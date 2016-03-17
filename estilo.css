@@ -1,0 +1,29 @@
+.caja{
+	background-color: #DCEDC8;
+	width: 30%;
+	float: left;
+	margin-left: 3%;
+	font-family: sans-serif;
+}
+
+
+.cabecera{
+	background-color: #8BC34A;
+    height: 10%;
+    text-align: center;
+    color: white;
+}
+.cuerpo{
+	color: #33691E;
+	text-align: center;
+}
+body{
+}
+h2{
+	margin-top: 0px;
+}
+p{
+}
+em{
+	color: #D46E00;
+}
