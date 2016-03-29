@@ -1,31 +1,34 @@
 <html>
-<head>
-	<meta charset="utf-8"</meta>
+	<head>
+		<meta charset="utf-8"</meta>
 
-	<style type="text/css">
-    form,fieldset{display: flex; flex-flow: row wrap; width: 480px;}
-    label{width: 200px;}
-    input{width: 250px;margin-bottom: 15px;}
-    </style>
-	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-	
-	<title>contactos.html</title>
-	
-</head>
-<body>
-<form action="mailto:petzeal@petzeal.es">	
+		<style type="text/css">
+		form,fieldset{display: flex; flex-flow: row wrap; width: 480px;}
+		label{width: 200px;}
+		input{width: 250px;margin-bottom: 15px;}
+		</style>
+		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+		
+		<title>Contacto</title>
+		
+	</head>
+	<body>
+		<form action="mailto:petzeal@petzeal.es">	
 
-	<label>Nombre</label> <input type="text" name="nombre" placeholder="Escribe tu nombre" autocomplete maxlenght="50"/>
-	<label>Email</label> <input type="email"/>
-	<label>Evaluación</label><input type="radio"name="consulta" value="evaluacion"/>
-	<label>Sugerencias</label><input type="radio"name="consulta"value="sugerencias"/>		
-	<label>Críticas</label><input type="radio"name="consulta"value="criticas"/>
-	<label> Marque esta casilla para verificar que ha leído nuestros terminos y condiciones del servicio</label>
-	<input type="checkbox"/>
-	<label>Texto:</label>
-	<textarea name="consulta" rows="4" cols="60" maxlength="100"></textarea>
-	<input type="button" onclick="alert('Enviado!')" value="Enviar">
+			<label>Nombre</label> <input type="text" name="nombre" placeholder="Escribe tu nombre" autocomplete maxlenght="50"/>
+			<label>Email</label> <input type="email"/>
+			<label>Evaluación</label><input type="radio"name="consulta" value="evaluacion"/>
+			<label>Sugerencias</label><input type="radio"name="consulta"value="sugerencias"/>		
+			<label>Críticas</label><input type="radio"name="consulta"value="criticas"/>
+			<label> Marque esta casilla para verificar que ha leído nuestros terminos y condiciones del servicio</label>
+			<input type="checkbox"/>
+			<label>Texto:</label>
+			<textarea name="consulta" rows="4" cols="60" maxlength="100"></textarea>
+			<input type="button" onclick="alert('Enviado!')" value="Enviar">
 
-</form>	
-</body>
+		</form>	
+		<form method="get" action="./index.html">
+		<input type="submit" value="Volver" />
+		</form>
+	</body>
 </html>

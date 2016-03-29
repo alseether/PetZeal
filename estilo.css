@@ -3,15 +3,75 @@
 	width: 30%;
 	float: left;
 	margin-left: 3%;
-	font-family: sans-serif;
+	font-family: 'Primary Italics';
 }
 
+@font-face {
+    font-family: 'Magician Rings'; /*a name to be used later*/
+	src: url('assets/fonts/Magician Rings.ttf');
+}
+@font-face {
+    font-family: 'Primary Italics'; /*a name to be used later*/
+	src: url('assets/fonts/Primary Italics.ttf');
+}
 
+@font-face {
+    font-family: 'Photographs'; /*a name to be used later*/
+	src: url('assets/fonts/Photographs.ttf');
+}
+
+@font-face {
+    font-family: 'Back to School'; /*a name to be used later*/
+	src: url('assets/fonts/Back to School.ttf');
+}
+@font-face {
+    font-family: 'Bubblegum'; /*a name to be used later*/
+	src: url('assets/fonts/Bubblegum.ttf');
+}
+@font-face {
+    font-family: 'Generic'; /*a name to be used later*/
+	src: url('assets/fonts/Generic.ttf');
+}
+@font-face {
+    font-family: 'PiecebyPiece'; /*a name to be used later*/
+	src: url('assets/fonts/PiecebyPiece.ttf');
+}
+@font-face {
+    font-family: 'Strawberry Muffins'; /*a name to be used later*/
+	src: url('assets/fonts/Strawberry Muffins.ttf');
+}
+
+.cabecera1{
+	background-color: #8BC34A;
+    height: 10%;
+    text-align: center;
+    color: white;
+	font-family: 'Primary Italics';
+	font-size: 23;
+}
+.cabecera2{
+	background-color: #8BC34A;
+    height: 10%;
+    text-align: center;
+    color: white;
+	font-family: 'PiecebyPiece';
+	font-size: 23;
+}
+.cabecera3{
+	background-color: #8BC34A;
+    height: 10%;
+    text-align: center;
+    color: white;
+	font-family: 'Strawberry Muffins';
+	font-size: 23;
+}
 .cabecera{
 	background-color: #8BC34A;
     height: 10%;
     text-align: center;
     color: white;
+	font-family: 'Primary Italics';
+	font-size: 23;
 }
 .cuerpo{
 	color: #33691E;
