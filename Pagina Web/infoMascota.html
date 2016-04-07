@@ -5,47 +5,50 @@
 	</head>
 
 	<body>
-		<!--h2> PetZeal </h2> -->
-		<img src="assets/images/logotipo.png" alt="logotipo">
-		<h3> Presentación de la propuesta </h3>
-
-		<p> 
-			El objetivo de la página es el permitir a los poseedores de mascotas contar con un perfil de todos y cada uno de sus animales para tener un seguimiento de cuidados, alimentación y salud. Podrán contactar con otros dueños y con profesionales y sus servicios. Los usuarios podrán subir fotos de sus mascotas que otros usuarios podrán comentar.
-			La página contará con un buscador de mascotas con opciones de filtrado para encontrar otras con las que poder interaccionar (quedadas de paseo, cruzar mascotas, etc).
-			Estos profesionales podrán brindar sus servicios mediante la exclusividad de publicar posts.
-			Se tendrá también la posibilidad de encontrar artículos e información sobre los animales.
-		</p>
-
-		<h3> Detalles de la página </h3>
-		<p> En la siguiente página se muestran en detalle las características de la aplicación web. </p>
-			<form method="get" action="./detalles.html">
-			<input type="submit" value="Detalles" />
-			</form>
-
-		<h3> Interacción </h3>
-		<p> A continuación se explican los mecanismos de interacción. </p>
-			<form method="get" action="./interaccion.html">
-			<input type="submit" value="Mecanismos de interacción" />
-			</form>
-
-		<h3> Interfaz de usuario </h3>
-		<p> Aquí se describe la apariencia de la interfaz, aspecto de la página, etc.</p>
-			<form method="get" action="./interfaz.html">
-			<input type="submit" value="Interfaz" />
-			</form>
-
-		<h3> Miembros de grupo </h3>
-		<p> Integrantes del grupo que desarrollarán la página web.</p>
-			<form method="get" action="./miembros.html">
-			<input type="submit" value="Miembros" />
-			</form>
-
-		<h3> Contacto </h3>
-		<p> Por último, mostramos un ejemplo de como sería la página de contacto (mailto) para recibir feedback de los usuarios y notificaciones de errores </p>
-			<form method="get" action="./contacto.html">
-			<input type="submit" value="Contacto" />
-			</form>
-
+		<header>
+			<img id="logoCabecera" src="assets/images/logotipo.png" alt="logotipo">
+			<div id="barraBusqueda">
+				<img id="lupa" src="assets/images/lupa.png" alt="lupa">
+				<input type="text" name="Busqueda" placeholder="Buscar"><br>
+			</div>
+			<div id="camposLogin">
+				<fieldset>
+				<input type="text" name="usuario" placeholder="Usuario"><br>
+				<input type="password" name="contrasena" placeholder="Contrasena"><br>
+				<br>
+				<input type="submit" value="Log in">
+			</fieldset>
+			</div>
+		</header>
+		<div id="datosMascota">
+			<fieldset>
+				<legend>Mi mascota</legend>
+				<select>
+					<option value="anfibio">Anfibio</option>
+					<option value="ave">Ave</option>
+					<option value="caballo">Caballo</option>
+					<option value="gato">Gato</option>
+					<option value="perro">Perro</option>
+					<option value="pez">Pez</option>
+					<option value="reptil">Reptil</option>
+					<option value="roeador">Roedor</option>						
+					<option value="otros">Otros</option>
+				</select><br>
+				<input type="text" name="nombre" placeholder="Nombre"><br>
+				<input type="text" name="raza" placeholder="Raza"><br>
+				<input type="text" name="edad" placeholder="Edad"><br>
+				<textarea type="text" name="descripcion" placeholder="Descripcion"></textarea>
+				<br>
+				<input type="submit" value="Hecho!">
+			</fieldset>
+		</div>
+		<div id="fotoMascota">
+			<img id="fotoPerfilMascota" src="assets/images/perro.png" alt="perro"><br>
+			<input type="submit" value="Cambiar Foto"><br>
+			<input type="submit" value="Borrar Mascota"><br>
+		</div>
+		<img id="logoDerecho" src="assets/images/logotipo.png" alt="logotipo">
+		
 	</body>
 
 </html>
