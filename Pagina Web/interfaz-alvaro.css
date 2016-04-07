@@ -1,0 +1,14 @@
+header{
+	width:100%;
+}
+
+#logoCabecera{
+	min-width: 20%;
+	min-height: 60px;
+}
+#barraBusqueda{
+	min-width: 60%;
+}
+#camposLogin{
+	min-width: 20%;
+}
