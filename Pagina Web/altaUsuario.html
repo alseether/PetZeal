@@ -1,19 +1,51 @@
 <html>
-	<header>
-		
-	</header>
+	<head>
+			<title>PetZeal</title>
+			<meta charset="utf-8"</meta>
+		 	<link rel="stylesheet" type="text/css" href="estructura.css" />
+		 	<link rel="stylesheet" type="text/css" href="interfaz-cristian.css"/>
+	</head>
 	<body>
-		<div>
-			<label>Nombre</label> <input type="text" name="nombre" placeholder="Escribe tu nombre" autocomplete maxlenght="50"/><br/>
-			<label>Email</label> <input type="email" name="email"placeholder="Escribe tu email"/><br/>
-			<label>Contraseña</label> <input type="password" name="pwd" placeholder="Escribe una contraseña" minlenght="8"/><br/>
-			<label>CP</label> <input type="text" name="cp" placeholder="Escribe tu código postal" minlenght="5"/><br/>
-			Comentarios<br/>
-			<textarea name="nombre" rows="4" cols="50">
-			</textarea><br/>
-			<input type="submit" name="enviar" value="Registrarse"/>
-			<input type="reset" value="Borrar datos"/><br/>	
-			<img src="" alt="Logo Petzeal"/>
-		</div>		
+		<header>
+			<img class="col-desktop-2 col-tablet-2 col-phone-3" id="logoCabecera" src="assets/images/logotipo.png" alt="logotipo">
+			<div class="col-desktop-3 col-tablet-3 col-phone-3" id="barraBusqueda">
+				<img id="lupa" src="assets/images/lupa.png" alt="lupa">
+				<input type="text" name="Busqueda" placeholder="Buscar">
+			</div>
+			<div id="camposLogin">
+				<fieldset>
+				<input type="text" name="usuario" placeholder="Usuario"><br>
+				<input type="password" name="contrasena" placeholder="Contrasena"><br>
+				<br>
+				<input type="submit" value="Log in">
+			</fieldset>
+			</div>
+		</header>
+		<form action="" method="post" enctype="multipart/form-data">
+			<fieldset>
+				<legend>Registro</legend>
+				<article class="col-phone-12 col-desktop-12 col-tablet-12" id="formulario">
+					<label>Nombre</label> 
+					<input id="nombre" type="text" name="nombre" placeholder="Escribe tu nombre" autocomplete maxlenght="50"/>
+					
+					<label>Email</label> 
+					<input type="email" name="email"placeholder="Escribe tu email"/>
+					
+					<label>Contraseña</label> 
+					<input type="password" name="pwd" placeholder="Escribe una contraseña" minlenght="8"/>
+					
+					<label>CP</label> 
+					<input type="text" name="cp" placeholder="Escribe tu código postal" minlenght="5"/>
+					
+					<label>Comentarios</label>
+					<textarea name="nombre" rows="4" cols="50">
+					</textarea>
+					
+					<input type="submit" name="enviar" value="Registrarse"/>
+					<input type="reset" value="Borrar datos"/>
+					<img src="" alt="Logo Petzeal"/>
+				</article>
+			</fieldset>
+		</form>		
 	</body>
 </html>
