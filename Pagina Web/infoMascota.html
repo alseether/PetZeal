@@ -1,28 +1,28 @@
 <html>
 	<head>
 		<title> PetZeal </title>
-		<meta charset="UTF-8"> 
+		<meta charset="utf-8"> 
 		<link rel="stylesheet" type="text/css" href="estructura.css"/>
 		<link rel="stylesheet" type="text/css" href="interfaz-alvaro.css"/>
 	</head>
 
 	<body>
-		<header>
-			<img class="col-desktop-2 col-tablet-2 col-phone-3" id="logoCabecera" src="assets/images/logotipo.png" alt="logotipo">
-			<div class="col-desktop-3 col-tablet-3 col-phone-3" id="barraBusqueda">
+		<header class = "col-desktop-12 col-tablet-12 col-phone-12" >
+			<img class="col-desktop-3 col-tablet-3 col-phone-3" id="logoCabecera" src="assets/images/logotipo.png" alt="logotipo">
+			<div class="col-desktop-6 col-tablet-6 col-phone-6" id="barraBusqueda">
 				<img id="lupa" src="assets/images/lupa.png" alt="lupa">
 				<input type="text" name="Busqueda" placeholder="Buscar">
 			</div>
-			<div id="camposLogin">
+			<div id="camposLogin" class = "col-desktop-3 col-tablet-3 col-phone-3">
 				<fieldset>
-				<input type="text" name="usuario" placeholder="Usuario"><br>
-				<input type="password" name="contrasena" placeholder="Contrasena"><br>
-				<br>
-				<input type="submit" value="Log in">
-			</fieldset>
+					<input type="text" name="usuario" placeholder="Usuario"><br>
+					<input type="password" name="contrasena" placeholder="Contrasena"><br>
+					
+					<input type="submit" value="Log in">
+				</fieldset>
 			</div>
 		</header>
-		<div id="datosMascota">
+		<div id="datosMascota" class = "col-desktop-3 col-tablet-3 col-phone-6">
 			<fieldset>
 				<legend>Mi mascota</legend>
 				<select>
@@ -44,12 +44,12 @@
 				<input type="submit" value="Hecho!">
 			</fieldset>
 		</div>
-		<div id="fotoMascota">
+		<div id="fotoMascota" class = "col-desktop-3 col-tablet-3 col-phone-6">
 			<img id="fotoPerfilMascota" src="assets/images/perro.png" alt="perro"><br>
 			<input type="submit" value="Cambiar Foto"><br>
 			<input type="submit" value="Borrar Mascota"><br>
 		</div>
-		<img id="logoDerecho" src="assets/images/logotipo.png" alt="logotipo">
+		<img id="logoDerecho" class = "col-desktop-6 col-tablet-6 col-phone-12" src="assets/images/logotipo.png" alt="logotipo">
 		
 	</body>
 

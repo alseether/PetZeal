@@ -1,14 +1,35 @@
 header{
 	width:100%;
+	min-height: 20%;
 }
 
 #logoCabecera{
-	min-width: 20%;
-	min-height: 60px;
+	min-height: 10%;
 }
 #barraBusqueda{
-	min-width: 60%;
+	min-height: 20%;
+	padding-top: 4%;
+   
 }
+
+#lupa{
+	max-height: 5%;
+	max-width: 5%;
+}
+
 #camposLogin{
-	min-width: 20%;
+	float: right;
+}
+#datosMascota fieldset{
+	min-height: 80%;
+    display: flex;
+}
+#fotoMascota{
+	min-height: 80%;
+}
+
+#fotoMascota  * {
+	margin-left: 25%;
+}
+#fotoPerfilMascota{
 }
