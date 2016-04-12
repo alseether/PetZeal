@@ -6,47 +6,43 @@
 		 	<link rel="stylesheet" type="text/css" href="interfaz-cristian.css"/>
 	</head>
 	<body>
-		<header>
-			<img class="col-desktop-2 col-tablet-2 col-phone-3" id="logoCabecera" src="assets/images/logotipo.png" alt="logotipo">
-			<div class="col-desktop-3 col-tablet-3 col-phone-3" id="barraBusqueda">
+		<header class = "col-desktop-12 col-tablet-12 col-phone-12" >
+			<img class="col-desktop-3 col-tablet-3 col-phone-3" id="logoCabecera" src="assets/images/logotipo.png" alt="logotipo">
+			<div class="col-desktop-4 col-tablet-5 col-phone-4" id="barraBusqueda">
 				<img id="lupa" src="assets/images/lupa.png" alt="lupa">
 				<input type="text" name="Busqueda" placeholder="Buscar">
 			</div>
-			<div>
-				<fieldset id="camposLogin">
-					<input type="text" name="usuario" placeholder="Usuario">
-					<input type="password" name="contrasena" placeholder="Contrasena">
-					<input type="submit" value="Log in" action="">
-					<form method="get" action="./altaUsuario.html">
-						<input type="submit" value="Sign up"/>
-					</form>
+			<div id="camposLogin" class = "col-desktop-3 col-tablet-3 col-phone-3">
+				<fieldset>
+					<input type="text" name="usuario" placeholder="Usuario"><br>
+					<input type="password" name="contrasena" placeholder="Contrasena"><br>
+					
+					<input type="submit" value="Log in">
+					<input type="button" value="Sign up" action="./altaUsuario.html">
 				</fieldset>
 			</div>
 		</header>
 		<form action="" method="post" enctype="multipart/form-data" 
-				class="col-desktop-6 col-tablet-8 col-phone-12" id="formulario">
+				class="col-desktop-6 col-tablet-5 col-phone-12" id="formulario">
 			<fieldset>
 				<legend id="tituloCuadro" >Registro </legend>
-				<article id="camposRegistro">
-					<label>Nombre</label> 
+				<article class="col-desktop-6 col-tablet-8 col-phone-12" id="camposRegistro">
 					<input id="nombre" type="text" name="nombre" placeholder="Escribe tu nombre" autocomplete maxlenght="50"/><br>
 					
-					<label>Email</label> 
 					<input type="email" name="email"placeholder="Escribe tu email"/><br>
 					
-					<label>Contraseña</label> 
 					<input type="password" name="pwd" placeholder="Escribe una contraseña" minlenght="8"/><br>
 					
-					<label>CP</label> 
 					<input type="text" name="cp" placeholder="Escribe tu código postal" minlenght="5"/><br>
-					
-					<input type="submit" name="enviar" value="Registrarse"/>
-					<input type="reset" value="Borrar datos"/><br>
+					<div id="botones">
+						<input type="submit" name="enviar" value="Registrarse"/>
+						<input type="reset" value="Borrar datos"/><br>
+					</div>
 				</article>
 			</fieldset>
 		</form>	
-		<div>
-			<img class="col-desktop-6 col-tablet-2 col-phone-12" id="logoPrincipal" src="assets/images/logotipo.png" alt="logotipo"/>	
+		<div id="logoPrincipal">
+			<img class="col-desktop-6 col-tablet-7 col-phone-12" src="assets/images/logotipo.png" alt="logotipo"/>	
 		</div>
 	</body>
 </html>
