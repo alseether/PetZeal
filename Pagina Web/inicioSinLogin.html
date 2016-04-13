@@ -3,17 +3,30 @@
 	<head>
 		<title>PetZeal</title>
 		<meta charset="utf-8"</meta>
-		 <link rel="stylesheet" type="text/css" href="estructura.css" />
+		  	<link rel="stylesheet" type="text/css" href="estructura.css" />
+		 	<link rel="stylesheet" type="text/css" href="interfaz-julio.css"/>
 		
 	</head>
 	<body>
-		<header>
-
+		<header class = "col-desktop-12 col-tablet-12 col-phone-12" >
+			<img class="col-desktop-3 col-tablet-3 col-phone-3" id="logoCabecera" src="assets/images/logotipo.png" alt="logotipo">
+			<div class="col-desktop-6 col-tablet-6 col-phone-6" id="barraBusqueda">
+				<img id="lupa" src="assets/images/lupa.png" alt="lupa">
+				<input type="text" name="Busqueda" placeholder="Buscar">
+			</div>
+			<div id="camposLogin" class = "col-desktop-3 col-tablet-3 col-phone-3">
+				<fieldset>
+					<input type="text" name="usuario" placeholder="Usuario"><br>
+					<input type="password" name="contrasena" placeholder="Contrasena"><br>
+					
+					<input type="submit" value="Log in">
+				</fieldset>
+			</div>
 		</header>
 		<div id="principal">
 			<nav class="col-phone-12 col-desktop-3 col-tablet-3">TimeLine
-				<cabecera>
-
+				<cabecera class="Grid-cell">
+						
 				</cabecera>
 
 				<timeLine>
@@ -21,14 +34,17 @@
 				</rimeLine>	
 
 			</nav>	
-			<article class="col-phone-12 col-desktop-6 col-tablet-6">Central
-				<div>
-					<img src="images/logotipo.png" alt="logotipo"/>
-					<form method="get" action="./registro.html"><!--colocar nombre de registro.html-->
-						<input type="submit" value="Regístrate!"/>	
+			<article class="col-phone-12 col-desktop-6 col-tablet-6" id="centro">
+					
+					<img class="col-desktop-10 col-tablet-6 col-phone-12" id="logoPrincipal" src="assets/images/logotipo.png" alt="logotipo"/>	
+
+
+			
+					<form method="get" id="botonRegistro" action="./registro.html"><!--colocar nombre de registro.html-->
+					<input type="submit" value="Regístrate!"/>	
 					</form>	
 
-				</div>
+				
 			</article>
 			<aside class="col-phone-12 col-desktop-3 col-tablet-3">TimeLine2
 				<cabecera>
