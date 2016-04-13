@@ -19,28 +19,39 @@
 					</div>
 					<div id="linea2">
 						<input id="pass" type="password" name="contrasena" placeholder="Contrasena">
-						<input id="signup" type="button" value="Sign up" action="./altaUsuario.html">.
+						<input id="signup" type="button" value="Sign up" action="./altaUsuario.html">
 					</div>
 			</div>
 		</header>
-		<form action="" method="post" enctype="multipart/form-data" 
-				class="col-desktop-6 col-tablet-5 col-phone-12" id="formulario">
-			<fieldset>
-				<legend id="tituloCuadro" >Información del usuario</legend>
-				<article class="col-desktop-6 col-tablet-8 col-phone-12" id="camposRegistro">
-					<input id="nombre" type="text" name="nombre" placeholder="Escribe tu nombre" value="Benito Camela" autocomplete maxlenght="50"/><br>
-					
-					<input type="email" name="email" placeholder="Escribe tu email" value="benitocamela69@gmail.com"/><br>
-					
-					<input type="password" name="pwd" placeholder="Escribe una contraseña" value="12345678" minlenght="8"/><br>
-					
-					<input type="text" name="cp" placeholder="Escribe tu código postal" value="80012" minlenght="5"/><br>
+		<div  class="col-desktop-12 col-tablet-12 col-phone-12" id="info">
+			<form action="" method="post" enctype="multipart/form-data" 
+					class="col-desktop-6 col-tablet-5 col-phone-12" id="formulario">
+				<fieldset>
+					<legend id="tituloCuadro" >Información del usuario</legend>
+					<article class="col-desktop-6 col-tablet-8 col-phone-12" id="camposDatos">
+						<input id="nombre" type="text" name="nombre" placeholder="Escribe tu nombre" value="Benito Camela" autocomplete maxlenght="50"/><br>
+						
+						<input type="email" name="email" placeholder="Escribe tu email" value="benitocamela69@gmail.com"/><br>
+						
+						<input type="password" name="pwd" placeholder="Escribe una contraseña" value="12345678" minlenght="8"/><br>
+						
+						<input type="text" name="cp" placeholder="Escribe tu código postal" value="80012" minlenght="5"/><br>
+						<div id="botones">
+							<input type="submit" name="enviar" value="Guardar cambios"/>
+							<input type="reset" value="Dar de baja"/><br>
+						</div>
+					</article>
+				</fieldset>
+			</form>
+			<div class="col-desktop-6 col-tablet-5 col-phone-12" id="cuadroBaja">
+				<fieldset>
+					<p>¿Está seguro que queire darse de baja?</p>
 					<div id="botones">
-						<input type="submit" name="enviar" value="Guardar cambios"/>
-						<input type="reset" value="Dar de baja"/><br>
+						<input type="submit" name="enviar" value="Estoy seguro"/>
+						<input type="button" value="Ummm...No, mejor me quedo"/><br>
 					</div>
-				</article>
-			</fieldset>
-		</form>	
+				</fieldset>
+			</div>
+		</div>
 	</body>
 </html>

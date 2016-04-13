@@ -74,24 +74,31 @@ em{
 }
 
 
-
+#info{
+	display: flex;
+	flex-direction: column;
+}
 
 #formulario{
 	max-height: 80%;
-	margin-top: 15%;
+	margin-top: 10%;
 }
 
 #tituloCuadro{
 	font-size: 50;
 }
 
-#camposRegistro{
+#camposDatos{
 	display: flex;
 	flex-direction: column;
 }
 
 #botones{
 	flex-direction: row;
+}
+
+#cuadroBaja{
+	max-height: 50%;
 }
 
 @media (max-width: 991px){
