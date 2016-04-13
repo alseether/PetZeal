@@ -3,28 +3,51 @@
 <head>
 	<title>PetZeal</title>
 	 <meta charset="utf-8"/>
-	 <link rel="stylesheet" type="text/css" href="estructura.css" />
+			<link rel="stylesheet" type="text/css" href="estructura.css" />
+		 	<link rel="stylesheet" type="text/css" href="interfaz-zapi.css"/>
 </head>
 	
 <body>
+	<header class ="col-phone-12 col-desktop-12 col-tablet-12">
+		<img class ="col-desktop-3 col-tablet-3 col-phone-3" id="logoCabecera"  src="assets/images/logotipo.png" alt = "logotipo">
+		<div class="col-desktop-6 col-tablet-6 col-phone-6" id="barraBusqueda">
+			<img id="lupa" src="assets/images/lupa.png" alt="lupa">
+			<input type="text" name="Busqueda" placeholder="Buscar">
+		</div>
+		<div id="camposLogin" class = "col-desktop-3 col-tablet-3 col-phone-3">
+			<fieldset>
+				<input type="text" name="usuario" placeholder="Usuario"><br>
+				<input type="password" name="contrasena" placeholder="Contrasena"><br>
+				
+				<input type="submit" value="Log in">
+			</fieldset>
+		</div>	
+	</header>
 
-	<nav class ="col-phone-12 col-desktop-3 col-desktop-3">Timeline
-		<cabecera id="Post">
+	<nav class ="col-phone-12 col-desktop-3 col-tablet-3">
+		<table border class ="col-phone-12 col-desktop-10 col-tablet-3">
+			<tr id="cabeceraTabla">
+				<td colspan="2">Post</td>
+			</tr>
+				<td>foto con comentario2</td>
+				<td>descripcion</td>
+				</tr>	
+			<tr>
 			
-		</cabecera>
-		<Timeline id="timeline">
-			
-			
-		</Timeline>
+				<td>foto con comentario</td>
+				<td>descripcion</td>
+			</tr>
+
+		</table>
 	</nav>
-	<article class="col-phone-12 col-desktop-6 col-desktop-6">Central
+	<article class="col-phone-12 col-desktop-6 col-tablet-6">Central
 		<form method="get" action="./comentar_post.html">
 		<textarea name="nombre" rows="25" cols="40" maxlength="100"></textarea>
 		</form>
 			<input type="submit" value="Comentar" />
 			<input type="submit" value="Like"/>
 	</article>
-	<aside class="col-phone-12 col-desktop-3 col-desktop-3">Timeline2</aside>
+	<aside class="col-phone-12 col-desktop-3 col-tablet-3">Timeline2</aside>
 
 </body>
 
