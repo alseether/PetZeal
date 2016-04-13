@@ -21,12 +21,17 @@ body{
 em{
 	color: #D46E00;
 }
+#tabla{
+	overflow: scroll;
+	height: 400px;
 
-table{
-	width:
+}
+#tabla table{
 
-
-
+	background-color: lightgrey;
+}
+#fotozapi{
+	width: 120px;
 }
 #cabeceraTabla{
 background-color: #8BC34A;
