@@ -13,9 +13,11 @@ header{
 
 body{
 	color: #33691E;
-	background-color: #DCEDC8;
 	font-family: 'Primary Italics';
 	font-size: 30;
+	background: url("assets/images/logotipo.png") center;
+	background-repeat: no-repeat;
+	background-color: #DCEDC8;
 }
 em{
 	color: #D46E00;
@@ -38,6 +40,7 @@ em{
 
 #lupa{
 	background: url("assets/images/lupa.png") center;
+	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
@@ -59,7 +62,6 @@ em{
 	margin-left: 7%;
 }
 
-
 #linea2{
 	height: 25px;
 	margin-top: 3%;
@@ -71,8 +73,12 @@ em{
 	margin-left: 7%;
 }
 
+
+
+
 #formulario{
 	max-height: 80%;
+	margin-top: 15%;
 }
 
 #tituloCuadro{
