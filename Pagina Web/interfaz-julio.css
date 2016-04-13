@@ -17,6 +17,9 @@ body{
 	background-color: #DCEDC8;
 	font-family: 'Primary Italics';
 	font-size: 30;
+	background: url("assets/images/logotipo.png") center;
+	background-repeat: no-repeat;
+	background-color: #DCEDC8;
 }
 em{
 	color: #D46E00;
@@ -42,6 +45,7 @@ article{
 }
 
 #botonRegistro{
+	margin-top: 60;
 	margin-left: 45%;
 }
 
@@ -62,4 +66,22 @@ article{
 #camposLogin{
 	float: right;
 }
+table {
+       border: solid black;
+       color:black;
+       margin-left: 5%;
+       
+}
+#borde{
+	border: solid black;
+}
+#cabecera{
+	border: solid black;
+	background-color: #8BC34A;
+	font-family: 'Primary Italics';
+	font-size: 25;
+}
 
+#posts1{
+	width: 100px;
+}
