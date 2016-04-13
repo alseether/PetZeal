@@ -4,7 +4,6 @@
 }
 
 header{
-	width:100%;
 	height: 10%;
 	background-color: #8BC34A;
 	color: white;
@@ -23,25 +22,51 @@ em{
 }
 
 #logoCabecera{
-	width: 10%;
 	height: 100%;
+	/*background-image: url("assets/images/logotipo.png");*/
 }
 
 #barraBusqueda{
-	min-height: 20%;
-	/*padding-top: 0%;*/
-	padding-left: 10%
+	min-height: 25px;
+	padding-top: 2%;
+	padding-left: 10%;
+	display: flex;
+	flex-direction: row;
 }
 
 #lupa{
-	max-height: 3%;
-	max-width: 3%;
+	background: url("assets/images/lupa.png") center;
+	background-size: 100%;
 }
 
 #camposLogin{
 	float: right;
 	height: 100%;
-	display: block;
+	display: flex;
+	flex-direction: column;
+}
+
+#linea1{
+	height: 25px;
+	margin-top: 3%;
+	display: flex;
+	flex-direction: row;
+}
+
+#login{
+	margin-left: 7%;
+}
+
+
+#linea2{
+	height: 25px;
+	margin-top: 3%;
+	display: flex;
+	flex-direction: row;
+}
+
+#signup{
+	margin-left: 7%;
 }
 
 #formulario{
