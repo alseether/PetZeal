@@ -22,13 +22,10 @@ em{
 	color: #D46E00;
 }
 #tabla{
-	overflow: scroll;
-	height: 400px;
+	overflow-y: scroll;
+	height: 100%;
+	width: 20%;
 
-}
-#tabla table{
-
-	background-color: lightgrey;
 }
 #fotozapi{
 	width: 120px;
