@@ -1,65 +1,65 @@
-.col-desktop-12{
+.col-phone-12{
 	float: left;
 	width: 100%;
 }
 
-.col-desktop-11{
+.col-phone-11{
 	float: left;
 	width: 91.6666%;
 }
 
-.col-desktop-10{
+.col-phone-10{
 	float: left;
 	width: 83.3333%;
 }
 
-.col-desktop-9{
+.col-phone-9{
 	float: left;
 	width: 75%;
 }
 
-.col-desktop-8{
+.col-phone-8{
 	float: left;
 	width: 66.6666%;
 }
 
-.col-desktop-7{
+.col-phone-7{
 	float: left;
 	width: 58.3333%;
 }
 
-.col-desktop-6{
+.col-phone-6{
 	float: left;
 	width: 50%;
 }
 
-.col-desktop-5{
+.col-phone-5{
 	float: left;
 	width: 41.6666%;
 }
 
-.col-desktop-4{
+.col-phone-4{
 	float: left;
 	width: 33.3333%;
 }
 
-.col-desktop-3{
+.col-phone-3{
 	float: left;
 	width: 25%;
 }
 
-.col-desktop-2{
+.col-phone-2{
 	float: left;
 	width: 16.6666%;
 }
 
-.col-desktop-1{
+.col-phone-1{
 	float: left;
 	width: 8.3333%;
 }
-
-@media (max-width: 991px){
-	.col-tablet-12{
+/*
+@media only screen and (min-width: 767px){
+;	.col-tablet-12{
 	float: left;
 	width: 100%;
 	}
@@ -119,65 +119,69 @@
 		width: 8.3333%;
 	}
 }
-@media (max-width: 767px){
-	.col-phone-12{
-	float: left;
-	width: 100%;
+*/
+@media only screen and (min-width: 991px){
+;	.col-desktop-12{
+		float: left;
+		width: 100%;
 	}
 
-	.col-phone-11{
+	.col-desktop-11{
 		float: left;
 		width: 91.6666%;
 	}
 
-	.col-phone-10{
+	.col-desktop-10{
 		float: left;
 		width: 83.3333%;
 	}
 
-	.col-phone-9{
+	.col-desktop-9{
 		float: left;
 		width: 75%;
 	}
 
-	.col-phone-8{
+	.col-desktop-8{
 		float: left;
 		width: 66.6666%;
 	}
 
-	.col-phone-7{
+	.col-desktop-7{
 		float: left;
 		width: 58.3333%;
 	}
 
-	.col-phone-6{
+	.col-desktop-6{
 		float: left;
 		width: 50%;
 	}
 
-	.col-phone-5{
+	.col-desktop-5{
 		float: left;
 		width: 41.6666%;
 	}
 
-	.col-phone-4{
+	.col-desktop-4{
 		float: left;
 		width: 33.3333%;
 	}
 
-	.col-phone-3{
+	.col-desktop-3{
 		float: left;
 		width: 25%;
 	}
 
-	.col-phone-2{
+	.col-desktop-2{
 		float: left;
 		width: 16.6666%;
 	}
 
-	.col-phone-1{
+	.col-desktop-1{
 		float: left;
 		width: 8.3333%;
 	}
 }
+
+
+
 
