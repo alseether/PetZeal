@@ -67,6 +67,7 @@ article{
 	float: right;
 }
 table {
+
        border: solid black;
        color:black;
        margin-left: 5%;
@@ -75,6 +76,7 @@ table {
 #borde{
 	border: solid black;
 }
+
 #cabecera{
 	border: solid black;
 	background-color: #8BC34A;
@@ -84,4 +86,23 @@ table {
 
 #posts1{
 	width: 100px;
+}
+
+#anadirMascota{
+	
+	width: 95%;
+}
+#posts{
+	overflow-y: scroll;
+	height: 550px;
+}
+#cuadradoAnadir{
+	height: 500px;
+	font-family: 'Primary Italics';
+	font-size: 25;
+
+
+}
+#anadir{
+	width: 50px;
 }
