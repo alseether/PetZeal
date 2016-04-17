@@ -175,6 +175,14 @@ img{
 	height: 50%;
 }
 
+#fotoPerfil_Usu{
+	/*height: 420px;*/
+	background: url("assets/images/oficio.jpg") top;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	height: 50%;
+}
+
 #botonCambiar{
 	background-color: white ;
     border: 2px #8BC34A groove;
