@@ -7,6 +7,7 @@ header{
 	display: flex;
 	height: 15%;
 	background-color: #8BC34A;
+	position: fixed;
 	color: white;
 	font-family: 'Primary Italics';
 	font-size: 50;
@@ -114,7 +115,7 @@ img{
 
 #formulario{
 	max-height: 80%;
-	margin-top: 5%;
+	margin-top: 12%;
 }
 
 #tituloCuadro{
@@ -157,4 +158,28 @@ img{
 
 #confirmacion{
 	margin-bottom: 10px;
+}
+
+#fotoEsp{
+	width: 45%;
+	margin-left: 5%;
+	/*height: 550px;*/
+	min-height: -webkit-min-content;
+}
+
+#fotoPerfil{
+	/*height: 420px;*/
+	background: url("assets/images/imagenRegistro.jpg") top;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	height: 50%;
+}
+
+#botonCambiar{
+	background-color: white ;
+    border: 2px #8BC34A groove;
+    color: #8BC34A;
+    margin-left: 12.5%;
+	margin-top: 5%;
+	width: 75%;
 }
