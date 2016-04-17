@@ -4,7 +4,8 @@
 }
 
 header{
-	height: 10%;
+	display: flex;
+	height: 15%;
 	background-color: #8BC34A;
 	color: white;
 	font-family: 'Primary Italics';
@@ -15,7 +16,9 @@ body{
 	color: #33691E;
 	font-family: 'Primary Italics';
 	font-size: 30;
-	background: url("assets/images/logotipo.png") center;
+	background: url("assets/images/fondoPetZeal_1.png") center;
+	background-size: 100%;
+	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-color: #DCEDC8;
 }
@@ -23,22 +26,52 @@ em{
 	color: #D46E00;
 }
 
+fieldset{
+	display: block;
+    -webkit-margin-start: 2px;
+    -webkit-margin-end: 2px;
+    -webkit-padding-before: 0.35em;
+    -webkit-padding-start: 0.75em;
+    -webkit-padding-end: 0.75em;
+    -webkit-padding-after: 0.625em;
+    min-width: -webkit-min-content;
+	border: 2px groove threedface;
+	min-height: -webkit-min-content;
+}
+
+img{
+	border: none;
+}
+
 #logoCabecera{
 	height: 100%;
-	background: url("assets/images/logotipo.png") center;
+	background: url("assets/images/logoPetZeal.png") center;
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
 #barraBusqueda{
-	min-height: 25px;
+	/*min-height: 25px;
 	padding-top: 2%;
 	padding-left: 10%;
 	display: flex;
+	flex-direction: row;*/
+
+	min-height: 35px;
+	display: flex;
 	flex-direction: row;
+	width: 60%;
+	height:20%;
+	margin: 50px;
+}
+
+#barra{
+	width: 90%;
 }
 
 #lupa{
+	width: 5%;
+	height: 100%;
 	background: url("assets/images/lupa.png") center;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -81,7 +114,7 @@ em{
 
 #formulario{
 	max-height: 80%;
-	margin-top: 10%;
+	margin-top: 5%;
 }
 
 #tituloCuadro{
@@ -97,14 +130,31 @@ em{
 	flex-direction: row;
 }
 
+.boton{
+	padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+	border-radius: 8px;
+}
+
+#botonAceptar {
+    background-color:#8BC34A ;
+    border: none;
+    color: white;
+}
+
+#botonCancelar{
+	background-color: white ;
+    border: 2px #8BC34A groove;
+    color: #8BC34A;
+}
+
 #cuadroBaja{
 	max-height: 50%;
 }
 
-@media (max-width: 991px){
-
-}
-
-@media (max-width: 767px){
-
+#confirmacion{
+	margin-bottom: 10px;
 }

@@ -1,15 +1,16 @@
 <html>
 	<head>
-			<title>PetZeal</title>
-			<meta charset="utf-8"</meta>
-		 	<link rel="stylesheet" type="text/css" href="estructura.css" />
-		 	<link rel="stylesheet" type="text/css" href="interfaz-cristian.css"/>
+		<title>PetZeal</title>
+		<meta charset="utf-8"</meta>
+		<link rel="stylesheet" type="text/css" href="cssreset.css"/>			
+	 	<link rel="stylesheet" type="text/css" href="estructura.css" />
+	 	<link rel="stylesheet" type="text/css" href="interfaz-cristian.css"/>
 	</head>
 	<body>
 		<header class = "col-desktop-12 col-tablet-12 col-phone-12" >
-			<img class="col-desktop-2 col-tablet-2 col-phone-2" id="logoCabecera">
-			<div class="col-desktop-3 col-tablet-3 col-phone-3" id="barraBusqueda">
-				<input type="text" name="Busqueda" placeholder="Buscar">
+			<img class="col-desktop-2 col-tablet-2 col-phone-2" id="logoCabecera"> 
+			<div  id="barraBusqueda">
+				<input type="text" name="Busqueda" placeholder="Buscar" id="barra">
 				<input type="button" class="col-desktop-1 col-tablet-1 col-phone-1" src="assets/images/lupa.png" id="lupa">
 			</div>
 			<div id="camposLogin" class = "col-desktop-3 col-tablet-3 col-phone-2">
@@ -19,13 +20,15 @@
 					</div>
 					<div id="linea2">
 						<input id="pass" type="password" name="contrasena" placeholder="Contrasena">
-						<input id="signup" type="button" value="Sign up" action="./altaUsuario.html">.
+						<form method="get" action="./altaUsuario.html" id="signup">
+							<input type="submit" value="Sign up">
+						</form>
 					</div>
 			</div>
 		</header>
 		<form action="" method="post" enctype="multipart/form-data" 
 				class="col-desktop-6 col-tablet-5 col-phone-12" id="formulario">
-			<fieldset>
+			<fieldset id ="j">
 				<legend id="tituloCuadro" >Registro </legend>
 				<article class="col-desktop-6 col-tablet-8 col-phone-12" id="camposDatos">
 					<input id="nombre" type="text" name="nombre" placeholder="Escribe tu nombre" autocomplete maxlenght="50"/><br>
@@ -36,8 +39,8 @@
 					
 					<input type="text" name="cp" placeholder="Escribe tu código postal" minlenght="5"/><br>
 					<div id="botones">
-						<input type="submit" name="enviar" value="Registrarse"/>
-						<input type="reset" value="Borrar datos"/><br>
+						<input class="boton" id="botonAceptar" type="submit" name="enviar" value="Registrarse"/>
+						<input class="boton" id="botonCancelar" type="reset" value="Borrar datos"/><br>
 					</div>
 				</article>
 			</fieldset>
