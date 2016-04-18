@@ -113,6 +113,11 @@ img{
 	flex-direction: column;
 }
 
+#datos{
+	display: flex;
+	flex-direction: row;
+}
+
 #formulario{
 	max-height: 115%; /*NO ME MOLA NADA ESTO pero queda bien*/
 	margin-top: 5%;
@@ -140,16 +145,33 @@ img{
 	border-radius: 8px;
 }
 
-#botonAceptar {
+.botonVerde {
     background-color:#8BC34A ;
     border: none;
     color: white;
 }
 
-#botonCancelar{
+.botonBlanco{
 	background-color: white ;
     border: 2px #8BC34A groove;
     color: #8BC34A;
+}
+
+.botonNaranja{
+    background-color:#D46E00 ;
+    border: none;
+    color: white;
+}
+
+#botonCambiar{
+    margin-left: 12.5%;
+	margin-top: 5%;
+	width: 75%;
+}
+
+#botonPremium {
+    margin-left: 40%;
+    margin-top: 40%;
 }
 
 #cuadroBaja{
@@ -181,13 +203,4 @@ img{
 	background-repeat: no-repeat;
 	background-size: 100%;
 	height: 50%;
-}
-
-#botonCambiar{
-	background-color: white ;
-    border: 2px #8BC34A groove;
-    color: #8BC34A;
-    margin-left: 12.5%;
-	margin-top: 5%;
-	width: 75%;
 }

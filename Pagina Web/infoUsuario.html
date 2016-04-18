@@ -27,31 +27,36 @@
 			</div>
 		</header>
 		<div  class="col-desktop-12 col-tablet-12 col-phone-12" id="info">
-			<form action="" method="post" enctype="multipart/form-data" 
-					class="col-desktop-6 col-tablet-8 col-phone-6" id="formulario">
-				<fieldset>
-					<legend id="tituloCuadro" >Información del usuario</legend>
-					<div class="col-desktop-6 col-tablet-8 col-phone-12" id="camposDatos">
-						<input type="text" name="nombre" placeholder="Escribe tu nombre" value="Benito Camela" autocomplete maxlenght="50"/><br>
-						
-						<input type="email" name="email" placeholder="Escribe tu email" value="benitocamela69@gmail.com"/><br>
-						
-						<input type="password" name="pwd" placeholder="Escribe una contraseña" value="12345678" minlenght="8"/><br>
-						
-						<input type="text" name="cp" placeholder="Escribe tu código postal" value="80012" minlenght="5"/><br>
-						<div id="botones">
-							<input class="boton" id="botonAceptar" type="submit" name="enviar" value="Guardar cambios"/>
-							<input class="boton" id="botonCancelar" type="reset" value="Dar de baja"/><br>
+			<div id="datos">
+				<form action="" method="post" enctype="multipart/form-data" 
+						class="col-desktop-6 col-tablet-8 col-phone-6" id="formulario">
+					<fieldset>
+						<legend id="tituloCuadro" >Información del usuario</legend>
+						<div class="col-desktop-6 col-tablet-8 col-phone-12" id="camposDatos">
+							<input type="text" name="nombre" placeholder="Escribe tu nombre" value="Benito Camela" autocomplete maxlenght="50"/><br>
+							
+							<input type="email" name="email" placeholder="Escribe tu email" value="benitocamela69@gmail.com"/><br>
+							
+							<input type="password" name="pwd" placeholder="Escribe una contraseña" value="12345678" minlenght="8"/><br>
+							
+							<input type="text" name="cp" placeholder="Escribe tu código postal" value="80012" minlenght="5"/><br>
+							<div id="botones">
+								<input class="boton botonVerde" type="submit" name="enviar" value="Guardar cambios"/>
+								<input class="boton botonBlanco" type="reset" value="Dar de baja"/><br>
+							</div>
 						</div>
-					</div>
-				</fieldset>
-			</form>
+					</fieldset>
+				</form>
+				<form method="get" action="./altaEspecialista.html">
+					<input class="boton botonNaranja" id="botonPremium" type="submit" value="Convertirse en Premium">
+				</form>
+			</div>
 			<div class="col-desktop-6 col-tablet-5 col-phone-12" id="cuadroBaja">
 				<fieldset>
 					<p id="confirmacion">¿Está seguro que queire darse de baja?</p>
 					<div id="botones">
-						<input class="boton" id="botonAceptar"type="submit" name="enviar" value="Estoy seguro"/>
-						<input class="boton" id="botonCancelar" type="button" value="Ummm...No, mejor me quedo"/><br>
+						<input class="boton botonVerde" type="submit" name="enviar" value="Estoy seguro"/>
+						<input class="boton botonBlanco" type="button" value="Ummm...No, mejor me quedo"/><br>
 					</div>
 				</fieldset>
 			</div>
