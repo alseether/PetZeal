@@ -1,54 +1,106 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<title>PetZeal</title>
-	 <meta charset="utf-8"/>
-			<link rel="stylesheet" type="text/css" href="estructura.css" />
+<html>
+	<head>
+		<title>PetZeal</title>
+		<meta charset="utf-8"</meta>
+			<link rel="stylesheet" type="text/css" href="cssreset.css"/>
+		  	<link rel="stylesheet" type="text/css" href="estructura.css" />
 		 	<link rel="stylesheet" type="text/css" href="interfaz-zapi.css"/>
-</head>
-	
-<body>
-	<header class ="col-phone-12 col-desktop-12 col-tablet-12">
-		<img class ="col-desktop-3 col-tablet-3 col-phone-3" id="logoCabecera"  src="assets/images/logotipo.png" alt = "logotipo">
-		<div class="col-desktop-6 col-tablet-6 col-phone-6" id="barraBusqueda">
-			<img id="lupa" src="assets/images/lupa.png" alt="lupa">
-			<input type="text" name="Busqueda" placeholder="Buscar">
-		</div>
-		<div id="camposLogin" class = "col-desktop-3 col-tablet-3 col-phone-3">
-			<fieldset>
-				<input type="text" name="usuario" placeholder="Usuario"><br>
-				<input type="password" name="contrasena" placeholder="Contrasena"><br>
-				
-				<input type="submit" value="Log in">
-			</fieldset>
-		</div>	
-	</header>
-
-	<nav class ="col-phone-12 col-desktop-3 col-tablet-3" id = "tabla">
-		<table border= "1" class ="col-phone-12 col-desktop-3 col-tablet-3">
-			<tr id="cabeceraTabla">
-				<td colspan="2">Post</td>
-			</tr><td><img id="fotozapi"  src="assets/images/zapi.jpg" alt = "foto"></td><td>descripcion</td></tr>	
-			</tr><td><img id="fotozapi"  src="assets/images/zapi.jpg" alt = "foto"></td><td>descripcion</td></tr>	
-			</tr><td><img id="fotozapi"  src="assets/images/zapi.jpg" alt = "foto"></td><td>descripcion</td></tr>	
-		</table>
-	</nav>
-	
-	<article class="col-phone-12 col-desktop-6 col-tablet-6">Lectura post
-	<div>
 		
-	</div>
+	</head>
+	<body>
+		<header class = "col-desktop-12 col-tablet-12 col-phone-12" >
+			<img class="col-desktop-3 col-tablet-3 col-phone-3" id="logoCabecera" src="assets/images/logotipo.png" alt="logotipo">
+			<div class="col-desktop-6 col-tablet-6 col-phone-6" id="barraBusqueda">
+				<img id="lupa" src="assets/images/lupa.png" alt="lupa">
+				<input type="text" name="Busqueda" placeholder="Buscar">
+			</div>
+			<div id="camposLogin" class = "col-desktop-3 col-tablet-3 col-phone-3">
+				<fieldset>
+					<input type="text" name="usuario" placeholder="Usuario"><br>
+					<input type="password" name="contrasena" placeholder="Contrasena"><br>
+					<input type="submit" value="Log in">
+				</fieldset>
+			</div>
+		</header>
+			<div class="col-phone-12 col-desktop-3 col-tablet-3">
+				<div>
+					<div class="cabecera"> Posts</div>
+						<ul class="listado-posts">
+							<li>
+								<img src="assets/images/cristian.jpg" alt="pots1">
+								<p class="info-list-cont">Cristian lider<br>
+									    Evento:Paseador de cabras<br>
+									    Me ofrezco a pasear cabr..</p>							
+							</li>
+							<li>
+								<img src="assets/images/julio.jpg" alt="post1">
+								<p class="info-list-cont">julito<br>
+									    Evento: sexador de pollos<br>
+									    Cobro 200 euros la hora</p>							
+							</li>
+							<li>
+								<img src="assets/images/zapi.jpg" alt="pots1">
+								<p class="info-list-cont">Zapicorrr<br>
+									    Evento: entrenador de bufalos<br>
+									    entreno todo tipo de bufalos</p>							
+							</li>
+								<li>
+								<img src="assets/images/alvaro.jpg" alt="pots1">
+								<p class="info-list-cont">Zapicorrr<br>
+									    Evento: entrenador de bufalos<br>
+									    entreno todo tipo de bufalos</p>							
+							</li>
+								<li>
+								<img src="assets/images/paula.jpg" alt="pots1">
+								<p class="info-list-cont">Zapicorrr<br>
+									    Evento: entrenador de bufalos<br>
+									    entreno todo tipo de bufalos</p>							
+							</li>
+								<li>
+								<img src="assets/images/imagenRegistro.jpg" alt="pots1">
+								<p class="info-list-cont">Anónimo<br>
+									    Evento: Soy un mirón<br>
+									    Seguid trabajando, os observo </p>							
+							</li>
+						</ul>
+				</div>
+			</div>
 
-		<form method="get" action="./comentar_post.html">
-		<textarea name="nombre" rows="5" cols="50" maxlength="50"></textarea>
-		</form>
-			<input type="submit" value="Comentar" />
-			<input type="submit" value="Like"/>
-	</article>
-	<aside class="col-phone-12 col-desktop-3 col-tablet-3">Timeline2</aside>
-
-</body>
+			<div class="col-phone-12 col-desktop-6 col-tablet-6" id="centro">	
 
 
+				<div><input class="boton" id="botonRegistrar" type="submit" name="enviar" value="Registrate !"/></div>	
 
+			</div>
+
+			<aside class="col-phone-12 col-desktop-3 col-tablet-3">
+				<div>
+					<div class="cabecera"> Información de especies</div>
+					<ul class="listado-especies">
+					
+						<li>
+							<img src="assets/images/perroInfoMascota.jpg" alt="pots1">
+							<p class="info-list-cont">Perros</p>							
+						</li>
+						<li>
+							<img src="assets/images/gato.jpg" alt="pots1">
+							<p class="info-list-cont">gatos</p>							
+						</li>
+						<li>
+							<img src="assets/images/ave.jpg" alt="pots1">
+							<p class="info-list-cont">Aves</p>							
+						</li>
+						<li>
+							<img src="assets/images/roedor.jpg" alt="pots1">
+							<p class="info-list-cont">Roedores</p>							
+						</li>
+						<li>
+							<img src="assets/images/pez.jpg" alt="pots1">
+							<p class="info-list-cont">Peces</p>							
+						</li>
+					</ul>
+				</div>
+			</aside>
+	</body>
 </html>
