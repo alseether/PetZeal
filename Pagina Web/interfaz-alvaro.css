@@ -16,9 +16,12 @@ body{
 	color: #33691E;
 	font-family: 'Primary Italics';
 	font-size: 30;
-	/*background: url("assets/images/logotipo.png") center;*/
-	background-repeat: no-repeat;
-	background-color: #DCEDC8;
+	
+	background: url("assets/images/fondoPetZeal_1.png") center;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #DCEDC8;
 }
 em{
 	color: #D46E00;
@@ -27,7 +30,7 @@ em{
 
 #logoCabecera{
 	width: 15%;
-	min-width: 250px;
+	min-width: 100px;
 	height: 100%;
 	background: url("assets/images/logotipo.png") center;
 	background-repeat: no-repeat;
@@ -47,11 +50,17 @@ em{
 	width: 92%;
 }
 #lupa{
+/*
 	width: 8%;
 	height: 100%;
 	background: url("assets/images/lupa.png") center;
 	background-repeat: no-repeat;
-	background-size: 75%;
+	background-size: 75%;*/
+	width: 5%;
+	height: 100%;
+	background: url("assets/images/lupa.png") center;
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
 
 #camposLogin{
@@ -61,7 +70,6 @@ em{
 	display: flex;
 	flex-direction: column;
 	margin-top: 20px;
-    margin-right: -100px;
 }
 
 #linea1{
