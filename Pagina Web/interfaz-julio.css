@@ -9,35 +9,41 @@ header{
 	background-color: #8BC34A;
 	color: white;
 	font-family: 'Primary Italics';
-	font-size: 50;
+	font-size: 50px;
 }
 
 body{
 	color: #33691E;
 	background-color: #DCEDC8;
 	font-family: 'Primary Italics';
-	font-size: 30;
+	font-size: 30px;
 	background: url("assets/images/logotipo.png") center;
 	background-repeat: no-repeat;
 	background-color: #DCEDC8;
-}
-em{
-	color: #D46E00;
+	padding: 0;
+	margin: 0;
 }
 
-article{
+
+.anadir-mascota{
+	border: 2px solid black;
+	height: 70%;
+	margin: 0 50;
+	width: 500px;
+	float: left;
+	display: block;
+	text-align: center;
+
 	
-	color: #33691E;
-	background-color: #DCEDC8;
-	color: white;
-	font-family: 'Primary Italics';
-	font-size: 50;
 }
 
-#centro{
-	  display: flex;
-	  flex-direction: column;
+.anadir-mascota p{
+	margin-top: 30%;
+}
 
+#anadir{
+	width: 50px;
+	
 }
 
 #logoPrincipal{
@@ -45,7 +51,7 @@ article{
 }
 
 #botonRegistro{
-	margin-top: 60;
+	margin-top: 60%;
 	margin-left: 45%;
 }
 
@@ -66,36 +72,94 @@ article{
 #camposLogin{
 	float: right;
 }
-table {
 
-       border: solid black;
-       color:black;
-       margin-left: 5%;
-       
-}
-#borde{
+.listado-posts{
+	width: 90%;
+	margin: 0 auto;
+	list-style: none;
 	border: solid black;
+	color: black;
+	
+	padding: 0;
+	
+	overflow-y: scroll;
+
 }
 
-#cabecera{
+.listado-posts li {
+    display: inline-block;
+    width: 100%;
+}
+
+.listado-posts li img {
+    float: left;
+    width: 85px;
+    height: 85px;
+}
+
+.listado-posts li p {
+    float: left;
+    
+}.listado-mascotas{
+	width: 90%;
+
+	list-style: none;
 	border: solid black;
+	color: black;
+	margin: 0 auto;
+	padding: 0;
+	
+	overflow-y: scroll;
+
+}
+
+.listado-mascotas li {
+    display: inline-block;
+    width: 100%;
+}
+
+.listado-mascotas li img {
+    float: left;
+    width: 85px;
+    height: 85px;
+}
+
+.listado-mascotas li p {
+    float: left;
+    
+}
+
+.cabecera{
+	width: 90%;
+	margin: 0 auto;
 	background-color: #8BC34A;
 	font-family: 'Primary Italics';
-	font-size: 25;
+	font-size: 30px;
+	border-top: solid black; 
+	border-right: solid black;
+	border-left: solid black;
+
+}.cabecera-medio{
+	width: 90%;
+	margin: 0 auto;
+	background-color: #8BC34A;
+	font-family: 'Primary Italics';
+	font-size: 30px;
+	border-top: solid black; 
+	border-right: solid black;
+	border-left: solid black;
 }
 
-#posts1{
-	width: 100px;
+
+
+.info-list-cont{
+	float: right;
+	margin: 0;
+	padding: 0;
+	font-size: 17px;	
 }
 
-#anadirMascota{
-	
-	width: 95%;
-}
-#posts{
-	overflow-y: scroll;
-	height: 550px;
-}
+
 #cuadradoAnadir{
 	height: 500px;
 	font-family: 'Primary Italics';
@@ -103,6 +167,8 @@ table {
 
 
 }
-#anadir{
-	width: 50px;
+
+
+#medio{
+	padding-left: 35%;
 }
