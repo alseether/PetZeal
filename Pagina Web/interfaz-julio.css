@@ -172,6 +172,23 @@ img{
     
 }
 
+
+#subir-publicacion {
+	margin-top: 2%;
+    display: inline-block;
+    width: 100%;
+}
+#subir-publicacion-foto{
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+#cuadro-descripcion{
+	width: 81%;
+	height: 10%;
+}
+
 .cabecera{
 	width: 90%;
 	margin: 0 auto;
@@ -213,3 +230,20 @@ img{
 #medio{
 	padding-left: 35%;
 }
+
+.boton{
+	padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	border-radius: 5px;
+
+}
+
+.botonNaranja{
+    background-color:#D46E00 ;
+    border: none;
+    color: white;
+}
+
