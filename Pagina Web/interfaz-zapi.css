@@ -22,54 +22,23 @@ body{
 	background-color: #DCEDC8;
 	padding: 0;
 	margin: 0;
-}
 
-#centro{
-width: 50%;
-height: 30%;
-}
+	background-size: 80%;
+	background-attachment: fixed;
+	}
 
-}
-.anadir-mascota{
-	border: 2px solid black;
-	height: 70%;
-	margin: 0 50;
-	width: 500px;
-	float: left;
-	display: block;
-	text-align: center;
-}
-
-.anadir-mascota p{
-	margin-top: 30%;
-}
-
-#anadir{
-	width: 50px;
-	
-}
-
-#logoPrincipal{
-	  margin-left: 8%;
-}
-
-#botonRegistro{
-	margin-top: 60%;
-	margin-left: 45%;
-}
 
 #logoCabecera{
 	height: 100%;
 }
 #barraBusqueda{
 	min-height: 20%;
-	padding-top: 4%;
-   
+	padding-top: 4%; 
 }
 
 #lupa{
-	max-height: 5%;
-	max-width: 5%;
+	max-height: 10%;
+	max-width: 10%;
 }
 
 #camposLogin{
@@ -108,7 +77,6 @@ height: 30%;
 .listado-especies{
 	width: 90%;
 	margin: 0 auto;
-	list-style: none;
 	border: solid black;
 	color: black;
 	height: 72%;
@@ -129,35 +97,29 @@ height: 30%;
 }
 
 .listado-especies li p {
+    
     float: left;
     
 }
-.listado-mascotas{
-	width: 90%;
-	list-style: none;
+.caja-post{
+
+	margin-top: 5%;
+	background-color: white;
 	border: solid black;
-	color: black;
-	margin: 0 auto;
-	padding: 0;
-	overflow-y: scroll;
+	width: 98%;
+	height: 50%;
+}
+.caja-post img{
 
+	float: left;
+    margin-left: 2%;
+    width: 100px;
+    height: 100px;
+}
+.caja-post p{
+	margin-left: 5%;
 }
 
-.listado-mascotas li {
-    display: inline-block;
-    width: 100%;
-}
-
-.listado-mascotas li img {
-    float: left;
-    width: 85px;
-    height: 85px;
-}
-
-.listado-mascotas li p {
-    float: left;
-    
-}
 
 .cabecera{
 	width: 90%;
@@ -169,19 +131,7 @@ height: 30%;
 	border-right: solid black;
 	border-left: solid black;
 
-}.cabecera-medio{
-	width: 90%;
-	margin: 0 auto;
-	background-color: #8BC34A;
-	font-family: 'Primary Italics';
-	font-size: 30px;
-	border-top: solid black; 
-	border-right: solid black;
-	border-left: solid black;
 }
-
-
-
 .info-list-cont{
 	float: right;
 	margin: 0;
@@ -190,35 +140,38 @@ height: 30%;
 }
 .boton{
 
-    background-color: #8BC34A;
-    border: none;
+    background-color: #D46E00;
+    border: 1%;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 25px;
     border-radius: 8px;
 }
-#botonRegistrar{
-	position: absolute;
-	top: 80%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+#cuadro-comentario{
+	float: left;
+	background-color: white;
+	margin-top: 2%;
+	width: 95%;
+	height: 15%;
 
 }
-#cuadradoAnadir{
-	height: 500px;
-	font-family: 'Primary Italics';
-	font-size: 25;
+#botoncomentar{
 
+	float: right;
+	font-size: 15px;
+
+}
+#botonLike{
+	margin-right: 5%;
+	float: right;
+	font-size: 15px;
 
 }
 
 
-#medio{
-	padding-left: 35%;
-}
 
 /*	#8BC34A
 	#DCEDC8
