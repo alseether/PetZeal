@@ -106,6 +106,10 @@ em{
 		border-radius: 8px;
 }
 
+#fs2{
+	background: rgba(255,255,255,0.6);
+}
+
 fieldset{
 	display: block;
     -webkit-margin-start: 2px;
@@ -115,7 +119,7 @@ fieldset{
     -webkit-padding-end: 0.75em;
     -webkit-padding-after: 0.625em;
     min-width: -webkit-min-content;
-	border: 2px groove threedface;
+	border: 2.5px groove;
 	height: 100%;
 }
 #miMascota{
@@ -131,30 +135,32 @@ fieldset{
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	width: 45%;
-	margin-right: 5%;
+	margin-right:5%;
 }
 
+#datosMascota *{
+	margin-top: 5px;
+	margin-bottom:2.5px;
+}
+
+
 #fotoMascota{
-	width: 45%;
-	margin-left: 5%;
-	height: 550px;
+	height: 100%;
+	margin-left:5%;
 }
 
 #fotoMascota  .boton {
-	background-color: white ;
+		background-color: white ;
     border: 2px #8BC34A groove;
     color: #8BC34A;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-	border-radius: 8px;
+    padding: 7px;
+    text-align:center;
+    font-size: 60%;
+		border-radius: 8px;
 	
-	margin-left: 12.5%;
-	margin-top: 5%;
-	width: 75%; 
+	  margin-left:20%;
+		margin-top: 5%;
+		min-width:180px;
 }
 #fotoPerfilMascota{
 	height: 420px;
@@ -174,16 +180,18 @@ fieldset{
 }
 
 .botoneraConfirmacion{
-	margin-left: 20%;
-	margin-top: 10%;
+	/*margin-top: 10%;*/
+	position: relative;
 }
 .fotoPerfilMascota{
 	max-height: 360px;
 	max-width: 280px;
 	height: 60%;
-	width: 100%;
-	min-height: 100px;
-	min-width: 77.77px;
+	width: 80%;
+	min-height: 232px;
+	min-width: 100px;
+	margin-left: 20%;
+	margin-right:20%;
 }
 .scrollDiv{
 	height: 95%;
@@ -195,6 +203,10 @@ fieldset{
 	height: 100px;
 	display: flex;
 	margin-bottom: 5px;
+	border-color: #8BC34A;
+	border-width: 2px;
+	border-style: groove;
+	background: white;
 }
 
 .fotoPostLargo{
@@ -226,19 +238,27 @@ fieldset{
 		/* Cuidado con este margen */
 	
 }
-.botoneraConfirmacion #botonHecho{
-	margin-left:0%;
+.botoneraConfirmacion .boton{
+	margin-right:10px;
+	margin-left:5%;
+	/*float:right;*/
+}
 
+.botoneraConfirmacion #botonHecho{
+	margin-left:5%;
+	margin-right:10px;
+	/*float:left;*/
 }
 
 .cajaFlotanteCentral{
 		width: 40%;
-    height: 40%;
-		min-height:230px;
-		min-width: 300px;
-		max-height: 250px;
+    height: 55%;
+		min-height:180px;
+		min-width: 280px;
+		max-height: 400px;
     position: fixed;
-    margin-left: 30%;
+    
+		margin-left: 10%;
     margin-top: 200px;
     border-style: groove;
     background-color: white;
