@@ -107,17 +107,6 @@ img{
 	margin-left: 7%;
 }
 
-
-#info{
-	display: flex;
-	flex-direction: column;
-}
-
-#datos{
-	display: flex;
-	flex-direction: row;
-}
-
 #formulario{
 	max-height: 115%; /*NO ME MOLA NADA ESTO pero queda bien*/
 	margin-top: 5%;
@@ -125,15 +114,6 @@ img{
 
 #tituloCuadro{
 	font-size: 50;
-}
-
-#camposDatos{
-	display: flex;
-	flex-direction: column;
-}
-
-#botones{
-	flex-direction: row;
 }
 
 .boton{
