@@ -103,7 +103,7 @@ em{
     text-decoration: none;
     display: inline-block;
     font-size: 25px;
-	border-radius: 8px;
+		border-radius: 8px;
 }
 
 fieldset{
@@ -168,7 +168,7 @@ fieldset{
 }
 
 .mensajeConfirmacion{
-    margin-top: 2%;
+  margin-top: 2%;
 	text-align: center;
 	font-size: 1.3em;
 }
@@ -214,7 +214,7 @@ fieldset{
 	margin-left: 2%;
 }
 .boton{
-	background-color: white ;
+		background-color: white ;
     border: 2px #8BC34A groove;
     color: #8BC34A;
     padding: 15px 32px;
@@ -222,22 +222,29 @@ fieldset{
     text-decoration: none;
     display: inline-block;
     font-size: 23px;
-	border-radius: 8px;
-	margin-left: 30%;
+		border-radius: 8px;
+		/* Cuidado con este margen */
+	
+}
+.botoneraConfirmacion #botonHecho{
+	margin-left:0%;
+
 }
 
 .cajaFlotanteCentral{
-	width: 40%;
+		width: 40%;
     height: 40%;
-	max-height: 250px;
+		min-height:230px;
+		min-width: 300px;
+		max-height: 250px;
     position: fixed;
     margin-left: 30%;
-    margin-top: 25%;
+    margin-top: 200px;
     border-style: groove;
     background-color: white;
     border-color: #8BC34A;
     border-width: 2px;
-	border-radius: 5px;
+		border-radius: 5px;
 }
 
 
