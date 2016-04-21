@@ -4,10 +4,9 @@
 }
 
 header{
-	display: flex;
-	height: 15%;
+	display:flex;
+	height: 100px;
 	background-color: #8BC34A;
-	/*position: fixed;*/
 	color: white;
 	font-family: 'Primary Italics';
 	font-size: 50;
@@ -45,19 +44,15 @@ img{
 }
 
 #logoCabecera{
+	width: 15%;
+	min-width: 100px;
 	height: 100%;
-	background: url("assets/images/logoPetZeal.png") center;
+	background: url("assets/images/logotipo.png") center;
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
 #barraBusqueda{
-	/*min-height: 25px;
-	padding-top: 2%;
-	padding-left: 10%;
-	display: flex;
-	flex-direction: row;*/
-
 	min-height: 35px;
 	display: flex;
 	flex-direction: row;
@@ -66,11 +61,16 @@ img{
 	margin: 50px;
 }
 
-#barra{
-	width: 90%;
+#busquedaEntrada{
+	width: 92%;
 }
-
 #lupa{
+/*
+	width: 8%;
+	height: 100%;
+	background: url("assets/images/lupa.png") center;
+	background-repeat: no-repeat;
+	background-size: 75%;*/
 	width: 5%;
 	height: 100%;
 	background: url("assets/images/lupa.png") center;
@@ -79,10 +79,12 @@ img{
 }
 
 #camposLogin{
+	width: 25%;
 	float: right;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
+	margin-top: 20px;
 }
 
 #linea1{
@@ -105,6 +107,25 @@ img{
 
 #signup{
 	margin-left: 7%;
+}
+
+
+
+#camposDatos *{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.campo{
+	width: 100%;
+}
+
+.info{
+	display:inline-block;
+	font-size: 30;
+	/*line-height: 1.5;*/
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 #formulario{
@@ -150,8 +171,8 @@ img{
 }
 
 #botonPremium {
-    margin-left: 40%;
-    margin-top: 40%;
+    margin-left: 10%;
+    margin-top: 17%;
 }
 
 #cuadroBaja{
@@ -163,8 +184,7 @@ img{
 }
 
 #fotoEsp{
-	width: 45%;
-	margin-left: 5%;
+	margin-left: 6%;
 	/*height: 550px;*/
 	min-height: -webkit-min-content;
 }
@@ -174,7 +194,7 @@ img{
 	background: url("assets/images/imagenRegistro.jpg") top;
 	background-repeat: no-repeat;
 	background-size: 100%;
-	height: 50%;
+	height: 30%;
 }
 
 #fotoPerfil_Usu{
@@ -182,5 +202,46 @@ img{
 	background: url("assets/images/oficio.jpg") top;
 	background-repeat: no-repeat;
 	background-size: 100%;
-	height: 50%;
+	height: 30%;
+}
+
+.botoneraConfirmacion .boton{
+	margin-right:10px;
+	margin-left:5%;
+	/*float:right;*/
+}
+
+.botoneraConfirmacion #botonHecho{
+	margin-left:5%;
+	margin-right:10px;
+	/*float:left;*/
+}
+
+.cajaFlotanteCentral{
+	width: 40%;
+	/*height: 55%;*/
+	min-height: -webkit-min-content;
+	min-width: 280px;
+	/*max-height: 400px;*/
+	position: fixed;
+
+	margin-left: 10%;
+    margin-top: 200px;
+    border-style: groove;
+    background-color: white;
+    border-color: #8BC34A;
+    border-width: 2px;
+	border-radius: 5px;
+}
+
+.mensajeConfirmacion{
+  margin-top: 2%;
+	text-align: center;
+	font-size: 1.3em;
+}
+
+.botoneraConfirmacion{
+	/*margin-top: 10%;*/
+	position: relative;
+	margin-bottom: 55px;
 }

@@ -36,7 +36,7 @@
 					<input class="campo" type="password" name="pwd" placeholder="Escribe una contraseña" value="12345678" minlenght="8"/><br>
 					
 					<input class="campo" type="text" name="cp" placeholder="Escribe tu código postal" value="80012" minlenght="5"/><br>
-					
+
 					<input class="boton botonVerde" type="submit" name="enviar" value="Guardar cambios"/>
 					<input class="boton botonBlanco" type="reset" value="Dar de baja"/><br>
 				</div>
@@ -45,5 +45,12 @@
 		<form class="col-desktop-5 col-tablet-4 col-phone-12" method="get" action="./altaEspecialista.html">
 			<input class="boton botonNaranja" id="botonPremium" type="submit" value="Convertirse en Premium">
 		</form>
+		<div class="cajaFlotanteCentral col-desktop-4 col-tablet-4 col-phone-12">
+			<div class="mensajeConfirmacion">¿Realmente quieres eliminar este usuario?</div>
+			<div class="botoneraConfirmacion">
+				<input id="botonHecho" class =" boton botonVerde col-desktop-5 col-tablet-5 col-phone-11" type="submit" value="NO">
+				<input class="boton botonBlanco col-desktop-5 col-tablet-5 col-phone-11" type="submit" value="SI">
+			</div>
+		</div>
 	</body>
 </html>
