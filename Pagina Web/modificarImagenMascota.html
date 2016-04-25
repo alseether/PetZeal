@@ -5,6 +5,28 @@
 		<link rel="stylesheet" type="text/css" href="cssreset.css"/>
 		<link rel="stylesheet" type="text/css" href="estructura.css"/>
 		<link rel="stylesheet" type="text/css" href="interfaz-alvaro.css"/>
+		<script>
+	 		function openCity(evt, cityName) {
+		    // Declare all variables
+			    var i, tabcontent, tablinks;
+
+			    // Get all elements with class="tabcontent" and hide them
+			    tabcontent = document.getElementsByClassName("tabcontent");
+			    for (i = 0; i < tabcontent.length; i++) {
+			        tabcontent[i].style.display = "none";
+			    }
+
+			    // Get all elements with class="tablinks" and remove the class "active"
+			    tablinks = document.getElementsByClassName("tablinks");
+			    for (i = 0; i < tabcontent.length; i++) {
+			        tablinks[i].className = tablinks[i].className.replace(" active", "");
+			    }
+
+			    // Show the current tab, and add an "active" class to the link that opened the tab
+			    document.getElementById(cityName).style.display = "block";
+			    evt.currentTarget.className += " active";
+			}
+	 	</script>
 	</head>
 
 	<body>
@@ -57,56 +79,39 @@
 			</fieldset>
 		</div>
 		
-		<div id="postMascota" class = "col-desktop-6 col-tablet-6 col-phone-12">
-			<fieldset id="fs2">
-				<legend>Mis Posts</legend>
-				<div class = "scrollDiv">
-					<div class = "postLargo">
-						<div class = "fotoPostLargo"></div>
-						<div class = "contenidoPostLargo"> Pasando un agradable rato con el perro por el parque </div>
-					</div>
-					<div class = "postLargo">
-						<div class = "fotoPostLargo"></div>
-						<div class = "contenidoPostLargo"> Pasando un agradable rato con el perro por el parque </div>
-					</div>
-					<div class = "postLargo">
-						<div class = "fotoPostLargo"></div>
-						<div class = "contenidoPostLargo"> Pasando un agradable rato con el perro por el parque </div>
-					</div>
-					<div class = "postLargo">
-						<div class = "fotoPostLargo"></div>
-						<div class = "contenidoPostLargo"> Pasando un agradable rato con el perro por el parque </div>
-					</div>
-					<div class = "postLargo">
-						<div class = "fotoPostLargo"></div>
-						<div class = "contenidoPostLargo"> Pasando un agradable rato con el perro por el parque </div>
-					</div>
-					<div class = "postLargo">
-						<div class = "fotoPostLargo"></div>
-						<div class = "contenidoPostLargo"> Pasando un agradable rato con el perro por el parque </div>
-					</div>
-					<div class = "postLargo">
-						<div class = "fotoPostLargo"></div>
-						<div class = "contenidoPostLargo"> Pasando un agradable rato con el perro por el parque </div>
-					</div>
-					<div class = "postLargo">
-						<div class = "fotoPostLargo"></div>
-						<div class = "contenidoPostLargo"> Pasando un agradable rato con el perro por el parque </div>
-					</div>
-					<div class = "postLargo">
-						<div class = "fotoPostLargo"></div>
-						<div class = "contenidoPostLargo"> Pasando un agradable rato con el perro por el parque </div>
+		<div class="cajaFlotanteCentral col-desktop-6 col-tablet-8 col-phone-12">
+			<div class="mensajeConfirmacion">Cambiar foto de perfil</div>
+				<ul class="tab">
+					<li><a href="#" class="tablinks" onclick="openCity(event, 'fotos')">Tus fotos</a></li>
+					<li><a href="#" class="tablinks" onclick="openCity(event, 'nuevas')">Nueva foto</a></li>
+					<li><a href="#" class="tablinks" onclick="openCity(event, 'enlace')">URL</a></li>
+				</ul>
+				<div id="fotos" class="tabcontent">
+					<div>
+						<img id="fotoPerfilCambiar"></img>
+					</div><br>
+				  	<div id="botonesCambiar">
+				  		<input class="boton botonBlanco" type="reset" value="Cancelar"/>
+						<input class="boton botonVerde" type="submit" name="enviar" value="Subir"/>	
 					</div>
 				</div>
-			</fieldset>
-		</div>
-		
-		<div class="cajaFlotanteCentral">
-			<div class="mensajeConfirmacion">Realmente quieres eliminar esta mascota</div>
-			<div class="botoneraConfirmacion">
-				<input id="botonHecho" type="submit" value="NO">
-				<input class="boton" type="submit" value="SI">
-			</div>
+
+				<div id="nuevas" class="tabcontent">
+				  	<label>Selecciona una foto:</label><input type="file" accept="image/jpeg, image/png"/>
+				  	<div id="botonesCambiar">
+				  		<input class="boton botonBlanco" type="reset" value="Cancelar"/>
+						<input class="boton botonVerde" type="submit" name="enviar" value="Subir"/>	
+					</div>
+				</div>
+
+				<div id="enlace" class="tabcontent"> 
+				  	<label>Introduce un URL:</label><input type="url" name="paraLista" list="listaurls">
+				  	<div id="botonesCambiar">
+				  		<input class="boton botonBlanco" type="reset" value="Cancelar"/>
+						<input class="boton botonVerde" type="submit" name="enviar" value="Subir"/>	
+					</div>
+				</div>
+        	</div>
 		</div>
 	</body>
 
