@@ -138,13 +138,24 @@ img{
 	color: black;
 	padding: 0;	
 	overflow-y: scroll;
+	l-border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+border: 3px solid black;
+border-top: none;
+
 }
 
 .listado li {
-    
+  
  	margin-top: 2%;
     display: inline-block;
     width: 100%;
+border: 3px solid black;
+border-right: none;
+border-left: none;
+
 }
 
 .listado li img {
@@ -167,14 +178,24 @@ img{
 	margin: 0 auto;
 	padding: 0;
 	overflow-y: scroll;
-
+	l-border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+border: 3px solid black;
+border-top: none;
 }
 
 .listado-mascotas li {
+	
+   border: solid black 2px;
+   border-right: none;
+   border-left: none;
     background-color: #DCEDC8; 
 	margin-top: 2%;
     display: inline-block;
     width: 100%;
+
 }
 
 .listado-mascotas li img {
@@ -230,9 +251,16 @@ img{
 	background-color: #8BC34A;
 	font-family: 'Primary Italics';
 	font-size: 30px;
-	border-top: solid black; 
+	/*border-top: solid black; 
 	border-right: solid black;
-	border-left: solid black;
+	border-left: solid black;*/
+
+	l-border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+border: 3px solid black;
+
 
 }.cabecera-medio{
 	width: 90%;
