@@ -1,0 +1,254 @@
+<html>
+<html>
+	<head>
+		<title>PetZeal</title>
+		<meta charset="utf-8"</meta>
+		<link rel="stylesheet" type="text/css" href="cssreset.css" />
+		<link rel="stylesheet" type="text/css" href="estructura.css" />
+		<link rel="stylesheet" type="text/css" href="interfaz-alvaro.css"/>
+		<link rel="stylesheet" type="text/css" href="interfaz-julio.css"/>
+		<script>
+	 		function openCity(evt, cityName) {
+		    // Declare all variables
+			    var i, tabcontent, tablinks;
+
+			    // Get all elements with class="tabcontent" and hide them
+			    tabcontent = document.getElementsByClassName("tabcontent");
+			    for (i = 0; i < tabcontent.length; i++) {
+			        tabcontent[i].style.display = "none";
+			    }
+
+			    // Get all elements with class="tablinks" and remove the class "active"
+			    tablinks = document.getElementsByClassName("tablinks");
+			    for (i = 0; i < tabcontent.length; i++) {
+			        tablinks[i].className = tablinks[i].className.replace(" active", "");
+			    }
+
+			    // Show the current tab, and add an "active" class to the link that opened the tab
+			    document.getElementById(cityName).style.display = "block";
+			    evt.currentTarget.className += " active";
+			}
+	 	</script>
+		
+	</head>
+	<body>
+		<header class = "col-desktop-12 col-tablet-12 col-phone-12" >
+			<div id="logoCabecera"></div>
+			<div id="barraBusqueda">
+				<input type="text" name="Busqueda" placeholder="Buscar" id="busquedaEntrada">
+				<input type="button" class="col-desktop-1 col-tablet-1 col-phone-1" src="assets/images/lupa.png" id="lupa">
+			</div>
+			<div id="camposLogin" >
+					<div id="linea1">
+						<input id="usu" type="text" name="usuario" placeholder="Usuario">
+						<input id="login" type="submit" value="Log in">
+					</div>
+					<div id="linea2">
+						<input id="pass" type="password" name="contrasena" placeholder="Contrasena">
+						<input id="signup" type="button" value="Sign up" action="./altaUsuario.html">
+					</div>
+			</div>
+		</header>
+		<div class="cajaCambiarFoto col-desktop-6 col-tablet-8 col-phone-12">
+			<div class="mensajeConfirmacion">Subir foto</div>
+				<ul class="tab">
+					<li><a href="#" class="tablinks" onclick="openCity(event, 'fotos')">Tus fotos</a></li>
+					<li><a href="#" class="tablinks" onclick="openCity(event, 'nuevas')">Nueva foto</a></li>
+					<li><a href="#" class="tablinks" onclick="openCity(event, 'enlace')">URL</a></li>
+				</ul>
+				<div id="fotos" class="tabcontent">
+					<div>
+						<img id="fotoPerfilCambiar"></img>
+					</div><br>
+				  	<div id="botonesCambiar">
+				  		<input class="boton botonBlanco" type="reset" value="Cancelar"/>
+						<input class="boton botonVerde" type="submit" name="enviar" value="Subir"/>	
+					</div>
+				</div>
+
+				<div id="nuevas" class="tabcontent">
+				  	<label>Selecciona una foto:</label><input type="file" accept="image/jpeg, image/png"/>
+				  	<div id="botonesCambiar">
+				  		<input class="boton botonBlanco" type="reset" value="Cancelar"/>
+						<input class="boton botonVerde" type="submit" name="enviar" value="Subir"/>	
+					</div>
+				</div>
+
+				<div id="enlace" class="tabcontent"> 
+				  	<label>Introduce un URL:</label><input type="url" name="paraLista" list="listaurls">
+				  	<div id="botonesCambiar">
+				  		<input class="boton botonBlanco" type="reset" value="Cancelar"/>
+						<input class="boton botonVerde" type="submit" name="enviar" value="Subir"/>	
+					</div>
+				</div>
+        	</div>
+		</div>
+		<div class="div-cuerpo">
+			<div class="col-phone-12 col-desktop-3 col-tablet-12 ">
+				<div>
+					<div class="cabecera"> Posts</div>
+					<ul class="listado">
+					
+						<li>
+							<img src="assets/images/alvaro.jpg" alt="pots1">
+							<p class="info-list-cont">Cristian lider<br>
+								    Evento:Paseador de cabras<br>
+								    Me ofrezco a pasear cabr..</p>	
+   							<input class="boton botonNaranja" type="submit" name="like" value="like" id="like"/>
+							<input class="boton botonNaranja" type="submit" name="comentar" value="comentar" id="comentar"/>
+						
+						</li>
+						<li>
+							<img src="assets/images/paula.jpg" alt="pots1">
+							<p class="info-list-cont">Cristian lider<br>
+								    Evento:Paseador de cabras<br>
+								    Me ofrezco a pasear cabr..</p>
+							<input class="boton botonNaranja" type="submit" name="like" value="like" id="like"/>
+							<input class="boton botonNaranja" type="submit" name="commentario" value="comentar" id="comentar"/>
+
+						</li>
+						<li>
+							<img src="assets/images/cristian.jpg" alt="pots1">
+							<p class="info-list-cont">Cristian lider<br>
+								    Evento:Paseador de cabras<br>
+								    Me ofrezco a pasear cabr..</p>		
+							<input class="boton botonNaranja" type="submit" name="like" value="like" id="like"/>
+							<input class="boton botonNaranja" type="submit" name="comentar" value="comentar" id="comentar"/>
+
+						</li><li>
+							<img src="assets/images/zapi.jpg" alt="pots1">
+							<p class="info-list-cont">Cristian lider<br>
+								    Evento:Paseador de cabras<br>
+								    Me ofrezco a pasear cabr..</p>	
+							<input class="boton botonNaranja" type="submit" name="like" value="like" id="like"/>
+							<input class="boton botonNaranja" type="submit" name="comentar" value="comentar" id="subir"/>
+
+						</li>
+						<li>
+							<img src="assets/images/paula.jpg" alt="pots1">
+							<p class="info-list-cont">Cristian lider<br>
+								    Evento:Paseador de cabras<br>
+								    Me ofrezco a pasear cabr..</p>	
+						
+							<input class="boton botonNaranja" type="submit" name="like" value="like" id="like"/>
+							<input class="boton botonNaranja" type="submit" name="comentar" value="comentar" id="subir"/>
+						</li>
+						<li>
+							<img src="assets/images/alvaro.jpg" alt="pots1">
+							<p class="info-list-cont">Cristian lider<br>
+								    Evento:Paseador de cabras<br>
+								    Me ofrezco a pasear cabr..</p>							
+						
+							<input class="boton botonNaranja" type="submit" name="like" value="like" id="like"/>
+							<input class="boton botonNaranja" type="submit" name="comentar" value="comentar" id="subir"/>
+						</li>
+						<li>
+							<img src="assets/images/julio.jpg" alt="pots1">
+							<p class="info-list-cont">Cristian lider<br>
+								    Evento:Paseador de cabras<br>
+								    Me ofrezco a pasear cabr..</p>		
+							<input class="boton botonNaranja" type="submit" name="like" value="like" id="like"/>
+							<input class="boton botonNaranja" type="submit" name="comentar" value="comentar" id="subir"/>
+
+						</li>
+						<li>
+							<img src="assets/images/zapi.jpg" alt="pots1">
+							<p class="info-list-cont">Cristian lider<br>
+								    Evento:Paseador de cabras<br>
+								    Me ofrezco a pasear cabr..</p>
+							<input class="boton botonNaranja" type="submit" name="like" value="like" id="like"/>
+							<input class="boton botonNaranja" type="submit" name="comentar" value="comentar" id="subir"/>
+						</li>
+						
+					</ul>
+				</div>
+
+			</div>	
+		
+			<div class="col-phone-12 col-desktop-6 col-tablet-12" >
+					
+				<div>
+					<div class="cabecera"> Mascota 1</div>
+					<ul class="listado-mascotas">
+					
+						<li id="subir-publicacion">
+							<img src="assets/images/imagenRegistroMascota.jpg" alt="pots1" id="subir-publicacion-foto">
+							<textarea type="text" name="descripcion" placeholder="Descripcion" id="cuadro-descripcion"></textarea>
+							<input class="boton botonNaranja" type="submit" name="enviar" value="Foto" id="foto"/>
+							<input class="boton botonNaranja" type="submit" name="enviar" value="Subir" id="subir"/>
+
+
+						</li>
+						<li>
+							<img src="assets/images/cristian.jpg" alt="pots1">
+							<p class="info-list-cont">Cristian lider<br>
+								    Evento:Paseador de cabras<br>
+								    Me ofrezco a pasear cabr..</p>							
+						</li>
+						<li>
+							<img src="assets/images/zapi.jpg" alt="pots1">
+							<p class="info-list-cont">Cristian lider<br>
+								    Evento:Paseador de cabras<br>
+								    Me ofrezco a pasear cabr..</p>							
+						</li>						
+						<li>
+							<img src="assets/images/alvaro.jpg" alt="pots1">
+							<p class="info-list-cont">Cristian lider<br>
+								    Evento:Paseador de cabras<br>
+								    Me ofrezco a pasear cabr..</p>							
+						</li>
+						<li>
+							<img src="assets/images/julio.jpg" alt="pots1">
+							<p class="info-list-cont">Cristian lider<br>
+								    Evento:Paseador de cabras<br>
+								    Me ofrezco a pasear cabr..</p>							
+						</li>
+					</ul>
+				</div>	
+				<div class="lista-mascotas">
+			
+					<img src="assets/images/roedor.jpg" alt="mascota">
+					<img src="assets/images/gato.jpg" alt="mascota">
+					<img src="assets/images/ave.jpg" alt="mascota">
+					<img src="assets/images/pez.jpg" alt="mascota">
+					<input class="boton botonNaranja" type="submit" name="Añadir Mascota" value="añadir-mascota" id="añadir-mascota"/>
+				</div>			
+			</div>
+			<div class="col-phone-12 col-desktop-3 col-tablet-12 ">
+				<div>
+				    <div class="cabecera"> Informacion</div>
+					<ul class="listado">
+						
+						<li>
+							<img src="assets/images/gato.jpg" alt="pots1">
+							<p class="info-list-cont">gato</p>							
+						</li>
+						<li>
+							<img src="assets/images/perroInfoMascota.jpg" alt="pots1">
+							<p class="info-list-cont">Perro</p>							
+						</li>
+						<li>
+							<img src="assets/images/pez.jpg" alt="pots1">
+							<p class="info-list-cont">Pez</p>							
+						</li><li>
+							<img src="assets/images/roedor.jpg" alt="pots1">
+							<p class="info-list-cont">Roedor</p>							
+						</li>
+						<li>
+							<img src="assets/images/perroInfoMascota.jpg" alt="pots1">
+							<p class="info-list-cont">Perro</p>							
+						</li><li>
+							<img src="assets/images/ave.jpg" alt="pots1">
+							<p class="info-list-cont">Ave</p>							
+						</li>
+						<li>
+							<img src="assets/images/gato.jpg" alt="pots1">
+							<p class="info-list-cont">Gato</p>							
+						</li>
+			
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
