@@ -3,32 +3,36 @@
 	<head>
 		<title>PetZeal</title>
 		<meta charset="utf-8"</meta>
+		    <link rel="stylesheet" type="text/css" href="cssreset.css"/>
 		  	<link rel="stylesheet" type="text/css" href="estructura.css" />
 		 	<link rel="stylesheet" type="text/css" href="interfaz-julio.css"/>
 		
 	</head>
 	<body>
 		<header class = "col-desktop-12 col-tablet-12 col-phone-12" >
-			<img class="col-desktop-3 col-tablet-3 col-phone-3" id="logoCabecera" src="assets/images/logotipo.png" alt="logotipo">
-			<div class="col-desktop-6 col-tablet-6 col-phone-6" id="barraBusqueda">
-				<img id="lupa" src="assets/images/lupa.png" alt="lupa">
-				<input type="text" name="Busqueda" placeholder="Buscar">
+			<div id="logoCabecera"></div>
+			<div id="barraBusqueda">
+				<input type="text" name="Busqueda" placeholder="Buscar" id="busquedaEntrada">
+				<input type="button" class="col-desktop-1 col-tablet-1 col-phone-1" src="assets/images/lupa.png" id="lupa">
 			</div>
-			<div id="camposLogin" class = "col-desktop-3 col-tablet-3 col-phone-3">
-				<fieldset>
-					<input type="text" name="usuario" placeholder="Usuario"><br>
-					<input type="password" name="contrasena" placeholder="Contrasena"><br>
-					
-					<input type="submit" value="Log in">
-				</fieldset>
+			<div id="camposLogin" >
+					<div id="linea1">
+						<input id="usu" type="text" name="usuario" placeholder="Usuario">
+						<input id="login" type="submit" value="Log in">
+					</div>
+					<div id="linea2">
+						<input id="pass" type="password" name="contrasena" placeholder="Contrasena">
+						<input id="signup" type="button" value="Sign up" action="./altaUsuario.html">
+					</div>
 			</div>
 		</header>
-			<nav class="col-phone-12 col-desktop-3 col-tablet-3">
+		<div class="div-cuerpo">
+			<div class="col-phone-12 col-desktop-3 col-tablet-12">
 								
 				<div>
 
 					<div class="cabecera"> Posts</div>
-					<ul class="listado-posts">
+					<ul class="listado">
 								
 						<li>
 							<img src="assets/images/julio.jpg" alt="pots1">
@@ -54,46 +58,54 @@
 
 					</ul>
 				</div>
-			</nav>	
+			</div>	
 		
-			<article class="col-phone-12 col-desktop-6 col-tablet-6" id="centro">
-					
-					<form method="get" id="botonRegistro" action="./registro.html"><!--colocar nombre de registro.html-->
-					<input type="submit" value="Regístrate!"/>	
+			<div class="col-phone-12 col-desktop-6 col-tablet-12">
+				<div id="centrar">
+					<form method="get"    action="./registro.html" ><!--colocar nombre de registro.html-->
+					<input type="submit" value="Regístrate!" class="boton-medio botonNaranja centro" />	
 					</form>	
-
+				</div>	
 				
-			</article>
-			<aside class="col-phone-12 col-desktop-3 col-tablet-3">
+			</div>
+			<div class="col-phone-12 col-desktop-3 col-tablet-12">
 				<div>
-					<div class="cabecera"> Informacion De Especies</div>
-					<ul class="listado-posts">
-
+				    <div class="cabecera"> Informacion</div>
+					<ul class="listado">
+						
 						<li>
-							<img src="assets/images/cristian.jpg" alt="animal1">
-							<p class="info-list-cont">Perros</p>							
+							<img src="assets/images/gato.jpg" alt="pots1">
+							<p class="info-list-cont">gato</p>							
 						</li>
 						<li>
-							<img src="assets/images/cristian.jpg" alt="animal2">
-							<p class="info-list-cont">Gatos</p>							
+						<li>
+							<img src="assets/images/perroInfoMascota.jpg" alt="pots1">
+							<p class="info-list-cont">Perro</p>							
 						</li>
 						<li>
-							<img src="assets/images/cristian.jpg" alt="animal3">
-							<p class="info-list-cont">Pajaros</p>							
+							<img src="assets/images/pez.jpg" alt="pots1">
+							<p class="info-list-cont">Pez</p>							
 						</li><li>
-							<img src="assets/images/cristian.jpg" alt="animal4">
-							<p class="info-list-cont">Ratas</p>							
-						</li><li>
-							<img src="assets/images/cristian.jpg" alt="animal5">
-							<p class="info-list-cont">Peces</p>							
+							<img src="assets/images/roedor.jpg" alt="pots1">
+							<p class="info-list-cont">Roedor</p>							
 						</li>
-				
-	
-				
-
+						<li>
+							<img src="assets/images/perroInfoMascota.jpg" alt="pots1">
+							<p class="info-list-cont">Perro</p>							
+						</li><li>
+							<img src="assets/images/ave.jpg" alt="pots1">
+							<p class="info-list-cont">Ave</p>							
+						</li>
+						<li>
+							<img src="assets/images/gato.jpg" alt="pots1">
+							<p class="info-list-cont">Gato</p>							
+						</li>
+			
 					</ul>
 				</div>
+			</div>
 
-			</aside>
+			</div>
+		</div>
 	</body>
 </html>

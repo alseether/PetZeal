@@ -9,29 +9,28 @@
 		
 	</head>
 	<body>
-				<header class = "col-desktop-12 col-tablet-12 col-phone-12" >
-			<img class="col-desktop-2 col-tablet-2 col-phone-2" id="logoCabecera"> 
-			<div  id="barraBusqueda">
-				<input type="text" name="Busqueda" placeholder="Buscar" id="barra">
+		<header class = "col-desktop-12 col-tablet-12 col-phone-12" >
+			<div id="logoCabecera"></div>
+			<div id="barraBusqueda">
+				<input type="text" name="Busqueda" placeholder="Buscar" id="busquedaEntrada">
 				<input type="button" class="col-desktop-1 col-tablet-1 col-phone-1" src="assets/images/lupa.png" id="lupa">
 			</div>
-			<div id="camposLogin" class = "col-desktop-3 col-tablet-3 col-phone-2">
+			<div id="camposLogin" >
 					<div id="linea1">
 						<input id="usu" type="text" name="usuario" placeholder="Usuario">
 						<input id="login" type="submit" value="Log in">
 					</div>
 					<div id="linea2">
 						<input id="pass" type="password" name="contrasena" placeholder="Contrasena">
-						<form method="get" action="./altaUsuario.html" id="signup">
-							<input type="submit" value="Sign up">
-						</form>
+						<input id="signup" type="button" value="Sign up" action="./altaUsuario.html">
 					</div>
 			</div>
 		</header>
-			<div class="col-phone-12 col-desktop-3 col-tablet-3 ">
+		<div class="div-cuerpo">
+			<div class="col-phone-12 col-desktop-3 col-tablet-12 ">
 				<div>
 					<div class="cabecera"> Posts</div>
-					<ul class="listado-posts">
+					<ul class="listado">
 					
 						<li>
 							<img src="assets/images/alvaro.jpg" alt="pots1">
@@ -59,7 +58,8 @@
 							<input class="boton botonNaranja" type="submit" name="like" value="like" id="like"/>
 							<input class="boton botonNaranja" type="submit" name="comentar" value="comentar" id="comentar"/>
 
-						</li><li>
+						</li>
+						<li>
 							<img src="assets/images/zapi.jpg" alt="pots1">
 							<p class="info-list-cont">Cristian lider<br>
 								    Evento:Paseador de cabras<br>
@@ -106,58 +106,65 @@
 						
 					</ul>
 				</div>
-
 			</div>	
-		
-			<article class="col-phone-12 col-desktop-6 col-tablet-6" >
+			<div class="col-phone-12 col-desktop-6 col-tablet-12 " >
 					
 				<div>
-					<div class="cabecera-medio"> Mascota 1</div>
+					<div class="cabecera"> Mis Posts</div>
 					<ul class="listado-mascotas">
 					
-						<li id="subir-publicacion">
-							<img src="assets/images/imagenRegistro.jpg" alt="pots1" id="subir-publicacion-foto">
-							<textarea type="text" name="descripcion" placeholder="Descripcion" id="cuadro-descripcion"></textarea>
-							<input class="boton botonNaranja" type="submit" name="enviar" value="Foto" id="foto"/>
-							<input class="boton botonNaranja" type="submit" name="enviar" value="Subir" id="subir"/>
-
-
-						</li>
 						<li>
 							<img src="assets/images/cristian.jpg" alt="pots1">
 							<p class="info-list-cont">Cristian lider<br>
 								    Evento:Paseador de cabras<br>
-								    Me ofrezco a pasear cabr..</p>							
+								    Me ofrezco a pasear cabr..</p>		
+						    <input class="boton botonNaranja" type="submit" name="borrar" value="borrar" id="borrar"/>					
 						</li>
 						<li>
-							<img src="assets/images/cristian.jpg" alt="pots1">
+							<img src="assets/images/zapi.jpg" alt="pots1">
 							<p class="info-list-cont">Cristian lider<br>
 								    Evento:Paseador de cabras<br>
 								    Me ofrezco a pasear cabr..</p>							
 						</li>						
 						<li>
-							<img src="assets/images/cristian.jpg" alt="pots1">
+							<img src="assets/images/alvaro.jpg" alt="pots1">
 							<p class="info-list-cont">Cristian lider<br>
 								    Evento:Paseador de cabras<br>
 								    Me ofrezco a pasear cabr..</p>							
 						</li>
 						<li>
-							<img src="assets/images/cristian.jpg" alt="pots1">
+							<img src="assets/images/julio.jpg" alt="pots1">
 							<p class="info-list-cont">Cristian lider<br>
 								    Evento:Paseador de cabras<br>
 								    Me ofrezco a pasear cabr..</p>							
 						</li>
-				
-	
-				
-
+						<li>
+							<img src="assets/images/julio.jpg" alt="pots1">
+							<p class="info-list-cont">Cristian lider<br>
+								    Evento:Paseador de cabras<br>
+								    Me ofrezco a pasear cabr..</p>							
+						</li>
+						<li>
+							<img src="assets/images/julio.jpg" alt="pots1">
+							<p class="info-list-cont">Cristian lider<br>
+								    Evento:Paseador de cabras<br>
+								    Me ofrezco a pasear cabr..</p>							
+						</li>
 					</ul>
-				</div>				
-			</article>
-			<div class="col-phone-12 col-desktop-3 col-tablet-3">
+				</div>	
+				<div class="lista-mascotas">
+					<input class="boton botonNaranja" type="submit" name="Publicar posts" value="publicar-posts" id="publicar-posts"/>
+					<img src="assets/images/oficio.jpg" alt="mascota">
+					<img src="assets/images/gato.jpg" alt="mascota">
+					<img src="assets/images/ave.jpg" alt="mascota">
+					<img src="assets/images/pez.jpg" alt="mascota">
+					<input class="boton botonNaranja" type="submit" name="Añadir Mascota" value="añadir-mascota" id="añadir-mascota"/>
+				</div>			
+			</div>
+			<div class="col-phone-12 col-desktop-3 col-tablet-12">
 				<div>
-				    <div class="cabecera"> Informacion de Especialista</div>
-					<ul class="listado-posts">
+				    <div class="cabecera"> Informacion</div>
+					<ul class="listado">
 						
 						<li>
 							<img src="assets/images/gato.jpg" alt="pots1">
@@ -190,5 +197,7 @@
 					</ul>
 				</div>
 			</div>
+			</div>
+		</div>
 	</body>
 </html>

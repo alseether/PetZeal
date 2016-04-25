@@ -42,21 +42,16 @@ fieldset{
 img{
 	border: none;
 }
-
 #logoCabecera{
+	width: 15%;
+	min-width: 100px;
 	height: 100%;
-	background: url("assets/images/fondoPetZeal_2.png") center;
+	background: url("assets/images/logotipo.png") center;
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
 #barraBusqueda{
-	/*min-height: 25px;
-	padding-top: 2%;
-	padding-left: 10%;
-	display: flex;
-	flex-direction: row;*/
-
 	min-height: 35px;
 	display: flex;
 	flex-direction: row;
@@ -65,11 +60,16 @@ img{
 	margin: 50px;
 }
 
-#barra{
-	width: 90%;
+#busquedaEntrada{
+	width: 92%;
 }
-
 #lupa{
+/*
+	width: 8%;
+	height: 100%;
+	background: url("assets/images/lupa.png") center;
+	background-repeat: no-repeat;
+	background-size: 75%;*/
 	width: 5%;
 	height: 100%;
 	background: url("assets/images/lupa.png") center;
@@ -78,10 +78,12 @@ img{
 }
 
 #camposLogin{
+	width: 25%;
 	float: right;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
+	margin-top: 20px;
 }
 
 #linea1{
@@ -106,8 +108,15 @@ img{
 	margin-left: 7%;
 }
 
-.anadir-mascota p{
-	margin-top: 30%;
+
+.anadir-mascota li{
+	width: 100%;
+	margin: 10 35%;
+}
+
+.anadir-mascota  li img{
+	margin: 0 15%;
+	
 }
 
 #anadir{
@@ -115,9 +124,14 @@ img{
 	
 }
 
-.listado-posts{
+.div-cuerpo{
+
+	height: 78%;
+}
+.listado{
+
 	width: 90%;
-	height: 72%;
+	max-height: 100%;
 	margin: 0 auto;
 	list-style: none;
 	border: solid black;
@@ -126,26 +140,27 @@ img{
 	overflow-y: scroll;
 }
 
-.listado-posts li {
-
+.listado li {
+    
  	margin-top: 2%;
     display: inline-block;
     width: 100%;
 }
 
-.listado-posts li img {
+.listado li img {
     float: left;
+    margin-right: 2%;
     width: 85px;
     height: 85px;
 }
 
-.listado-posts li p {
+.listado li p {
 
     float: left;
     
 }.listado-mascotas{
 	width: 90%;
-	height: 72%;
+	height: 87%;
 	list-style: none;
 	border: solid black;
 	color: black;
@@ -156,22 +171,42 @@ img{
 }
 
 .listado-mascotas li {
+    background-color: #DCEDC8; 
 	margin-top: 2%;
     display: inline-block;
     width: 100%;
 }
 
 .listado-mascotas li img {
+	
     float: left;
+    margin-right: 2%;
     width: 150px;
     height: 150px;
 }
 
 .listado-mascotas li p {
+
     float: left;
     
 }
+.listado-mascotas li input{
+	margin-top: 40;
+    float: right;
+    
+}
 
+.lista-mascotas{
+	width: 90%;
+
+	margin: 0 auto;
+}
+
+.lista-mascotas img {
+    
+    width: 70px;
+    height: 70px;
+}
 
 #subir-publicacion {
 	margin-top: 2%;
@@ -185,11 +220,11 @@ img{
 }
 
 #cuadro-descripcion{
-	width: 81%;
+	width: 78%;
 	height: 10%;
 }
 
-.cabecera{
+.cabecera{ 
 	width: 90%;
 	margin: 0 auto;
 	background-color: #8BC34A;
@@ -239,6 +274,14 @@ img{
     font-size: 12px;
 	border-radius: 5px;
 
+}.boton-medio{
+	padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	border-radius: 5px;
+
 }
 
 .botonNaranja{
@@ -247,3 +290,12 @@ img{
     color: white;
 }
 
+
+#centrar{
+	width: 100%;
+
+}
+.centro{
+	margin: 40%;
+	margin-top: 15%;
+}
