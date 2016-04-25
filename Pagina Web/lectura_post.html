@@ -6,9 +6,9 @@
 			<link rel="stylesheet" type="text/css" href="cssreset.css"/>
 		  	<link rel="stylesheet" type="text/css" href="estructura.css" />
 		 	<link rel="stylesheet" type="text/css" href="interfaz-zapi.css"/>
-		
 	</head>
 	<body>
+		<div id="cabecerilla">
 		<header class = "col-desktop-12 col-tablet-12 col-phone-12" >
 			<img class="col-desktop-3 col-tablet-3 col-phone-3" id="logoCabecera" src="assets/images/logotipo.png" alt="logotipo">
 			<div class="col-desktop-6 col-tablet-6 col-phone-6" id="barraBusqueda">
@@ -23,6 +23,8 @@
 				</fieldset>
 			</div>
 		</header>
+		</div>
+		<div id="cuerpo">
 			<div class="col-phone-12 col-desktop-3 col-tablet-3">
 				<div>
 					<div class="cabecera"> Posts</div>
@@ -67,30 +69,44 @@
 				</div>
 			</div>
 
-			<article class="col-phone-12 col-desktop-6 col-tablet-6">	
-				<div class="caja-post">
-					<div>
-						<img src="assets/images/gato.jpg" alt="gato">
-						<p>Aqui va el titulo</p>
+			<article class="col-phone-12 col-desktop-6 col-tablet-6">
+				<div class="caja-posts">
+					<ul >
+						<li>
+							<img src="assets/images/gato.jpg" alt="pots1">
+							<pid id="titulo">Evento: Aqui va el titulo.</p>				
+						</li>
+						<li><p> Aquí va el resto de la informacion de un post cualquiera en el que te cuentan su vida y esas cosas tan geniales de la informacion de un post cualquiera</p></li>
 
-						<p>Aqui va el resto de la informacion de un post cualquiera en el que te cuentan su vida y esas cosas tan geniales.</p>
-					</div>
-				</div>
-				
-				<div class="addcomentario">
-
-					<textarea type="text" name="comentario" placeholder="tu comentario..." id="cuadro-comentario"></textarea>
-					<input class="boton" type="submit" name="enviar" value="Me gusta"  id="botonLike"/>		
-					<input class="boton" type="submit" name="enviar" value="Publicar" id="botonComentar"/>
+						<div class="addcomentario">
 					
+							<li>
+								<textarea type="text" name="comentario" placeholder="tu comentario..." id="cuadro-comentario"></textarea>
+								<input class="boton" type="submit" name="enviar" value="Me gusta"  id="botonLike"/>		
+								<input class="boton" type="submit" name="enviar" value="Publicar" id="botonComentar"/>
+							</li>
+						</div>
+					</ul>
+
 				</div>
-				
+			
+				<div class="caja-posts">
+					<ul id="caja-comentario">
+						<li>
+							<img src="assets/images/gato.jpg" alt="pots1">
+							<p id="titulo">wiskas, gato europeo.</p>				
+							<p> Aqui va el comentario del amigo, diciendo los interesante que es tu Post</p></li>
+							<li><input class="boton" type="submit" name="enviar" value="Me gusta"  id="botonLike"/>	</li>
+
+					</ul>
+				</div>
 			</article>
+
 
 			<aside class="col-phone-12 col-desktop-3 col-tablet-3">
 				<div>
 					<div class="cabecera"> Información de especies</div>
-					<ul class="listado-especies">
+					<ul class="listado-posts">
 					
 						<li>
 							<img src="assets/images/perroInfoMascota.jpg" alt="pero">
@@ -112,8 +128,10 @@
 							<img src="assets/images/pez.jpg" alt="pez">
 							<p class="info-list-cont">Peces</p>							
 						</li>
+
 					</ul>
 				</div>
 			</aside>
+		</div>
 	</body>
 </html>
