@@ -15,13 +15,28 @@
 	margin-bottom: 10px;
 }
 
+.info{
+	display:inline-block;
+	font-size: 30;
+	/*line-height: 1.5;*/
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 
 .fotoEsp{
 	margin-left: 6%;
 	min-height: -webkit-min-content;
 }
+
+#fotoPerfilOficio{
+	background: url("assets/images/oficio.jpg") top;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	height: 30%;
+}
+
 #fotoPerfilPerro{
-	background: url("assets/images/imagenRegistroMascota.jpg") top;
+	background: url("assets/images/perroInfoMascota.jpg") top;
 	background-repeat: no-repeat;
 	background-size: 100%;
 	height: 30%;
