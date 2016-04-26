@@ -284,7 +284,7 @@ img{
 	margin-bottom: 55px;
 }
 
-ul.tab {
+.barraPestanas {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -293,11 +293,11 @@ ul.tab {
     background-color: #f1f1f1;
 }
 
-ul.tab li {
+.pestana {
 	float: left;
 }
 
-ul.tab li a {
+.pestana {
     display: inline-block;
     color: black;
     text-align: center;
@@ -307,15 +307,15 @@ ul.tab li a {
     font-size: 17px;
 }
 
-ul.tab li a:hover {
+.pestana:hover {
 	background-color: #ddd;
 }
 
-ul.tab li a:focus, .active {
+.pestana:focus, .active {
 	background-color: #ccc;
 }
 
-.tabcontent {
+.contenidoPestana {
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
@@ -324,19 +324,52 @@ ul.tab li a:focus, .active {
 
 .cajaCambiarFoto{
 	width: 40%;
-	height: 55%;
+	/*height: 55%;*/
 	min-height: -webkit-min-content;
 	min-width: 280px;
 	/*max-height: 400px;*/
 	position: fixed;
-
-	margin-left: 10%;
-    margin-top: 200px;
-    border-style: groove;
-    background-color: white;
-    border-color: #8BC34A;
-    border-width: 2px;
+	margin-left: 30%;
+	margin-top: 200px;
+	border-style: groove;
+	background-color: white;
+	border-color: #8BC34A;
+	border-width: 2px;
 	border-radius: 5px;
+}
+@media only screen and (max-width: 991px){
+	.cajaCambiarFoto{
+		width: 40%;
+		/*height: 55%;*/
+		min-height: -webkit-min-content;
+		min-width: 280px;
+		/*max-height: 400px;*/
+		position: fixed;
+		margin-left: 25%;
+		margin-top: 200px;
+		border-style: groove;
+		background-color: white;
+		border-color: #8BC34A;
+		border-width: 2px;
+		border-radius: 5px;
+	}
+}
+@media only screen and (max-width: 767px){
+	.cajaCambiarFoto{
+		width: 40%;
+		/*height: 55%;*/
+		min-height: -webkit-min-content;
+		min-width: 280px;
+		/*max-height: 400px;*/
+		position: fixed;
+		margin-left: 7%;
+		margin-top: 200px;
+		border-style: groove;
+		background-color: white;
+		border-color: #8BC34A;
+		border-width: 2px;
+		border-radius: 5px;
+	}
 }
 
 .cajaLogin{

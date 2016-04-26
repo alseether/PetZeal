@@ -8,23 +8,19 @@
 		<link rel="stylesheet" type="text/css" href="interfaz-alvaro.css"/>
 		<link rel="stylesheet" type="text/css" href="interfaz-julio.css"/>
 		<script>
-	 		function openCity(evt, cityName) {
-		    // Declare all variables
-			    var i, tabcontent, tablinks;
+	 		function abrePestana(evt, cityName) {
+			    var i, contenidoPestana, pestana;
 
-			    // Get all elements with class="tabcontent" and hide them
-			    tabcontent = document.getElementsByClassName("tabcontent");
-			    for (i = 0; i < tabcontent.length; i++) {
-			        tabcontent[i].style.display = "none";
+			    contenidoPestana = document.getElementsByClassName("contenidoPestana");
+			    for (i = 0; i < contenidoPestana.length; i++) {
+			        contenidoPestana[i].style.display = "none";
 			    }
 
-			    // Get all elements with class="tablinks" and remove the class "active"
-			    tablinks = document.getElementsByClassName("tablinks");
-			    for (i = 0; i < tabcontent.length; i++) {
-			        tablinks[i].className = tablinks[i].className.replace(" active", "");
+			    pestana = document.getElementsByClassName("pestana");
+			    for (i = 0; i < contenidoPestana.length; i++) {
+			        pestana[i].className = pestana[i].className.replace(" active", "");
 			    }
 
-			    // Show the current tab, and add an "active" class to the link that opened the tab
 			    document.getElementById(cityName).style.display = "block";
 			    evt.currentTarget.className += " active";
 			}
@@ -51,12 +47,12 @@
 		</header>
 		<div class="cajaCambiarFoto col-desktop-6 col-tablet-8 col-phone-12">
 			<div class="mensajeConfirmacion">Subir foto</div>
-				<ul class="tab">
-					<li><a href="#" class="tablinks" onclick="openCity(event, 'fotos')">Tus fotos</a></li>
-					<li><a href="#" class="tablinks" onclick="openCity(event, 'nuevas')">Nueva foto</a></li>
-					<li><a href="#" class="tablinks" onclick="openCity(event, 'enlace')">URL</a></li>
+				<ul class="barraPestanas">
+					<li><a href="#" class="pestana" onclick="abrePestana(event, 'fotos')">Tus fotos</a></li>
+					<li><a href="#" class="pestana" onclick="abrePestana(event, 'nuevas')">Nueva foto</a></li>
+					<li><a href="#" class="pestana" onclick="abrePestana(event, 'enlace')">URL</a></li>
 				</ul>
-				<div id="fotos" class="tabcontent">
+				<div id="fotos" class="contenidoPestana">
 					<div>
 						<img id="fotoPerfilCambiar"></img>
 					</div><br>
@@ -66,7 +62,7 @@
 					</div>
 				</div>
 
-				<div id="nuevas" class="tabcontent">
+				<div id="nuevas" class="contenidoPestana">
 				  	<label>Selecciona una foto:</label><input type="file" accept="image/jpeg, image/png"/>
 				  	<div id="botonesCambiar">
 				  		<input class="boton botonBlanco" type="reset" value="Cancelar"/>
@@ -74,7 +70,7 @@
 					</div>
 				</div>
 
-				<div id="enlace" class="tabcontent"> 
+				<div id="enlace" class="contenidoPestana"> 
 				  	<label>Introduce un URL:</label><input type="url" name="paraLista" list="listaurls">
 				  	<div id="botonesCambiar">
 				  		<input class="boton botonBlanco" type="reset" value="Cancelar"/>

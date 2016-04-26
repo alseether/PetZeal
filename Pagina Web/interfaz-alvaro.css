@@ -227,7 +227,7 @@ fieldset{
 	/*float:left;*/
 }
 
-ul.tab {
+.barraPestanas {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -236,11 +236,11 @@ ul.tab {
     background-color: #f1f1f1;
 }
 
-ul.tab li {
+.pestana {
 	float: left;
 }
 
-ul.tab li a {
+.pestana {
     display: inline-block;
     color: black;
     text-align: center;
@@ -250,15 +250,15 @@ ul.tab li a {
     font-size: 17px;
 }
 
-ul.tab li a:hover {
+.pestana:hover {
 	background-color: #ddd;
 }
 
-ul.tab li a:focus, .active {
+.pestana:focus, .active {
 	background-color: #ccc;
 }
 
-.tabcontent {
+.contenidoPestana {
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
