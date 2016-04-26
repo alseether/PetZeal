@@ -20,6 +20,12 @@
 	margin-left: 6%;
 	min-height: -webkit-min-content;
 }
+#fotoPerfilPerro{
+	background: url("assets/images/imagenRegistroMascota.jpg") top;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	height: 30%;
+}
 
 #fotoPerfilMascota{
 	background: url("assets/images/imagenRegistroMascota.jpg") top;
