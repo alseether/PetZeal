@@ -43,3 +43,9 @@
     font-size: 12px;
     border-radius: 5px;
 }
+
+.botonCambiar{
+    margin-left: 12.5%;
+    margin-top: 5%;
+    width: 75%;
+}

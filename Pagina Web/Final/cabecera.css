@@ -28,6 +28,7 @@ header{
 
 #busquedaEntrada{
 	width: 92%;
+	border-radius: 10px;
 }
 
 #lupa{
