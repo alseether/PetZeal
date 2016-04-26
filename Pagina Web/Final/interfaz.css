@@ -143,11 +143,7 @@ img{
 
 .listado-mascotas li p {
     float: left;
-    
-}
-.listado-mascotas li input{
-	margin-top: 40;
-    float: right;  
+	width: -webkit-calc(100% - 168px);    
 }
 
 .lista-mascotas{
@@ -227,7 +223,7 @@ img{
 	margin-top: 15%;
 }
 
-#borrar{
+.borrar{
 	width: 30px;
 	height: 30px;
 }
