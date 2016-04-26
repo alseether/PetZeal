@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>PetZeal</title>
+		<meta charset="utf-8"</meta>
+		<link rel="stylesheet" type="text/css" href="cssreset.css"/>			
+	 	<link rel="stylesheet" type="text/css" href="estructura.css" />
+	 	<link rel="stylesheet" type="text/css" href="interfaz-cristian.css"/>
+	 	<link rel="stylesheet" type="text/css" href="interfaz-paula.css"/>
+	</head>
+	<body>
+		<div class="cajaFlotanteCentral col-desktop-4 col-tablet-4 col-phone-12">
+			<h2> Publicar artículo </h2>
+			<input id="areaTitulo" type="text" name="q" value="" placeholder="Título"/>
+			<br/>
+			<textarea id="areaTexto" name="nombre" rows="4" cols="50" placeholder="Escribe tu artículo aquí"></textarea>
+			<br/>
+			<input id="areaTitulo" type="text" name="q" value="#alimentacion"/>
+			<br/>
+			<div id="botonesArticulo">
+				<label id="especialFont"> Etiquetas: </label>
+				<select name="tags">
+ 					<option value="alimentacion" selected>Alimentación</option>
+  					<option value="cuidados">Cuidados</option>
+  					<option value="producto">Producto</option>
+  					<option value="salud">Salud</option>
+				</select>
+				<input class="boton" type="submit" name="Publicar" value="Enviar"/>
+				<input class="boton" type="submit" name="Cancelar" value="Cancelar"/>
+			</div>
+		</div>
+
+	</body>
+</html>
