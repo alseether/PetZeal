@@ -44,8 +44,13 @@
     border-radius: 5px;
 }
 
-.botonCambiar{
+#botonCambiar{
     margin-left: 12.5%;
     margin-top: 5%;
     width: 75%;
+}
+
+#botonPremium {
+    margin-left: 10%;
+    margin-top: 10%;
 }
