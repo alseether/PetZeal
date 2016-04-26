@@ -1,0 +1,45 @@
+.boton-grand{
+	padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+	border-radius: 8px;
+}
+
+.boton-peq{
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.botonVerde {
+    background-color:#8BC34A ;
+    border: none;
+    color: white;
+}
+
+.botonBlanco{
+	background-color: white ;
+    border: 2px #8BC34A groove;
+    color: #8BC34A;
+}
+
+.botonNaranja{
+    background-color:#D46E00 ;
+    border: none;
+    color: white;
+}
+
+.botonLogin{
+    min-width: 100px;
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 5px;
+}

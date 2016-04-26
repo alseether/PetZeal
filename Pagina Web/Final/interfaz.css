@@ -1,0 +1,233 @@
+@import url(botones.css);
+@import url(cabecera.css);
+@import url(formularios.css);
+@import url(estatica.css);
+@import url(msn.css);
+@import url(flotantes.css);
+
+@font-face {
+    font-family: 'Primary Italics'; /*a name to be used later*/
+	src: url('assets/fonts/Primary Italics.ttf');
+}
+
+body{
+	color: #33691E;
+	font-family: 'Primary Italics';
+	font-size: 30;
+}
+em{
+	color: #D46E00;
+}
+
+fieldset{
+	display: block;
+    -webkit-margin-start: 2px;
+    -webkit-margin-end: 2px;
+    -webkit-padding-before: 0.35em;
+    -webkit-padding-start: 0.75em;
+    -webkit-padding-end: 0.75em;
+    -webkit-padding-after: 0.625em;
+    min-width: -webkit-min-content;
+	border: 2px groove threedface;
+	min-height: -webkit-min-content;
+	border-radius: 10px;
+}
+
+img{
+	border: none;
+}
+
+#cuerpo-principal{
+	background: url("assets/images/fondoPetZeal_2.png") center;
+	background-size: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-color: #DCEDC8;
+}
+
+#cuerpo-secundario{
+	background: url("assets/images/fondoPetZeal_1.png") center;
+	background-size: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-color: #DCEDC8;
+}
+
+.cabecerilla{
+	height: 20%;
+}
+
+.anadir-mascota li{
+	width: 100%;
+	margin: 10 35%;
+}
+
+.anadir-mascota  li img{
+	margin: 0 15%;	
+}
+
+#anadir{
+	width: 50px;	
+}
+
+.div-cuerpo{
+
+	height: 80%;
+}
+
+.listado{
+	width: 90%;
+	max-height: 100%;
+	margin: 0 auto;
+	list-style: none;
+	border: solid black;
+	color: black;
+	padding: 0;	
+	overflow-y: scroll;
+	border-radius: 8px;
+}
+
+.listado li {
+ 	margin-top: 2%;
+    display: inline-block;
+    width: 100%;
+	border: 3px solid black;
+	border-right: none;
+	border-left: none;
+	opacity: 0.9;
+	background-color: #DCEDC8;
+}
+
+.listado li img {
+    float: left;
+    margin-right: 2%;
+    width: 85px;
+    height: 85px;
+}
+
+.listado li p {
+	width: -webkit-calc(100% - 115px);
+    float: left;
+    
+}.listado-mascotas{
+	width: 90%;
+	height: 87%;
+	list-style: none;
+	border: solid black;
+	color: black;
+	margin: 0 auto;
+	padding: 0;
+	overflow-y: scroll;
+	border-radius: 8px;
+}
+
+.listado-mascotas li {
+	opacity: 0.9;
+   	border: solid black;
+   	border-right: none;
+   	border-left: none;
+   	border-top: solid black; 
+   	background-color: #DCEDC8; 
+	margin-top: 2%;
+   	display: inline-block;
+   	width: 100%;
+
+}
+
+.listado-mascotas li img {	
+    float: left;
+    margin-right: 2%;
+    width: 150px;
+    height: 150px;
+}
+
+.listado-mascotas li p {
+    float: left;
+    
+}
+.listado-mascotas li input{
+	margin-top: 40;
+    float: right;  
+}
+
+.lista-mascotas{
+	width: 90%;
+	margin-left: 23%;
+}
+
+.lista-mascotas img {
+    width: 70px;
+    height: 70px;
+}
+
+#subir-publicacion {
+	margin-top: 2%;
+    display: inline-block;
+    width: 100%;
+}
+#subir-publicacion-foto{
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+#cuadro-descripcion{
+	width: 78%;
+	height: 10%;
+}
+
+.cabecera{ 
+	width: 90%;
+	margin: 0 auto;
+	background-color: #8BC34A;
+	font-family: 'Primary Italics';
+	font-size: 30px;
+	border-top: solid black; 
+	border-right: solid black;
+	border-left: solid black;
+	border-radius: 8px;
+}
+
+.cabecera-medio{
+	width: 90%;
+	margin: 0 auto;
+	background-color: #8BC34A;
+	font-family: 'Primary Italics';
+	font-size: 30px;
+	border-top: solid black; 
+	border-right: solid black;
+	border-left: solid black;
+}
+
+.info-list-cont{
+	float: right;
+	margin: 0;
+	padding: 0;
+	font-size: 17px;
+	/*width: 100%;*/	
+}
+
+#cuadradoAnadir{
+	height: 500px;
+	font-family: 'Primary Italics';
+	font-size: 25;
+}
+
+
+#medio{
+	padding-left: 35%;
+}
+
+#centrar{
+	width: 100%;
+
+}
+.centro{
+	margin: 40%;
+	margin-top: 15%;
+}
+
+#borrar{
+	width: 30px;
+	height: 30px;
+}
