@@ -133,7 +133,7 @@ fieldset{
 #miMascota{
 	height: 80%;
 }
-
+/*
 #contenedorMiMascota{
 	width: 90%;
 	margin-left: 5%;
@@ -144,13 +144,21 @@ fieldset{
 	flex-direction: column;
 	height: 100%;
 	margin-right:5%;
-}
+}*/
 
+/*
 #datosMascota *{
 	margin-top: 5px;
 	margin-bottom:2.5px;
-}
+}*/
 
+.campo{
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 5%;
+	margin-right:5%;
+}
 
 #fotoMascota{
 	height: 100%;
@@ -447,8 +455,13 @@ fieldset{
 		width:100%;
 	}
 }
+.fotoPerfilCont{
+	margin-left: 6%;
+	/*height: 550px;*/
+	min-height: -webkit-min-content;
+}
 
-#fotoPerfilCambiar{
+.fotoPerfilCambiar{
 	/*height: 420px;*/
 	background: url("assets/images/oficio.jpg") top;
 	background-repeat: no-repeat;
