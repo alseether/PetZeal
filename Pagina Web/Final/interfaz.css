@@ -112,7 +112,7 @@ img{
 
 .listado-mascotas{
 	width: 90%;
-	height: 75%;
+	height: -webkit-calc(100% - 100px - 36px - 70px);
 	list-style: none;
 	border: 2px solid black;
 	color: black;
