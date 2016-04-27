@@ -29,6 +29,9 @@
 				<div class="col-desktop-6 col-tablet-6 col-phone-12 camposDatos">
 					<input class="campo" type="text" name="nombre" placeholder="Escribe tu nombre" value="Debora Melconejo" 
 							autocomplete maxlenght="50"/><br>
+
+					<input class="campo" type="text" name="nick" placeholder="Escribe un nombre de usuario (Ej. @idiota)" value="@yegua_indomable"
+							autocomplete maxlenght="50"/><br>
 					
 					<input class="campo" type="email" name="email" placeholder="Escribe tu email" value="debora_melconejo@gmail.com"/><br>
 					
@@ -49,21 +52,21 @@
 					<textarea class="campo" type="text" name="descripcion" placeholder="Descripcion">Doy el callo por dinero, yo trabajo por dinero. No se que y no se cuantos, pero a mi dame dinero</textarea><br>
 
 					<div id="botones">
-						<input class="boton botonVerde" type="submit" name="enviar" value="Guardar cambios"/>
-						<input class="boton botonBlanco" type="reset" value="Dar de baja"/><br>
+						<a class="boton-grand botonVerde" href="inicioConLogin.html">Guardar cambios</a>
+						<a class="boton-grand botonBlanco" href="bajaUsuario.html">Dar de baja</a><br>
 					</div>
 				</div>
-				<div id="fotoEsp" class = "col-desktop-5 col-tablet-5 col-phone-11">
-					<div id="fotoPerfil_Usu"></div>
-						<input id="botonCambiar" class="boton botonBlanco" type="submit" value="Cambiar Foto"><br>
+				<div class = "fotoEsp col-desktop-5 col-tablet-5 col-phone-11">
+					<div id="fotoPerfilOficio"></div>
+						<a id="botonCambiar" class="boton-grand botonBlanco" href="cambiarFotoEspecialista.html">Cambiar foto</a><br>
 				</div>
 			</fieldset>
 		</form>
 		<div class="cajaCambiarFoto col-desktop-4 col-tablet-4 col-phone-12">
 			<div class="mensajeConfirmacion">¿Realmente quieres eliminar este usuario?</div>
 			<div class="botoneraConfirmacion">
-				<input class ="boton-grand botonVerde col-desktop-5 col-tablet-5 col-phone-11" type="submit" value="NO">
-				<input class="boton-grand botonBlanco col-desktop-5 col-tablet-5 col-phone-11" type="submit" value="SI">
+				<a class="boton-grand botonVerde col-desktop-5 col-tablet-5 col-phone-11" href="infoEspecialista_Usu.html">NO</a>
+				<a class="boton-grand botonBlanco col-desktop-5 col-tablet-5 col-phone-11" href="inicioConLogin.html">SI</a>
 			</div>
 		</div>
 	</body>
