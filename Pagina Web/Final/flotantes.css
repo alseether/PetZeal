@@ -45,19 +45,6 @@
 	width: 30%;
 }
 
-#especialFont{
-	width: 50%;
-}
-
-#buscaUsuario{
-	justify: right;
-	width: 50%;
-}
-
-.areaTexto{
-	width: 100%;
-}
-
 .mensajeConfirmacion{
 	margin-top: 2%;
 	text-align: center;
@@ -89,6 +76,11 @@
 	border-width: 2px;
 	border-radius: 5px;
 }
+
+#buscaUsu{
+	margin-top: 1.5%;
+}
+
 @media only screen and (max-width: 991px){
 	.cajaCambiarFoto{
 		width: 40%;

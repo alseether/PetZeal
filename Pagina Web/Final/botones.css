@@ -54,3 +54,20 @@
     margin-left: 10%;
     margin-top: 10%;
 }
+
+#botonCancelar {
+   /* margin-left: 10%;*/
+    float: right;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#botonEnviar {
+    border: 2px #8BC34A solid; 
+    margin-left: 3%;
+    float: right;
+    margin-top: 1%;
+    margin-right: 3%;
+    margin-bottom: 1%;
+}
+
