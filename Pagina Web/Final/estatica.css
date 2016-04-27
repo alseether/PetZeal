@@ -82,3 +82,6 @@
 .textoEst{
 	margin-bottom: 30px;
 }
+#subrayarTitulos{
+	text-decoration: underline;
+}
