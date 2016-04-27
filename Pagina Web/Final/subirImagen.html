@@ -5,7 +5,8 @@
 		<meta charset="utf-8"</meta>
 		<link rel="stylesheet" type="text/css" href="cssreset.css" />
 		<link rel="stylesheet" type="text/css" href="estructura.css" />
-		<link rel="stylesheet" type="text/css" href="interfaz.css"/>
+		<link rel="stylesheet" type="text/css" href="interfaz-alvaro.css"/>
+		<link rel="stylesheet" type="text/css" href="interfaz-julio.css"/>
 		<script>
 	 		function abrePestana(evt, cityName) {
 			    var i, contenidoPestana, pestana;
@@ -28,18 +29,19 @@
 	</head>
 	<body>
 		<header class = "col-desktop-12 col-tablet-12 col-phone-12" >
-			<a id="logoCabecera" href="inicioConLogin.html"></a>
+			<div id="logoCabecera"></div>
 			<div id="barraBusqueda">
 				<input type="text" name="Busqueda" placeholder="Buscar" id="busquedaEntrada">
-				<a id="lupa" class="col-desktop-1 col-tablet-1 col-phone-1" href="buscar_post.html"></a>
+				<input type="button" class="col-desktop-1 col-tablet-1 col-phone-1" src="assets/images/lupa.png" id="lupa">
 			</div>
-			<a id="logoCorreo" href="mensajeria.html"></a>
 			<div id="camposLogin" >
 					<div id="linea1">
-						<a id="login" class="botonLogin botonNaranja" href="inicioLogin.html">Iniciar sesion</a>
+						<input id="usu" type="text" name="usuario" placeholder="Usuario">
+						<input id="login" type="submit" value="Log in">
 					</div>
 					<div id="linea2">
-						<a id="signup" class="botonLogin botonNaranja" href="altaUsuario.html">Registrarse</a>
+						<input id="pass" type="password" name="contrasena" placeholder="Contrasena">
+						<input id="signup" type="button" value="Sign up" action="./altaUsuario.html">
 					</div>
 			</div>
 		</header>
@@ -55,24 +57,24 @@
 						<img class="fotoPerfilCambiar"></img>
 					</div><br>
 				  	<div id="botonesCambiar">
-				  		<input class="boton-grand botonBlanco" type="reset" value="Cancelar"/>
-						<input class="boton-grand botonVerde" type="submit" name="enviar" value="Subir"/>	
+				  		<input class="boton botonBlanco" type="reset" value="Cancelar"/>
+						<input class="boton botonVerde" type="submit" name="enviar" value="Subir"/>	
 					</div>
 				</div>
 
 				<div id="nuevas" class="contenidoPestana">
 				  	<label>Selecciona una foto:</label><input type="file" accept="image/jpeg, image/png"/>
 				  	<div id="botonesCambiar">
-				  		<input class="boton-grand botonBlanco" type="reset" value="Cancelar"/>
-						<input class="boton-grand botonVerde" type="submit" name="enviar" value="Subir"/>	
+				  		<input class="boton botonBlanco" type="reset" value="Cancelar"/>
+						<input class="boton botonVerde" type="submit" name="enviar" value="Subir"/>	
 					</div>
 				</div>
 
 				<div id="enlace" class="contenidoPestana"> 
 				  	<label>Introduce un URL:</label><input type="url" name="paraLista" list="listaurls">
 				  	<div id="botonesCambiar">
-				  		<input class="boton-grand botonBlanco" type="reset" value="Cancelar"/>
-						<input class="boton-grand botonVerde" type="submit" name="enviar" value="Subir"/>	
+				  		<input class="boton botonBlanco" type="reset" value="Cancelar"/>
+						<input class="boton botonVerde" type="submit" name="enviar" value="Subir"/>	
 					</div>
 				</div>
         	</div>
