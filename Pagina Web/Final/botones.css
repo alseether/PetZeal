@@ -71,3 +71,11 @@
     margin-bottom: 1%;
 }
 
+#botonMascotaMensajes{
+    margin-top: 2%;
+}
+
+#botonRedactarCorreo{
+    float: right;
+    margin-right: 2%;
+}

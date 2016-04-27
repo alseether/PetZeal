@@ -1,0 +1,190 @@
+<html>
+	<head>
+		<title>PetZeal</title>
+		<meta charset="utf-8"</meta>
+		<link rel="stylesheet" type="text/css" href="cssreset.css"/>
+		<link rel="stylesheet" type="text/css" href="estructura.css"/>
+	 	<link rel="stylesheet" type="text/css" href="interfaz.css"/>
+
+
+	 	<script>
+	 		function openTabMasc(evt, masctabName) {
+		    // Declare all variables
+		    var i, mastabcontent, masctablinks;
+
+		    // Get all elements with class="tabcontent" and hide them
+		    mastabcontent = document.getElementsByClassName("mastabcontent");
+		    for (i = 0; i < mastabcontent.length; i++) {
+		        mastabcontent[i].style.display = "none";
+		    }
+
+		    // Get all elements with class="tablinks" and remove the class "active"
+		    masctablinks = document.getElementsByClassName("masctablinks");
+		    for (i = 0; i < mastabcontent.length; i++) {
+		        masctablinks[i].className = masctablinks[i].className.replace("active", "");
+		    }
+
+		    // Show the current tab, and add an "active" class to the link that opened the tab
+		    document.getElementById(masctabName).style.display = "block";
+		    evt.currentTarget.className += " active";
+			}
+
+			function openTabMen(evt, mentabName) {
+		    // Declare all variables
+		    var j, mentabcontent, mentablinks;
+
+		    // Get all elements with class="tabcontent" and hide them
+		    mentabcontent = document.getElementsByClassName("mentabcontent");
+		    for (j = 0; j < mentabcontent.length; j++) {
+		        mentabcontent[j].style.display = "none";
+		    }
+
+		    // Get all elements with class="tablinks" and remove the class "active"
+		    mentablinks = document.getElementsByClassName("mentablinks");
+		    for (j = 0; j < mentabcontent.length; j++) {
+		        mentablinks[j].className = mentablinks[j].className.replace("active", "");
+		    }
+
+		    // Show the current tab, and add an "active" class to the link that opened the tab
+		    document.getElementById(mentabName).style.display = "block";
+		    evt.currentTarget.className += " active";
+			}
+	 	</script>
+
+	</head>
+	<body>
+	<header class = "col-desktop-12 col-tablet-12 col-phone-12" >
+		<div id="logoCabecera"></div>
+			<div id="barraBusqueda">
+				<input type="text" name="Busqueda" placeholder="Buscar" id="busquedaEntrada">
+				<input type="button" class="col-desktop-1 col-tablet-1 col-phone-1" src="assets/images/lupa.png" id="lupa">
+			</div>
+			<div id="logoCorreo"></div>
+				<div id="camposLogin" >
+					<div id="linea1">
+						<input id="login" class="botonLogin botonNaranja" type="submit" value="Iniciar sesión">
+					</div>
+					<div id="linea2">
+						<input id="signup" class="botonLogin botonNaranja" type="button" value="Registrarse" action="./altaUsuario.html">
+					</div>
+				</div>
+	</header>
+
+
+		<div class="divMensajesMascotas col-desktop-12 col-tablet-12 col-phone-12">
+
+			<div class_"opcionesMascotas"> 
+				<ul class="mastab">
+					<input type="button" name="mascota1" value="Toby" <a href="#" class="masctablinks boton-grand BotonBlanco" onclick="openTabMasc(event, 'mascota1')"/>
+					<input type="button" name="mascota2" value="Yacko" <a href="#" class="masctablinks boton-grand BotonBlanco" onclick="openTabMasc(event, 'mascota2')"/>
+				</ul>
+			 </div>
+
+			<div class="contenedorMascotas">
+
+					<div id="mascota1" class="mastabcontent">
+					  <h3>Mensajes de Toby</h3>
+
+					  	<div class="divGeneralMensajes col-desktop-12 col-tablet-12 col-phone-12">
+
+							<div class="opcionesMensajes"> 
+								<ul class="mentab">
+									<input type="button" name="entrada" value="Bandeja de entrada" <a href="#" class="mentablinks boton-grand botonVerde" onclick="openTabMen(event, 'entrada')"/>
+									<input type="button" name="salida" value="Bandeja de salida" <a href="#" class="mentablinks boton-grand botonVerde" onclick="openTabMen(event, 'salida')"/>
+									<input id="botonRedactarCorreo" type="button" name="redactar" value="Redactar" <a href="./mensajeria2.html" class="mentablinks boton-grand botonVerde"/>				
+								</ul>
+							 </div>
+
+							<div class="contenedorMensajes ">
+								<div id="entrada" class="mentabcontent entrada">
+					 				<table class="listaMensajes col-desktop-12 col-tablet-12 col-phone-12">
+					 					<tr>
+					 						<td><h3>Bandeja de entrada</h3></td><td/>
+					 					</tr>
+					 					<tr>
+					 						<td><h3> De: <em>Nevado@yeguaindomable</em></h></td> <td>Asunto: <em>Tengo caballos nuevos</em></td>
+					 					</tr>
+					 					<tr>
+					 						<td><h3> De: <em>Susi@Madaleno</em></h></td> <td>Asunto: <em>¿Quieres salir hoy?</em></td>
+					 					</tr>
+					 					<tr>
+					 						<td><h3> De: <em>Rex@ThePunisher</em></h></td> <td>Asunto: <em>Huelga en el parque</em></td>
+					 					</tr>
+					 				</table>
+								</div>
+
+								<div id="salida" class="mentabcontent salida">
+					 				<table class="listaMensajes col-desktop-12 col-tablet-12 col-phone-12">							 			
+					 					<tr>
+					 						<td><h3>Bandeja de salida</h3></td><td/>
+					 					</tr>
+					 					<tr>
+					 						<td><h3> De: <em>Rex@ThePunisher</em></h></td> <td>Asunto: <em>RE: Huelga en el parque</em></td>
+					 					</tr>
+					 					<tr>
+					 						<td><h3> De: <em>Nevado@yeguaindomable</em></h></td> <td>Asunto: <em>Doma</em></td>
+					 					</tr>
+					 				</table>
+								</div>
+
+							</div>
+
+						</div>	
+
+					</div> <!-- Div mascota1 -->
+
+					<div id="mascota2" class="mastabcontent">
+					  <h3>Mensajes de Yacko</h3>
+
+					  	<div class="divGeneralMensajes col-desktop-12 col-tablet-12 col-phone-12">
+
+							<div class="opcionesMensajes"> 
+								<ul class="mentab">
+									<input type="button" name="entrada2" value="Bandeja de entrada" <a href="#" class="mentablinks boton-grand botonVerde" onclick="openTabMen(event, 'entrada2')"/>
+									<input type="button" name="salida2" value="Bandeja de salida" <a href="#" class="mentablinks boton-grand botonVerde" onclick="openTabMen(event, 'salida2')"/>
+									<input id="botonRedactarCorreo" type="button" name="redactar" value="Redactar" <a href="./mensajeria2.html" class="mentablinks boton-grand botonVerde" />
+								</ul>
+							 </div>
+
+							<div class="contenedorMensajes">
+								<div id="entrada2" class="mentabcontent">
+					 				<table class="listaMensajes col-desktop-12 col-tablet-12 col-phone-12">
+					 					<tr>
+					 						<td><h3>Bandeja de entrada</h3></td><td/>
+					 					</tr>
+					 					<tr>
+					 						<td><h3> De: <em>perro@usuario</em></h></td> <td>Asunto: <em>Correo</em></td>
+					 					</tr>
+					 					<tr>
+					 						<td><h3> De: <em>otroperro@otrousuario</em></h></td> <td>Asunto: <em>Otro Correo</em></td>
+					 					</tr>
+					 					<tr>
+					 						<td><h3> De: <em>Rex@ThePunisher</em></h></td> <td>Asunto: <em>Huelga en el parque</em></td>
+					 					</tr>
+					 				</table>
+								</div>
+
+								<div id="salida2" class="mentabcontent">
+							 		<table class="listaMensajes col-desktop-12 col-tablet-12 col-phone-12">
+							 			<tr>
+					 						<td><h3>Bandeja de salida</h3></td><td/>
+					 					</tr>
+					 					<tr>
+					 						<td><h3> De: <em>Canuto@LoLaiLo</em></h></td> <td>Asunto: <em>Por unos parques más verdes</em></td>
+					 					</tr>
+					 				</table>
+								</div>
+
+							</div>
+							
+						</div>	
+
+					</div> <!-- Div mascota2 -->
+
+
+			</div> <!-- Div contenedor mascotas -->
+
+		</div>
+
+	</body>
+</html>

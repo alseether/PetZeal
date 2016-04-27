@@ -81,6 +81,10 @@
 	margin-top: 1.5%;
 }
 
+#etiquetas{
+	margin-top: 1%;
+}
+
 @media only screen and (max-width: 991px){
 	.cajaCambiarFoto{
 		width: 40%;
