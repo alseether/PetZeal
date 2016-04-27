@@ -24,40 +24,6 @@
 			}
 	 	</script>
 	</head>
-	<div class="cajaCambiarFoto col-desktop-6 col-tablet-8 col-phone-12">
-			<div class="mensajeConfirmacion">Subir foto</div>
-				<ul class="barraPestanas">
-					<li><a href="#" class="pestana" onclick="abrePestana(event, 'fotos')">Tus fotos</a></li>
-					<li><a href="#" class="pestana" onclick="abrePestana(event, 'nuevas')">Nueva foto</a></li>
-					<li><a href="#" class="pestana" onclick="abrePestana(event, 'enlace')">URL</a></li>
-				</ul>
-				<div id="fotos" class="contenidoPestana">
-					<div>
-						<img class="fotoPerfilCambiar"></img>
-					</div><br>
-				  	<div id="botonesCambiar">
-				  		<input class="boton-grand botonBlanco" type="reset" value="Cancelar"/>
-						<input class="boton-grand botonVerde" type="submit" name="enviar" value="Subir"/>	
-					</div>
-				</div>
-
-				<div id="nuevas" class="contenidoPestana">
-				  	<label>Selecciona una foto:</label><input type="file" accept="image/jpeg, image/png"/>
-				  	<div id="botonesCambiar">
-				  		<input class="boton-grand botonBlanco" type="reset" value="Cancelar"/>
-						<input class="boton-grand botonVerde" type="submit" name="enviar" value="Subir"/>	
-					</div>
-				</div>
-
-				<div id="enlace" class="contenidoPestana"> 
-				  	<label>Introduce un URL:</label><input type="url" name="paraLista" list="listaurls">
-				  	<div id="botonesCambiar">
-				  		<input class="boton-grand botonBlanco" type="reset" value="Cancelar"/>
-						<input class="boton-grand botonVerde" type="submit" name="enviar" value="Subir"/>	
-					</div>
-				</div>
-        	</div>
-		</div>
 	<body id="cuerpo-secundario">
 		<header class = "col-desktop-12 col-tablet-12 col-phone-12" >
 			<a id="logoCabecera" href="inicioConLogin.html"></a>
@@ -75,6 +41,42 @@
 					</div>
 			</div>
 		</header>
+		
+		<div class="cajaCambiarFoto col-desktop-6 col-tablet-8 col-phone-12">
+			<div class="mensajeConfirmacion">Subir foto</div>
+				<ul class="barraPestanas">
+					<li><a href="#" class="pestana" onclick="abrePestana(event, 'fotos')">Tus fotos</a></li>
+					<li><a href="#" class="pestana" onclick="abrePestana(event, 'nuevas')">Nueva foto</a></li>
+					<li><a href="#" class="pestana" onclick="abrePestana(event, 'enlace')">URL</a></li>
+				</ul>
+				<div id="fotos" class="contenidoPestana">
+					<div>
+						<img class="fotoPerfilCambiar"></img>
+					</div><br>
+				  	<div id="botonesCambiar">
+						<a class="boton-grand botonBlanco" href="altaEspecialista.html">Cancelar</a>
+				  		<a class="boton-grand botonVerde" href="altaEspecialista.html">Subir</a>
+					</div>
+				</div>
+
+				<div id="nuevas" class="contenidoPestana">
+				  	<label>Selecciona una foto:</label><input type="file" accept="image/jpeg, image/png"/>
+				  	<div id="botonesCambiar">
+				  		<a class="boton-grand botonBlanco" href="altaEspecialista.html">Cancelar</a>
+				  		<a class="boton-grand botonVerde" href="altaEspecialista.html">Subir</a>
+					</div>
+				</div>
+
+				<div id="enlace" class="contenidoPestana"> 
+				  	<label>Introduce un URL:</label><input type="url" name="paraLista" list="listaurls">
+				  	<div id="botonesCambiar">
+				  		<a class="boton-grand botonBlanco" href="altaEspecialista.html">Cancelar</a>
+				  		<a class="boton-grand botonVerde" href="altaEspecialista.html">Subir</a>
+					</div>
+				</div>
+        	</div>
+		</div>
+		
 		<form action="" method="post" enctype="multipart/form-data" class="formulario col-desktop-7 col-tablet-8 col-phone-12">
 			<fieldset>
 				<legend id="tituloCuadro" >Registro </legend>
