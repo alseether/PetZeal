@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<title>PetZeal</title>
+		<meta charset="utf-8"</meta>
+		<link rel="stylesheet" type="text/css" href="cssreset.css"/>			
+	 	<link rel="stylesheet" type="text/css" href="estructura.css" />
+	 	<link rel="stylesheet" type="text/css" href="interfaz.css"/>
+	 	<script>
+	 		function abrePestana(evt, cityName) {
+			    var i, contenidoPestana, pestana;
+
+			    contenidoPestana = document.getElementsByClassName("contenidoPestana");
+			    for (i = 0; i < contenidoPestana.length; i++) {
+			        contenidoPestana[i].style.display = "none";
+			    }
+
+			    pestana = document.getElementsByClassName("pestana");
+			    for (i = 0; i < contenidoPestana.length; i++) {
+			        pestana[i].className = pestana[i].className.replace(" active", "");
+			    }
+
+			    document.getElementById(cityName).style.display = "block";
+			    evt.currentTarget.className += " active";
+			}
+	 	</script>
+	</head>
+	<div class="cajaCambiarFoto col-desktop-6 col-tablet-8 col-phone-12">
+			<div class="mensajeConfirmacion">Subir foto</div>
+				<ul class="barraPestanas">
+					<li><a href="#" class="pestana" onclick="abrePestana(event, 'fotos')">Tus fotos</a></li>
+					<li><a href="#" class="pestana" onclick="abrePestana(event, 'nuevas')">Nueva foto</a></li>
+					<li><a href="#" class="pestana" onclick="abrePestana(event, 'enlace')">URL</a></li>
+				</ul>
+				<div id="fotos" class="contenidoPestana">
+					<div>
+						<img class="fotoPerfilCambiar"></img>
+					</div><br>
+				  	<div id="botonesCambiar">
+				  		<input class="boton-grand botonBlanco" type="reset" value="Cancelar"/>
+						<input class="boton-grand botonVerde" type="submit" name="enviar" value="Subir"/>	
+					</div>
+				</div>
+
+				<div id="nuevas" class="contenidoPestana">
+				  	<label>Selecciona una foto:</label><input type="file" accept="image/jpeg, image/png"/>
+				  	<div id="botonesCambiar">
+				  		<input class="boton-grand botonBlanco" type="reset" value="Cancelar"/>
+						<input class="boton-grand botonVerde" type="submit" name="enviar" value="Subir"/>	
+					</div>
+				</div>
+
+				<div id="enlace" class="contenidoPestana"> 
+				  	<label>Introduce un URL:</label><input type="url" name="paraLista" list="listaurls">
+				  	<div id="botonesCambiar">
+				  		<input class="boton-grand botonBlanco" type="reset" value="Cancelar"/>
+						<input class="boton-grand botonVerde" type="submit" name="enviar" value="Subir"/>	
+					</div>
+				</div>
+        	</div>
+		</div>
+	<body id="cuerpo-secundario">
+		<header class = "col-desktop-12 col-tablet-12 col-phone-12" >
+			<a id="logoCabecera" href="inicioConLogin.html"></a>
+			<div id="barraBusqueda">
+				<input type="text" name="Busqueda" placeholder="Buscar" id="busquedaEntrada">
+				<a id="lupa" class="col-desktop-1 col-tablet-1 col-phone-1" href="buscar_post.html"></a>
+			</div>
+			<a id="logoCorreo" href="mensajeria.html"></a>
+			<div id="camposLogin" >
+					<div id="linea1">
+						<a id="login" class="botonLogin botonNaranja" href="inicioLogin.html">Iniciar sesion</a>
+					</div>
+					<div id="linea2">
+						<a id="signup" class="botonLogin botonNaranja" href="altaUsuario.html">Registrarse</a>
+					</div>
+			</div>
+		</header>
+		<form action="" method="post" enctype="multipart/form-data" class="formulario col-desktop-7 col-tablet-8 col-phone-12">
+			<fieldset>
+				<legend id="tituloCuadro" >Registro </legend>
+				<div class="camposDatos col-desktop-6 col-tablet-6 col-phone-12">
+					<input class="campo" type="text" name="direccion" placeholder="Escribe tu dirección" minlenght="5"/><br>
+
+					<input class="campo" type="phone" name="tlf" placeholder="Escribe tu teléfono" minlenght="5"/><br>
+
+					<input class="campo" type="text" name="ocupacion" placeholder="Escribe tu ocupacion" minlenght="5"/><br>
+
+					<input class="campo" type="url" name="cp" placeholder="Escribe tu página web" minlenght="5"/><br>
+
+					<textarea class="campo" type="text" name="descripcion" placeholder="Descripcion"></textarea><br>
+
+					<a class="boton-grand botonVerde" href="inicioConLoginEsp.html">Registrarse</a>
+
+					<a class="boton-grand botonBlanco">Borrar datos</a><br>
+					
+				</div>
+				<div class="fotoEsp col-desktop-5 col-tablet-5 col-phone-11">
+					<div id="fotoPerfilUsuario"></div>
+						<a id="botonCambiar" class="boton-grand botonBlanco" href=".html">Cambiar Foto</a><br>
+				</div>
+			</fieldset>
+		</form>	
+	</body>
+</html>
