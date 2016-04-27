@@ -4,9 +4,7 @@
 		<meta charset="utf-8"</meta>
 		<link rel="stylesheet" type="text/css" href="cssreset.css"/>
 		<link rel="stylesheet" type="text/css" href="estructura.css"/>
-	 	<link rel="stylesheet" type="text/css" href="interfaz-cristian.css"/>
-		<link rel="stylesheet" type="text/css" href="interfaz-alvaro.css"/>
-	 	<link rel="stylesheet" type="text/css" href="interfaz-paula.css"/>
+	 	<link rel="stylesheet" type="text/css" href="interfaz.css"/>
 
 
 	 	<script>
@@ -55,20 +53,30 @@
 
 	</head>
 	<body>
-		<header class = "col-desktop-12 col-tablet-12 col-phone-12" >
-			<div id="logoCabecera"></div>
+	<header class = "col-desktop-12 col-tablet-12 col-phone-12" >
+		<div id="logoCabecera"></div>
 			<div id="barraBusqueda">
 				<input type="text" name="Busqueda" placeholder="Buscar" id="busquedaEntrada">
 				<input type="button" class="col-desktop-1 col-tablet-1 col-phone-1" src="assets/images/lupa.png" id="lupa">
 			</div>
-		</header>	
+			<div id="logoCorreo"></div>
+				<div id="camposLogin" >
+					<div id="linea1">
+						<input id="login" class="botonLogin botonNaranja" type="submit" value="Iniciar sesión">
+					</div>
+					<div id="linea2">
+						<input id="signup" class="botonLogin botonNaranja" type="button" value="Registrarse" action="./altaUsuario.html">
+					</div>
+				</div>
+	</header>
+
 
 		<div class="divMensajesMascotas col-desktop-12 col-tablet-12 col-phone-12">
 
 			<div class_"opcionesMascotas"> 
 				<ul class="mastab">
-					<input type="button" name="mascota1" value="Toby" <a href="#" class="masctablinks" onclick="openTabMasc(event, 'mascota1')"/>
-					<input type="button" name="mascota2" value="Yacko" <a href="#" class="masctablinks" onclick="openTabMasc(event, 'mascota2')"/>
+					<input type="button" name="mascota1" value="Toby" <a href="#" class="masctablinks boton-grand BotonBlanco" onclick="openTabMasc(event, 'mascota1')"/>
+					<input type="button" name="mascota2" value="Yacko" <a href="#" class="masctablinks boton-grand BotonBlanco" onclick="openTabMasc(event, 'mascota2')"/>
 				</ul>
 			 </div>
 
@@ -81,14 +89,14 @@
 
 							<div class="opcionesMensajes"> 
 								<ul class="mentab">
-									<input type="button" name="entrada" value="Bandeja de entrada" <a href="#" class="mentablinks" onclick="openTabMen(event, 'entrada')"/>
-									<input type="button" name="salida" value="Bandeja de salida" <a href="#" class="mentablinks" onclick="openTabMen(event, 'salida')"/>
-									<input type="button" name="redactar" value="Redactar" <a href="./mensajeria2.html" class="mentablinks"/>				
+									<input type="button" name="entrada" value="Bandeja de entrada" <a href="#" class="mentablinks boton-grand botonVerde" onclick="openTabMen(event, 'entrada')"/>
+									<input type="button" name="salida" value="Bandeja de salida" <a href="#" class="mentablinks boton-grand botonVerde" onclick="openTabMen(event, 'salida')"/>
+									<input id="botonRedactarCorreo" type="button" name="redactar" value="Redactar" <a href="./mensajeria2.html" class="mentablinks boton-grand botonVerde"/>				
 								</ul>
 							 </div>
 
 							<div class="contenedorMensajes ">
-								<div id="entrada" class="mentabcontent">
+								<div id="entrada" class="mentabcontent entrada">
 					 				<table class="listaMensajes col-desktop-12 col-tablet-12 col-phone-12">
 					 					<tr>
 					 						<td><h3>Bandeja de entrada</h3></td><td/>
@@ -105,10 +113,10 @@
 					 				</table>
 								</div>
 
-								<div id="salida" class="mentabcontent">
+								<div id="salida" class="mentabcontent salida">
 					 				<table class="listaMensajes col-desktop-12 col-tablet-12 col-phone-12">							 			
 					 					<tr>
-					 						<td><h3>Bandeja de entrada</h3></td><td/>
+					 						<td><h3>Bandeja de salida</h3></td><td/>
 					 					</tr>
 					 					<tr>
 					 						<td><h3> De: <em>Rex@ThePunisher</em></h></td> <td>Asunto: <em>RE: Huelga en el parque</em></td>
@@ -132,9 +140,9 @@
 
 							<div class="opcionesMensajes"> 
 								<ul class="mentab">
-									<input type="button" name="entrada2" value="Bandeja de entrada" <a href="#" class="mentablinks" onclick="openTabMen(event, 'entrada2')"/>
-									<input type="button" name="salida2" value="Bandeja de salida" <a href="#" class="mentablinks" onclick="openTabMen(event, 'salida2')"/>
-									<input type="button" name="redactar" value="Redactar" <a href="./mensajeria2.html" class="mentablinks" />
+									<input type="button" name="entrada2" value="Bandeja de entrada" <a href="#" class="mentablinks boton-grand botonVerde" onclick="openTabMen(event, 'entrada2')"/>
+									<input type="button" name="salida2" value="Bandeja de salida" <a href="#" class="mentablinks boton-grand botonVerde" onclick="openTabMen(event, 'salida2')"/>
+									<input id="botonRedactarCorreo" type="button" name="redactar" value="Redactar" <a href="./mensajeria2.html" class="mentablinks boton-grand botonVerde" />
 								</ul>
 							 </div>
 
