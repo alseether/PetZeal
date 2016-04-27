@@ -39,6 +39,9 @@ header{
 	background-repeat: no-repeat;
 	background-size: 100%;
 	border-radius: 10px;
+	border-style: outset;
+    border-width: 2px;
+    border-color: buttonface;
 }
 
 #camposLogin{
