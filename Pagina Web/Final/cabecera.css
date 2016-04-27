@@ -5,6 +5,7 @@ header{
 	color: white;
 	font-family: 'Primary Italics';
 	font-size: 50;
+	min-width:650px;
 }
 
 #logoCabecera{

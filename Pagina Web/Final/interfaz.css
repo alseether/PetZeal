@@ -53,10 +53,6 @@ img{
 	background-color: #DCEDC8;
 }
 
-/*.cabecerilla{
-	height: 20%;
-}*/
-
 .anadir-mascota li{
 	width: 100%;
 	margin: 10 35%;
@@ -66,36 +62,39 @@ img{
 	margin: 0 15%;	
 }
 
-#anadir{
-	width: 50px;	
-}
-
 .div-cuerpo{
-
-	height: 80%;
+	height: 100%;
 }
 
 .listado{
 	width: 90%;
-	max-height: 100%;
+	height: -webkit-calc(100% - 100px - 36px);
 	margin: 0 auto;
 	list-style: none;
-	border: solid black;
+	border: 2px solid black;
 	color: black;
 	padding: 0;	
 	overflow-y: scroll;
 	border-radius: 8px;
 }
 
+#listadoBusqueda{
+	height: -webkit-calc(100% - 100px - 36px - 30px - 30px);
+}
+
+#listadoEstatica{
+	height: -webkit-calc(100% - 100px - 36px - 30px);
+}
+
 .listado li {
  	margin-top: 2%;
     display: inline-block;
-    width: 100%;
-	border: 3px solid black;
-	border-right: none;
+    width: -webkit-calc(100% - 2px);
+	border: 2px solid black;
 	border-left: none;
 	opacity: 0.9;
 	background-color: #DCEDC8;
+	border-radius: 5px;
 }
 
 .listado li img {
@@ -109,11 +108,13 @@ img{
 	width: -webkit-calc(100% - 115px);
     float: left;
     
-}.listado-mascotas{
+}
+
+.listado-mascotas{
 	width: 90%;
 	height: 87%;
 	list-style: none;
-	border: solid black;
+	border: 2px solid black;
 	color: black;
 	margin: 0 auto;
 	padding: 0;
@@ -123,10 +124,9 @@ img{
 
 .listado-mascotas li {
 	opacity: 0.9;
-   	border: solid black;
+   	border: 2px solid black;
    	border-right: none;
    	border-left: none;
-   	border-top: solid black; 
    	background-color: #DCEDC8; 
 	margin-top: 2%;
    	display: inline-block;
@@ -156,6 +156,56 @@ img{
     height: 70px;
 }
 
+.caja-posts{
+	width: 90%;
+	min-height: 120px;
+	margin: 35 auto;
+	list-style: none;
+	border: solid black;
+	border-width: thin;
+	border-radius: 5px;
+	background-color: white;
+	opacity: 0.9;
+	color: black;
+	max-height: 100%;
+	padding: 0;	
+}
+
+.caja-posts li {
+	margin-top: 2%; 
+    display: inline-block;
+    width: 100%;
+}
+
+.caja-posts li img {
+	float: left;
+    margin-right: 2%;
+    width: 85px;
+    height: 85px;
+}
+
+.caja-posts li p {
+    width: auto;
+    margin-right: 5%;
+    margin-left: 5%;
+    font-size: 20px;
+}
+
+.addcomentario{
+	margin-top: 10%;
+}
+
+#titulo{
+	font-size: 30px;
+}
+
+#cuadro-comentario{
+	float: right;
+	margin-right: 5%;
+	width: 90%;
+	height: 15%;
+}
+
 #subir-publicacion {
 	margin-top: 2%;
     display: inline-block;
@@ -172,15 +222,33 @@ img{
 	height: 10%;
 }
 
+#resultadoBusqueda{
+	margin-left: 4%;
+}
+
+#numeroElementosBusqueda{
+	border-radius: 5px;
+	width: 90%;
+	height: 30px;
+	text-align: center;
+	margin: 0 auto;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	border-top: 2px solid black;
+	border-bottom: none;
+	border-radius: 5px;
+
+}
+
 .cabecera{ 
 	width: 90%;
 	margin: 0 auto;
 	background-color: #8BC34A;
 	font-family: 'Primary Italics';
 	font-size: 30px;
-	border-top: solid black; 
-	border-right: solid black;
-	border-left: solid black;
+	border-top: 2px solid black; 
+	border-left: 2px solid black; 
+	border-right: 2px solid black; 
 	border-radius: 8px;
 }
 
@@ -221,9 +289,4 @@ img{
 .centro{
 	margin: 40%;
 	margin-top: 15%;
-}
-
-.borrar{
-	width: 30px;
-	height: 30px;
 }
