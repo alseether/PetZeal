@@ -51,16 +51,17 @@
 	font-size: 1.3em;
 }
 .botoneraConfirmacion{
+	display: flex;
 	position: relative;
-	margin-bottom: 15%;
+	margin-bottom: 10%;
 }
 .botoneraConfirmacion .botonBlanco{
 	margin-right:10px;
 	margin-left:5%;
 }
 .botoneraConfirmacion .botonVerde{
-	margin-left:5%;
-	margin-right:10px;
+	margin-left:10px;
+	margin-right:5%;
 }
 
 .cajaCambiarFoto .campoLogin {
