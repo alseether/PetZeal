@@ -5,6 +5,7 @@
     display: inline-block;
     font-size: 18px;
 	border-radius: 8px;
+	font-family: Arial;
 }
 
 .boton-peq{
@@ -14,62 +15,72 @@
     display: inline-block;
     font-size: 12px;
     border-radius: 5px;
+	font-family: Arial;
 }
 
 .botonVerde {
+	font-family: Arial;
     background-color:#8BC34A ;
     border: none;
     color: white;
 }
 
 .botonBlanco{
+	font-family: Arial;
 	background-color: white ;
     border: 2px #8BC34A groove;
     color: #8BC34A;
 }
 
 .botonNaranja{
+	font-family: Arial;
     background-color:#D46E00 ;
     border: none;
     color: white;
 }
 
 .botonLogin{
+	font-family: Arial;
     min-width: 100px;
     padding: 2px 4px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 5px;
 }
 
 .botonBorrar{
-  background: url("assets/images/borrar.png") center;  
-  background-repeat: no-repeat;
-  background-size: 100%;  
-  width: 30px;
-  height: 30px;
+	font-family: Arial;
+	background: url("assets/images/borrar.png") center;  
+	background-repeat: no-repeat;
+	background-size: 100%;  
+	width: 30px;
+	height: 30px;
 }
 
 #botonCambiar{
+	font-family: Arial;
     margin-left: 12.5%;
     margin-top: 5%;
     width: 75%;
 }
 
 #botonPremium {
+	font-family: Arial;
     margin-left: 10%;
     margin-top: 10%;
 }
 
 #botonCancelar {
+	font-family: Arial;
     float: right;
     margin-top: 1%;
     margin-bottom: 1%;
 }
 
 #botonEnviar {
+	font-family: Arial;
     border: 2px #8BC34A solid; 
     margin-left: 3%;
     float: right;
@@ -79,29 +90,34 @@
 }
 
 #botonMascotaMensajes{
+	font-family: Arial;
     margin-top: 2%;
 }
 
 #botonRedactarCorreo{
+	font-family: Arial;
     float: right;
     margin-right: 2%;
 }
 
 #botoncomentar{
+	font-family: Arial;
     float: right;
     margin-bottom: 5%;
 }
 
 #botonLike{
+	font-family: Arial;
     margin-right: 5%;
     float: right;
 }
 
 #botonAnadir{
-  background: url("assets/images/anadir-mascota.jpg") center;  
-  background-repeat: no-repeat;
-  background-size: 100%;  
-  width: 50px;
-  height: 50px;
-  margin-left: 13%;
+	font-family: Arial;
+	background: url("assets/images/anadir-mascota.jpg") center;  
+	background-repeat: no-repeat;
+	background-size: 100%;  
+	width: 50px;
+	height: 50px;
+	margin-left: 13%;
 }
