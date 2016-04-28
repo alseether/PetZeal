@@ -1,4 +1,5 @@
 <html>
+<html>
 	<head>
 		<title>PetZeal</title>
 		<meta charset="utf-8"</meta>
@@ -17,17 +18,40 @@
 			<a id="logoCorreo" href="mensajeria.html"></a>
 			<div id="camposLogin" >
 					<div id="linea1">
-						<a id="login" class="botonLogin botonNaranja" href="infoUsuario.html">Mi perfil</a>
+						<a id="login" class="botonLogin botonNaranja" href="infoEspecialista_Usu.html">Mi perfil</a>
 					</div>
 					<div id="linea2">
 						<a id="signup" class="botonLogin botonNaranja" href="inicioSinLogin.html">Salir</a>
 					</div>
 			</div>
 		</header>
+		<div class="cajaCambiarFoto col-desktop-4 col-tablet-4 col-phone-12">
+			<h2> Publicar artículo </h2>
+			<form action="" method="get">
+				<input class="col-desktop-12 col-tablet-12 col-phone-12" type="text" name="q" value="" placeholder="Título"/><br/>
+				<textarea class="col-desktop-12 col-tablet-12 col-phone-12" name="nombre" rows="15" cols="50" placeholder="Escribe tu artículo aquí..."></textarea>
+				<br/>
+				<input id="etiquetas" class="col-desktop-12 col-tablet-12 col-phone-12" type="text" name="q" value="#alimentacion"/><br/>
+				<div class="botonesMensaje col-desktop-6 col-tablet-12 col-phone-12">
+				<label id="especialFont"> Etiquetas: </label>
+					<select name="tags">
+	 					<option value="alimentacion" selected>Alimentación</option>
+	  					<option value="cuidados">Cuidados</option>
+	  					<option value="producto">Producto</option>
+	  					<option value="salud">Salud</option>
+					</select>
+				</div>
+				<div class="botonesMensaje">
+					<a href="inicioConLoginEsp_Post.html"><input id="botonEnviar" class="boton-grand botonVerde" type="button" name="Enviar" value="Enviar"/></a>
+					<a href="inicioConLoginEsp_Post.html"><input id="botonCancelar" class="boton-grand botonBlanco" type="button" name="Cancelar" value="Cancelar"/></a>
+				</div>
+			</form>
+		</div>
 		<div class="div-cuerpo">
 			<div class="col-phone-12 col-desktop-3 col-tablet-12 ">
-				<div class="cabecera"> Posts</div>
-				<ul class="listado">		
+				<div>
+					<div class="cabecera"> Posts</div>
+					<ul class="listado">		
 					<li>
 						<a href="infoEspecialista_Otro.html"> <img src="assets/images/julio.jpg" alt="pots1"> </a>
 						<a href="lectura_post.html">
@@ -79,52 +103,40 @@
 						<a id="subir"  class="boton-peq botonNaranja" href="lectura_post.html">Comentar</a>
 					</li>
 				</ul>
+				</div>
 			</div>	
-		
-			<div class="col-phone-12 col-desktop-6 col-tablet-12" >
-				<div class="cabecera">Toby</div>
+			<div class="col-phone-12 col-desktop-6 col-tablet-12 " >
+				<div class="cabecera"> Mis Posts</div>
 				<ul class="listado-mascotas">
-				
-					<li id="subir-publicacion">
-						<img src="assets/images/imagenRegistroMascota.jpg" alt="pots1" id="subir-publicacion-foto">
-						<textarea type="text" name="descripcion" placeholder="Descripcion" id="cuadro-descripcion"></textarea>
-						<a id="foto"  class="boton-peq botonNaranja" href="subirImagen.html">Foto</a>
-						<a id="subir"  class="boton-peq botonNaranja">Subir</a>
-
-
+					<li>
+						<a href="lectura_post.html"> <img src="assets/images/posts1.jpg" alt="pots1"></a>
+						<p class="info-list-cont">Tienda 100 duros.<br>
+							    Ven a comprar a nuestra tienda,<br>
+							    tenemos descuentos 50%..</p>		
+						<input type="button" src="assets/images/borrar.png" class="botonBorrar">			
 					</li>
 					<li>
-						<a href="infoMascota_Usu.html"> <img src="assets/images/perros-guia2.jpg" alt="pots1"></a>
-						<p class="info-list-cont">Toby descansando.<br>
-						    Despues de un paseo con mi dueño,<br>
-						    descansando antes de reanurar la marcha..</p>		
-						<input type="button" src="assets/images/borrar.png" class="botonBorrar">
-
-					</li>
-					<li>
-						<a href="infoMascota_Usu.html"> <img src="assets/images/perros-guia3.jpg" alt="pots1"></a>
-						<p class="info-list-cont">Toby en el parque.<br>
-						    Mientras mi dueño descansa en el parque,<br>
-						    yo aprovecho para tomar el sol..</p>		
-						<input type="button" src="assets/images/borrar.png" class="botonBorrar">						
+						<a href="lectura_post.html"> <img src="assets/images/posts2.jpg" alt="pots1"></a>
+						<p class="info-list-cont">Tienda 100 duros.<br>
+							    Podras acariciar un tigre,<br>
+							    recordar que cuesta 100 duros...</p>		
+						<input type="button" src="assets/images/borrar.png" class="botonBorrar">					
 					</li>						
 					<li>
-						<a href="infoMascota_Usu.html"> <img src="assets/images/perros-guia1.jpg" alt="pots1"></a>
-						<p class="info-list-cont">Aprendiendooo.<br>
-						    Jugando con mi profesor, <br>
-						    antes de seguir con la clase magistral..</p>		
-						<input type="button" src="assets/images/borrar.png" class="botonBorrar">
-				</ul>	
+						<a href="lectura_post.html"> <img src="assets/images/posts3.jpg" alt="pots1"></a>
+						<p class="info-list-cont">Tienda 100 duros.<br>
+							    Tenemos una nueva serpiente,<br>
+							    Podreis comprarla o pasearla por..</p>	
+						<input type="button" src="assets/images/borrar.png" class="botonBorrar">						
+					</li>
+				</ul>
 				<div class="lista-mascotas">
-			
-					<a href="inicioConLogin.html"> <img src="assets/images/roedor.jpg" alt="mascota"></a>
-					<a href="inicioConLogin.html">	<img src="assets/images/gato.jpg" alt="mascota"></a>
-					<a href="inicioConLogin.html">	<img src="assets/images/ave.jpg" alt="mascota"></a>
-					<a href="inicioConLogin.html">	<img src="assets/images/pez.jpg" alt="mascota"></a>
-					<a  href="altaMascota.html">
-						<img id ="anadir" src="assets/images/anadir-mascota.jpg" alt="añadir">	
-					</a>
-					
+					<a id="publicar-post"  class="boton-grand botonNaranja" href="inicioConLoginEsp_Post_Publicar.html">Publicar Post</a>
+					<a href="inicioConLoginEsp_Post.html"> <img src="assets/images/oficio.jpg" alt="mascota"></a>
+					<a href="inicioConLoginEsp.html">	<img src="assets/images/gato.jpg" alt="mascota"></a>
+					<a href="inicioConLoginEsp.html">	<img src="assets/images/ave.jpg" alt="mascota"></a>
+					<a href="inicioConLoginEsp.html">	<img src="assets/images/pez.jpg" alt="mascota"></a>
+					<a href="altaMascota.html">	<img id ="anadir" src="assets/images/anadir-mascota.jpg" alt="añadir"></a>
 				</div>			
 			</div>
 			<div class="col-phone-12 col-desktop-3 col-tablet-12 ">
@@ -139,7 +151,7 @@
 						<a href="informacion_estatica.html">
 							<img src="assets/images/perroInfoMascota.jpg" alt="pero">
 							<p class="info-list-cont">Perros</p>		
-						</a>							
+						</a>						
 					</li>
 					<li>
 						<img src="assets/images/pez.jpg" alt="pots1">
