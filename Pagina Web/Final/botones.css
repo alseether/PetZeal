@@ -55,6 +55,11 @@
 	background: url("assets/images/borrar.png") center;  
 	background-repeat: no-repeat;
 	background-size: 100%;  
+	border-style: groove;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: #D46E00;
+	margin-top: 3px;
 	width: 30px;
 	height: 30px;
 }
