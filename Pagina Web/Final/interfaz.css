@@ -110,6 +110,14 @@ img{
     
 }
 
+.listado li h2 {
+	width: -webkit-calc(100% - 115px);
+    float: left;
+    font-size: 40px;
+	margin-top: 20px;
+	text-align: center;
+}
+
 .listado-mascotas{
 	width: 90%;
 	height: -webkit-calc(100% - 100px - 36px - 70px);
