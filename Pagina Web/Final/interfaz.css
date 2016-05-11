@@ -316,4 +316,12 @@ img{
 		width: 50%;
 		margin-left: 30%;
 	}
+	#centrar{
+	width: 100%;
+
+	}
+	.centro{
+		margin-left: 30%;
+		margin-right: 20%;
+	}
 }
