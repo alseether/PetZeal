@@ -1,0 +1,140 @@
+.boton-grand{
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 8px;
+    font-family: Arial;
+}
+
+.boton-peq{
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 5px;
+    font-family: Arial;
+}
+
+.botonVerde {
+    font-family: Arial;
+    background-color:#8BC34A ;
+    border: none;
+    color: white;
+}
+
+.botonBlanco{
+    font-family: Arial;
+    background-color: white ;
+    border: 2px #8BC34A groove;
+    color: #8BC34A;
+}
+
+.botonNaranja{
+    font-family: Arial;
+    background-color:#D46E00 ;
+    border: none;
+    color: white;
+}
+
+.botonLogin{
+    font-family: Arial;
+    min-width: 100px;
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.botonBorrar{
+    font-family: Arial;
+    background: url("assets/images/borrar.png") center;  
+    background-repeat: no-repeat;
+    background-size: 100%;  
+    border-style: groove;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: #D46E00;
+    margin-top: 3px;
+    width: 30px;
+    height: 30px;
+}
+
+#botonCambiar{
+    font-family: Arial;
+    margin-left: 12.5%;
+    margin-top: 5%;
+    width: 75%;
+}
+
+#botonPremium {
+    font-family: Arial;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+#botonCancelar {
+    font-family: Arial;
+    float: right;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#botonEnviar {
+    font-family: Arial;
+    border: 2px #8BC34A solid; 
+    margin-left: 3%;
+    float: right;
+    margin-top: 1%;
+    margin-right: 3%;
+    margin-bottom: 1%;
+}
+
+#botonMascotaMensajes{
+    font-family: Arial;
+    margin-top: 2%;
+}
+
+#botonRedactarCorreo{
+    font-family: Arial;
+    float: right;
+    margin-right: 2%;
+}
+
+#botoncomentar{
+    font-family: Arial;
+    float: right;
+    margin-bottom: 5%;
+}
+
+#botonLike{
+    font-family: Arial;
+    margin-right: 5%;
+    float: right;
+}
+
+#botonAnadir{
+    font-family: Arial;
+    background: url("assets/images/anadir-mascota.png") center;  
+    background-repeat: no-repeat;
+    background-size: 100%;  
+    width: 50px;
+    height: 50px;
+    margin-left: 25%;
+}
+
+@media only screen and (max-width: 991px){
+    .boton-bigger{
+        padding: 40px 50px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 60px;
+        border-radius: 8px;
+        font-family: Arial;
+    }
+}
