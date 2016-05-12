@@ -124,5 +124,17 @@
 	background-size: 100%;  
 	width: 50px;
 	height: 50px;
-	margin-left: 13%;
+	margin-left: 25%;
+}
+
+@media only screen and (max-width: 991px){
+    .boton-bigger{
+        padding: 40px 50px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 60px;
+        border-radius: 8px;
+        font-family: Arial;
+    }
 }
