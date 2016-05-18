@@ -5,7 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="cssreset.css"/>			
 	 	<link rel="stylesheet" type="text/css" href="estructura.css" />
 	 	<link rel="stylesheet" type="text/css" href="interfaz.css"/>
-	 	<script scr="funciones.js"></script>
+	 	<script scr="./funciones.js"></script>
 	</head>
 	<body id="cuerpo-secundario">
 		<?php include 'cabecera.php';?>
@@ -18,7 +18,6 @@
 					else
 						include 'registroUsu.php';
 				?>
-				<div id="flotante"></div>
 			</fieldset>
 		</form>	
 	</body>

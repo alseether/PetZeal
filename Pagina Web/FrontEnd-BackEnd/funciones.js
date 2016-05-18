@@ -71,31 +71,7 @@ window.onload = function(){
  			caja[0].style.visibility = "visible";
 	}
 
-	var openLogin1 = function() {
-		//var ok = false;
-		//if (ok == false) {
-			$("flotante").load("./cuadroLogin.php");
-			//ok = true;
-		//}
-		/*else{
-			var caja = document.getElementsByClassName("cajaCambiarFoto");
-	 		if(caja[0].style.visibility == "visible"){
-	 			caja[0].style.visibility = "hidden";.
-	 			post.style["visibility"] = "visible";
-	 			comment.style["visibility"] = "visible";
-	 		}else{
-	 			caja[0].style.visibility = "visible";
-	 			post.style["visibility"] = "hidden";
-	 			comment.style["visibility"] = "hidden";
-	 		}
-		}  */  	
- 	}
-
- 	var openLogin = function(){
-		document.getElementById("flotante").innerHTML="<?php include'cuadroLogin.php'; ?>";
-	}
-
-	document.getElementById("login").addEventListener('click',openLogin);
+	document.getElementById("login").addEventListener('click',viewBox);
 	document.getElementById("baja").addEventListener('click',viewBox);
 	document.getElementById("botonCambiar").addEventListener('click',viewBox);
 	document.getElementById("comentar").addEventListener('click',viewPost);
