@@ -37,8 +37,8 @@
 			echo '<input class="campoLogin" type="password" name="pwd" placeholder="Escribe tu contraseña" minlenght="8"/><br>';
 		echo '</div>';
 		echo '<div class="botoneraConfirmacion">';
-			echo '<a id="botonHecho"  class =" boton-grand botonVerde col-desktop-5 col-tablet-5 col-phone-11" href="login.php">Iniciar Sesión</a>';
-			echo '<a id="cancelar" type="button" class="boton-grand botonBlanco col-desktop-5 col-tablet-5 col-phone-11">Cancelar</a>';
+			echo '<a id="botonHecho"  class ="boton-grand botonVerde col-desktop-5 col-tablet-5 col-phone-11" href="login.php">Iniciar Sesión</a>';
+			echo '<input id="cancelar" class="boton-grand botonBlanco col-desktop-5 col-tablet-5 col-phone-11" type="button" value="Cancelar"></input>';
 		echo '</div>';
 	echo '</div>';
 ?>
