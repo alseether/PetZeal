@@ -53,7 +53,7 @@ window.onload = function(){
 	var viewPost = function(){
 		var caja = document.getElementsByClassName("cajaCambiarFoto");
  		if(caja[0].style.visibility == "visible"){
- 			caja[0].style.visibility = "hidden";.
+ 			caja[0].style.visibility = "hidden";
  			post.style["visibility"] = "visible";
  			comment.style["visibility"] = "visible";
  		}else{
@@ -66,10 +66,12 @@ window.onload = function(){
 	var closeBox = function(){
 		var caja = document.getElementsByClassName("cajaCambiarFoto");
  		if(caja[0].style.visibility == "visible")
- 			caja[0].style.visibility = "hidden";.
+ 			caja[0].style.visibility = "hidden";
  		else
  			caja[0].style.visibility = "visible";
 	}
+
+
 
 	document.getElementById("login").addEventListener('click',viewBox);
 	document.getElementById("baja").addEventListener('click',viewBox);

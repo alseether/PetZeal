@@ -6,12 +6,13 @@
 			echo '<input type="text" name="Busqueda" placeholder="Buscar" id="busquedaEntrada">';
 			echo '<a id="lupa" class="col-desktop-1 col-tablet-1 col-phone-1" href="buscar.php"></a>';
 		echo '</div>';
-		if(isset($_SESSION["login"]) && $_SESSION["login"]==true)
+		$_SESSION["log"] = false;
+		if(isset($_SESSION["log"]) && $_SESSION["log"]==true)
 			echo '<a id="logoCorreo" href="mensajeria.php"></a>';
 		echo '<div id="camposLogin" >';
-			if(isset($_SESSION["login"]) && $_SESSION["login"]==true){
+			if(isset($_SESSION["log"]) && $_SESSION["log"]==true){
 				echo '<div id="linea1">';
-					echo '<a id="login" class="botonLogin botonNaranja" href="infoUsu.php">Mi perfil</a>';
+					echo '<a class="botonLogin botonNaranja" href="infoUsu.php">Mi perfil</a>';
 				echo '</div>';
 				echo '<div id="linea2">';
 					echo '<a id="signup" class="botonLogin botonNaranja" href="logout.php">Salir</a>';
@@ -27,6 +28,7 @@
 			}		
 		echo '</div>';
 	echo '</header>';
+
 	echo '<div class="cajaCambiarFoto col-desktop-4 col-tablet-4 col-phone-12">';
 		echo '<div class="mensajeConfirmacion">Iniciar sesión</div>';
 		echo '<div>';
@@ -36,7 +38,7 @@
 		echo '</div>';
 		echo '<div class="botoneraConfirmacion">';
 			echo '<a id="botonHecho"  class =" boton-grand botonVerde col-desktop-5 col-tablet-5 col-phone-11" href="login.php">Iniciar Sesión</a>';
-			echo '<a id="cancelar" class="boton-grand botonBlanco col-desktop-5 col-tablet-5 col-phone-11">Cancelar</a>';
+			echo '<a id="cancelar" type="button" class="boton-grand botonBlanco col-desktop-5 col-tablet-5 col-phone-11">Cancelar</a>';
 		echo '</div>';
 	echo '</div>';
 ?>
