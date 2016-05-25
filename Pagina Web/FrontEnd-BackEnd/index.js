@@ -1,12 +1,11 @@
-window.onload = function(){
-	alert("PUTA");
-	function ini() {
-		alert("PUTA");
-	    $("#header").load("prueba.html");
-	}
-}
 
-function getCookie(galleta) {
+
+$(document).ready(function(){
+    $("#header").load("cabecera.php");
+});	
+
+
+/*function getCookie(galleta) {
     var name = galleta + "=";
     var arr = document.cookie.split(';');
     for(var i=0; i<arr.length; i++) {
@@ -17,4 +16,4 @@ function getCookie(galleta) {
         	return cook.substring(name.length, cook.length);
     }
     return "";
-}
+}*/
