@@ -1,18 +1,3 @@
-
-	$(document).ready(function(){
-	    $("#header").load("cabecera.php");
-	});	
-	$(document).ready(function(){
-	    $("#slideIzq").load("postsGenerales.php");
-	});	
-	$(document).ready(function(){
-	    $("#content").load("central.php");
-	});	
-	$(document).ready(function(){
-	    $("#slideDer").load("infoEstatica.html");
-	});	
-
-
 	function openTabMasc(evt, masctabName) {
 	    // Declare all variables
 	    var i, mastabcontent, masctablinks;
