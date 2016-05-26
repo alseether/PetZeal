@@ -5,7 +5,7 @@
 	startDB();
 	$consulta = "select * from posts order by IDpost desc limit 20";
 	$ultimosPost = query($consulta);
-	
+
 	echo '<div class="col-phone-12 col-desktop-3 col-tablet-12">';
 		echo '<div class="cabecera"> Posts</div>';
 		echo '<ul class="listado">';
@@ -19,9 +19,12 @@
 					echo '<a href="infoEspecialista_Otro_SinLogin.html"> <img src="'.$rowUsu["Imagen"].'" alt="foto usuario"></a>';
 					echo '<a href="lectura_post_SinLogin.html"><p class="info-list-cont">'.$rowUsu["Nick"].'<br>';
 						    echo ''.$row["Titulo"].'<br>';
-						    echo ''.$row["Descripcion"].'</p></a>';						
+						    echo ''.$row["Descripcion"].'</p></a>';	
+
 				echo '</li>';
 			} 
 		echo '</ul>';
 	echo '</div>';
+
+	closeDB();
 ?>

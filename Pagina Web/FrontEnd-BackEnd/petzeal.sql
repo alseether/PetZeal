@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-05-2016 a las 15:53:44
+-- Tiempo de generación: 26-05-2016 a las 16:50:35
 -- Versión del servidor: 5.6.16
 -- Versión de PHP: 5.5.11
 
@@ -189,9 +189,9 @@ CREATE TABLE IF NOT EXISTS `publicaciones` (
 --
 
 INSERT INTO `publicaciones` (`IDpublicacion`, `Descripcion`, `Fecha`, `Imagen`, `Likes`, `IDmascota`) VALUES
-(1, 'Mira mi gata que guapaaa.', '2016-05-12', '', 800, 3),
-(2, 'Mi rata se ha comido la casa.', '2016-05-12', '', 900, 1),
-(3, 'Chipi despues de un baño', '2016-05-12', '', 4, 2);
+(1, 'Mira mi gata que guapaaa.', '2016-05-12', 'assets\\publicaciones-images\\publi1.jpg', 800, 3),
+(2, 'Mi rata se ha comido la casa.', '2016-05-12', 'assets\\publicaciones-images\\publi2.jpg', 900, 1),
+(3, 'Chipi despues de un baño', '2016-05-12', 'assets\\publicaciones-images\\publi3.jpg', 4, 2);
 
 -- --------------------------------------------------------
 
