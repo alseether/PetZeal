@@ -5,14 +5,14 @@
 	*/
 	//Sacar datos y comprobarlos
 	//$_SESSION["log"] = true;
-	session_start();
-	$_SESSION["log"] = false;
+	//session_start();
+	//$_SESSION["log"] = false;
 	if(!isset($_REQUEST["usuario"]) || !isset($_REQUEST["passwd"]) || $_REQUEST["usuario"] == "" || strpos($_REQUEST["usuario"],"<") != false || $_REQUEST["passwd"] == "" || strpos($_REQUEST["passwd"],"<") != false){
 	    header('Location: /PetZeal-master/Pagina%20Web/FrontEnd-BackEnd/index.html?mess=1');
 	    exit();
 	}
 	$nick=$_REQUEST["usuario"];
-	$_SESSION["usu"]=$_REQUEST["usuario"];
+	//$_SESSION["usu"]=$_REQUEST["usuario"];
 	$passwd=$_REQUEST["passwd"];
 	//Conectar BBDD
 	include_once('scriptsBBDD.php');
@@ -33,7 +33,11 @@
 	}
 	$rol=$reg["Rol"];
 	closeDB();
-	$_SESSION["log"] = true;
+//	$_SESSION["log"] = true;
+	setcookie("log", true, time() + (24*3600));	// tiempo de expiracion, 1 dia
+	setcookie("idUsu", $idUsu["IDusuario"], time() + (24*3600));
+	setcookie("nick", $nick, time() + (24*3600));
+	setcookie("rol", $rol, time() + (24*3600));
 	//Actualizar variables de sesión
 	header('Location: /PetZeal-master/Pagina%20Web/FrontEnd-BackEnd/index.html');
 ?>
