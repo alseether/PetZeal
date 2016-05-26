@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-05-2016 a las 16:50:35
+-- Tiempo de generación: 26-05-2016 a las 18:01:48
 -- Versión del servidor: 5.6.16
 -- Versión de PHP: 5.5.11
 
@@ -97,11 +97,11 @@ CREATE TABLE IF NOT EXISTS `mascotas` (
 --
 
 INSERT INTO `mascotas` (`IDmascota`, `Nombre`, `Especie`, `Raza`, `Nacimiento`, `Descripcion`, `Imagen`, `IDusuario`) VALUES
-(1, 'Mordiscos', 'Rata', 'Laboratorio', '0000-00-00', '', '', 1),
-(2, 'Pelito', 'Caballo', 'Mustang', '0000-00-00', '', '', 5),
-(3, 'Sora', 'Gato', 'Comun', '0000-00-00', '', '', 2),
-(4, 'Chipichapi', 'Huron', '', '0000-00-00', '', '', 3),
-(5, 'Nemo', 'Pez', 'Pez payaso', '0000-00-00', '', '', 4);
+(1, 'Mordiscos', 'Rata', 'Laboratorio', '0000-00-00', '', 'assets\\pets-images\\alseether-Mordiscos.jpg', 1),
+(2, 'Pelito', 'Caballo', 'Mustang', '0000-00-00', '', 'assets\\pets-images\\Cr-Pelito.jpg', 5),
+(3, 'Sora', 'Gato', 'Comun', '0000-00-00', '', 'assets\\pets-images\\Pau-Sora.jpg', 2),
+(4, 'Chipichapi', 'Huron', '', '0000-00-00', '', 'assets\\pets-images\\default.jpg', 3),
+(5, 'Nemo', 'Pez', 'Pez payaso', '0000-00-00', '', 'assets\\pets-images\\Julito-Nemo.jpg', 4);
 
 -- --------------------------------------------------------
 
