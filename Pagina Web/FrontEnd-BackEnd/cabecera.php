@@ -6,12 +6,12 @@
 			echo '<input type="text" name="Busqueda" placeholder="Buscar" id="busquedaEntrada">';
 			echo '<a id="lupa" class="col-desktop-1 col-tablet-1 col-phone-1" href="buscar.php"></a>';
 		echo '</div>';
-		if(isset($_SESSION["log"]) && $_SESSION["log"] == true)
+		if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true)
 			echo '<a id="logoCorreo" href="mensajeria.php"></a>';
 		echo '<div id="camposLogin" >';
-			if(isset($_SESSION["log"]) && $_SESSION["log"] == true){
+			if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true){
 				echo '<div id="linea1">';
-					echo '<a class="botonLogin botonNaranja" href="infoUsu.php">' .$_SESSION["usu"]. '</a>';
+					echo '<a class="botonLogin botonNaranja" href="infoUsu.php">' .$_COOKIE["usu"]. '</a>';
 				echo '</div>';
 				echo '<div id="linea2">';
 					echo '<a id="signup" class="botonLogin botonNaranja" href="logout.php">Salir</a>';
@@ -19,7 +19,7 @@
 			}
 			else{
 				echo '<div id="linea1">';
-					echo '<input id="login" class="botonLogin botonNaranja" type="button" value="Iniciar sesion"></input>';
+					echo '<input id="login" class="botonLogin botonNaranja" type="button" onclick="viewBox()" value="Iniciar sesion"></input>';
 				echo '</div>';
 				echo '<div id="linea2">';
 					echo '<a id="signup" class="botonLogin botonNaranja" href="registro.php">Registrarse</a>';
