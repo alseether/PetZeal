@@ -26,7 +26,7 @@
 						echo '</ul>';
 					}
 				}else{
-					$posts = getPostsUsuario($_COOKIE["idUsu"])->fetch_assoc();
+					$posts = getPostsUsuario($_COOKIE["idUsu"]);
 					if($posts->num_rows > 0){
 						echo '<div class="cabecera">'.$_COOKIE["nick"].'</div>';
 						echo '<ul class="listado-mascotas">';
