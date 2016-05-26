@@ -35,41 +35,41 @@ function getInfoUsuario($idUsuario){
 function insertaNuevoUsuario($nick, $password, $email, $rol, $cp, $nombre, $direccion, $telefono, $ocupacion, $web, $descripcion, $imagen){
 	global $mysqli;
 	$query="INSERT INTO usuarios (Nick, Password, Email, Rol, CP, Nombre, Direccion, Telefono, Ocupacion, Web, Descripcion, Imagen) 
-	VALUES ('$nick', '$password', '$email', '$rol', '$cp', '$nombre', '$direccion', '$telefono', '$ocupacion', '$web', '$descripcion', '$imagen')";
+	VALUES ('".$nick."', '".$password."', '".$email."', '".$rol."', '".$cp."', '".$nombre."', '".$direccion."', '".$telefono."', '".$ocupacion."', '".$web."', '".$descripcion."', '".$imagen."')";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 function actualizaInfoUsuario($idUsuario, $nick, $password, $email, $rol, $cp, $nombre, $direccion, $telefono, $ocupacion, $web, $descripcion, $imagen){
 	global $mysqli;
-	$query="UPDATE usuarios SET Nick='$nick', Password='$password' , Email='$email', Rol='$rol', CP='$cp', Nombre='$nombre', Direccion='$direccion', Telefono='$telefono', Ocupacion='$ocupacion', Web='$web', 'Descripcion=$descripcion', Imagen='$imagen'
-	WHERE IDusuario='$idUsuario'"; 
+	$query="UPDATE usuarios SET Nick='".$nick."', Password='".$password."' , Email='".$email."', Rol='".$rol."', CP='".$cp."', Nombre='".$nombre."', Direccion='".$direccion."', Telefono='".$telefono."', Ocupacion='".$ocupacion."', Web='".$web."', Descripcion='".$descripcion."', Imagen='".$imagen."'
+	WHERE IDusuario='".$idUsuario."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 function eliminaUsuario($idUsuario){
 	global $mysqli;
-	$query="DELETE usuarios WHERE IDusuario='$idUsuario'"; 
+	$query="DELETE usuarios WHERE IDusuario='".$idUsuario."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 /* Funciones de la tabla de mascotas*/
 function getMascotasUsuario($idUsuario){
 	global $mysqli;
-	$query="SELECT IDmascota FROM mascotas WHERE IDusuario LIKE '$idUsuario'";
+	$query="SELECT IDmascota FROM mascotas WHERE IDusuario ='".$idUsuario."'";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 	return $ret;
 }
 
 function getIdMascota($nombreMascota, $idUsuario){
 	global $mysqli;
-	$query="SELECT IDmascota FROM mascotas WHERE IDusuario LIKE '$idUsuario' AND Nombre LIKE '$nombreMascota' ";
+	$query="SELECT IDmascota FROM mascotas WHERE IDusuario = '".$idUsuario."' AND Nombre = '".$nombreMascota."' ";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 	return $ret;
 }
 
 function getInfoMascota($idMascota){
 	global $mysqli;
-	$query="SELECT * FROM mascotas WHERE IDmascota LIKE '$idMascota'";
+	$query="SELECT * FROM mascotas WHERE IDmascota LIKE '".$idMascota."'";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 	return $ret;
 }
@@ -77,34 +77,34 @@ function getInfoMascota($idMascota){
 function insertaNuevaMascota($nombre, $especie, $raza, $nacimiento, $descripcion, $imagen, $idUsuario){
 	global $mysqli;
 	$query="INSERT INTO mascotas (Nombre, Especie, Raza, Nacimiento, Descripcion, Imagen, IDusuario) 
-	VALUES ('$nombre', '$especie', '$raza', '$nacimiento', '$descripcion', '$imagen', '$idUsuario')";
+	VALUES ('".$nombre."', '".$especie."', '".$raza."', '".$nacimiento."', '".$descripcion."', '".$imagen."', '".$idUsuario."')";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 function actualizaInfoMascota($idMascota, $nombre, $especie, $raza, $nacimiento, $descripcion, $imagen, $idUsuario){
 	global $mysqli;
-	$query="UPDATE mascotas SET Nombre='$nombre', Especie='$especie', Raza='$raza', Nacimiento='$nacimiento', Descripcion='$descripcion', Imagen='$imagen', IDusuario='$idUsuario'
-	WHERE IDmascota='$idMascota'"; 
+	$query="UPDATE mascotas SET Nombre='".$nombre."', Especie='".$especie."', Raza='".$raza."', Nacimiento='".$nacimiento."', Descripcion='".$descripcion."', Imagen='".$imagen."', IDusuario='".$idUsuario."'
+	WHERE IDmascota='".$idMascota."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 function eliminaMascota($idMascota){
 	global $mysqli;
-	$query="DELETE mascota WHERE IDmascota='$idMascota'"; 
+	$query="DELETE mascota WHERE IDmascota='".$idMascota."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 /* Funciones de la tabla de posts*/
 function getPostsUsuario($idUsuario){
 	global $mysqli;
-	$query="SELECT IDpost FROM posts WHERE IDusuario LIKE '$idUsuario'";
+	$query="SELECT IDpost FROM posts WHERE IDusuario = '".$idUsuario."'";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 	return $ret;
 }
 
 function getInfoPost($idPost){
 	global $mysqli;
-	$query="SELECT * FROM posts WHERE IDpost LIKE '$idPost'";
+	$query="SELECT * FROM posts WHERE IDpost = '".$idPost."'";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 	return $ret;
 }
@@ -112,34 +112,34 @@ function getInfoPost($idPost){
 function insertaNuevoPost($titulo, $fecha, $descripcion, $et1, $et2, $et3, $et4, $et5, $likes, $idUsuario){
 	global $mysqli;
 	$query="INSERT INTO posts (Titulo, Fecha, Descripcion, Etiqueta1, Etiqueta2, Etiqueta3, Etiqueta4, Etiqueta5, IDusuario) 
-	VALUES ('$titulo', '$fecha', '$descripcion', '$et1', '$et2', '$et3, '$et4', '$et5', '$likes', '$idUsuario')";
+	VALUES ('".$titulo."', '".$fecha."', '".$descripcion."', '".$et1."', '".$et2."', '".$et3."', '".$et4."', '".$et5."', '".$likes."', '".$idUsuario."')";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 function actualizaInfoPost($idPost, $titulo, $fecha, $descripcion, $et1, $et2, $et3, $et4, $et5, $likes, $idUsuario){
 	global $mysqli;
-	$query="UPDATE posts SET Titulo='$titulo', Fecha='$fecha', Descripcion='$descripcion', Etiqueta1='$et1', Etiqueta2='$et2', Etiqueta3='$et3', Etiqueta4='$et4', Etiqueta5='$et5', Likes='$likes', IDusuario='$idUsuario'
-	WHERE IDpost='$idPost'"; 
+	$query="UPDATE posts SET Titulo='".$titulo."', Fecha='".$fecha."', Descripcion='".$descripcion."', Etiqueta1='".$et1."', Etiqueta2='".$et2."', Etiqueta3='".$et3."', Etiqueta4='".$et4."', Etiqueta5='".$et5."', Likes='".$likes."', IDusuario='".$idUsuario."'
+	WHERE IDpost='".$idPost."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 function eliminaPost($idPost){
 	global $mysqli;
-	$query="DELETE posts WHERE IDpost='$idPost'"; 
+	$query="DELETE posts WHERE IDpost='".$idPost."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 /* Funciones de la tabla de publicaciones*/
 function getPublicacionesMascota($idMascota){
 	global $mysqli;
-	$query="SELECT IDpublicacion FROM publicaciones WHERE IDmascota LIKE '$idMascota'";
+	$query="SELECT IDpublicacion FROM publicaciones WHERE IDmascota = '".$idMascota."'";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 	return $ret;
 }
 
 function getInfoPublicacion($idPublicacion){
 	global $mysqli;
-	$query="SELECT * FROM publicaciones WHERE IDpublicacion LIKE '$idPublicacion'";
+	$query="SELECT * FROM publicaciones WHERE IDpublicacion = '".$idPublicacion."'";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 	return $ret;
 }
@@ -147,34 +147,34 @@ function getInfoPublicacion($idPublicacion){
 function insertaNuevaPublicacion($descripcion, $fecha, $imagen, $likes, $idMascota){
 	global $mysqli;
 	$query="INSERT INTO publicaciones (Descripcion, Fecha, Imagen, Likes, IDmascota) 
-	VALUES ('$descripcion', '$fecha', '$imagen', '$likes', '$idMascota')";
+	VALUES ('".$descripcion."', '".$fecha."', '".$imagen."', '".$likes."', '".$idMascota."')";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 function actualizaInfoPublicacion($idPublicacion, $descripcion, $fecha, $imagen, $likes, $idMascota){
 	global $mysqli;
-	$query="UPDATE publicaciones SET Descripcion='$descripcion', Fecha='$fecha', Imagen='$imagen', Likes='$likes', IDmascota='$idMascota'
-	WHERE IDpublicacion='$idPublicacion'"; 
+	$query="UPDATE publicaciones SET Descripcion='".$descripcion."', Fecha='".$fecha."', Imagen='".$imagen."', Likes='".$likes."', IDmascota='".$idMascota."'
+	WHERE IDpublicacion='".$idPublicacion."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 function eliminaPublicacion($idPublicacion){
 	global $mysqli;
-	$query="DELETE publicaciones WHERE IDpublicacion='$idPublicacion'"; 
+	$query="DELETE publicaciones WHERE IDpublicacion='".$idPublicacion."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 /* Funciones de la tabla de comentarios*/
 function getComentariosPost($idPost){
 	global $mysqli;
-	$query="SELECT IDcomentario FROM comentarios WHERE IDpost LIKE '$idPost'";
+	$query="SELECT IDcomentario FROM comentarios WHERE IDpost = '".$idPost."'";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 	return $ret;
 }
 
 function getInfoComentario($idComentario){
 	global $mysqli;
-	$query="SELECT * FROM comentarios WHERE IDcomentario LIKE '$idComentario'";
+	$query="SELECT * FROM comentarios WHERE IDcomentario = '".$idComentario."'";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 	return $ret;
 }
@@ -182,41 +182,41 @@ function getInfoComentario($idComentario){
 function insertaNuevoComentario($fecha, $descripcion, $idMascota, $idEspecialista, $idPost){
 	global $mysqli;
 	$query="INSERT INTO comentarios (Fecha, Descripcion, IDmascota, IDespecialista, IDpost) 
-	VALUES ('$fecha', '$descripcion', '$idMascota', '$idEspecialista', '$idPost')";
+	VALUES ('".$fecha."', '".$descripcion."', '".$idMascota."', '".$idEspecialista."', '".$idPost."')";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 function actualizaInfoComentario($idComentario, $fecha, $descripcion, $idMascota, $idEspecialista, $idPost){
 	global $mysqli;
-	$query="UPDATE comentarios SET Fecha='$fecha', Descripcion='$descripcion', IDmascota='$idMascota', IDespecialista='$idEspecialista', IDpost='$idPost')
-	WHERE IDcomentario='$idComentario'"; 
+	$query="UPDATE comentarios SET Fecha='".$fecha."', Descripcion='".$descripcion."', IDmascota='".$idMascota."', IDespecialista='".$idEspecialista."', IDpost='".$idPost."')
+	WHERE IDcomentario='".$idComentario."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 function eliminaComentario($idComentario){
 	global $mysqli;
-	$query="DELETE comentarios WHERE IDcomentario='$idComentario'"; 
+	$query="DELETE comentarios WHERE IDcomentario='".$idComentario."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 /* Funciones de la tabla de mensajes*/
 function getMensajesEnviados($idMascota){
 	global $mysqli;
-	$query="SELECT IDmensaje FROM mensajes WHERE IDemisor LIKE '$idMascota'";
+	$query="SELECT IDmensaje FROM mensajes WHERE IDemisor = '".$idMascota."'";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 	return $ret;
 }
 
 function getMensajesRecibidos($idMascota){
 	global $mysqli;
-	$query="SELECT IDmensaje FROM mensajes WHERE IDreceptor LIKE '$idMascota'";
+	$query="SELECT IDmensaje FROM mensajes WHERE IDreceptor = '".$idMascota."'";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 	return $ret;
 }
 
 function getInfoMensaje($idMensaje){
 	global $mysqli;
-	$query="SELECT * FROM mensajes WHERE IDmensaje LIKE '$idMensaje'";
+	$query="SELECT * FROM mensajes WHERE IDmensaje = '".$idMensaje."'";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 	return $ret;
 }
@@ -224,27 +224,27 @@ function getInfoMensaje($idMensaje){
 function insertaNuevoMensaje($idEmisor, $idReceptor, $asunto, $fecha, $contenido, $leido){
 	global $mysqli;
 	$query="INSERT INTO mensajes (IDemisor, IDreceptor, Asunto, Fecha, Contenido, Leido) 
-	VALUES ('$idEmisor', '$idReceptor', '$asunto', '$fecha', '$contenido', '$leido')";
+	VALUES ('".$idEmisor."', '".$idReceptor."', '".$asunto."', '".$fecha."', '".$contenido."', '".$leido."')";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 function actualizaInfoMensaje($idMensaje, $idEmisor, $idReceptor, $asunto, $fecha, $contenido, $leido){
 	global $mysqli;
-	$query="UPDATE mensaje SET IDemisor='$idEmisor', IDreceptor='$idReceptor', Asunto='$asunto', Fecha='$fecha', Contenido='$contenido', Leido='$leido')
-	WHERE IDmensaje='$idMensaje'"; 
+	$query="UPDATE mensaje SET IDemisor='".$idEmisor."', IDreceptor='".$idReceptor."', Asunto='".$asunto."', Fecha='".$fecha."', Contenido='".$contenido."', Leido='".$leido."')
+	WHERE IDmensaje='".$idMensaje."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 function eliminaMensaje($idMensaje){
 	global $mysqli;
-	$query="DELETE mensajes WHERE IDmensajes='$idMensaje'"; 
+	$query="DELETE mensajes WHERE IDmensajes='".$idMensaje."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 /* Funciones de la tabla de etiquetas*/
 function getInfoEtiqueta($idEtiqueta){
 	global $mysqli;
-	$query="SELECT * FROM etiquetas WHERE IDetiqueta LIKE '$idEtiqueta'";
+	$query="SELECT * FROM etiquetas WHERE IDetiqueta = '".$idEtiqueta."'";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 	return $ret;
 }
@@ -252,27 +252,27 @@ function getInfoEtiqueta($idEtiqueta){
 function insertaNuevaEtiqueta($etiqueta, $usos){
 	global $mysqli;
 	$query="INSERT INTO etiquetas (Etiqueta, Usos) 
-	VALUES ('$etiqueta', '$usos')";
+	VALUES ('".$etiqueta."', '".$usos."')";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 function actualizaInfoEtiqueta($idEtiqueta, $etiqueta, $usos){
 	global $mysqli;
-	$query="UPDATE etiquetas SET Etiqueta='$etiqueta', Usos='$usos')
-	WHERE IDetiqueta='$idEtiqueta'"; 
+	$query="UPDATE etiquetas SET Etiqueta='".$etiqueta."', Usos='".$usos."')
+	WHERE IDetiqueta='".$idEtiqueta."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 function eliminaEtiqueta($idEtiqueta){
 	global $mysqli;
-	$query="DELETE etiquetas WHERE IDetiqueta='$idEtiqueta'"; 
+	$query="DELETE etiquetas WHERE IDetiqueta='".$idEtiqueta."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
 /* Funciones de la tabla de salt*/
 function getSaltUsuario($idUsuario){
 	global $mysqli;
-	$query="SELECT Salt FROM salt WHERE IDusuario LIKE '$idUsuario'";
+	$query="SELECT Salt FROM salt WHERE IDusuario = '".$idUsuario."'";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 	return $ret;
 }
@@ -280,7 +280,7 @@ function getSaltUsuario($idUsuario){
 function insertaNuevaSalt($idUsuario, $salt){
 	global $mysqli;
 	$query="INSERT INTO salt (IDusuario, Salt) 
-	VALUES ('$idUsuario', '$salt')";
+	VALUES ('".$idUsuario."', '".$salt."')";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
