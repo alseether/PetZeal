@@ -1,4 +1,17 @@
-window.onload = function(){
+
+	$(document).ready(function(){
+	    $("#header").load("cabecera.php");
+	});	
+	$(document).ready(function(){
+	    $("#slideIzq").load("postsGenerales.html");
+	});	
+	$(document).ready(function(){
+	    $("#content").load("central.php");
+	});	
+	$(document).ready(function(){
+	    $("#slideDer").load("infoEstatica.html");
+	});	
+
 
 	function openTabMasc(evt, masctabName) {
 	    // Declare all variables
@@ -42,7 +55,7 @@ window.onload = function(){
 	    evt.currentTarget.className += " active";
 	}
 
-	var viewBox = function(){
+	function viewBox(){
 		var caja = document.getElementsByClassName("cajaCambiarFoto");
 		if(caja[0].style.visibility == "visible")
  			caja[0].style.visibility = "hidden";
@@ -50,7 +63,7 @@ window.onload = function(){
  			caja[0].style.visibility = "visible";
 	}
 
-	var viewPost = function(){
+	function viewPost() {
 		var caja = document.getElementsByClassName("cajaCambiarFoto");
  		if(caja[0].style.visibility == "visible"){
  			caja[0].style.visibility = "hidden";
@@ -63,18 +76,8 @@ window.onload = function(){
  		}
 	}
 
-	var closeBox = function(){
+	function closeBox(){
 		var caja = document.getElementsByClassName("cajaCambiarFoto");
  		caja[0].style.visibility = "hidden";
 	}
 
-
-
-	document.getElementById("login").addEventListener('click',viewBox);
-	document.getElementById("cancelar").addEventListener('click',closeBox);
-	/*document.getElementById("baja").addEventListener('click',viewBox);
-	document.getElementById("botonCambiar").addEventListener('click',viewBox);
-	document.getElementById("comentar").addEventListener('click',viewPost);
-	document.getElementById("verPost").addEventListener('click',viewPost);*/
-	
-}
