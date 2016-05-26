@@ -3,7 +3,7 @@
 	    $("#header").load("cabecera.php");
 	});	
 	$(document).ready(function(){
-	    $("#slideIzq").load("postsGenerales.html");
+	    $("#slideIzq").load("postsGenerales.php");
 	});	
 	$(document).ready(function(){
 	    $("#content").load("central.php");

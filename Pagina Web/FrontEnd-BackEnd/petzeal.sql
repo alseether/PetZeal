@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-05-2016 a las 15:01:05
+-- Tiempo de generación: 26-05-2016 a las 15:53:44
 -- Versión del servidor: 5.6.16
 -- Versión de PHP: 5.5.11
 
@@ -150,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `IDusuario` int(11) unsigned NOT NULL,
   PRIMARY KEY (`IDpost`),
   KEY `Titulo` (`Titulo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- Volcado de datos para la tabla `posts`
@@ -159,7 +159,14 @@ CREATE TABLE IF NOT EXISTS `posts` (
 INSERT INTO `posts` (`IDpost`, `Titulo`, `Fecha`, `Descripcion`, `Etiqueta1`, `Etiqueta2`, `Etiqueta3`, `Etiqueta4`, `Etiqueta5`, `Likes`, `IDusuario`) VALUES
 (1, 'Cuidado de hurones', '2016-05-12', 'Blablabla, chipipchop', 5, 2, 0, 0, 0, 2, 3),
 (2, 'Vacunacion hurones', '2016-05-10', 'pompompom pom', 5, 4, 6, 0, 0, 12, 3),
-(3, 'Peces asesinos', '2016-05-11', 'Pis peces pe pomen pentre pellos.', 2, 7, 8, 0, 0, 80, 4);
+(3, 'Peces asesinos', '2016-05-11', 'Pis peces pe pomen pentre pellos.', 2, 7, 8, 0, 0, 80, 4),
+(4, 'Otro post', '2016-05-11', 'Descripcion del post', 2, 7, 8, 0, 0, 60, 4),
+(5, 'super post', '2016-05-11', 'Descripcion del post', 2, 7, 8, 0, 0, 60, 4),
+(6, ' mega post', '2016-05-11', 'Descripcion del post', 2, 7, 8, 0, 0, 60, 4),
+(7, 'ultra post', '2016-05-11', 'Descripcion del post', 2, 7, 8, 0, 0, 60, 4),
+(8, 'master post', '2016-05-11', 'Descripcion del post', 2, 7, 8, 0, 0, 60, 4),
+(9, 'poke post', '2016-05-11', 'Descripcion del post', 2, 7, 8, 0, 0, 60, 4),
+(10, 'grande post', '2016-05-11', 'Descripcion del post', 2, 7, 8, 0, 0, 60, 4);
 
 -- --------------------------------------------------------
 
@@ -221,19 +228,19 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   PRIMARY KEY (`IDusuario`),
   UNIQUE KEY `Nick` (`Nick`,`Email`),
   KEY `Nick_2` (`Nick`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
 INSERT INTO `usuarios` (`IDusuario`, `Nick`, `Password`, `Email`, `Rol`, `CP`, `Nombre`, `Direccion`, `Telefono`, `Ocupacion`, `Web`, `Descripcion`, `Imagen`) VALUES
-(1, 'alseether', '1234567', 'alvlazar@ucm.es', 'User', 40003, '', '', 555479412, '', '', '', ''),
-(2, 'Pau', '87654321', 'paulaill@ucm.es', 'User', 28012, '', '', 614789457, '', '', '', ''),
-(3, 'Zapi', 'sapito', 'dzapi01@ucm.es', 'Premium', 13003, '', '', 54791274, '', '', '', ''),
-(4, 'Julito', 'julito', 'julioa02@ucm.es', 'Premium', 145872, '', '', 2654621, '', '', '', ''),
-(5, 'Cr', 'pelaso', 'crvazque@ucm.es', 'Admin', 457896, '', '', 45549885, '', '', '', ''),
-(6, 'root', 'toor', 'holamundo@mail.com', 'Admin', 0, '', '', 0, '', '', '', '');
+(1, 'alseether', '1234567', 'alvlazar@ucm.es', 'User', 40003, '', '', 555479412, '', '', '', 'assets\\profile-images\\alvaro.jpg'),
+(2, 'Pau', '87654321', 'paulaill@ucm.es', 'User', 28012, '', '', 614789457, '', '', '', 'assets\\profile-images\\paula.jpg'),
+(3, 'Zapi', 'sapito', 'dzapi01@ucm.es', 'Premium', 13003, '', '', 54791274, '', '', '', 'assets\\profile-images\\zapi.jpg'),
+(4, 'Julito', 'julito', 'julioa02@ucm.es', 'Premium', 145872, '', '', 2654621, '', '', '', 'assets\\profile-images\\julio.jpg'),
+(5, 'Cr', 'pelaso', 'crvazque@ucm.es', 'Admin', 457896, '', '', 45549885, '', '', '', 'assets\\profile-images\\cristian.jpg'),
+(6, 'root', 'toor', 'holamundo@mail.com', 'Admin', 0, '', '', 0, '', '', '', 'assets\\profile-images\\default.jpg');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

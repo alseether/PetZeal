@@ -17,6 +17,12 @@ function closeDB(){
 	$mysqli->close();
 }
 
+function query($consulta){
+	global $mysqli;
+	$ret = $mysqli->query($consulta) or die ($mysqli->error. " en la linea".(__LINE__-1));
+	return $ret;
+}
+
 /* Funciones de la tabla de usuarios*/
 function getIdUsuario($nick){
 	global $mysqli;
@@ -95,6 +101,13 @@ function eliminaMascota($idMascota){
 }
 
 /* Funciones de la tabla de posts*/
+function getPosts(){
+	global $mysqli;
+	$query="SELECT * FROM posts";
+	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
+	return $ret;
+}
+
 function getPostsUsuario($idUsuario){
 	global $mysqli;
 	$query="SELECT IDpost FROM posts WHERE IDusuario = '".$idUsuario."'";
