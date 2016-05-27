@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<title>PetZeal</title>
+		<meta charset="utf-8">
+   		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	  <link rel="stylesheet" type="text/css" href="boots.css"/>
+    		<!--
+		    <link rel="stylesheet" type="text/css" href="cssreset.css"/>
+		  	<link rel="stylesheet" type="text/css" href="estructura.css" />
+		 	<link rel="stylesheet" type="text/css" href="interfaz.css"/>
+		 -->
+		 	<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+		
+	</head>
+	<body>
+		<div id="cabecera" class="page-header col-lg-12 col-md-12 col-sm-12" style="background-color:006633;">
+
+			<div class="col-lg-3 col-md-3 col-sm-3">
+      	<a href="index.html" style="background-color:006633;">
+   	  		<img alt="PetZeal" id="imagenLogo" src="assets/images/logoPetZeal.png">
+   			</a>
+   		</div>
+
+    		<div class="col-lg-6 col-md-6 col-sm-6">
+    			<div id="buscadorHeader" class="input-group">
+      				<input type="text" class="form-control" placeholder="Search for...">
+      				<span class="input-group-btn">
+                 <button class="btn btn-default" type="button">
+                  <div class="glyphicon glyphicon-search" style="height:20px"></div>
+                </button>
+      				</span>
+   				 </div>
+  			</div>
+
+    		<div id="botonesHeader" class="col-lg-3 col-md-3 col-sm-3">
+    			<a href="inicioLogin.html">
+	    		   <button id="botonHeader" type="button" class="btn btn-default btn-md col-lg-7 col-md-11 col-sm-11">Iniciar sesión</button>
+	    		</a>
+	    	  <a href="altaUsuario.html">
+				    <button id="botonHeader" type="button" class="btn btn-default btn-md col-lg-7 col-md-11 col-sm-11"> Registrarse</button>
+				  </a>
+			</div>
+
+		</div> <!-- page-header -->
+
+		<div class="div-cuerpo-forms col-lg-12 col-md-12 col-sm-12"> 
+
+			<form action="" method="post" enctype="multipart/form-data" class="col-lg-9 col-md-12 col-sm-12 form-horizontal"><h1>Registro</h1>
+				<div class="form-group">
+        			<label class="col-xs-2 control-label" for="inputSuccess">Nombre</label>
+        			<div class="col-xs-10">
+            			<input type="text" id="inputSuccess" class="form-control" placeholder="Escribe tu nombre..." autocomplete maxlenght="50">
+        			</div>
+    			</div>
+    			<div class="form-group has-success">
+        			<label class="col-xs-2 control-label" for="inputSuccess">Nombre de usuario</label>
+        			<div class="col-xs-10">
+            			<input type="text" id="inputSuccess" class="form-control" placeholder="Escribe tu nombre de usuario... (Ej. @idiota)"autocomplete maxlenght="20">
+            			<span class="help-block">Username is available</span>
+        			</div>
+    			</div>
+    			<div class="form-group has-warning">
+        			<label class="col-xs-2 control-label" for="inputWarning">Contraseña</label>
+        			<div class="col-xs-10">
+            			<input type="password" id="inputWarning" class="form-control" placeholder="Escribe tu contraseña..." minlenght="8">
+            			<span class="help-block">Password strength: Weak</span>
+        			</div>
+    			</div>
+    			<div class="form-group has-error">
+        			<label class="col-xs-2 control-label" for="inputError">Email</label>
+        			<div class="col-xs-10">
+            			<input type="email" id="inputError" class="form-control" placeholder="Escribe tu email...">
+            			<span class="help-block">Please enter a valid email address</span>
+        			</div>
+    			</div>
+    			<div class="form-group">
+        			<label class="col-xs-2 control-label" for="inputSuccess">C.P.</label>
+        			<div class="col-xs-10">
+            			<input type="text" id="inputSuccess" class="form-control" placeholder="Escribe tu código postal..." minlenght="5">
+        			</div>
+    			</div>
+			</form>
+
+			<div class="col-lg-9 col-md-12 col-sm-12">
+				<div class="center-block">
+					<a href="inicioRecienRegistrado.html">
+						<button type="button" class="btn btn-success btn-lg">Regístrate</button>
+					</a>
+					<button type="button" class="btn btn-lg">Borrar datos</button>
+				</div>	
+			</div>
+
+		</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.min.js"></script>
+		
+	</body>
+</html>
