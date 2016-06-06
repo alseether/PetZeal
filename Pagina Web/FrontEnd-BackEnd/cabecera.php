@@ -1,11 +1,10 @@
 <?php
-	session_start(); 
 	echo '<header class = "col-desktop-12 col-tablet-12 col-phone-12" >';
 		echo '<a id="logoCabecera" href="index.php"></a>';
-		echo '<div id="barraBusqueda">';
-			echo '<input type="text" name="Busqueda" placeholder="Buscar" id="busquedaEntrada">';
-			echo '<a id="lupa" class="col-desktop-1 col-tablet-1 col-phone-1" href="buscar.php"></a>';
-		echo '</div>';
+		echo '<form id="barraBusqueda" method="get" action="busqueda.html">';
+			echo '<input type="text" name="search" placeholder="Buscar" id="busquedaEntrada">';
+			echo '<input id="lupa" class="col-desktop-1 col-tablet-1 col-phone-1" type="submit" value=""></input>';
+		echo '</form>';
 		if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true)
 			echo '<a id="logoCorreo" href="mensajeria.php"></a>';
 		echo '<div id="camposLogin" >';
