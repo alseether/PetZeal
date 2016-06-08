@@ -10,7 +10,7 @@
 		echo '<div id="camposLogin" >';
 			if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true){
 				echo '<div id="linea1">';
-					echo '<a class="botonLogin botonNaranja" href="infoUsu.php">' .$_COOKIE["nick"]. '</a>';
+					echo '<a class="botonLogin botonNaranja" href="infoUsuario.html">' .$_COOKIE["nick"]. '</a>';
 				echo '</div>';
 				echo '<div id="linea2">';
 					echo '<a id="signup" class="botonLogin botonNaranja" href="logout.php">Salir</a>';
