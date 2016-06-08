@@ -22,13 +22,13 @@
 	$idUsu = $idQuery->fetch_assoc();
 	$resto = getInfoUsuario($idUsu["IDusuario"]);
 	if($resto->num_rows == 0){
-	    header('Location: /index.html?mess=2');
+	    header('Location: ./index.html?mess=2');
 	    exit();
 	}
 	$reg=$resto->fetch_array();
 	//Comprobar contraseña y asignar iduser
 	if($passwd != $reg["Password"]){
-	    header('Location: ./index.html?mess=3'.$nick);
+	    header('Location: ./index.html?mess=3');
 	    exit();
 	}
 	$rol=$reg["Rol"];

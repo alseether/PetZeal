@@ -29,7 +29,7 @@
 				$encontrado = true;
 				echo '<li>';
 					echo '<a href="info.html?masc=true&id='.$idMasc["IDmascota"].'"> <img src="'.$mascota["Imagen"].'" alt="foto mascota"></a>';
-		   			echo '<a href="info.html?masc=true&id='.$idMasc["IDmascota"].'">'.implode($search).'</a>';
+		   			echo '<a href="info.html?masc=true&id='.$idMasc["IDmascota"].'">@'.implode($search).'</a>';
 				echo '</li>';
 			}
 		} 
@@ -40,7 +40,7 @@
 			$encontrado = true;
 			echo '<li>';
 				echo '<a href="info.html?masc=false&id='.$usu["IDusuario"].'"> <img src="'.$usu["Imagen"].'" alt="foto usuario"></a>';
-				echo '<a href="info.html?masc=false&id='.$usu["IDusuario"].'">'.implode($search).'</a>';
+				echo '<a href="info.html?masc=false&id='.$usu["IDusuario"].'">@'.implode($search).'</a>';
 			echo '</li>';
 		}
 	}
@@ -58,7 +58,7 @@
 			$idUsu = getInfoUsuario($row["IDusuario"])->fetch_assoc();
 			echo '<li>';
 				echo '<a href="info.html?masc=false&id='.$idUsu["IDusuario"].'"> <img src="'.$idUsu["Imagen"].'" alt="foto usuario"></a>';
-				echo '<a href="lectura.html?id='.$row["IDpost"].'"><p class="info-list-cont">'.$idUsu["Nick"].'<br>';
+				echo '<a href="lectura.html?id='.$row["IDpost"].'"><p class="info-list-cont">@'.$idUsu["Nick"].'<br>';
 				    echo ''.$row["Titulo"].'<br>';
 				    echo ''.$row["Descripcion"].'</p></a>';	
 			echo '</li>';

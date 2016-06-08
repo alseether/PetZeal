@@ -1,6 +1,6 @@
 <?php
 	echo '<header class = "col-desktop-12 col-tablet-12 col-phone-12" >';
-		echo '<a id="logoCabecera" href="index.php"></a>';
+		echo '<a id="logoCabecera" href="index.html"></a>';
 		echo '<form id="barraBusqueda" method="get" action="busqueda.html">';
 			echo '<input type="text" name="search" placeholder="Buscar: Post - @usuario - @mascota - $etiqueta " id="busquedaEntrada">';
 			echo '<input id="lupa" class="col-desktop-1 col-tablet-1 col-phone-1" type="submit" value=""></input>';
