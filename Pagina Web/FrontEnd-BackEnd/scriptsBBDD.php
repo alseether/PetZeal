@@ -297,4 +297,57 @@ function insertaNuevaSalt($idUsuario, $salt){
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
+/* Funciones de busqueda */
+
+function getIdEtiqueta($nombre){
+	global $mysqli;
+	$query="SELECT IDetiqueta FROM etiquetas WHERE Etiqueta = '".$nombre."' ";
+	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
+	return $ret;
+}
+
+function buscaPalabras($palabra, $len){
+	global $mysqli;
+	$query = "SELECT * FROM posts WHERE Titulo LIKE '%".$palabra[0]."%'";
+	for ($i = 1; $i < $len; $i++) {
+    	$query .= "AND Titulo LIKE '%".$palabra[$i]."%'";
+	}
+	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
+	return $ret;
+}
+
+function buscaEtiquetas($palabra, $len){
+	global $mysqli;
+	$num = 0;
+	for ($i = 0; $i < $len; $i++){
+		$array = str_split($palabra[$i]);
+		unset($array[0]);
+		$row = getIdEtiqueta(implode($array));
+		if($row->num_rows > 0){
+			$row = $row->fetch_assoc();
+			$etiqueta[$i] = $row["IDetiqueta"];
+			$num++;
+		}
+	}
+
+	$query = "SELECT * FROM posts WHERE Etiqueta1 = ".$etiqueta[0]." ";
+	for ($i = 1; $i < $num; $i++){
+    	$query .= "OR Etiqueta1 = ".$etiqueta[$i]." ";
+    }
+	for ($i = 0; $i < $num; $i++){
+    	$query .= "OR Etiqueta2 = ".$etiqueta[$i]." ";
+	}
+	for ($i = 0; $i < $num; $i++){
+    	$query .= "OR Etiqueta3 = ".$etiqueta[$i]." ";
+    }
+	for ($i = 0; $i < $num; $i++){
+    	$query .= "OR Etiqueta4 = ".$etiqueta[$i]." ";
+    }
+	for ($i = 0; $i < $num; $i++){
+    	$query .= "OR Etiqueta5 = ".$etiqueta[$i]." ";
+    }
+	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
+	return $ret;
+}
+
 ?>

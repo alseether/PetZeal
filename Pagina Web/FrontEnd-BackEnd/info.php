@@ -1,8 +1,8 @@
 <?php
 	include_once("funciones.php");
 	include_once("scriptsBBDD.php");
-	$mascota = $_GET["masc"];
-	$idAccedido = $_GET["id"];
+	$mascota = $_REQUEST["masc"];
+	$idAccedido = $_REQUEST["id"];
 
 	if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true && isset($_COOKIE["rol"])){
 		if($mascota == "true"){
@@ -18,19 +18,19 @@
 			closeDB();
 
 			if($encontrado)
-				include("infoMascota.html");//PONER COMO PHP PARA TRATAR LA CONSULTAS A LA BASE DE DATOS
+				include("infoMascota.php");
 			else
-				include("infoMascotaOtro.html");//PONER COMO PHP PARA TRATAR LA CONSULTAS A LA BASE DE DATOS
+				include("infoMascotaOtro.php");
 		}
 		else if($_COOKIE["rol"] == "User"){
 			if($idAccedido == $_COOKIE["idUsu"])
-				include("infoUsuario.html");//PONER COMO PHP PARA TRATAR LA CONSULTAS A LA BASE DE DATOS
+				include("infoUsuario.php");
 		}
 		else{
 			if($idAccedido == $_COOKIE["idUsu"])
-				include("infoPremium.html");//PONER COMO PHP PARA TRATAR LA CONSULTAS A LA BASE DE DATOS
+				include("infoPremium.php");
 			else
-				include("infoPremiumOtro.html");//PONER COMO PHP PARA TRATAR LA CONSULTAS A LA BASE DE DATOS
+				include("infoPremiumOtro.php");
 		}
 	}
 ?>
