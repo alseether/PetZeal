@@ -4,6 +4,7 @@
 	startDB();
 	$id = $_GET["id"];
 	$hayPosts = $_GET["p"];
+	$cargadoPosts = 1;
 	echo '<div class="col-phone-12 col-desktop-6 col-tablet-12">';
 		echo '<div id="centrar">';					  
 			if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true){
@@ -31,18 +32,18 @@
 						echo '</ul>';
 					}
 				}else{//premiun
-					if($hayPosts == 0)
+					if($hayPosts == 1){
 						$posts = getPostsUsuario($_COOKIE["idUsu"]);
 						if($posts->num_rows > 0){
 							echo '<div class="cabecera">'.$_COOKIE["nick"].'</div>';
 							echo '<ul class="listado-mascotas">';	
 									cargaPostUsuario($_COOKIE["idUsu"]);
 							echo '</ul>';
-							$cargadoPosts = true;
+							$cargadoPosts = 0;
 						}
 						
 					}
-					if($cargadoPosts != true){						
+					if($cargadoPosts != 0){						
 							$mascotas = getMascotasUsuario($_COOKIE["idUsu"]);
 							if($mascotas->num_rows > 0){
 								$row = $mascotas->fetch_assoc();
@@ -73,8 +74,10 @@
 								echo '</ul>';
 							}
 					}
+					$cargadoPosts = 1;
 	
-				cargaCarrusel($_COOKIE["idUsu"]);
+					cargaCarrusel($_COOKIE["idUsu"]);
+				}
 			}else{
 				echo '<a href="altaUsuario.html" class="boton-grand botonNaranja centro boton-biggr">Registrate</a>';
 			}

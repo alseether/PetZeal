@@ -20,7 +20,7 @@
 			echo '<li>';
 				echo '<a href="infoMascota_Usu.html"> <img src="'.$p["Imagen"].'" alt="foto publicacion"></a>';
 				echo '<p class="info-list-cont">'.$p["Descripcion"].'';
-				echo '<input type="button" src="assets/images/borrar.png" class="botonBorrar">';
+				echo '<input type="button"  onclick='.borrarPublicacion( $row["IDpublicacion"], $idMascota).' src="assets/images/borrar.png" class="botonBorrar">';
 			echo '<li>';
 			$i++;
 		}
@@ -38,8 +38,8 @@
 			echo '<li>';
 				echo '<a href="infoMascota_Usu.html"> <img src="'.$infoUsu["Imagen"].'" alt="foto perfil"></a>';
 				echo '<p class="info-list-cont">'.$p["Titulo"].'<br>'.$p["Descripcion"].'</p>';
-				echo '<input type="button" src="assets/images/borrar.png" class="botonBorrar">';
-			echo '<li>';
+				echo '<input type="button" onclick='.borrarPosts($row["IDpost"]).' src="assets/images/borrar.png" class="botonBorrar">';
+			echo '<li>'; 
 			$i++;
 		}
 	}
@@ -52,7 +52,8 @@
 			if(isset($_COOKIE["rol"]) && $_COOKIE["rol"] == "Premium"){
 				echo '<a id="publicar-post"  class="boton-grand botonNaranja" href="inicioConLoginEsp_Post_Publicar.html">Publicar Post</a>';
 				//primera imagen de mi posts (foto de perfil)
-				echo '<button onclick="cambioMascota(0,'.true.')"> <img src="'.$infoUsu["Imagen"].'" alt="foto perfil"></button>';
+				$num = 0;
+				echo '<button onclick="cambioMascota(0,1)"> <img src="'.$infoUsu["Imagen"].'" alt="foto perfil"></button>';
 			}
 			$mascotas = getMascotasUsuario($idUsuario);
 			$i=0;
@@ -60,11 +61,23 @@
 				$row = $mascotas->fetch_assoc();
 				$infoMascota = getInfoMascota($row["IDmascota"])->fetch_assoc();
 				
-				echo '<button onclick="cambioMascota('.$infoMascota["IDmascota"].','.false.')"> <img src='.$infoMascota["Imagen"].' data-idMascota = '.$infoMascota["IDmascota"].' alt="'.$infoMascota["Nombre"].'"></button>';
+				echo '<button onclick="cambioMascota('.$infoMascota["IDmascota"].',0)"> <img src='.$infoMascota["Imagen"].' data-idMascota = '.$infoMascota["IDmascota"].' alt="'.$infoMascota["Nombre"].'"></button>';
 				$i++;
 			}
 			echo '<a href="altaMascota.html">	<img id ="anadir" src="assets/images/anadir-mascota.jpg" alt="añadir"></a>';
 		}
 		echo '</div>';	
+	}
+
+		// Esta funcion requiere haber abierto la BBDD
+	function borrarPosts( $idPost){
+		eliminaPost($idPost);
+		//cambioMascota(0,1);
+
+	}
+	function borrarPublicacion( $IDpublicacion, $idMascota){
+		eliminaPost($IDpublicacion);
+		 cambioMascota($idMascota,0);
+
 	}
 ?>
