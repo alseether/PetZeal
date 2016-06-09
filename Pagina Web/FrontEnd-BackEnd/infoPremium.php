@@ -39,6 +39,7 @@
 			echo '<div class = "fotoEsp col-desktop-5 col-tablet-5 col-phone-11">';
 				echo '<div id="fotoPerfilOficio"></div>';
 					echo '<a id="botonCambiar" class="boton-grand botonBlanco" href="cambiarFotoEspecialista.html">Cambiar foto</a><br>';
+					//<input type="file" accept="image/jpeg, image/png">
 			echo '</div>';
 		echo '</fieldset>';
 	echo '</form>';
