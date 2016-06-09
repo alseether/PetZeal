@@ -9,10 +9,10 @@
 		echo '<div id="centrar">';					  
 			if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true){
 				if(isset($_COOKIE["rol"]) &&  $_COOKIE["rol"] == 'User'){//usuario
-					if($num == 0){
+					if($id == 0){
 						$mascotas = getMascotasUsuario($_COOKIE["idUsu"]);
 					}else{
-						$mascotas = $num;
+						$mascotas = $id;
 					}
 					if($mascotas->num_rows > 0){
 						$row = $mascotas->fetch_assoc();
@@ -31,7 +31,7 @@
 							
 						echo '</ul>';
 					}
-				}else{//premiun
+				}else{//premium
 					if($hayPosts == 1){
 						$posts = getPostsUsuario($_COOKIE["idUsu"]);
 						if($posts->num_rows > 0){

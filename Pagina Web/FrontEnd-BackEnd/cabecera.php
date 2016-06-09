@@ -6,7 +6,7 @@
 			echo '<input id="lupa" class="col-desktop-1 col-tablet-1 col-phone-1" type="submit" value=""></input>';
 		echo '</form>';
 		if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true)
-			echo '<a id="logoCorreo" href="mensajeria.php"></a>';
+			echo '<a id="logoCorreo" href="mensajeria.html"></a>';
 		echo '<div id="camposLogin" >';
 			if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true){
 				echo '<div id="linea1">';
