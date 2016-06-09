@@ -1,0 +1,126 @@
+<html>
+	<head>
+		<title>PetZeal</title>
+		<meta charset="utf-8">
+   		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" type="text/css" href="boots.css"/>
+		<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div id="cabecera" class="page-header col-lg-12 col-md-12 col-sm-12" style="background-color:006633;">
+
+			<div class="col-lg-3 col-md-3 col-sm-3">
+      	<a href="inicioConLogin.html" style="background-color:006633;">
+   	  		<img alt="PetZeal" id="imagenLogo" src="assets/images/logoPetZeal.png">
+   			</a>
+   		</div>
+
+    		<div class="col-lg-6 col-md-6 col-sm-6">
+    			<div id="buscadorHeader" class="input-group">
+      				<input type="text" class="form-control" placeholder="Search for...">
+      				<span class="input-group-btn">
+                 <button class="btn btn-default" type="button">
+                  <div class="glyphicon glyphicon-search" style="height:20px"></div>
+                </button>
+      				</span>
+   				 </div>
+  			</div>
+
+    		<div id="botonesHeader" class="col-lg-3 col-md-3 col-sm-3">
+          <div>
+            <a href="mensajeria.html" class="col-lg-2 col-md-2 col-sm-2 botonMensajeria">
+              <button id="botonHeader" type="button" class="btn btn-default glyphicon glyphicon-envelope btn-md"></button>
+            </a>
+          </div>
+    			<a href="infoUsuario.html" class="col-lg-10 col-md-10 col-sm-10">
+	    		   <button id="botonHeader" type="button" class="btn btn-success btn-md col-lg-10 col-md-10 col-sm-10">Mi perfil</button>
+	    		</a>
+
+          <div class="col-lg-2 col-md-2 col-sm-2"></div>
+	    	  <a href="index.html" class="col-lg-10 col-md-10 col-sm-10">
+				    <button id="botonHeader" type="button" class="btn btn-default btn-md col-lg-10 col-md-10 col-sm-10">Desconectarse</button>
+				</a>
+			</div>
+
+		</div> <!-- page-header -->
+
+		<div class="div-cuerpo-forms col-lg-12 col-md-12 col-sm-12"> 
+
+			<form action="" method="post" enctype="multipart/form-data" class="col-lg-9 col-md-12 col-sm-12 form-horizontal"><h1>Información del usuario</h1>
+				<div class="form-group">
+        			<label class="col-xs-2 control-label" for="inputSuccess">Nombre</label>
+        			<div class="col-xs-10">
+            			<input type="text" id="inputSuccess" class="form-control" placeholder="Escribe tu nombre..." value="Benito Camela"
+							autocomplete maxlenght="0" autocomplete maxlenght="50">
+        			</div>
+    			</div>
+    			<div class="form-group">
+        			<label class="col-xs-2 control-label" for="inputSuccess">Nombre de usuario</label>
+        			<div class="col-xs-10">
+            			<input type="text" id="inputSuccess" class="form-control" placeholder="Escribe tu nombre de usuario... (Ej. @idiota)"value="@benito_calentorro" autocomplete maxlenght="20">
+        			</div>
+    			</div>
+    			<div class="form-group">
+        			<label class="col-xs-2 control-label" for="inputWarning">Contraseña</label>
+        			<div class="col-xs-10">
+            			<input type="password" id="inputWarning" class="form-control" placeholder="Escribe tu contraseña..." value="12345678" minlenght="8">
+        			</div>
+    			</div>
+    			<div class="form-group">
+        			<label class="col-xs-2 control-label" for="inputError">Email</label>
+        			<div class="col-xs-10">
+            			<input type="email" id="inputError" class="form-control" placeholder="Escribe tu email..." value="benitocamela69@gmail.com">
+        			</div>
+    			</div>
+    			<div class="form-group">
+        			<label class="col-xs-2 control-label" for="inputSuccess">C.P.</label>
+        			<div class="col-xs-10">
+            			<input type="text" id="inputSuccess" class="form-control" placeholder="Escribe tu código postal..." value="80012" minlenght="5">
+        			</div>
+    			</div>
+			</form>
+
+			<div class="col-lg-9 col-md-12 col-sm-12">
+				<div class="center-block">
+					<!--Implementar actualizarUsuario.php que redireccionará a inicioConLogin.html><-->
+					<a href="actualizarUsuario.php" type="button" class="btn btn-success btn-lg" role="button">Guardar cambios</a>
+					<button type="button" class="btn btn-lg" data-toggle="modal" data-target="#ventanaBaja">Dar de baja</button>
+				</div>	
+			</div>
+
+		    <!-- Modal -->
+		    <div id="ventanaBaja" class="modal fade" role="dialog">
+		      <div class="modal-dialog">
+
+		        <!-- Modal content-->
+		        <div class="modal-content">
+		          <div class="modal-header">
+		            <button type="button" class="close" data-dismiss="modal">&times;</button>
+		            <h2 class="modal-title">¿Realmente quieres eliminar este usuario?</h2>
+		          </div>
+		          <div class="modal-body modal-body-justified">
+		          	<button type="button" class="btn btn-default btn-lg btn-success" data-dismiss="modal">NO</button>
+		          	<!--Implementar borrarUsuario.php><-->
+		          	<a href="borrarUsuario.php" type="button" class="btn btn-default btn-lg btn-danger" role="button">SI</a>
+		          </div>
+		        </div>
+
+		      </div>
+		    </div>
+
+		<form class="col-desktop-5 col-tablet-4 col-phone-12" method="get" action="./altaEspecialista.html">
+			<a href="altaEspecialista.html">
+			<button type="button" class="btn btn-warning btn-lg">Convertirse a Premium</button>
+			</a>
+		</form>
+
+		</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+		
+	</body>
+</html>

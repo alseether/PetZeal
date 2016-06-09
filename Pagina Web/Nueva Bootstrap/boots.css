@@ -1,0 +1,62 @@
+#cabecera{
+	margin: 0px 0px 1% 0px;
+}
+
+#imagenLogo{
+	height: 15%;
+	margin-top: 4%;
+}
+
+#buscadorHeader{
+	margin-top: 8%;
+	margin-left: 2%;
+}
+
+#botonesHeader{
+	margin-top: 3%;
+}
+
+.botonMensajeria{
+	margin-top: 4%;
+}
+
+#botonHeader{
+	margin-bottom: 1%;
+	margin-left: 25%;
+}
+
+#botonRegistrate{
+	margin-top: 40%;
+}
+
+.div-cuerpo{
+	height: 78%; 
+	background: url("assets/images/fondoPetZeal_2.png") center;
+	background-size: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.div-cuerpo-forms{
+	height: 78%; 
+	background: url("assets/images/fondoPetZeal_1.png") center;
+	background-size: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+#panelPosts{
+	Overflow-y: scroll; 
+	height: 85%;
+}
+
+#panelPosts-mascota{
+	Overflow-y: scroll; 
+	height: 76%;
+}
+
+#textAniadir{
+	justify: center;
+}
+
+
