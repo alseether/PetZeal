@@ -207,7 +207,7 @@ function insertaNuevoMensaje($idEmisor, $idReceptor, $asunto, $fecha, $contenido
 }
 function actualizaInfoMensaje($idMensaje, $idEmisor, $idReceptor, $asunto, $fecha, $contenido, $leido){
 	global $mysqli;
-	$query="UPDATE mensaje SET IDemisor='".$idEmisor."', IDreceptor='".$idReceptor."', Asunto='".$asunto."', Fecha='".$fecha."', Contenido='".$contenido."', Leido='".$leido."')
+	$query="UPDATE mensajes SET IDemisor='".$idEmisor."', IDreceptor='".$idReceptor."', Asunto='".$asunto."', Fecha='".$fecha."', Contenido='".$contenido."', Leido='".$leido."')
 	WHERE IDmensaje='".$idMensaje."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }

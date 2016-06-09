@@ -39,7 +39,64 @@
 	    document.getElementById(mentabName).style.display = "block";
 	    evt.currentTarget.className += " active";
 	}
+	
+	function mostrarVentanaRedactar() {
+		
+		var j;
+		var caja = document.getElementsByClassName("cajaCambiarFoto");
+		
+		 for (j = 0; j < caja.length; j++) {
+			 if(caja[j].style.visibility == "visible"){
+				 caja[j].style.visibility = "hidden";
+			 }
+			else{
+				caja[j].style.visibility = "visible";
+			}
+	    }
+	}
+	
+	function openContMenRecibido(evt, mensaje) {
+	    // Declare all variables
+	    var j, mentabcontent, mentablinks;
 
+	    // Get all elements with class="tabcontent" and hide them
+	    mentabcontent = document.getElementsByClassName("contenidoMensajeR");
+	    for (j = 0; j < mentabcontent.length; j++) {
+	        mentabcontent[j].style.display = "none";
+	    }
+
+	    // Get all elements with class="tablinks" and remove the class "active"
+	    mentablinks = document.getElementsByClassName("cabeceraMensajeR");
+	    for (j = 0; j < mentabcontent.length; j++) {
+	        mentablinks[j].className = mentablinks[j].className.replace("active", "");
+	    }
+
+	    // Show the current tab, and add an "active" class to the link that opened the tab
+	    document.getElementById(mensaje).style.display = "block";
+	    evt.currentTarget.className += " active";
+	}
+
+	function openContMenEnviado(evt, mensaje) {
+	    // Declare all variables
+	    var j, mentabcontent, mentablinks;
+
+	    // Get all elements with class="tabcontent" and hide them
+	    mentabcontent = document.getElementsByClassName("contenidoMensajeE");
+	    for (j = 0; j < mentabcontent.length; j++) {
+	        mentabcontent[j].style.display = "none";
+	    }
+
+	    // Get all elements with class="tablinks" and remove the class "active"
+	    mentablinks = document.getElementsByClassName("cabeceraMensajeE");
+	    for (j = 0; j < mentabcontent.length; j++) {
+	        mentablinks[j].className = mentablinks[j].className.replace("active", "");
+	    }
+
+	    // Show the current tab, and add an "active" class to the link that opened the tab
+	    document.getElementById(mensaje).style.display = "block";
+	  	evt.currentTarget.className += " active";
+	}
+	
 	function viewBox(){
 		var caja = document.getElementsByClassName("cajaCambiarFoto");
 		if(caja[0].style.visibility == "visible")

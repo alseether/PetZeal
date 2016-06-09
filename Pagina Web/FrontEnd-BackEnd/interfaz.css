@@ -299,6 +299,19 @@ img{
 	margin-top: 15%;
 }
 
+.fondoRojo{
+		background: red;
+}
+
+.contenidoMensajeR{
+	display: none;
+}
+
+.contenidoMensajeE{
+	display: none;
+}
+
+
 @media only screen and (max-width: 991px){
 	.listado{
 		height: -webkit-min-content;
