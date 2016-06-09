@@ -54,7 +54,7 @@ function actualizaInfoUsuario($idUsuario, $nick, $password, $email, $rol, $cp, $
 
 function eliminaUsuario($idUsuario){
 	global $mysqli;
-	$query="DELETE usuarios WHERE IDusuario='".$idUsuario."'"; 
+	$query="DELETE FROM usuarios WHERE IDusuario='".$idUsuario."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
@@ -96,7 +96,7 @@ function actualizaInfoMascota($idMascota, $nombre, $especie, $raza, $nacimiento,
 
 function eliminaMascota($idMascota){
 	global $mysqli;
-	$query="DELETE mascota WHERE IDmascota='".$idMascota."'"; 
+	$query="DELETE FROM mascota WHERE IDmascota='".$idMascota."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
@@ -138,7 +138,7 @@ function actualizaInfoPost($idPost, $titulo, $fecha, $descripcion, $et1, $et2, $
 
 function eliminaPost($idPost){
 	global $mysqli;
-	$query="DELETE posts WHERE IDpost='".$idPost."'"; 
+	$query="DELETE FROM posts WHERE IDpost='".$idPost."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
@@ -173,7 +173,7 @@ function actualizaInfoPublicacion($idPublicacion, $descripcion, $fecha, $imagen,
 
 function eliminaPublicacion($idPublicacion){
 	global $mysqli;
-	$query="DELETE publicaciones WHERE IDpublicacion='".$idPublicacion."'"; 
+	$query="DELETE FROM publicaciones WHERE IDpublicacion='".$idPublicacion."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
@@ -208,7 +208,7 @@ function actualizaInfoComentario($idComentario, $fecha, $descripcion, $idMascota
 
 function eliminaComentario($idComentario){
 	global $mysqli;
-	$query="DELETE comentarios WHERE IDcomentario='".$idComentario."'"; 
+	$query="DELETE FROM comentarios WHERE IDcomentario='".$idComentario."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
@@ -250,7 +250,7 @@ function actualizaInfoMensaje($idMensaje, $idEmisor, $idReceptor, $asunto, $fech
 
 function eliminaMensaje($idMensaje){
 	global $mysqli;
-	$query="DELETE mensajes WHERE IDmensajes='".$idMensaje."'"; 
+	$query="DELETE FROM mensajes WHERE IDmensajes='".$idMensaje."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
@@ -278,7 +278,7 @@ function actualizaInfoEtiqueta($idEtiqueta, $etiqueta, $usos){
 
 function eliminaEtiqueta($idEtiqueta){
 	global $mysqli;
-	$query="DELETE etiquetas WHERE IDetiqueta='".$idEtiqueta."'"; 
+	$query="DELETE FROM etiquetas WHERE IDetiqueta='".$idEtiqueta."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
