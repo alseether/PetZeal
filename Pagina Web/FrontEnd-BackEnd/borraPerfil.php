@@ -12,10 +12,10 @@
 		}
 		else {
 			eliminaUsuario($id);
-			setcookie("log", false, time() + (24*3600));	// tiempo de expiracion, 1 dia
-			setcookie("idUsu", NULL, time() + (24*3600));
-			setcookie("nick", NULL, time() + (24*3600));
-			setcookie("rol", NULL, time() + (24*3600));
+			setcookie("log", "", time() - 3600); //Crea la cookie con cadicidad hace una hora, por tanto la borra
+			setcookie("idUsu", "", time() - 3600);
+			setcookie("nick", "", time() - 3600);
+			setcookie("rol", "", time() - 3600);
 		}
 	}
 	closeDB();

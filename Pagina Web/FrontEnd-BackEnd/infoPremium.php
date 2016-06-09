@@ -32,7 +32,7 @@
 				echo '<textarea class="campo" type="text" name="descripcion" placeholder="Descripcion">'.$usu["Descripcion"].'</textarea><br>';
 
 				echo '<div id="botones">';
-				echo '<input class="campo" type="text" name="cp" placeholder="Escribe tu código postal" value="'.$usu["CP"].'" minlenght="5"/><br>';
+					echo '<input class="boton-grand botonVerde" value="Guardar cambios" type=submit></input>';
 					echo '<a class="boton-grand botonBlanco" href="borraPerfil.php?masc=false&id='.$usu["IDusuario"].'">Dar de baja</a><br>';
 				echo '</div>';
 			echo '</div>';
