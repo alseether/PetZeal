@@ -13,16 +13,20 @@
 }
 
 #botonesHeader{
-	margin-top: 3%;
+	margin-top: 2%;
+	margin-bottom: 1%;
 }
 
 .botonMensajeria{
-	margin-top: 4%;
+	margin-top: 8%;
 }
 
 #botonHeader{
 	margin-bottom: 1%;
-	margin-left: 25%;
+}
+
+.botonModal{
+	margin-top: 2%;
 }
 
 #botonRegistrate{

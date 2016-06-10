@@ -1,50 +1,46 @@
 <html>
-	<head>
-		<title>PetZeal</title>
-		<meta charset="utf-8">
-   		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<link rel="stylesheet" type="text/css" href="boots.css"/>
-		<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	</head>
+  <head>
+    <title>PetZeal</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="boots.css"/>
+    <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+  </head>
 
 	<body>
-		<div id="cabecera" class="page-header col-lg-12 col-md-12 col-sm-12" style="background-color:006633;">
+   <div id="cabecera" class="page-header col-lg-12 col-md-12 col-sm-12" style="background-color:006633;">
 
-			<div class="col-lg-3 col-md-3 col-sm-3">
-      	<a href="inicioConLogin.html" style="background-color:006633;">
-   	  		<img alt="PetZeal" id="imagenLogo" src="assets/images/logoPetZeal.png">
-   			</a>
-   		</div>
+      <div class="col-lg-3 col-md-4 col-sm-3 col-xs-12">
+        <a href="inicioConLogin.html" style="background-color:006633;">
+          <img alt="PetZeal" id="imagenLogo" src="assets/images/logoPetZeal.png">
+        </a>
+      </div>
 
-    		<div class="col-lg-6 col-md-6 col-sm-6">
-    			<div id="buscadorHeader" class="input-group">
-      				<input type="text" class="form-control" placeholder="Search for...">
-      				<span class="input-group-btn">
-                 <button class="btn btn-default" type="button">
-                  <div class="glyphicon glyphicon-search" style="height:20px"></div>
-                </button>
-      				</span>
-   				 </div>
-  			</div>
+      <div class="col-lg-6 col-md-5 col-sm-5 col-xs-12">
+        <div id="buscadorHeader" class="input-group">
+            <input type="text" class="form-control" placeholder="Buscar... (@nombreDeMascota, #etiqueta)">
+            <span class="input-group-btn">
+               <button class="btn btn-default" type="submit">
+                <div class="glyphicon glyphicon-search" style="height:20px"></div>
+              </button>
+            </span>
+         </div>
+      </div>
 
-    		<div id="botonesHeader" class="col-lg-3 col-md-3 col-sm-3">
-          <div>
-            <a href="mensajeria.html" class="col-lg-2 col-md-2 col-sm-2 botonMensajeria">
-              <button id="botonHeader" type="button" class="btn btn-default glyphicon glyphicon-envelope btn-md"></button>
-            </a>
-          </div>
-    			<a href="infoUsuario.html" class="col-lg-10 col-md-10 col-sm-10">
-	    		   <button id="botonHeader" type="button" class="btn btn-success btn-md col-lg-10 col-md-10 col-sm-10">Mi perfil</button>
-	    		</a>
-          <div class="col-lg-2 col-md-2 col-sm-2"></div>
-	    	  <a href="index.html" class="col-lg-10 col-md-10 col-sm-10">
-				    <button id="botonHeader" type="button" class="btn btn-default btn-md col-lg-10 col-md-10 col-sm-10">Desconectarse</button>
-				</a>
-			</div>
+      <div id="botonesHeader" class="col-lg-3 col-md-3 col-sm-4">
+        <a href="mensajeria.html" id="botonHeader" class="btn btn-default glyphicon glyphicon-envelope btn-md col-lg-2 col-md-2 col-sm-2 botonMensajeria" role="button"></a>
+        <div class="col-lg-3 col-md-3 col-sm-3"></div>
+        <a href="infoUsuario.html" id="botonHeader" class="btn btn-success btn-md col-lg-7 col-md-7 col-sm-7" role="button">Mi perfil</a>
+        <div class="col-lg-3 col-md-3 col-sm-3"></div>
+        <a href="index.html" id="botonHeader" class="btn btn-default btn-md col-lg-7 col-md-7 col-sm-7" role="button">Desconectarse</a>
+    </div>
 
-		</div> <!-- page-header -->
+    </div> <!-- page-header -->
 
 		<div class="col-lg-9 col-md-12 col-sm-12">
 			<h1>Información sobre perros</h1>
