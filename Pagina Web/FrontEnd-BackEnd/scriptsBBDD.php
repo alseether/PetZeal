@@ -171,7 +171,7 @@ function insertaNuevoComentario($fecha, $descripcion, $idMascota, $idEspecialist
 }
 function actualizaInfoComentario($idComentario, $fecha, $descripcion, $idMascota, $idEspecialista, $idPost){
 	global $mysqli;
-	$query="UPDATE comentarios SET Fecha='".$fecha."', Descripcion='".$descripcion."', IDmascota='".$idMascota."', IDespecialista='".$idEspecialista."', IDpost='".$idPost."')
+	$query="UPDATE comentarios SET Fecha='".$fecha."', Descripcion='".$descripcion."', IDmascota='".$idMascota."', IDespecialista='".$idEspecialista."', IDpost='".$idPost."'
 	WHERE IDcomentario='".$idComentario."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
@@ -207,7 +207,7 @@ function insertaNuevoMensaje($idEmisor, $idReceptor, $asunto, $fecha, $contenido
 }
 function actualizaInfoMensaje($idMensaje, $idEmisor, $idReceptor, $asunto, $fecha, $contenido, $leido){
 	global $mysqli;
-	$query="UPDATE mensajes SET IDemisor='".$idEmisor."', IDreceptor='".$idReceptor."', Asunto='".$asunto."', Fecha='".$fecha."', Contenido='".$contenido."', Leido='".$leido."')
+	$query="UPDATE mensajes SET IDemisor='".$idEmisor."', IDreceptor='".$idReceptor."', Asunto='".$asunto."', Fecha='".$fecha."', Contenido='".$contenido."', Leido='".$leido."'
 	WHERE IDmensaje='".$idMensaje."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }

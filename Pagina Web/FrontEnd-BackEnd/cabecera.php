@@ -44,18 +44,20 @@
 			}		
 		echo '</div>';
 	echo '</header>';
-
-	echo '<form class="cajaCambiarFoto col-desktop-4 col-tablet-4 col-phone-12" method="post" action="login.php">';
-		echo '<div class="mensajeConfirmacion">Iniciar sesión</div>';
-		echo '<div>';
-			echo '<input class="campoLogin" type="text" name="usuario" placeholder="Escribe tu email o nombre de usuario" 
-					autocomplete maxlenght="50"/><br>';
-			echo '<input class="campoLogin" type="password" name="passwd" placeholder="Escribe tu contraseña" minlenght="8"/><br>';
-		echo '</div>';
-		echo '<div class="botoneraConfirmacion">';
-			echo '<input id="botonHecho"  class ="boton-grand botonVerde col-desktop-5 col-tablet-5 col-phone-11" type="submit" value="Inicial sesion"></input>';
-			echo '<input id="cancelar" class="boton-grand botonBlanco col-desktop-5 col-tablet-5 col-phone-11" type="button" value="Cancelar"></input>';
-		echo '</div>';
-	echo '</form>';
+	
+	if(!isset($_COOKIE["log"]) || $_COOKIE["log"] == false){
+		echo '<form class="cajaCambiarFoto col-desktop-4 col-tablet-4 col-phone-12" method="post" action="login.php">';
+			echo '<div class="mensajeConfirmacion">Iniciar sesión</div>';
+			echo '<div>';
+				echo '<input class="campoLogin" type="text" name="usuario" placeholder="Escribe tu email o nombre de usuario" 
+						autocomplete maxlenght="50"/><br>';
+				echo '<input class="campoLogin" type="password" name="passwd" placeholder="Escribe tu contraseña" minlenght="8"/><br>';
+			echo '</div>';
+			echo '<div class="botoneraConfirmacion">';
+				echo '<input id="botonHecho"  class ="boton-grand botonVerde col-desktop-5 col-tablet-5 col-phone-11" type="submit" value="Inicial sesion"></input>';
+				echo '<input id="cancelar" class="boton-grand botonBlanco col-desktop-5 col-tablet-5 col-phone-11" type="button" value="Cancelar"></input>';
+			echo '</div>';
+		echo '</form>';
+	}
 	closeDB();
 ?>

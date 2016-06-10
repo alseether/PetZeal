@@ -304,12 +304,13 @@ img{
 }
 
 .contenidoMensajeR{
-	display: none;
+	visibility: hidden;
 }
 
 .contenidoMensajeE{
-	display: none;
+	visibility: hidden;
 }
+
 
 
 @media only screen and (max-width: 991px){

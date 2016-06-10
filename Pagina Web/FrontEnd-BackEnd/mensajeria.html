@@ -11,6 +11,26 @@
 	<script type="text/javascript" src="funciones.js"></script>
 </head>
 <body>
+
+	<div class="cajaCambiarFoto col-desktop-4 col-tablet-4 col-phone-12">
+		<h2> Nuevo mensaje privado </h2>
+			<!-- En action, el buscador de usuarios de nuestra web -->
+		<form action="enviarMensaje.php" method="post">
+			<label class="col-desktop-3 col-tablet-3 col-phone-3"> Mensaje de: </label>
+			<input class="col-desktop-3 col-tablet-3 col-phone-3" type="text" name="emisor" value="" />
+			<label class="col-desktop-3 col-tablet-3 col-phone-3"> Mensaje a: </label>
+			<input class="col-desktop-3 col-tablet-3 col-phone-3" type="text" name="receptor" value="" />
+			<label class="col-desktop-6 col-tablet-6 col-phone-6"> Asunto </label>
+			<input class="col-desktop-6 col-tablet-6 col-phone-6" type="text" name="asunto" value="" />
+			<textarea class="col-desktop-12 col-tablet-12 col-phone-12" name="contenido" rows="4" cols="50" placeholder="Escribe tu mensaje aquí..."></textarea>
+			<br/>
+			<div class="botonesMensaje">
+				<input id="botonEnviar" class="boton-grand botonVerde" type="submit" name="Enviar" value="Enviar"/></a>
+				<a href="mensajeria.html"><input id="botonCancelar" class="boton-grand botonBlanco" type="button" name="Cancelar" value="Cancelar"/></a>
+			</div>
+		</form>
+	</div>
+
 	<div id="header"></div>
 	<div id="slideIzq"></div>
 	<div id="content"></div>

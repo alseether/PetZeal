@@ -1,3 +1,5 @@
+	
+	
 	function openTabMasc(evt, masctabName) {
 	    // Declare all variables
 	    var i, mastabcontent, masctablinks;
@@ -55,14 +57,16 @@
 	    }
 	}
 	
-	function openContMenRecibido(evt, mensaje) {
+	function openContMenRecibido(evt, mascota, mensaje) {
+		
+		$("#entrada"+mascota).load("cargaBandejaEntrada.php?corr="+mensaje+"&masc="+mascota);
 	    // Declare all variables
 	    var j, mentabcontent, mentablinks;
 
 	    // Get all elements with class="tabcontent" and hide them
 	    mentabcontent = document.getElementsByClassName("contenidoMensajeR");
 	    for (j = 0; j < mentabcontent.length; j++) {
-	        mentabcontent[j].style.display = "none";
+	        mentabcontent[j].style.visibility = "hidden";
 	    }
 
 	    // Get all elements with class="tablinks" and remove the class "active"
@@ -72,8 +76,9 @@
 	    }
 
 	    // Show the current tab, and add an "active" class to the link that opened the tab
-	    document.getElementById(mensaje).style.display = "block";
+	    document.getElementById(mensaje).style.visibility = "visible";
 	    evt.currentTarget.className += " active";
+		
 	}
 
 	function openContMenEnviado(evt, mensaje) {
