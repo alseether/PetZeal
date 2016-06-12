@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<title>PetZeal</title>
+		<meta charset="utf-8">
+   	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="boots.css"/>
+		<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+ 		<div id="cabecera" class="page-header col-lg-12 col-md-12 col-sm-12" style="background-color:006633;">
+
+			<div class="col-lg-3 col-md-4 col-sm-4">
+      	<a href="index.html" style="background-color:006633;">
+   	  		<img alt="PetZeal" id="imagenLogo" src="assets/images/logoPetZeal.png">
+   			</a>
+   		</div>
+
+  		<div class="col-lg-6 col-md-5 col-sm-5">
+  			<div id="buscadorHeader" class="input-group">
+    				<input type="text" class="form-control" placeholder="Buscar... (@nombreDeMascota, #etiqueta)">
+    				<span class="input-group-btn">
+               <button class="btn btn-default" type="submit">
+                <div class="glyphicon glyphicon-search" style="height:20px"></div>
+              </button>
+    				</span>
+ 				 </div>
+			</div>
+
+  		<div id="botonesHeader" class="col-lg-3 col-md-3 col-sm-3">
+        <div class="col-lg-3 col-md-3 col-sm-3"></div>
+        <button id="botonHeader" type="button" class="btn btn-default btn-md col-lg-7 col-md-8 col-sm-10" data-toggle="modal" data-target="#ventanaLogin">Iniciar sesión</button>
+        <div class="col-lg-3 col-md-3 col-sm-3"></div>
+        <a id="botonHeader" href="altaUsuario.html" type="button" class="btn btn-default btn-md col-lg-7 col-md-8 col-sm-10" role="button">Registrarse</a>
+		</div>
+
+		</div> <!-- page-header -->
+
+    <!-- Modal -->
+    <div id="ventanaLogin" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Iniciar sesión</h2>
+          </div>
+          <div class="modal-body">
+            <!--action=".php"-->
+            <form class="form-horizontal" action="inicioConLogin.html" role="form">
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="text">Usuario:</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="text" placeholder="Introduzca nombre de usuario">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Contraseña:</label>
+                <div class="col-sm-10"> 
+                  <input type="password" class="form-control" id="pwd" placeholder="Introduzca contraseña">
+                </div>
+              </div>
+              <div class="form-group"> 
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-default">Entrar</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+	<form action="" method="post" enctype="multipart/form-data" class="panel panel-default col-lg-7 col-md-7 col-sm-7">
+		<fieldset>
+			<div class="panel-heading"><h1>Información de usuario</h1></div>
+			<div class="panel-body col-lg-8 col-md-8 col-sm-12">
+				<h3>Debora Melconejo</h3>
+				<h4>@yegua_indomable</h4>
+				<h4>Inseminadora de caballos</h4>
+				<h4>C/Piruleta (Casa de Gominola)</h4>
+				<h4>40555</h4>
+				<h4>666555444</h4>
+				<h4>Doy el callo por dinero, yo trabajo por dinero. No se que y no se cuantos, pero a mi dame dinero</h4>
+				<a href="www.tevioloaljamelgo.com" class="btn btn-link" role="button"><h4>www.tevioloaljamelgo.com</h4></a>
+			</div>
+			<div>
+				<div class = "col-lg-4 col-md-4 col-sm-11">
+					<img src="/assets/images/oficio.jpg" class="img-rounded" alt="Foto de perfil del especialista" width="200" height="150">
+				</div>
+			</div>
+		</fieldset>
+	</form>
+	</body>
+</html>

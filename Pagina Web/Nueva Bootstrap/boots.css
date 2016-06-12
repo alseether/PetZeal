@@ -53,6 +53,10 @@
 	Overflow-y: scroll; 
 	height: 85%;
 }
+#panelComentarios{
+	Overflow-y: scroll; 
+	height: 33%;
+}
 
 #panelPosts-mascota{
 	Overflow-y: scroll; 
