@@ -2,7 +2,6 @@
 	include("funciones.php");
 	$premium = $_GET["pr"];
 
-	debug_to_console($premium);
 	if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true){
 		if(isset($_COOKIE["rol"])){
 			if($_COOKIE["rol"] == "User" && $premium == "true"){
