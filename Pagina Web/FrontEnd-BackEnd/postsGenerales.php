@@ -10,37 +10,35 @@
 		echo '<div class="cabecera"> Posts</div>';
 		echo '<ul class="listado">';
 		if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true){
-			if(isset($_COOKIE["rol"]) &&  $_COOKIE["rol"] == 'User'){//usuario
 
-				for ($i = 0; $i < $ultimosPost->num_rows; $i++) {
-					$row = $ultimosPost->fetch_assoc();
-					$infoUsuario = getInfoUsuario($row["IDusuario"]);
-					$rowUsu = $infoUsuario->fetch_assoc();
-			    	echo '<li>';
-			    		// AQUI FALTA PONER LAS URLs CORRECTAS A LAS QUE LLEVEN
-						echo '<a href="infoUsuario.php"> <img src="'.$rowUsu["Imagen"].'" alt="foto usuario"></a>';
-						echo '<a href="lectura_post_SinLogin.html"><p class="info-list-cont">'.$rowUsu["Nick"].'<br>';
-							    echo ''.$row["Titulo"].'<br>';
-							    echo ''.$row["Descripcion"].'</p></a>';	
+			for ($i = 0; $i < $ultimosPost->num_rows; $i++) {
+				$row = $ultimosPost->fetch_assoc();
+				$infoUsuario = getInfoUsuario($row["IDusuario"]);
+				$rowUsu = $infoUsuario->fetch_assoc();
+		    	echo '<li>';
+		    		// AQUI FALTA PONER LAS URLs CORRECTAS A LAS QUE LLEVEN
+					echo '<a href="info.html?masc=false&id='.$row["IDusuario"].'"> <img src="'.$rowUsu["Imagen"].'" alt="foto usuario"></a>';
+					echo '<a href="lectura_post_SinLogin.html"><p class="info-list-cont">'.$rowUsu["Nick"].'<br>';
+						    echo ''.$row["Titulo"].'<br>';
+						    echo ''.$row["Descripcion"].'</p></a>';	
 
-					echo '</li>';
-				}
+				echo '</li>';	
 			}	 
-		}else{
+		}else{//no loguedo
 				for ($i = 0; $i < $ultimosPost->num_rows; $i++) {
 					$row = $ultimosPost->fetch_assoc();
 					$infoUsuario = getInfoUsuario($row["IDusuario"]);
 					$rowUsu = $infoUsuario->fetch_assoc();
 			    	echo '<li>';
 			    		// AQUI FALTA PONER LAS URLs CORRECTAS A LAS QUE LLEVEN
-						echo '<a href="infoUsuario.php"> <img src="'.$rowUsu["Imagen"].'" alt="foto usuario"></a>';
+						echo '<a href="info.html?masc=false&id='.$row["IDusuario"].'"> <img src="'.$rowUsu["Imagen"].'" alt="foto usuario"></a>';
 						echo '<a href="lectura_post_SinLogin.html"><p class="info-list-cont">'.$rowUsu["Nick"].'<br>';
 							    echo ''.$row["Titulo"].'<br>';
 							    echo ''.$row["Descripcion"].'</p></a>';	
 
 					echo '</li>';
 				}			
-		
+
 		}
 		echo '</ul>';
 	echo '</div>';
