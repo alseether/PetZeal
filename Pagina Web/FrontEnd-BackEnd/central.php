@@ -1,10 +1,21 @@
 <?php
 	include_once('scriptsBBDD.php');
 	include_once('funciones.php');
+
 	startDB();
 	$id = $_GET["id"];
 	$hayPosts = $_GET["p"];
+	$numPosts = $_GET["np"];
+	$numPubli = $_GET["nm"];
 	$cargadoPosts = 1;
+	if($numPosts > 0){
+		eliminaPost($numPosts);
+		$numPosts = 0;
+	}
+	if($numPubli > 0){
+		eliminaPublicacion($numPubli);
+		$numPubli = 0;
+	}
 	echo '<div class="col-phone-12 col-desktop-6 col-tablet-12">';
 		echo '<div id="centrar">';					  
 			if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true){
@@ -24,7 +35,9 @@
 								echo '<img src="assets/images/imagenRegistroMascota.jpg" alt="pots1" id="subir-publicacion-foto">';
 								echo '<textarea type="text" name="descripcion" placeholder="Descripcion" id="cuadro-descripcion"></textarea>';
 								echo '<a id="foto"  class="boton-peq botonNaranja" href="subirImagen.html">Foto</a>';
-								echo '<a id="subir"  class="boton-peq botonNaranja">Subir</a>';
+								$foto = "assets/images/imagenRegistroMascota.jpg";
+								//subirPubliacion($foto);
+								echo '<button type="button" onclick="subirPubliacion('.$foto.')" id="subir"  class="boton-peq botonNaranja">Subir</button>';
 							echo '</li>';
 							
 								cargaPublicacionesMascota($row["IDmascota"]);
@@ -63,7 +76,9 @@
 										echo '<img src="assets/images/imagenRegistroMascota.jpg" alt="pots1" id="subir-publicacion-foto">';
 										echo '<textarea type="text" name="descripcion" placeholder="Descripcion" id="cuadro-descripcion"></textarea>';
 										echo '<a id="foto"  class="boton-peq botonNaranja" href="subirImagen.html">Foto</a>';
-										echo '<a id="subir"  class="boton-peq botonNaranja">Subir</a>';
+										$foto = "assets/images/imagenRegistroMascota.jpg";
+										//subirPublicacion($foto);
+										echo '<button type="button" onclick="subirPublicacion('.$foto.')" id="subir"  class="boton-peq botonNaranja">Subir</button>';
 									echo '</li>';
 								if($id == 0){
 									cargaPublicacionesMascota($row["IDmascota"]);
