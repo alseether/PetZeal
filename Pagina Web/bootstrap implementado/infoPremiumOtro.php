@@ -4,7 +4,7 @@
 	startDB();
 	$usu = getInfoUsuario($_REQUEST["id"])->fetch_assoc();
 	echo '<form action="" method="post" enctype="multipart/form-data"	class="formulario col-desktop-7 col-tablet-8 col-phone-12">';
-		echo '<fieldset>';z
+		echo '<fieldset>';
 			echo '<div class="panel-heading"><h1>Información de usuario</h1></div>';
 			echo '<div class="panel-body col-lg-8 col-md-8 col-sm-12">';
 				echo '<h3>'.$usu["Nombre"].'</h3>';
