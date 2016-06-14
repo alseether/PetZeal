@@ -3,6 +3,7 @@
 	include_once('funciones.php');
 	startDB();
 	$usu = getInfoUsuario($_COOKIE["idUsu"])->fetch_assoc();
+	echo '<img src="obtener.php?id=2"/>';
 	echo '<form action="./actualizarPerfil.php?masc=false&id='.$_COOKIE["idUsu"].'" method="post" enctype="multipart/form-data" class="col-lg-7 col-md-12 col-sm-12 form-horizontal">';
 		echo '<h1>Información del usuario premium</h1>';
 				echo '<div class="form-group">';
@@ -67,12 +68,12 @@
               echo '</div>';
           echo '</div>';
                     
-          echo '<input  class="btn btn-success btn-lg" value="Guardar cambios" type=submit></input>';
+          echo '<input  class="btn btn-success btn-lg" value="Guardar cambios" type="submit"></input>';
           echo '<button type="button" class="btn btn-lg" data-toggle="modal" data-target="#ventanaBaja">Dar de baja</button>';
 			echo '</form>';
 
       echo '<div class= "col-lg-5 col-md-5 col-sm-11">';
-        echo '<img src="assets/images/oficio.jpg" class="img-thumbnail img-justify" alt="Tu foto" width="150" height="150">';
+        echo '<img src="obtener.php?id=1" class="img-thumbnail img-justify" alt="Tu foto" width="150" height="150">';
         echo '<button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#ventanaFoto">Cambiar foto</button>';
       echo '</div>';
 
@@ -84,12 +85,13 @@
                 echo '<button type="button" class="close" data-dismiss="modal">&times;</button>';
                 echo '<h3 class="modal-title">Subir foto</h3>';
               echo '</div>';
-              echo '<div class="modal-body">';
-                echo '<input type="file" accept="image/jpeg, image/png"/>';
-                echo '<button type="button" class="botonModal btn btn-default btn-md" data-dismiss="modal">Cancelar</button>';
+              echo '<form action="almacenar.php" method="post" enctype="multipart/form-data">';//./actualizarFotoPerfil.php?masc=false&id='.$usu["IDusuario"].'
+                echo '<label for="imagen">Imagen:</label>';
+                echo '<input type="file" name="imagen"></input>';
+               // echo '<button type="button" class="botonModal btn btn-default btn-md" data-dismiss="modal">Cancelar</button>';
             
-                echo '<a href="noseque.php" type="button" class="botonModal btn btn-success btn-md" role="button">Subir</a>';
-              echo '</div>';
+                echo '<input type="submit" class="botonModal btn btn-success btn-md" role="button"value="Subir"></input>';
+              echo '</form>';
             echo '</div>';
 
           echo '</div>';
