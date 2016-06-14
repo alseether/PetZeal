@@ -8,7 +8,7 @@
 	//session_start();
 	//$_SESSION["log"] = false;
 	if(!isset($_REQUEST["usuario"]) || !isset($_REQUEST["passwd"]) || $_REQUEST["usuario"] == "" || strpos($_REQUEST["usuario"],"<") != false || $_REQUEST["passwd"] == "" || strpos($_REQUEST["passwd"],"<") != false){
-	    header('Location: ./index.html?mess=1');
+	    header('Location: ./error.php?err=1');
 	    exit();
 	}
 	$nick=$_REQUEST["usuario"];
@@ -22,13 +22,13 @@
 	$idUsu = $idQuery->fetch_assoc();
 	$resto = getInfoUsuario($idUsu["IDusuario"]);
 	if($resto->num_rows == 0){
-	    header('Location: ./index.html?mess=2');
+	    header('Location: ./error.php?err=2');
 	    exit();
 	}
 	$reg=$resto->fetch_array();
 	//Comprobar contraseña y asignar iduser
 	if($passwd != $reg["Password"]){
-	    header('Location: ./index.html?mess=3');
+	    header('Location: ./error.php?err=3');
 	    exit();
 	}
 	$rol=$reg["Rol"];
