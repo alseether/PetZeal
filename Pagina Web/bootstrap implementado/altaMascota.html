@@ -1,0 +1,70 @@
+<form action="./signup.php?tipo=masc" method="post" enctype="multipart/form-data" class="col-lg-7 col-md-12 col-sm-12 form-horizontal"><h1>Nueva mascota</h1>
+	<div class="form-group">
+		<label class="col-xs-2 control-label" for="inputSuccess">Especie</label>
+		<div class="col-xs-10">
+		<select name="especie" class = "form-control">
+			<option value="anfibio">Anfibio</option>
+			<option value="ave">Ave</option>
+			<option value="caballo">Caballo</option>
+			<option value="gato">Gato</option>
+			<option value="perro">Perro</option>
+			<option value="pez">Pez</option>
+			<option value="reptil">Reptil</option>
+			<option value="roedor">Roedor</option>						
+			<option value="otros">Otros</option>
+		</select>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-xs-2 control-label" for="inputSuccess">Nombre</label>
+		<div class="col-xs-10">
+			<input type="text" id="inputSuccess" class="form-control" name="name"  placeholder="Escribe su nombre" autocomplete maxlenght="50">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-xs-2 control-label" for="inputSuccess">Raza</label>
+		<div class="col-xs-10">
+			<input type="text" id="inputSuccess" class="form-control" name="raza"  placeholder="Escribe su raza" autocomplete maxlenght="50">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-xs-2 control-label" for="inputSuccess">Fecha de nacimiento</label>
+		<div class="col-xs-10">
+			<input type="date" id="inputSuccess" class="form-control" name="edad"  placeholder="Escribe su fecha de nacimiento" autocomplete maxlenght="50">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-xs-2 control-label" for="inputSuccess">Descripción</label>
+		<div class="col-xs-10">
+			<textarea type="text" id="inputSuccess" class="form-control" name="descripcion"  placeholder="Escribe una descripción" autocomplete maxlenght="50"></textarea>
+		</div>
+	</div>
+	<button type="submit" class="btn btn-success btn-lg">Registrar</button>
+		<button type="reset" class="btn btn-lg">Borrar datos</button>
+</form>
+
+<div class= "col-lg-5 col-md-5 col-sm-11">
+	<img class="img-thumbnail img-justify" alt="Imagen de tu mascota" name="imagen" width="150" height="150">
+	<button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#ventanaFoto">Subir foto</button>
+</div>
+
+<!-- Modal -->
+<div id="ventanaFoto" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3 class="modal-title">Subir foto</h3>
+      </div>
+      <div class="modal-body">
+      	<input type="file" accept="image/jpeg, image/png"/>
+      	<button type="button" class="botonModal btn btn-default btn-md" data-dismiss="modal">Cancelar</button>
+      	<!--Implementar php><-->
+      	<a href="noseque.php" type="button" class="botonModal btn btn-success btn-md" role="button">Subir</a>
+      </div>
+    </div>
+
+  </div>
+</div>
