@@ -1,4 +1,4 @@
-<?php
+ <?php
 	// realiza consulta a la BBDD de los post existentes
 	include_once('scriptsBBDD.php');
 	include_once('funciones.php');
@@ -18,7 +18,7 @@
 		    	echo '<li>';
 		    		// AQUI FALTA PONER LAS URLs CORRECTAS A LAS QUE LLEVEN
 					echo '<a href="info.html?masc=false&id='.$row["IDusuario"].'"> <img src="'.$rowUsu["Imagen"].'" alt="foto usuario"></a>';
-					echo '<a href="lectura_post_SinLogin.html"><p class="info-list-cont">'.$rowUsu["Nick"].'<br>';
+					echo '<a type="button" onclick="cargaPostCentro('.$row["IDusuario"].','.$row["IDpost"].')"><p class="info-list-cont">'.$rowUsu["Nick"].'<br>';
 						    echo ''.$row["Titulo"].'<br>';
 						    echo ''.$row["Descripcion"].'</p></a>';	
 
@@ -32,7 +32,7 @@
 			    	echo '<li>';
 			    		// AQUI FALTA PONER LAS URLs CORRECTAS A LAS QUE LLEVEN
 						echo '<a href="info.html?masc=false&id='.$row["IDusuario"].'"> <img src="'.$rowUsu["Imagen"].'" alt="foto usuario"></a>';
-						echo '<a href="lectura_post_SinLogin.html"><p class="info-list-cont">'.$rowUsu["Nick"].'<br>';
+						echo '<a type="button" onclick="cargaPostCentro('.$row["IDusuario"].','.$row["IDpost"].')"><p class="info-list-cont">'.$rowUsu["Nick"].'<br>';
 							    echo ''.$row["Titulo"].'<br>';
 							    echo ''.$row["Descripcion"].'</p></a>';	
 
