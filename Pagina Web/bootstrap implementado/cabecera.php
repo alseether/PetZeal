@@ -30,11 +30,9 @@
 				}
 				debug_to_Console($noLeidos);
 				if($noLeidos == 0){
-					//echo '<a id="logoCorreo" href="mensajeria.html"></a>';
 					echo '<a href="mensajeria.html" id="botonHeader" class="btn btn-default glyphicon glyphicon-envelope btn-md col-lg-2 col-md-2 col-sm-2 botonMensajeria" role="button"></a>';
 				}	
 				else{
-					//echo '<a id="logoCorreoPendientes" href="mensajeria.html"></a>';
 					echo '<a href="mensajeria.html" id="botonHeader" class="btn btn-default glyphicon glyphicon-envelope btn-md col-lg-2 col-md-2 col-sm-2 botonMensajeria" role="button"><span class="badge">'.$noLeidos.'</span></a>';
 				}
 			}
