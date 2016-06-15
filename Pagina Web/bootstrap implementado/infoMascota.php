@@ -8,16 +8,43 @@
 		echo '<div class="form-group">';
 			echo '<label class="col-xs-2 control-label" for="inputSuccess">Especie</label>';
 			echo '<div class="col-xs-10">';
-			echo '<select class = "form-control">';
-				echo '<option value="anfibio">Anfibio</option>';
-				echo '<option value="ave">Ave</option>';
-				echo '<option value="caballo">Caballo</option>';
-				echo '<option value="gato">Gato</option>';
-				echo '<option value="perro">Perro</option>';
-				echo '<option value="pez">Pez</option>';
-				echo '<option value="reptil">Reptil</option>';
-				echo '<option value="roedor">Roedor</option>';						
-				echo '<option value="otros">Otros</option>';
+			echo '<select name="especie" class = "form-control">';
+				if($masc["Especie"] == "Anfibio")
+					echo '<option selected value="Anfibio">Anfibio</option>';
+				else
+					echo '<option value="Anfibio">Anfibio</option>';
+				if($masc["Especie"] == "Ave")
+					echo '<option selected value="Ave">Ave</option>';
+				else
+					echo '<option value="Ave">Ave</option>';
+				if($masc["Especie"] == "Caballo")
+					echo '<option selected value="Caballo">Caballo</option>';
+				else
+					echo '<option value="Caballo">Caballo</option>';
+				if($masc["Especie"] == "Gato")
+					echo '<option selected value="Gato">Gato</option>';
+				else
+					echo '<option value="Gato">Gato</option>';
+				if($masc["Especie"] == "Perro")
+					echo '<option selected value="Perro">Perro</option>';
+				else
+					echo '<option value="Perro">Perro</option>';
+				if($masc["Especie"] == "Pez")
+					echo '<option selected value="Pez">Pez</option>';
+				else
+					echo '<option value="Pez">Pez</option>';
+				if($masc["Especie"] == "Reptil")
+					echo '<option selected value="Reptil">Reptil</option>';
+				else
+					echo '<option value="Reptil">Reptil</option>';
+				if($masc["Especie"] == "Roedor")
+					echo '<option selected value="Roedor">Roedor</option>';
+				else
+					echo '<option value="Roedor">Roedor</option>';	
+				if($masc["Especie"] == "Otros")
+					echo '<option selected value="Otros">Otros</option>';
+				else					
+					echo '<option value="Otros">Otros</option>';
 			echo '</select>';
 			echo '</div>';
 		echo '</div>';
@@ -50,8 +77,8 @@
 	echo '</form>';
 
 	echo '<div class= "col-lg-5 col-md-5 col-sm-11">';
-		echo '<img src="assets/images/perroInfoMascota.jpg" class="img-thumbnail img-justify" alt="Imagen de tu mascota" width="150" height="150">';
-		echo '<button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#ventanaFoto">Cambiar foto</button>';
+        echo '<img src="'.$masc["Imagen"].'" class="img-thumbnail img-justify" alt="Tu foto" width="150" height="150">';
+        echo '<button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#ventanaFoto">Cambiar foto</button>';
 	echo '</div>';
 
 	echo '<div id="ventanaFoto" class="modal fade" role="dialog">';
@@ -62,11 +89,13 @@
 	        echo '<button type="button" class="close" data-dismiss="modal">&times;</button>';
 	        echo '<h3 class="modal-title">Subir foto</h3>';
 	      echo '</div>';
-	      echo '<div class="modal-body">';
-	      	echo 'input type="file" accept="image/jpeg, image/png"/>';
-	      	echo '<button type="button" class="botonModal btn btn-default btn-md" data-dismiss="modal">Cancelar</button>';
-	      	echo '<a href="noseque.php" type="button" class="botonModal btn btn-success btn-md" role="button">Subir</a>';
-	      echo '</div>';
+	      echo '<form action="./actualizarFotoPerfil.php?masc=true&id='.$masc["IDmascota"].'" method="post" enctype="multipart/form-data">';
+            echo '<label for="imagen">Imagen:</label>';
+            echo '<input type="file" name="imagen"></input>';
+            echo '<button type="button" class="botonModal btn btn-default btn-md" data-dismiss="modal">Cancelar</button>';
+        
+            echo '<input type="submit" class="botonModal btn btn-success btn-md" role="button"value="Subir"></input>';
+          echo '</form>';
 	    echo '</div>';
 
 	  echo '</div>';

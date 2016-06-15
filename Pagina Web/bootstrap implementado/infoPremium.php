@@ -3,7 +3,6 @@
 	include_once('funciones.php');
 	startDB();
 	$usu = getInfoUsuario($_COOKIE["idUsu"])->fetch_assoc();
-	echo '<img src="obtener.php?id=2"/>';
 	echo '<form action="./actualizarPerfil.php?masc=false&id='.$_COOKIE["idUsu"].'" method="post" enctype="multipart/form-data" class="col-lg-7 col-md-12 col-sm-12 form-horizontal">';
 		echo '<h1>Información del usuario premium</h1>';
 				echo '<div class="form-group">';
@@ -22,49 +21,49 @@
     			echo '<div class="form-group">';
         			echo '<label class="col-xs-2 control-label" for="inputError">Email</label>';
         			echo '<div class="col-xs-10">';
-            			echo '<input type="email" id="inputError" class="form-control" placeholder="Escribe tu email" value="'.$usu["Email"].'">';
+            			echo '<input type="email" id="inputError" class="form-control" placeholder="Escribe tu email" name="email" value="'.$usu["Email"].'">';
         			echo '</div>';
     			echo '</div>';
     			echo '<div class="form-group">';
         			echo '<label class="col-xs-2 control-label" for="inputWarning">Contraseña</label>';
         			echo '<div class="col-xs-10">';
-            			echo '<input type="password" id="inputWarning" class="form-control" placeholder="Escribe tu contraseña" value="'.$usu["Password"].'" minlenght="8">';
+            			echo '<input type="password" id="inputWarning" class="form-control" placeholder="Escribe tu contraseña" name="pwd" value="'.$usu["Password"].'" minlenght="8">';
         			echo '</div>';
     			echo '</div>';
     			echo '<div class="form-group">';
         			echo '<label class="col-xs-2 control-label" for="inputSuccess">C.P.</label>';
         			echo '<div class="col-xs-10">';
-            			echo '<input type="text" id="inputSuccess" class="form-control" placeholder="Escribe tu código postal" value="'.$usu["CP"].'" minlenght="5">';
+            			echo '<input type="text" id="inputSuccess" class="form-control" placeholder="Escribe tu código postal" name="cp" value="'.$usu["CP"].'" minlenght="5">';
         			echo '</div>';
     			echo '</div>';
           echo '<div class="form-group">';
               echo '<label class="col-xs-2 control-label" for="inputSuccess">Dirección</label>';
               echo '<div class="col-xs-10">';
-                  echo '<input type="text" id="inputSuccess" class="form-control" placeholder="Escribe tu dirección" value="'.$usu["Direccion"].'" autocomplete maxlenght="80">';
+                  echo '<input type="text" id="inputSuccess" class="form-control" placeholder="Escribe tu dirección" name="direccion" value="'.$usu["Direccion"].'" autocomplete maxlenght="80">';
               echo '</div>';
           echo '</div>';
           echo '<div class="form-group">';
             echo '<label class="col-xs-2 control-label" for="inputSuccess">Teléfono</label>';
               echo '<div class="col-xs-10">';
-                 echo '<input type="text" id="inputSuccess" class="form-control" placeholder="Escribe tu teléfono" value="'.$usu["Telefono"].'" autocomplete maxlenght="9">';
+                 echo '<input type="text" id="inputSuccess" class="form-control" placeholder="Escribe tu teléfono" name="tlf" value="'.$usu["Telefono"].'" autocomplete maxlenght="9">';
               echo '</div>';
           echo '</div>';
           echo '<div class="form-group">';
              echo '<label class="col-xs-2 control-label" for="inputSuccess">Ocupación</label>';
               echo '<div class="col-xs-10">';
-                  echo '<input type="text" id="inputWarning" class="form-control" placeholder="Escribe tu ocupación" value="'.$usu["Ocupacion"].'" minlenght="20">';
+                  echo '<input type="text" id="inputWarning" class="form-control" placeholder="Escribe tu ocupación" name="ocupacion" value="'.$usu["Ocupacion"].'" minlenght="20">';
               echo '</div>';
           echo '</div>';
           echo '<div class="form-group">';
               echo '<label class="col-xs-2 control-label" for="inputSuccess">Web</label>';
               echo '<div class="col-xs-10">';
-                 echo '<input type="text" id="inputError" class="form-control" placeholder="Escribe tu dirección web" value="'.$usu["Web"].'">';
+                 echo '<input type="text" id="inputError" class="form-control" placeholder="Escribe tu dirección web" name="web" value="'.$usu["Web"].'">';
               echo '</div>';
           echo '</div>';
           echo '<div class="form-group">';
               echo '<label class="col-xs-2 control-label" for="inputSuccess">Descripción</label>';
               echo '<div class="col-xs-10">';
-                  echo '<textarea type="text" id="inputSuccess" class="form-control" placeholder="Escribe una breve descripción" autocomplete maxlenght="50">'.$usu["Descripcion"].'</textarea>';
+                  echo '<textarea type="text" id="inputSuccess" class="form-control" placeholder="Escribe una breve descripción" name="descripcion" autocomplete maxlenght="50">'.$usu["Descripcion"].'</textarea>';
               echo '</div>';
           echo '</div>';
                     
@@ -73,7 +72,7 @@
 			echo '</form>';
 
       echo '<div class= "col-lg-5 col-md-5 col-sm-11">';
-        echo '<img src="obtener.php?id=1" class="img-thumbnail img-justify" alt="Tu foto" width="150" height="150">';
+        echo '<img src="'.$usu["Imagen"].'" class="img-thumbnail img-justify" alt="Tu foto" width="150" height="150">';
         echo '<button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#ventanaFoto">Cambiar foto</button>';
       echo '</div>';
 
@@ -85,10 +84,10 @@
                 echo '<button type="button" class="close" data-dismiss="modal">&times;</button>';
                 echo '<h3 class="modal-title">Subir foto</h3>';
               echo '</div>';
-              echo '<form action="almacenar.php" method="post" enctype="multipart/form-data">';//./actualizarFotoPerfil.php?masc=false&id='.$usu["IDusuario"].'
+              echo '<form action="./actualizarFotoPerfil.php?masc=false&id='.$usu["IDusuario"].'" method="post" enctype="multipart/form-data">';
                 echo '<label for="imagen">Imagen:</label>';
                 echo '<input type="file" name="imagen"></input>';
-               // echo '<button type="button" class="botonModal btn btn-default btn-md" data-dismiss="modal">Cancelar</button>';
+                echo '<button type="button" class="botonModal btn btn-default btn-md" data-dismiss="modal">Cancelar</button>';
             
                 echo '<input type="submit" class="botonModal btn btn-success btn-md" role="button"value="Subir"></input>';
               echo '</form>';

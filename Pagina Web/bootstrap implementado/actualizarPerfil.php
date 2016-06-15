@@ -6,16 +6,17 @@
 	$id = $_REQUEST["id"];
 	if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true && isset($_COOKIE["rol"])){
 		if($mascota == "true"){
-			$nombre = $_POST['nombre'];
-			$especie = $_POST['especie'];
+			$nombre = $_REQUEST['nombre'];
+			$especie = $_REQUEST['especie'];
 			$raza = $_REQUEST["raza"];
-			$nacimiento = $_REQUEST["nacimiento"];
+			$nacimiento = $_REQUEST["edad"];
 			$descripcion = $_REQUEST["descripcion"]; 
-			actualizaInfoMascota($id, $nombre, $especie, $raza, $nacimiento, $descripcion, NULL, $_COOKIE["idUsu"]);
+			$datos = getInfoMascota($id)->fetch_assoc();
+			actualizaInfoMascota($id, $nombre, $especie, $raza, $nacimiento, $descripcion, $datos["Imagen"], $_COOKIE["idUsu"]);
 		}
 		else{
-			$nombre = $_POST['nombre'];
-			$password = $_POST['pwd'];
+			$nombre = $_REQUEST['nombre'];
+			$password = $_REQUEST['pwd'];
 			$nick = $_REQUEST["nick"];
 			$email = $_REQUEST["email"];
 			$cp = $_REQUEST["cp"]; 
@@ -44,7 +45,7 @@
 						setcookie("nick", "", time() - 3600);
 						setcookie("nick", $nick, time() + (24*3600));
 					}
-					actualizaInfoUsuario($id, $nick, $password, $email, "Premium", $cp, $nombre, $direccion, $telefono, $ocupacion, $web, $descripcion, NULL);
+					actualizaInfoUsuario($id, $nick, $password, $email, "Premium", $cp, $nombre, $direccion, $telefono, $ocupacion, $web, $descripcion, $datos["Imagen"]);
 				}
 			}
 		}
