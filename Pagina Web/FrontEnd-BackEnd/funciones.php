@@ -20,7 +20,7 @@
 			echo '<li>';
 				echo '<a href="infoMascota_Usu.html"> <img src="'.$p["Imagen"].'" alt="foto publicacion"></a>';
 				echo '<p class="info-list-cont">'.$p["Descripcion"].'';
-				echo '<input type="button"  onclick="cambioMascota('.$idMascota.',0,0,'.$row["IDpublicacion"].')" src="assets/images/borrar.png" class="botonBorrar">';
+				echo '<input type="button"  onclick="borrarPublicacion('.$idMascota.', '.$row["IDpublicacion"].')" src="assets/images/borrar.png" class="botonBorrar">';
 			echo '<li>';
 			$i++;
 		}
@@ -40,11 +40,11 @@
 			echo '<li>';
 				echo '<a href="infoMascota_Usu.html"> <img src="'.$infoUsu["Imagen"].'" alt="foto perfil"></a>';
 				echo '<p class="info-list-cont">'.$p["Titulo"].'<br>'.$p["Descripcion"].'</p>';
-				echo '<input type="button" onclick="cambioMascota(0,1,'.$row["IDpost"].',0)" src="assets/images/borrar.png" class="botonBorrar">';
+				echo '<input type="button" onclick="borrarPost('.$row["IDpost"].')" src="assets/images/borrar.png" class="botonBorrar">';
 			echo '<li>'; 
 			$i++;
 		}
-
+//eliminaPost($row["IDpost"]);
 	}
 
 	// Esta funcion requiere haber abierto la BBDD
@@ -56,7 +56,7 @@
 				echo '<a id="publicar-post"  class="boton-grand botonNaranja" href="inicioConLoginEsp_Post_Publicar.html">Publicar Post</a>';
 				//primera imagen de mi posts (foto de perfil)
 				$num = 0;
-				echo '<button onclick="cambioMascota(0,1,0,0)"> <img src="'.$infoUsu["Imagen"].'" alt="foto perfil"></button>';
+				echo '<button onclick="cambioMascota(0,1)"> <img src="'.$infoUsu["Imagen"].'" alt="foto perfil"></button>';
 			}
 			$mascotas = getMascotasUsuario($idUsuario);
 			$i=0;
@@ -64,7 +64,7 @@
 				$row = $mascotas->fetch_assoc();
 				$infoMascota = getInfoMascota($row["IDmascota"])->fetch_assoc();
 				
-				echo '<button onclick="cambioMascota('.$infoMascota["IDmascota"].',0,0,0)"> <img src='.$infoMascota["Imagen"].' data-idMascota = '.$infoMascota["IDmascota"].' alt="'.$infoMascota["Nombre"].'"></button>';
+				echo '<button onclick="cambioMascota('.$infoMascota["IDmascota"].',0)"> <img src='.$infoMascota["Imagen"].' data-idMascota = '.$infoMascota["IDmascota"].' alt="'.$infoMascota["Nombre"].'"></button>';
 				$i++;
 			}
 			echo '<a href="altaMascota.html">	<img id ="anadir" src="assets/images/anadir-mascota.jpg" alt="añadir"></a>';
@@ -73,9 +73,5 @@
 	}
 
 
-	function subirPublicacion( $foto){
-		insertaNuevaPublicacion(2, 3,$foto , 4, 5);
-		cambioMascota(0,1,0,0);
-	}
 
 ?>
