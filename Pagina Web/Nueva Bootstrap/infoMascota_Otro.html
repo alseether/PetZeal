@@ -44,7 +44,7 @@
     </div> <!-- page-header -->
 
 
-	<form action="" method="post" enctype="multipart/form-data" class="panel panel-default col-lg-7 col-md-7 col-sm-7">
+	<form action="" method="post" enctype="multipart/form-data" class="panel panel-default col-lg-6 col-md-6 col-sm-6">
 		<fieldset>
 			<div class="panel-heading"><h1>Información de la mascota</h1></div>
 			<div class="panel-body col-lg-8 col-md-8 col-sm-12">
@@ -62,7 +62,60 @@
 			</div>
 		</fieldset>
 	</form>
-		<!-- Modal -->
+
+	<div class="panel panel-default col-lg-6 col-md-6 col-sm-6">
+				<div class="panel panel-default">
+  				<div class="panel-heading"><h2>Publicaciones</h2></div>
+  				<div id="panelPosts-mascotaOtro" class="panel-body">
+					<ul class="media-list">
+
+  						<li class="media">
+   							<div class="media-left">
+      							<a data-toggle="modal" data-target="#ventanaImagen1">
+        							<img class="media-object img-rounded" width="100" height="100" src="assets/images/perros-guia2.jpg" alt="posts1">
+      							</a>
+    						</div>
+    						<form action="" method="post" enctype="multipart/form-data" class="media-body">
+      							<p>Después de un paseo con mi dueño, descansando antes de reanudar la marcha...</p>
+      							<div id="botonesHeader" class="btn-group pull-right">
+      								<span id="botonesHeader" class="btn btn-default">8</span>
+      								<button type="submit" class="btn btn-md glyphicon glyphicon-heart"></button>
+								</div>
+    						</form>
+  						</li>
+  						<li class="media">
+   							<div class="media-left">
+      							<a data-toggle="modal" data-target="#ventanaImagen2">
+        							<img class="media-object img-rounded" width="100" height="100" src="assets/images/perros-guia3.jpg" alt="posts1">
+      							</a>
+    						</div>
+    						<form action="" method="post" enctype="multipart/form-data" class="media-body">
+      							<p>Mientras mi dueño descansa, yo aprovecho para tomar el sol.</p>
+      							<div id="botonesHeader" class="btn-group pull-right">
+      								<span id="botonesHeader" class="btn btn-default">10</span>
+      								<button type="submit" class="btn btn-md glyphicon glyphicon-heart"></button>
+								</div>
+    						</form>
+  						</li>
+  						<li class="media">
+   							<div class="media-left">
+      							<a data-toggle="modal" data-target="#ventanaImagen3">
+        							<img class="media-object img-rounded" width="100" height="100" src="assets/images/perros-guia1.jpg" alt="posts1">
+      							</a>
+    						</div>
+    						<form action="" method="post" enctype="multipart/form-data" class="media-body">
+      							<p>Jugando con mi profesor antes de seguir con la clase magistral.</p>
+      							<div id="botonesHeader" class="btn-group pull-right">
+      								<span id="botonesHeader" class="btn btn-default">3</span>
+      								<button type="submit" class="btn btn-md glyphicon glyphicon-heart"></button>
+								</div>
+    						</form>
+  						</li>
+					</ul>
+  				</div>
+	</div>
+
+	<!-- Modal -->
 	<div id="ventanaMsn" class="modal fade" role="dialog">
 	  <div class="modal-dialog">
 
@@ -74,17 +127,68 @@
 	      </div>
 	      <div class="modal-body">
 	        <form action="" method="get" role="form">
+			  <div class="form-group col-lg-6">
+			    <label for="emisor">Mensaje de:</label>
+			        <select class = "form-control">
+						<option value="M1">Mascota1</option>
+						<option value="M2">Mascota2</option>
+					</select>
+			  </div>
+			  <div class="form-group col-lg-6">
+			    <label for="receptor">Mensaje a:</label>
+			    <input type="text" class="form-control" id="receptor" placeholder="@nombreDeUsuario">
+			  </div>
 			  <div class="form-group">
-			    <label for="nick">Mensaje a:</label>
-			    <input type="text" class="form-control" id="nick" placeholder="@nombreDeUsuario">
+			    <label for="asunto"></label>
+			    <input type="text" class="form-control" id="asunto" placeholder="Asunto">
 			  </div>
 			<div class="form-group">
-			  <label for="msn"></label>
-			  <textarea class="form-control" rows="3" id="msn" placeholder="Escribe aquí tu mensaje..."></textarea>
+			  <label for="contenido"></label>
+			  <textarea class="form-control" rows="3" id="contenido" placeholder="Escribe aquí tu mensaje..."></textarea>
 			</div>
 			  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 			  <button type="submit" class="pull-right btn btn-success">Enviar</button>
 			</form>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+
+		<!-- Modal -->
+	<div id="ventanaImagen1" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-body">
+	      	<button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <img class="media-object img-rounded" width="500" height="400" src="assets/images/perros-guia2.jpg" alt="posts1">
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+
+<div id="ventanaImagen2" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-body">
+	      	<button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <img class="media-object img-rounded" width="500" height="400" src="assets/images/perros-guia3.jpg" alt="posts1">
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+
+<div id="ventanaImagen3" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-body">
+	      	<button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <img class="media-object img-rounded" width="500" height="400" src="assets/images/perros-guia1.jpg" alt="posts1">
 	      </div>
 	    </div>
 
