@@ -28,7 +28,7 @@
 						setcookie("nick", "", time() - 3600);
 						setcookie("nick", $nick, time() + (24*3600));
 					}
-					actualizaInfoUsuario($id, $nick, $password, $email, "User", $cp, $nombre, NULL, NULL, NULL, NULL, NULL, NULL);
+					actualizaInfoUsuario($id, $nick, $password, $email, "User", $cp, $nombre, "", "", "", "", "", "");
 				}
 			}
 			else{

@@ -46,7 +46,7 @@
 				echo '<div class="col-lg-3 col-md-3 col-sm-3"></div>';
 		        echo '<button id="botonHeader" type="button" class="btn btn-default btn-md col-lg-7 col-md-8 col-sm-10" data-toggle="modal" data-target="#ventanaLogin" onclick="viewBox()">Iniciar sesión</button>';
 		        echo '<div class="col-lg-3 col-md-3 col-sm-3"></div>';
-		        echo '<a id="botonHeader" href="registro.php" type="button" class="btn btn-default btn-md col-lg-7 col-md-8 col-sm-10" role="button">Registrarse</a>';
+		        echo '<a id="botonHeader" href="registro.html?pr=false" type="button" class="btn btn-default btn-md col-lg-7 col-md-8 col-sm-10" role="button">Registrarse</a>';
 			}		
 		echo '</div>';
 	echo '</div>';

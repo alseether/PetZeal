@@ -1,6 +1,6 @@
 <?php
 	include("funciones.php");
-	$premium = $_GET["pr"];
+	$premium = $_REQUEST["pr"];
 
 	debug_to_console($premium);
 	if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true){
