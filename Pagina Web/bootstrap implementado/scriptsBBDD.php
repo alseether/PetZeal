@@ -4,6 +4,7 @@ $mysqli;
 function startDB(){
 	global $mysqli;
 	$mysqli = new mysqli('localhost', 'root', '', 'petzeal');	
+	$mysqli->set_charset("utf8");
 	if (mysqli_connect_errno()){
 		echo "Error de conexion: ".mysqli_connect_error();
 		exit();
