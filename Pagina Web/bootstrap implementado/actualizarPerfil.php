@@ -16,7 +16,7 @@
 		}
 		else{
 			$nombre = $_REQUEST['nombre'];
-			$password = $_REQUEST['pwd'];
+			$password = updateSecurePass($id, $_REQUEST["pwd"]);
 			$nick = $_REQUEST["nick"];
 			$email = $_REQUEST["email"];
 			$cp = $_REQUEST["cp"]; 

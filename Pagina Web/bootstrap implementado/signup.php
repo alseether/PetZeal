@@ -1,5 +1,6 @@
 <?php
 	include_once('scriptsBBDD.php');
+	include_once('funciones.php');
 	startDB();
 	$tipo=$_REQUEST["tipo"];
 	if($tipo == "usu"){
@@ -11,7 +12,6 @@
 		$nick=$_REQUEST["nick"];
 		$cp = $_REQUEST["cp"];
 		$email = $_REQUEST["email"];
-		$pwd = $_REQUEST["pwd"];
 		$rol = "User";
 		
 		//Buscar usuario
@@ -20,8 +20,11 @@
 			header('Location: ./error.php?err=5');
 			exit();
 		}
-		insertaNuevoUsuario($nick, $pwd, $email, $rol, $cp, "", "", "", "", "","", "");
+		insertaNuevoUsuario($nick, "", $email, $rol, $cp, "", "", "", "", "","", "");
 		$idUsu = getIdUsuario($nick)->fetch_assoc();
+		
+		$pwd = newSecurePass($idUsu["IDusuario"], $_REQUEST["pwd"]);
+		actualizaPassword($idUsu["IDusuario"], $pwd);
 
 		setcookie("log", true, time() + (24*3600));	// tiempo de expiracion, 1 dia
 		setcookie("idUsu", $idUsu["IDusuario"], time() + (24*3600));

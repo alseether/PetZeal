@@ -18,10 +18,13 @@ function query($consulta){
 	$ret = $mysqli->query($consulta) or die ($mysqli->error. " en la linea".(__LINE__-1));
 	return $ret;
 }
+
+
 /* Funciones de la tabla de usuarios*/
+
 function getIdUsuario($nick){
 	global $mysqli;
-	$query="SELECT IDusuario FROM usuarios WHERE Nick = '".$nick."' ";
+	$query="SELECT IDusuario FROM usuarios WHERE Nick = '".$nick."'";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 	return $ret;
 }
@@ -54,7 +57,17 @@ function eliminaUsuario($idUsuario){
 	$query="DELETE FROM usuarios WHERE IDusuario='".$idUsuario."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
+function actualizaPassword($idUsuario, $password){
+	global $mysqli;
+	echo $idUsuario;
+	echo $password;
+	$query="UPDATE usuarios SET  Password='".$password."'WHERE IDusuario='".$idUsuario."'"; 
+	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
+}
+
+
 /* Funciones de la tabla de mascotas*/
+
 function getMascotasUsuario($idUsuario){
 	global $mysqli;
 	$query="SELECT IDmascota FROM mascotas WHERE IDusuario ='".$idUsuario."'";
@@ -96,7 +109,10 @@ function eliminaMascota($idMascota){
 	$query="DELETE FROM mascota WHERE IDmascota='".$idMascota."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
+
+
 /* Funciones de la tabla de posts*/
+
 function getPosts(){
 	global $mysqli;
 	$query="SELECT * FROM posts";
@@ -132,7 +148,10 @@ function eliminaPost($idPost){
 	$query="DELETE FROM posts WHERE IDpost='".$idPost."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
+
+
 /* Funciones de la tabla de publicaciones*/
+
 function getPublicacionesMascota($idMascota){
 	global $mysqli;
 	$query="SELECT IDpublicacion FROM publicaciones WHERE IDmascota = '".$idMascota."'";
@@ -162,7 +181,10 @@ function eliminaPublicacion($idPublicacion){
 	$query="DELETE FROM publicaciones WHERE IDpublicacion='".$idPublicacion."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
+
+
 /* Funciones de la tabla de comentarios*/
+
 function getComentariosPost($idPost){
 	global $mysqli;
 	$query="SELECT IDcomentario FROM comentarios WHERE IDpost = '".$idPost."'";
@@ -192,7 +214,10 @@ function eliminaComentario($idComentario){
 	$query="DELETE FROM comentarios WHERE IDcomentario='".$idComentario."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
+
+
 /* Funciones de la tabla de mensajes*/
+
 function getMensajesEnviados($idMascota){
 	global $mysqli;
 	$query="SELECT IDmensaje FROM mensajes WHERE IDemisor = '".$idMascota."'";
@@ -228,7 +253,10 @@ function eliminaMensaje($idMensaje){
 	$query="DELETE FROM mensajes WHERE IDmensajes='".$idMensaje."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
+
+
 /* Funciones de la tabla de etiquetas*/
+
 function getInfoEtiqueta($idEtiqueta){
 	global $mysqli;
 	$query="SELECT * FROM etiquetas WHERE IDetiqueta = '".$idEtiqueta."'";
@@ -252,7 +280,10 @@ function eliminaEtiqueta($idEtiqueta){
 	$query="DELETE FROM etiquetas WHERE IDetiqueta='".$idEtiqueta."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
+
+
 /* Funciones de la tabla de salt*/
+
 function getSaltUsuario($idUsuario){
 	global $mysqli;
 	$query="SELECT Salt FROM salt WHERE IDusuario = '".$idUsuario."'";
@@ -265,7 +296,21 @@ function insertaNuevaSalt($idUsuario, $salt){
 	VALUES ('".$idUsuario."', '".$salt."')";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
+function actualizaSalt($idUsuario, $salt){
+	global $mysqli;
+	$query="UPDATE salt SET  Salt='".$salt."'
+	WHERE IDusuario='".$idUsuario."'"; 
+	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
+}
+function eliminaSalt($id){
+	global $mysqli;
+	$query="DELETE FROM salt WHERE IDusuario='".$id."'"; 
+	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
+}
+
+
 /* Funciones de busqueda */
+
 function getIdEtiqueta($nombre){
 	global $mysqli;
 	$query="SELECT IDetiqueta FROM etiquetas WHERE Etiqueta = '".$nombre."' ";
@@ -315,30 +360,5 @@ function buscaEtiquetas($palabra, $len){
     
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 	return $ret;
-}
-
-function subir_fichero($directorio_destino, $nombre_fichero)
-{
-    $tmp_name = $_FILES[$nombre_fichero]['tmp_name'];
-    //si hemos enviado un directorio que existe realmente y hemos subido el archivo    
-    if (is_dir($directorio_destino) && is_uploaded_file($tmp_name))
-    {
-        $img_file = $_FILES[$nombre_fichero]['name'];
-        $img_type = $_FILES[$nombre_fichero]['type'];
-        echo 1;
-        // Si se trata de una imagen   
-        if (((strpos($img_type, "gif") || strpos($img_type, "jpeg") ||
- 		strpos($img_type, "jpg")) || strpos($img_type, "png")))
-        {
-            //¿Tenemos permisos para subir la imágen?
-            echo 2;
-            if (move_uploaded_file($tmp_name, $directorio_destino . '/' . $img_file))
-            {
-                return true;
-            }
-        }
-    }
-    //Si llegamos hasta aquí es que algo ha fallado
-    return false;
 }
 ?>

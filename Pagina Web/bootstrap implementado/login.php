@@ -1,4 +1,7 @@
 <?php
+	include_once('scriptsBBDD.php');
+	include_once('funciones.php');
+	startDB();
 	/*
 	*   Este php será llamado mediante un enlace y enlazará a la página ppal si todo ha ido bien o a la del login 
 	*   con el correspondiente error pasado por GET
@@ -12,11 +15,8 @@
 	    exit();
 	}
 	$nick=$_REQUEST["usuario"];
-	//$_SESSION["usu"]=$_REQUEST["usuario"];
 	$passwd=$_REQUEST["passwd"];
-	//Conectar BBDD
-	include_once('scriptsBBDD.php');
-	startDB();
+	
 	//Buscar usuario
 	$idQuery = getIdUsuario($nick);
 	$idUsu = $idQuery->fetch_assoc();
@@ -27,7 +27,8 @@
 	}
 	$reg=$resto->fetch_array();
 	//Comprobar contraseña y asignar iduser
-	if($passwd != $reg["Password"]){
+	$introducida = obteinSecurePass($idUsu["IDusuario"], $passwd);
+	if($introducida != $reg["Password"]){
 	    header('Location: ./error.php?err=3');
 	    exit();
 	}

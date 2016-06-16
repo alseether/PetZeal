@@ -80,4 +80,40 @@
 		 cambioMascota($idMascota,0);
 
 	}
+
+	function obteinSecurePass($id, $pass){
+		$salt = getSaltUsuario($id)->fetch_assoc();
+		$nueva = $pass.$salt["Salt"]."idiota";
+		$nueva = hash("sha256", $nueva);
+
+		return $nueva;
+	}
+
+	function newSecurePass($id, $pass){
+		$salt = getRandomCode(12);
+		insertaNuevaSalt($id, $salt);
+		$nueva = $pass.$salt."idiota";
+		$nueva = hash("sha256", $nueva);
+
+		return $nueva;
+	}
+
+	function updateSecurePass($id, $pass){
+		$salt = getRandomCode(12);
+
+		actualizaSalt($id, $salt);
+		$nueva = $pass.$salt."idiota";
+		$nueva = hash("sha256", $nueva);
+
+		return $nueva;
+	}
+
+	function getRandomCode($tam){
+	    $an = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-)(.:,;";
+	    $su = strlen($an) - 1;
+	    $code = substr($an, rand(0, $su), 1);
+	    for($i=1; $i<$tam; $i++)
+	    	$code .=  substr($an, rand(0, $su), 1);
+	    return $code;
+	}
 ?>

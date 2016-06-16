@@ -25,12 +25,6 @@
         			echo '</div>';
     			echo '</div>';
     			echo '<div class="form-group">';
-        			echo '<label class="col-xs-2 control-label" for="inputWarning">Contraseña</label>';
-        			echo '<div class="col-xs-10">';
-            			echo '<input type="password" id="inputWarning" class="form-control" placeholder="Escribe tu contraseña" name="pwd" value="'.$usu["Password"].'" minlenght="8">';
-        			echo '</div>';
-    			echo '</div>';
-    			echo '<div class="form-group">';
         			echo '<label class="col-xs-2 control-label" for="inputSuccess">C.P.</label>';
         			echo '<div class="col-xs-10">';
             			echo '<input type="text" id="inputSuccess" class="form-control" placeholder="Escribe tu código postal" name="cp" value="'.$usu["CP"].'" minlenght="5">';
