@@ -14,18 +14,17 @@
 		 $("#slideIzq").load("postsGenerales.php");
 	}
 
-	
+/*	
 function subirPubli(id, posts, idPosts, idPubli){
 		
-		  $.post("subirImagen.php", {id:id,posts:posts,}, function(result, state){
+		  $.post("subirImagen.php", {id:id,posts:posts,idPosts:idPosts,idPubli:idPubli}, function(result, state){
 		  		if(result == 1){
-		  			 $("#content").load("central.php?id=" + id + "&p=" + posts);
-		  			  $("#slideIzq").load("postsGenerales.php");
+		  			 $("#content").load("central.php?id=" + idUsuario + "&p=0");
 		  		}
 		  });
 }
 
-	
+*/	
 function borrarPost(idPosts){
 		
 		  $.post("borrarPosts.php", {idPosts: idPosts}, function(result, state){

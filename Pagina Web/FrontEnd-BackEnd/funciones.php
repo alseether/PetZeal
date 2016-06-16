@@ -17,10 +17,16 @@
 		while($i < $publicaciones->num_rows && $i < 5){
 			$row = $publicaciones->fetch_assoc();
 			$p = getInfoPublicacion($row["IDpublicacion"])->fetch_assoc();
-			echo '<li>';
-				echo '<a href="infoMascota_Usu.html"> <img src="'.$p["Imagen"].'" alt="foto publicacion"></a>';
-				echo '<p class="info-list-cont">'.$p["Descripcion"].'';
-				echo '<input type="button"  onclick="borrarPublicacion('.$idMascota.', '.$row["IDpublicacion"].')" src="assets/images/borrar.png" class="botonBorrar">';
+			echo '<li class="media">';
+			   	echo '<div class="media-left">';
+      				echo '<a href="info.html?masc=true&id='.$idMascota.'">';
+        				echo'<img class="media-object img-rounded" width="100" height="100" src="'.$p["Imagen"].'" alt="foto publicacion">';
+      				echo '</a>';
+    			echo '</div>';
+				echo '<div class="media-body">';
+					echo '<p class="info-list-cont">'.$p["Descripcion"].'';
+					echo '<input type="button" class="pull-right btn btn-md glyphicon glyphicon-trash" onclick="borrarPublicacion('.$idMascota.', '.$row["IDpublicacion"].')" src="assets/images/borrar.png" class="botonBorrar">';
+				echo '</div>';
 			echo '<li>';
 			$i++;
 		}
@@ -38,7 +44,7 @@
 
 			$p = getInfoPost($row["IDpost"])->fetch_assoc();
 			echo '<li>';
-				echo '<a href="infoMascota_Usu.html"> <img src="'.$infoUsu["Imagen"].'" alt="foto perfil"></a>';
+				echo '<a href="info.html?masc=false&id='.$idUsuario.'"> <img src="'.$infoUsu["Imagen"].'" alt="foto perfil"></a>';
 				echo '<p class="info-list-cont">'.$p["Titulo"].'<br>'.$p["Descripcion"].'</p>';
 				echo '<input type="button" onclick="borrarPost('.$row["IDpost"].')" src="assets/images/borrar.png" class="botonBorrar">';
 			echo '<li>'; 
@@ -64,10 +70,10 @@
 				$row = $mascotas->fetch_assoc();
 				$infoMascota = getInfoMascota($row["IDmascota"])->fetch_assoc();
 				
-				echo '<button onclick="cambioMascota('.$infoMascota["IDmascota"].',0)"> <img src='.$infoMascota["Imagen"].' data-idMascota = '.$infoMascota["IDmascota"].' alt="'.$infoMascota["Nombre"].'"></button>';
+				echo '<button class="btn btn-default" onclick="cambioMascota('.$infoMascota["IDmascota"].',0)">$row["Nombre"]</button>';
 				$i++;
 			}
-			echo '<a href="altaMascota.html">	<img id ="anadir" src="assets/images/anadir-mascota.jpg" alt="añadir"></a>';
+			echo '<a href="altaMascota.html" class="btn btn-default pull-right" role="button">+</a>';
 		}
 		echo '</div>';	
 	}
