@@ -59,26 +59,21 @@
 	
 	function openContMenRecibido(evt, mascota, mensaje) {
 		
-		$("#entrada"+mascota).load("cargaBandejaEntrada.php?corr="+mensaje+"&masc="+mascota);
+		$("#content").load("mensajeria.php?corr="+mensaje);
+		
 	    // Declare all variables
-	    var j, mentabcontent, mentablinks;
+	    var j, tabsMascota;
 
 	    // Get all elements with class="tabcontent" and hide them
-	    mentabcontent = document.getElementsByClassName("contenidoMensajeR");
-	    for (j = 0; j < mentabcontent.length; j++) {
-	        mentabcontent[j].style.visibility = "hidden";
-	    }
-
-	    // Get all elements with class="tablinks" and remove the class "active"
-	    mentablinks = document.getElementsByClassName("cabeceraMensajeR");
-	    for (j = 0; j < mentabcontent.length; j++) {
-	        mentablinks[j].className = mentablinks[j].className.replace("active", "");
+	    tabsMascota = document.getElementsByClassName("tabMascota");
+	    for (j = 0; j < tabsMascota.length; j++) {
+	        tabsMascota[j].className = tabsMascota[j].className.replace("active", "");
 	    }
 
 	    // Show the current tab, and add an "active" class to the link that opened the tab
-	    document.getElementById(mensaje).style.visibility = "visible";
-	    evt.currentTarget.className += " active";
-		
+	    document.getElementById("tabM"+mascota).className += " active";
+	    var correo = document.getElementById("m"+mascota+"in"+mensaje);
+		correo.className += " in";
 	}
 
 	function openContMenEnviado(evt, mensaje) {

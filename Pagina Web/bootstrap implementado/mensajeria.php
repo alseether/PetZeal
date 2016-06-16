@@ -18,10 +18,10 @@
 						$row = $mascotas->fetch_assoc();
 						$mascota = getInfoMascota($row["IDmascota"])->fetch_assoc();
 						if($i == 0){
-							echo '<li class="active"><a data-toggle="tab" href="#masc'.$mascota["IDmascota"].'">'.$mascota["Nombre"].'</a></li>';
+							echo '<li id="tabM'.$mascota["IDmascota"].'" class="tabMascota active"><a data-toggle="tab" href="#masc'.$mascota["IDmascota"].'">'.$mascota["Nombre"].'</a></li>';
 						}
 						else{
-							echo '<li><a data-toggle="tab" href="#masc'.$mascota["IDmascota"].'">'.$mascota["Nombre"].'</a></li>';
+							echo '<li id="tabM'.$mascota["IDmascota"].'" class="tabMascota"><a data-toggle="tab" href="#masc'.$mascota["IDmascota"].'">'.$mascota["Nombre"].'</a></li>';
 						}
 					}
 					echo '</ul>';
@@ -56,19 +56,19 @@
 										if($mensaje["IDmensaje"] == $correoAbierto){
 											actualizaInfoMensaje($mensaje["IDmensaje"], $mensaje["IDemisor"], $mensaje["IDreceptor"], $mensaje["Asunto"], $mensaje["Fecha"], $mensaje["Contenido"], 1);
 											echo '<div class="panel panel-default">';
-											echo '<div id="mensajeAcordeon" class="panel-heading">';
+											echo '<div id="mensajeAcordeon" class="panel-heading" >'; // onclick="openContMenRecibido(event, '.$row["IDmascota"].','.$idMensaje["IDmensaje"].')"
 												echo '<h5 class="panel-title">';
 													echo '<a data-toggle="collapse" data-parent="#accordionI'.$row["IDmascota"].'" href="#m'.$row["IDmascota"].'in'.$mensaje["IDmensaje"].'">';
 															echo '<div class="col-lg-4"> De: '.$emisor["Nombre"].'@'.$nombreDueno.' </div>';
-															echo '<div class="col-lg-5"> Asunto: <em>'.$mensaje["Asunto"].'</em> </div>';
-															echo '<div class="col-lg-3"> Fecha: <em>'.$mensaje["Fecha"].'</em> </div>';
+															echo '<div class="col-lg-5"> Asunto: '.$mensaje["Asunto"].' </div>';
+															echo '<div class="col-lg-3"> Fecha: '.$mensaje["Fecha"].' </div>';
 													echo '</a>';
 												
 										}
 										else{
 											if($mensaje["Leido"] == 0){
 												echo '<div class="panel panel-success">';
-												echo '<div id="mensajeAcordeon" class="panel-heading">';
+												echo '<div id="mensajeAcordeon" class="panel-heading" >'; // onclick="openContMenRecibido(event, '.$row["IDmascota"].','.$idMensaje["IDmensaje"].')"
 												echo '<h5 class="panel-title">';
 												echo '<a data-toggle="collapse" data-parent="#accordionI'.$row["IDmascota"].'" href="#m'.$row["IDmascota"].'in'.$mensaje["IDmensaje"].'">';
 
@@ -80,17 +80,13 @@
 												}
 											else{
 												echo '<div class="panel panel-default">';
-												echo '<div id="mensajeAcordeon" class="panel-heading">';
+												echo '<div id="mensajeAcordeon" class="panel-heading" >'; // onclick="openContMenRecibido(event, '.$row["IDmascota"].','.$idMensaje["IDmensaje"].')"
 												echo '<h5 class="panel-title">';
 												echo '<a data-toggle="collapse" data-parent="#accordionI'.$row["IDmascota"].'" href="#m'.$row["IDmascota"].'in'.$mensaje["IDmensaje"].'">';
-														echo '<div class="col-lg-4"> De: <em>'.$emisor["Nombre"].'@'.$nombreDueno.'</em> </div>';
-														echo '<div class="col-lg-5"> Asunto: <em>'.$mensaje["Asunto"].'</em> </div>';
-														echo '<div class="col-lg-3"> Fecha: <em>'.$mensaje["Fecha"].'</em> </div>';
+														echo '<div class="col-lg-4"> De: '.$emisor["Nombre"].'@'.$nombreDueno.' </div>';
+														echo '<div class="col-lg-5"> Asunto: '.$mensaje["Asunto"].' </div>';
+														echo '<div class="col-lg-3"> Fecha: '.$mensaje["Fecha"].' </div>';
 												echo '</a>';
-												/*
-													PARA MARCAR LEIDOS
-												echo '<tr class="cabeceraMensajeR" onclick="openContMenRecibido(event, '.$row["IDmascota"].',\''.$idMensaje["IDmensaje"].'\')">';
-												*/
 											}
 										}
 												echo '</h5>';
@@ -130,7 +126,7 @@
 										echo '</a>';
 									echo '</h5>';
 								echo '</div>'; // Cierre panel heading
-								echo '<div id="'.$row["IDmascota"].'in'.$mensaje["IDmensaje"].'" class="panel-collapse collapse">';
+								echo '<div id="m'.$row["IDmascota"].'out'.$mensaje["IDmensaje"].'" class="panel-collapse collapse">';
 									echo '<div class="panel-body">'.$mensaje["Contenido"].'</div>';
 								echo '</div>';	// Cierre del contenido del mensaje
 							echo '</div>';	// Cierre de panel default
@@ -150,4 +146,52 @@
 	?>
 </div>
 			
+			
+		<!-- Modal -->
+	<div id="ventanaMsn" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Nuevo mensaje privado</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form action="" method="get" role="form">
+			  <div class="form-group col-lg-6">
+			    <label for="emisor">Mensaje de:</label>
+			        <select class = "form-control">
+						<?php
+							startDB();
+							$mascotas = getMascotasUsuario($_COOKIE["idUsu"]);
+								for($i = 0; $i < $mascotas->num_rows; $i++){
+									$row = $mascotas->fetch_assoc();
+									$mascota = getInfoMascota($row["IDmascota"])->fetch_assoc();
+									echo '<option value="'.$mascota["IDmascota"].'">'.$mascota["Nombre"].'</option>';
+								}
+							closeDB();
+						?>
+					</select>
+			  </div>
+			  <div class="form-group col-lg-6">
+			    <label for="receptor">Mensaje a:</label>
+			    <input type="text" class="form-control" id="receptor" placeholder="mascota@usuario">
+			  </div>
+			  <div class="form-group">
+			    <label for="asunto"></label>
+			    <input type="text" class="form-control" id="asunto" placeholder="Asunto">
+			  </div>
+			<div class="form-group">
+			  <label for="contenido"></label>
+			  <textarea class="form-control" rows="3" id="contenido" placeholder="Escribe aqui tu mensaje..."></textarea>
+			</div>
+			  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+			  <button type="submit" class="pull-right btn btn-success">Enviar</button>
+			</form>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
 			
