@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-06-2016 a las 18:07:10
+-- Tiempo de generación: 16-06-2016 a las 20:14:24
 -- Versión del servidor: 5.6.16
 -- Versión de PHP: 5.5.11
 
@@ -139,9 +139,9 @@ INSERT INTO `mensajes` (`IDmensaje`, `IDemisor`, `IDreceptor`, `Asunto`, `Fecha`
 
 CREATE TABLE IF NOT EXISTS `posts` (
   `IDpost` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `Titulo` varchar(35) NOT NULL,
+  `Titulo` varchar(35) CHARACTER SET utf8 NOT NULL,
   `Fecha` date NOT NULL,
-  `Descripcion` longtext CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `Descripcion` longtext COLLATE utf8_unicode_ci NOT NULL,
   `Etiqueta1` int(11) DEFAULT NULL,
   `Etiqueta2` int(11) DEFAULT NULL,
   `Etiqueta3` int(11) DEFAULT NULL,
@@ -151,7 +151,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `IDusuario` int(11) unsigned NOT NULL,
   PRIMARY KEY (`IDpost`),
   KEY `Titulo` (`Titulo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=12 ;
 
 --
 -- Volcado de datos para la tabla `posts`
@@ -161,13 +161,14 @@ INSERT INTO `posts` (`IDpost`, `Titulo`, `Fecha`, `Descripcion`, `Etiqueta1`, `E
 (1, 'Cuidado de hurones', '2016-05-12', 'Blablabla, chipipchop', 5, 2, 0, 0, 0, 2, 3),
 (2, 'Vacunacion hurones', '2016-05-10', 'pompompom pom', 5, 4, 6, 0, 0, 12, 3),
 (3, 'Peces asesinos', '2016-05-11', 'Pis peces pe pomen pentre pellos.', 2, 7, 8, 0, 0, 80, 4),
-(4, 'Otro post', '2016-05-11', 'Descripcion del post', 2, 7, 8, 0, 0, 60, 4),
+(4, 'Otro post', '2016-05-11', 'Descripcion del post', 2, 7, 8, 0, 0, 60, 3),
 (5, 'super post', '2016-05-11', 'Descripcion del post', 2, 7, 8, 0, 0, 60, 4),
 (6, ' mega post', '2016-05-11', 'Descripcion del post', 2, 7, 8, 0, 0, 60, 4),
 (7, 'ultra post', '2016-05-11', 'Descripcion del post', 2, 7, 8, 0, 0, 60, 4),
 (8, 'master post', '2016-05-11', 'Descripcion del post', 2, 7, 8, 0, 0, 60, 4),
 (9, 'poke post', '2016-05-11', 'Descripcion del post', 2, 7, 8, 0, 0, 60, 4),
-(10, 'grande post', '2016-05-11', 'Descripcion del post', 2, 7, 8, 0, 0, 60, 4);
+(10, 'grande post', '2016-05-11', 'Descripcion del post', 2, 7, 8, 0, 0, 60, 4),
+(11, 'Cuidado de los animales', '2016-05-02', 'Los niños pequeños se sienten atraídos por las cosas que son suaves y tiernas. Esto suele atenderse proporcionándoles juguetes de peluche, libros ilustrados e incluso programas de televisión que presenten animales lindos y deseables. Sin embargo, existe una gran diferencia entre una foto o un peluche y una mascota. Los animales son seres vivos y necesitan cuidados para asegurarse de que están obteniendo una alimentación adecuada y el ejercicio necesario. Ellos también se cansan e irritan al igual que los niños y necesitan aseo y limpieza después de que hacen sus necesidades\n\nExisten, sin embargo, buenas razones para involucrar a los animales en la vida de un niño. El cuidado de un animal puede ayudarlo a comprender que los animales tienen necesidades similares a las suyas, desarrollando la empatía, la tolerancia y el respeto que puede transferir a otros seres vivos. Además, existe evidencia de que tener una mascota puede reducir el estrés en las personas de todas las edades; los perros tienen el beneficio adicional de necesitar el ejercicio regular, lo que trae beneficios de salud para el niño y los padres.', 5, 4, 6, 0, 0, 12, 3);
 
 -- --------------------------------------------------------
 
@@ -184,6 +185,14 @@ CREATE TABLE IF NOT EXISTS `publicaciones` (
   `IDmascota` int(11) unsigned NOT NULL,
   PRIMARY KEY (`IDpublicacion`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Volcado de datos para la tabla `publicaciones`
+--
+
+INSERT INTO `publicaciones` (`IDpublicacion`, `Descripcion`, `Fecha`, `Imagen`, `Likes`, `IDmascota`) VALUES
+(1, 'Hola caracola', '2016-06-01', 'assets/publicaciones-images/1', 0, 3),
+(2, 'Adios', '2016-06-17', 'assets/publicaciones-images/2', 8, 3);
 
 -- --------------------------------------------------------
 
@@ -202,11 +211,11 @@ CREATE TABLE IF NOT EXISTS `salt` (
 --
 
 INSERT INTO `salt` (`IDusuario`, `Salt`) VALUES
-(23, 'MmLpG5Bm(c1L'),
-(24, '0qICDq8FS(4d'),
-(25, 'g-tcLpb2T41O'),
-(26, 'F6WIXAgsbm3g'),
-(27, 'qGy::ljaXcac');
+(1, 'MmLpG5Bm(c1L'),
+(2, '0qICDq8FS(4d'),
+(3, 'g-tcLpb2T41O'),
+(4, 'F6WIXAgsbm3g'),
+(5, 'qGy::ljaXcac');
 
 -- --------------------------------------------------------
 
@@ -238,11 +247,11 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`IDusuario`, `Nick`, `Password`, `Email`, `Rol`, `CP`, `Nombre`, `Direccion`, `Telefono`, `Ocupacion`, `Web`, `Descripcion`, `Imagen`) VALUES
-(23, 'julio', '337e10e4b03d5d099735a3fa603ec11765c4c53f702f2495092358e0b5b320d1', 'julioa02@ucm.es', 'User', 12345, '', '', 0, '', '', '', ''),
-(24, 'zapi', '9a2ead972275f33be4e9570f75c45f499b2cd828b4d7461fe2460df4f9350b4e', 'dzapi01@ucm.es', 'User', 1234, '', '', 0, '', '', '', ''),
-(25, 'paula', 'b0722a88fe660d40b61ae9d7f094ec525f178226be5d9ba92d308713d0d7e6c5', 'pauill@ucm.es', 'Premium', 1234, 'paula', 'Calle del gato montes', 654987321, 'Cuidadora de gatos', '', 'Puedo ocuparme de su gato cuando usted desee y no tenga con quien dejarlo. Me encargo de la comida, ', 'assets/pets-images/25'),
-(26, 'alvaro', '5dc36d66fce95a58297de819936f38276e3f3e1c511872dfc5801bb76e846a54', 'alvlazar@ucm.es', 'User', 1234, '', '', 0, '', '', '', ''),
-(27, 'cr', 'abd23350da0c81a475412ea2dfbd5ce65eb8721b21ba0f8b78c70e850734fc5c', 'crvazque@ucm.es', 'User', 12345, 'Cristian', '', 0, '', '', '', '');
+(1, 'julio', '337e10e4b03d5d099735a3fa603ec11765c4c53f702f2495092358e0b5b320d1', 'julioa02@ucm.es', 'User', 12345, '', '', 0, '', '', '', ''),
+(2, 'zapi', '9a2ead972275f33be4e9570f75c45f499b2cd828b4d7461fe2460df4f9350b4e', 'dzapi01@ucm.es', 'User', 1234, '', '', 0, '', '', '', ''),
+(3, 'paula', '', 'pauill@ucm.es', 'Premium', 1234, 'paula', 'Calle del gato montes', 654987321, 'Cuidadora de gatos', '', 'Puedo ocuparme de su gato cuando usted desee y no tenga con quien dejarlo. Me encargo de la comida, ', 'assets/profile-images/3'),
+(4, 'alvaro', '5dc36d66fce95a58297de819936f38276e3f3e1c511872dfc5801bb76e846a54', 'alvlazar@ucm.es', 'User', 1234, '', '', 0, '', '', '', ''),
+(5, 'cr', 'abd23350da0c81a475412ea2dfbd5ce65eb8721b21ba0f8b78c70e850734fc5c', 'crvazque@ucm.es', 'User', 12345, 'Cristian', '', 0, '', '', '', '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
