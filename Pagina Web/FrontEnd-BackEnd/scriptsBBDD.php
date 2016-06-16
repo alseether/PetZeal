@@ -145,6 +145,12 @@ function actualizaInfoPublicacion($idPublicacion, $descripcion, $fecha, $imagen,
 	WHERE IDpublicacion='".$idPublicacion."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
+function actualizaFotoPublicacion($foto, $idPublicacion){
+	global $mysqli;
+	$query="UPDATE publicaciones SET Imagen='".$foto."'
+	WHERE IDpublicacion='".$idPublicacion."'"; 
+	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
+}
 function eliminaPublicacion($idPublicacion){
 	global $mysqli;
 	$query="DELETE FROM publicaciones WHERE IDpublicacion='".$idPublicacion."'"; 
