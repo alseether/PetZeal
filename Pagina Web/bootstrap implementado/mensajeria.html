@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title>Petzeal</title>
+	 <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="boots.css"/>
+    <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="mensajeria.js"></script>
+	<script type="text/javascript" src="funciones.js"></script>
+</head>
+<body>
+
+			<!-- Modal -->
+	<div id="ventanaMsn" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Nuevo mensaje privado</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form action="" method="get" role="form">
+			  <div class="form-group col-lg-6">
+			    <label for="emisor">Mensaje de:</label>
+			        <select class = "form-control">
+						<option value="M1">Mascota1</option>
+						<option value="M2">Mascota2</option>
+					</select>
+			  </div>
+			  <div class="form-group col-lg-6">
+			    <label for="receptor">Mensaje a:</label>
+			    <input type="text" class="form-control" id="receptor" placeholder="@nombreDeUsuario">
+			  </div>
+			  <div class="form-group">
+			    <label for="asunto"></label>
+			    <input type="text" class="form-control" id="asunto" placeholder="Asunto">
+			  </div>
+			<div class="form-group">
+			  <label for="contenido"></label>
+			  <textarea class="form-control" rows="3" id="contenido" placeholder="Escribe aquí tu mensaje..."></textarea>
+			</div>
+			  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+			  <button type="submit" class="pull-right btn btn-success">Enviar</button>
+			</form>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+
+	<div id="header"></div>
+	<div id="slideIzq"></div>
+	<div id="content"></div>
+	<div id="slideDer"></div>
+</body>
+</html>
