@@ -1,0 +1,207 @@
+<html>
+  <head>
+    <title>PetZeal</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="boots.css"/>
+    <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+  </head>
+
+	<body>
+    <div id="cabecera" class="page-header col-lg-12 col-md-12 col-sm-12" style="background-color:006633;">
+
+      <div class="col-lg-3 col-md-4 col-sm-3 col-xs-12">
+        <a href="inicioConLogin.html" style="background-color:006633;">
+          <img alt="PetZeal" id="imagenLogo" src="assets/images/logoPetZeal.png">
+        </a>
+      </div>
+
+      <div class="col-lg-6 col-md-5 col-sm-5 col-xs-12">
+        <div id="buscadorHeader" class="input-group">
+            <input type="text" class="form-control" placeholder="Buscar... (@nombreDeMascota, #etiqueta)">
+            <span class="input-group-btn">
+               <button class="btn btn-default" type="submit">
+                <div class="glyphicon glyphicon-search" style="height:20px"></div>
+              </button>
+            </span>
+         </div>
+      </div>
+
+      <div id="botonesHeader" class="col-lg-3 col-md-3 col-sm-4">
+        <a href="mensajeria.html" id="botonHeader" class="btn btn-default glyphicon glyphicon-envelope btn-md col-lg-2 col-md-2 col-sm-2 botonMensajeria" role="button"></a>
+        <div class="col-lg-3 col-md-3 col-sm-3"></div>
+        <a href="infoUsuario.html" id="botonHeader" class="btn btn-success btn-md col-lg-7 col-md-7 col-sm-7" role="button">Mi perfil</a>
+        <div class="col-lg-3 col-md-3 col-sm-3"></div>
+        <a href="index.html" id="botonHeader" class="btn btn-default btn-md col-lg-7 col-md-7 col-sm-7" role="button">Desconectarse</a>
+    </div>
+
+    </div> <!-- page-header -->
+
+	<div class="div-cuerpo col-lg-12 col-md-12 col-sm-12">
+		<ul class="nav nav-pills nav-stacked col-lg-2">
+		  <li class="active"><a data-toggle="tab" href="#mascota1">Mascota 1</a></li>
+		  <li><a data-toggle="tab" href="#mascota2">Mascota 2</a></li>
+		</ul>
+
+		<div class="tab-content col-lg-10">
+
+		  <div id="mascota1" class="tab-pane fade in active">
+		  	<ul class="nav nav-tabs">
+			  <li class="active"><a data-toggle="tab" href="#entrada1">Bandeja de Entrada</a></li>
+			  <li><a data-toggle="tab" href="#salida1">Bandeja de Salida</a></li>
+			</ul>
+		    <div class="tab-content">
+			  <div id="entrada1" class="tab-pane fade in active">
+				<div class="panel-group" id="accordion">
+				  <div class="panel panel-default">
+				    <div class="panel-heading">
+				      <h4 class="panel-title">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#m1in1"> Mensaje </a>
+				      </h4>
+				    </div>
+				    <div id="m1in1" class="panel-collapse collapse">
+				      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+				      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+				      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+				      commodo consequat.</div>
+				    </div>
+				  </div>
+				  <div class="panel panel-default">
+				    <div class="panel-heading">
+				      <h4 class="panel-title">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#m1in2">Mensaje</a>
+				      </h4>
+				    </div>
+				    <div id="m1in2" class="panel-collapse collapse">
+				      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+				      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+				      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+				      commodo consequat.</div>
+				    </div>
+				  </div>
+
+				</div>
+			  </div>
+			  <div id="salida1" class="tab-pane fade">
+				<div class="panel-group" id="accordion">
+				  <div class="panel panel-default">
+				    <div class="panel-heading">
+				      <h4 class="panel-title">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#m1out1"> Mensaje </a>
+				      </h4>
+				    </div>
+				    <div id="m1out1" class="panel-collapse collapse">
+				      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+				      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+				      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+				      commodo consequat.</div>
+				    </div>
+				  </div>
+				  <div class="panel panel-default">
+				    <div class="panel-heading">
+				      <h4 class="panel-title">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#m1out2">Mensaje</a>
+				      </h4>
+				    </div>
+				    <div id="m1out2" class="panel-collapse collapse">
+				      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+				      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+				      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+				      commodo consequat.</div>
+				    </div>
+				  </div>
+
+				</div>
+			  </div>
+			</div>
+		  </div>
+
+		  <div id="mascota2" class="tab-pane fade">
+		  	<ul class="nav nav-tabs">
+			  <li class="active"><a data-toggle="tab" href="#entrada">Bandeja de Entrada</a></li>
+			  <li><a data-toggle="tab" href="#salida">Bandeja de Salida</a></li>
+			</ul>
+		    <div class="tab-content">
+			  <div id="entrada" class="tab-pane fade in active">
+				<div class="panel-group" id="accordion">
+				  <div class="panel panel-default">
+				    <div class="panel-heading">
+				      <h4 class="panel-title">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#m2in1"> Mensaje </a>
+				      </h4>
+				    </div>
+				    <div id="m2in1" class="panel-collapse collapse">
+				      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+				      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+				      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+				      commodo consequat.</div>
+				    </div>
+				  </div>
+				  <div class="panel panel-default">
+				    <div class="panel-heading">
+				      <h4 class="panel-title">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#m2in2">Mensaje</a>
+				      </h4>
+				    </div>
+				    <div id="m2in2" class="panel-collapse collapse">
+				      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+				      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+				      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+				      commodo consequat.</div>
+				    </div>
+				  </div>
+
+				</div>
+			  </div>
+
+			  <div id="salida" class="tab-pane fade">
+
+				<div class="panel-group" id="accordion">
+				  <div class="panel panel-default">
+				    <div class="panel-heading">
+				      <h4 class="panel-title">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#m2out1"> Mensaje </a>
+				      </h4>
+				    </div>
+				    <div id="m2out1" class="panel-collapse collapse">
+				      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+				      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+				      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+				      commodo consequat.</div>
+				    </div>
+				  </div>
+				  <div class="panel panel-default">
+				    <div class="panel-heading">
+				      <h4 class="panel-title">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#m2out2">Mensaje</a>
+				      </h4>
+				    </div>
+				    <div id="m2out2" class="panel-collapse collapse">
+				      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+				      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+				      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+				      commodo consequat.</div>
+				    </div>
+				  </div>
+
+				</div>
+
+			  </div>
+
+			</div>
+		  </div>
+
+		</div>
+
+
+			
+
+	</div>
+	</body>
+</html>
+
