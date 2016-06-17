@@ -183,6 +183,12 @@ function eliminaPublicacion($idPublicacion){
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 
+function actualizaFotoPublicacion($foto, $idPublicacion){
+	global $mysqli;
+	$query="UPDATE publicaciones SET Imagen='".$foto."'
+	WHERE IDpublicacion='".$idPublicacion."'"; 
+	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
+}
 
 /* Funciones de la tabla de comentarios*/
 
