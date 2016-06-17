@@ -130,6 +130,7 @@
 					echo '<a id="botonRegistrate" href="altaUsuario.html" type="button" class="col-lg-12 btn btn-warning btn-lg" role="button">Regístrate</a>';
 				echo '</div>';
 			}
+		echo '</div>';
 	echo '</div>';
 
 ?>
