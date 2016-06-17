@@ -15,7 +15,7 @@
 						$mascotas = getMascotasUsuario($_COOKIE["idUsu"]);
 						$id =$_COOKIE["idUsu"];
 					}else{
-						$mascotas = $id;
+						$mascotas =  getMascotasUsuario($id);
 					}
 					if($mascotas->num_rows > 0){
 						$row = $mascotas->fetch_assoc();
@@ -49,7 +49,7 @@
 							echo '</ul>';	
 						echo '</div>';
 					}
-				}else{//premium  tttttttttttttttttttttt
+				}else{//premium  
 					if($hayPosts == 1){
 						$posts = getPostsUsuario($_COOKIE["idUsu"]);
 						if($posts->num_rows > 0){
