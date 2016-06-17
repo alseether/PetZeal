@@ -6,41 +6,52 @@
 	$consulta = "select * from posts order by IDpost desc limit 20";
 	$ultimosPost = query($consulta);
 
-	echo '<div class="col-phone-12 col-desktop-3 col-tablet-12">';				
-		echo '<div class="cabecera"> Posts</div>';
-		echo '<ul class="listado">';
-		if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true){
+	echo '<div class="div-cuerpo col-lg-12 col-md-12 col-sm-12">';
+		echo '<div class="panel panel-default col-lg-3 col-md-12 col-sm-12">';
+			echo '<div class="panel-heading"><h2>Posts</h2></div>';
+			echo '<div id="panelPosts" class="panel-body">';
+			echo '<ul class="media-list>';
+			if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true){
 
-			for ($i = 0; $i < $ultimosPost->num_rows; $i++) {
-				$row = $ultimosPost->fetch_assoc();
-				$infoUsuario = getInfoUsuario($row["IDusuario"]);
-				$rowUsu = $infoUsuario->fetch_assoc();
-		    	echo '<li>';
-		    		// AQUI FALTA PONER LAS URLs CORRECTAS A LAS QUE LLEVEN
-					echo '<a href="info.html?masc=false&id='.$row["IDusuario"].'"> <img src="'.$rowUsu["Imagen"].'" alt="foto usuario"></a>';
-					echo '<a type="button" onclick="cargaPostCentro('.$row["IDusuario"].','.$row["IDpost"].')"><p class="info-list-cont">'.$rowUsu["Nick"].'<br>';
-						    echo ''.$row["Titulo"].'<br>';
-						    echo ''.$row["Descripcion"].'</p></a>';	
-
-				echo '</li>';	
-			}	 
-		}else{//no loguedo
 				for ($i = 0; $i < $ultimosPost->num_rows; $i++) {
 					$row = $ultimosPost->fetch_assoc();
 					$infoUsuario = getInfoUsuario($row["IDusuario"]);
 					$rowUsu = $infoUsuario->fetch_assoc();
-			    	echo '<li>';
+			    	echo '<li class="media">';
 			    		// AQUI FALTA PONER LAS URLs CORRECTAS A LAS QUE LLEVEN
-						echo '<a href="info.html?masc=false&id='.$row["IDusuario"].'"> <img src="'.$rowUsu["Imagen"].'" alt="foto usuario"></a>';
-						echo '<a type="button" onclick="cargaPostCentro('.$row["IDusuario"].','.$row["IDpost"].')"><p class="info-list-cont">'.$rowUsu["Nick"].'<br>';
-							    echo ''.$row["Titulo"].'<br>';
-							    echo ''.$row["Descripcion"].'</p></a>';	
+						echo '<div class="media-left">';
+							echo '<a href="info.html?masc=false&id='.$row["IDusuario"].'"> <img class="media-object img-thumbnail" width="100" height="100" src="'.$rowUsu["Imagen"].'" alt="foto usuario"></a>';
+						echo '</div>';
+						echo '<div class="media-body">';
+							echo '<a type="button" class="media-body" onclick="cargaPostCentro('.$row["IDusuario"].','.$row["IDpost"].')"><p class="info-list-cont">';
+							    echo '<h4 class="media-heading">'.$row["Titulo"].'</h4>';
+							    echo '<p>'.$row["Descripcion"].'</p></a>';	
+						echo '</div>';
+					echo '</li>';	
+				}	 
+			}else{//no loguedo
+					for ($i = 0; $i < $ultimosPost->num_rows; $i++) {
+						$row = $ultimosPost->fetch_assoc();
+						$infoUsuario = getInfoUsuario($row["IDusuario"]);
+						$rowUsu = $infoUsuario->fetch_assoc();
+				    	echo '<li class="media">';
+					    	echo '<div class="media-left">';
+					    		// AQUI FALTA PONER LAS URLs CORRECTAS A LAS QUE LLEVEN
+								echo '<a href="info.html?masc=false&id='.$row["IDusuario"].'"> <img class="media-object img-thumbnail" width="100" height="100" src="'.$rowUsu["Imagen"].'" alt="foto usuario"></a>';
+							echo '</div>';
+								echo '<div class="media-body">';
+								echo '<a type="button" class="media-body" onclick="cargaPostCentro('.$row["IDusuario"].','.$row["IDpost"].')"><p class="info-list-cont">'.$rowUsu["Nick"].'<br>';
+									    echo '<h4 class="media-heading">'.$row["Titulo"].'</h4>';
+									    echo '<p>'.$row["Descripcion"].'</p></a>';	
+								echo '</div>';
+						echo '</li>';
+					}			
 
-					echo '</li>';
-				}			
-
-		}
-		echo '</ul>';
+			}
+			echo '</ul>';
+			echo '</div>';
+			echo '</div>';
+		echo '</div>';
 	echo '</div>';
 
 	closeDB();
