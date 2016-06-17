@@ -3,4 +3,6 @@ $(document).ready(function(){
 	var parameters = "pr=" + pr;
     $("#header").load("cabecera.php");
     $("#content").load("alta.php?" + parameters);
+	
+	muestraError();
 });	

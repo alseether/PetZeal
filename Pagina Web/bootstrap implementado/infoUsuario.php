@@ -5,6 +5,8 @@
 	$usu = getInfoUsuario($_COOKIE["idUsu"])->fetch_assoc();
 	echo '<form action="./actualizarPerfil.php?masc=false&id='.$_COOKIE["idUsu"].'" method="post" enctype="multipart/form-data" class="col-lg-9 col-md-12 col-sm-12 form-horizontal">';
 		echo '<h1>Información del usuario</h1>';
+		// Lo he quitado porque un usuario solo tiene nick (Alvaro)
+		/*
 		echo '<div class="form-group">';
 			echo '<label class="col-xs-2 control-label" for="inputSuccess">Nombre</label>';
 			echo '<div class="col-xs-10">';
@@ -12,6 +14,7 @@
 					autocomplete maxlenght="0" autocomplete maxlenght="50">';
 			echo '</div>';
 		echo '</div>';
+		*/
 		echo '<div class="form-group">';
 			echo '<label class="col-xs-2 control-label" for="inputSuccess">Nombre de usuario</label>';
 			echo '<div class="col-xs-10">';

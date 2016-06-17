@@ -58,13 +58,24 @@
 	height: 33%;
 }
 
-#panelPosts-mascota{
-	Overflow-y: scroll; 
+.panelPosts-mascota{
+	overflow-y: scroll; 
 	height: 76%;
+}
+.panelScroll{
+	overflow-y: scroll; 
+}
+
+#panelPosts-mascotaOtro{
+	Overflow-y: scroll; 
+	height: 66%;
 }
 
 #textAniadir{
 	justify: center;
 }
 
+#mensajeAcordeon{
+	height: 35px;
+}
 

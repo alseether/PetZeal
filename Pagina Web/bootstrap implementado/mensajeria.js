@@ -3,6 +3,8 @@ $(document).ready(function(){
 	var corr = getURLParameter("corr");
 	if(corr == 0 || corr == null) $("#content").load("mensajeria.php?corr=0");
 	else $("#content").load("mensajeria.php?corr="+corr);
+	
+	muestraError();
 });	
 
 

@@ -5,7 +5,7 @@
 	   $("#content").load("central.php?id=0&p=1");
 	   $("#slideDer").load("infoEstatica.html");
 
-
+		muestraError();
 	});
 
 	function cambioMascota(id, posts){

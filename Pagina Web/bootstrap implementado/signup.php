@@ -3,8 +3,8 @@
 	include_once('funciones.php');
 	startDB();
 	$tipo=$_REQUEST["tipo"];
-	if($tipo == "usu"){
-		if(!isset($_REQUEST["nick"]) || !isset($_REQUEST["email"]) || !isset($_REQUEST["cp"]) || !isset($_REQUEST["pwd"]) 
+	if($tipo == "usu"){		
+		if(!isset($_REQUEST["nick"]) || !isset($_REQUEST["email"]) || !isset($_REQUEST["cp"]) || !isset($_REQUEST["pwd"])  || $_REQUEST["nick"] == "" || $_REQUEST["email"] == "" || $_REQUEST["cp"] == "" || $_REQUEST["pwd"] == ""
 			|| strpos($_REQUEST["nick"],"<") != false || strpos($_REQUEST["email"],"<") != false || strpos($_REQUEST["cp"],"<") != false || strpos($_REQUEST["pwd"],"<") != false){
 			header('Location: ./error.php?err=4');
 			exit();
@@ -30,10 +30,11 @@
 		setcookie("idUsu", $idUsu["IDusuario"], time() + (24*3600));
 		setcookie("nick", $nick, time() + (24*3600));
 		setcookie("rol", $rol, time() + (24*3600));
+		header('Location: ./index.html');
 	}
 	else if($tipo == "premium"){
-		
-		if(!isset($_REQUEST["nombre"]) || !isset($_REQUEST["direccion"]) || !isset($_REQUEST["tlf"]) || !isset($_REQUEST["ocupacion"]) ||!isset($_REQUEST["web"]) || !isset($_REQUEST["descripcion"]) 
+		if(!isset($_REQUEST["nombre"]) || !isset($_REQUEST["direccion"]) || !isset($_REQUEST["tlf"]) || !isset($_REQUEST["ocupacion"]) ||!isset($_REQUEST["web"])
+			|| $_REQUEST["nombre"] == "" || $_REQUEST["direccion"] == "" || $_REQUEST["tlf"] == "" || $_REQUEST["ocupacion"] == "" || $_REQUEST["web"] == "" || $_REQUEST["descripcion"] == "" 
 			|| strpos($_REQUEST["nombre"],"<") != false || strpos($_REQUEST["direccion"],"<") != false || strpos($_REQUEST["tlf"],"<") != false || strpos($_REQUEST["ocupacion"],"<") != false || strpos($_REQUEST["web"],"<") != false || strpos($_REQUEST["descripcion"],"<") != false){
 			header('Location: ./error.php?err=6');
 			exit();
@@ -55,6 +56,7 @@
 		actualizaFotoUsuario($_COOKIE["idUsu"], $target_path);
 		setcookie("rol", "", time() - 3600);
 		setcookie("rol", $rol, time() + (24*3600));
+		header('Location: ./index.html');
 	}
 	else{
 		
@@ -76,7 +78,8 @@
 		$target_path = "assets/profile-images/".$idMasc["IDmascota"];
 		move_uploaded_file($_FILES['imagen']['tmp_name'], $target_path);
 		actualizaFotoMascota($idMasc["IDmascota"], $target_path);
+		header('Location: ./index.html');
 	}
 	closeDB();
-	header('Location: ./index.html');
+	
 ?>

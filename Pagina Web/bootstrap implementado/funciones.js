@@ -97,13 +97,14 @@
 	  	evt.currentTarget.className += " active";
 	}
 	
+	/*
 	function viewBox(){
 		var caja = document.getElementsByClassName("cajaCambiarFoto");
 		if(caja[0].style.visibility == "visible")
  			caja[0].style.visibility = "hidden";
  		else
  			caja[0].style.visibility = "visible";
-	}
+	}*/
 
 	function viewPost() {
 		var caja = document.getElementsByClassName("cajaCambiarFoto");

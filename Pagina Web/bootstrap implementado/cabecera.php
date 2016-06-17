@@ -20,6 +20,7 @@
 		startDB();
 		echo '<div id="botonesHeader" class="col-lg-3 col-md-3 col-sm-3">';
 			if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true){
+				/*
 				$mascotas = getMascotasUsuario($_COOKIE["idUsu"]);
 				$noLeidos = 0;
 				for($i =0; $i < $mascotas->num_rows; $i++){
@@ -34,7 +35,8 @@
 				}	
 				else{
 					echo '<a href="mensajeria.html" id="botonHeader" class="btn btn-default glyphicon glyphicon-envelope btn-md col-lg-2 col-md-2 col-sm-2 botonMensajeria" role="button"><span class="badge">'.$noLeidos.'</span></a>';
-				}
+				}*/
+				echo '<a href="mensajeria.html" id="botonHeader" class="btn btn-default glyphicon glyphicon-envelope btn-md col-lg-2 col-md-2 col-sm-2 botonMensajeria" role="button"></a>';
 			}
 			if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true){
 				echo '<div class="col-lg-3 col-md-3 col-sm-3"></div>';

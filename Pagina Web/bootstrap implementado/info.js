@@ -4,4 +4,6 @@ $(document).ready(function(){
 	var parameters = "masc=" + masc + "&id=" + id;
     $("#header").load("cabecera.php");
     $("#content").load("info.php?" + parameters);
+	
+	muestraError();
 });	

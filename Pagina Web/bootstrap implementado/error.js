@@ -1,29 +1,9 @@
-
-	function cargaIndex(error){
-		if(error == 1 || error == 2){
-			window.alert("Nombre de usuario inválido");
-		}
-		else if(error == 3){
-			window.alert("Contraseña incorrecta");
-		}
-	    $("#header").load("cabecera.php");
-	    $("#slideIzq").load("postsGenerales.php");
-	    $("#content").load("central.php?id=0&p=1");
-	    $("#slideDer").load("infoEstatica.html");
-
-
-	});
+	var errores = ["","Datos invalidos o insuficientes", "Nombre de usuario invalido", "Contrasena incorrecta", "Datos invalidos o insuficientes", "El nick no esta disponible", "Datos de Usuario Invalidos", "Datos de Mascota Invalidos",
+							"No se pudieron actualizar los datos de tu mascota", "No se pudieron actualizar tus datos", "No se pudieron actualizar tus datos",
+							"Datos invalidos o insuficientes", "Destinatario incorrecto","No existe el usuario de destino", "El usuario destino no tiene mascotas", "El usuario destino no tiene ninguna mascota con ese nombre", "Inicia sesion para continuar" ];
 	
-	function cargaAltaUsuario(error){
-		if(error == 4){
-			window.alert("Datos de Usuario Inválidos");
-		}
-		else if(error == 5){
-			window.alert("El nick no esta disponible");
-			
-		}
-		 $("#header").load("cabecera.php");
-	    $("#slideIzq").load("postsGenerales.php");
-	    $("#content").load("central.php?id=0&p=1");
-	    $("#slideDer").load("infoEstatica.html");
+	function muestraError(){
+		var error = getURLParameter("err");
+		if(error != 0 && error != null)	window.alert(errores[error]);
 	}
+	

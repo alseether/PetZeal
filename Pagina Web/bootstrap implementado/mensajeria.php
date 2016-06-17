@@ -34,7 +34,12 @@
 				for($i = 0; $i < $mascotas->num_rows; $i++){
 					$row = $mascotas->fetch_assoc();
 					$mascota = getInfoMascota($row["IDmascota"])->fetch_assoc();
-					echo '<div id="masc'.$row["IDmascota"].'" class="tab-pane fade in active">';
+					if($i == 0){
+						echo '<div id="masc'.$row["IDmascota"].'" class="tab-pane fade in active">';
+					}
+					else{
+						echo '<div id="masc'.$row["IDmascota"].'" class="tab-pane fade in">';
+					}
 							echo '<ul class="nav nav-tabs">';
 								echo '<li class="active"><a data-toggle="tab" href="#entrada'.$row["IDmascota"].'">Bandeja de Entrada</a></li>';
 								echo '<li><a data-toggle="tab" href="#salida'.$row["IDmascota"].'">Bandeja de Salida</a></li>';
@@ -55,7 +60,7 @@
 										$nombreDueno = getInfoUsuario($idDuenoEmisor)->fetch_assoc()["Nick"];
 										if($mensaje["IDmensaje"] == $correoAbierto){
 											actualizaInfoMensaje($mensaje["IDmensaje"], $mensaje["IDemisor"], $mensaje["IDreceptor"], $mensaje["Asunto"], $mensaje["Fecha"], $mensaje["Contenido"], 1);
-											echo '<div class="panel panel-default">';
+											echo '<div class="panel panel-primary">';
 											echo '<div id="mensajeAcordeon" class="panel-heading" >'; // onclick="openContMenRecibido(event, '.$row["IDmascota"].','.$idMensaje["IDmensaje"].')"
 												echo '<h5 class="panel-title">';
 													echo '<a data-toggle="collapse" data-parent="#accordionI'.$row["IDmascota"].'" href="#m'.$row["IDmascota"].'in'.$mensaje["IDmensaje"].'">';
@@ -67,7 +72,7 @@
 										}
 										else{
 											if($mensaje["Leido"] == 0){
-												echo '<div class="panel panel-success">';
+												echo '<div class="panel panel-primary">';
 												echo '<div id="mensajeAcordeon" class="panel-heading" >'; // onclick="openContMenRecibido(event, '.$row["IDmascota"].','.$idMensaje["IDmensaje"].')"
 												echo '<h5 class="panel-title">';
 												echo '<a data-toggle="collapse" data-parent="#accordionI'.$row["IDmascota"].'" href="#m'.$row["IDmascota"].'in'.$mensaje["IDmensaje"].'">';
@@ -79,7 +84,7 @@
 												echo '</a>';
 												}
 											else{
-												echo '<div class="panel panel-default">';
+												echo '<div class="panel panel-primary">';
 												echo '<div id="mensajeAcordeon" class="panel-heading" >'; // onclick="openContMenRecibido(event, '.$row["IDmascota"].','.$idMensaje["IDmensaje"].')"
 												echo '<h5 class="panel-title">';
 												echo '<a data-toggle="collapse" data-parent="#accordionI'.$row["IDmascota"].'" href="#m'.$row["IDmascota"].'in'.$mensaje["IDmensaje"].'">';
@@ -114,12 +119,12 @@
 							$receptor = getInfoMascota($idReceptor)->fetch_assoc();
 							$idDuenoReceptor = $receptor["IDusuario"];
 							$nombreDueno = getInfoUsuario($idDuenoReceptor)->fetch_assoc()["Nick"];
-							echo '<div class="panel panel-default">';
+							echo '<div class="panel panel-primary">';
 								echo '<div  id="mensajeAcordeon" class="panel-heading">';
 									echo '<h5 class="panel-title">';
 										echo '<a data-toggle="collapse" data-parent="#accordionO'.$row["IDmascota"].'" href="#m'.$row["IDmascota"].'out'.$mensaje["IDmensaje"].'">';
 											echo '<div>';
-												echo '<div class="col-lg-4"> De: <em>'.$emisor["Nombre"].'@'.$nombreDueno.'</em> </div>';
+												echo '<div class="col-lg-4"> A: <em>'.$receptor["Nombre"].'@'.$nombreDueno.'</em> </div>';
 												echo '<div class="col-lg-5"> Asunto: <em>'.$mensaje["Asunto"].'</em> </div>';
 												echo '<div class="col-lg-3"> Fecha: <em>'.$mensaje["Fecha"].'</em> </div>';
 											echo '</div>';
@@ -133,7 +138,7 @@
 						}
 						echo '</div>'; // Cierre del panel group	  
 					echo '</div>'; // Cierre de la bandeja de salida
-					
+					echo '</div>'; // Cierre del tab-pane de mascota
 					echo '</div>'; // Cierre del tab-content de mascota
 										
 				}
@@ -158,10 +163,10 @@
 	        <h4 class="modal-title">Nuevo mensaje privado</h4>
 	      </div>
 	      <div class="modal-body">
-	        <form action="" method="get" role="form">
+	        <form action="enviarMensaje.php" method="get" role="form">
 			  <div class="form-group col-lg-6">
 			    <label for="emisor">Mensaje de:</label>
-			        <select class = "form-control">
+			        <select name = "emisor" class = "form-control">
 						<?php
 							startDB();
 							$mascotas = getMascotasUsuario($_COOKIE["idUsu"]);
@@ -176,15 +181,15 @@
 			  </div>
 			  <div class="form-group col-lg-6">
 			    <label for="receptor">Mensaje a:</label>
-			    <input type="text" class="form-control" id="receptor" placeholder="mascota@usuario">
+			    <input type="text" name="receptor" class="form-control" id="receptor" placeholder="mascota@usuario">
 			  </div>
 			  <div class="form-group">
 			    <label for="asunto"></label>
-			    <input type="text" class="form-control" id="asunto" placeholder="Asunto">
+			    <input type="text" name="asunto" class="form-control" id="asunto" placeholder="Asunto">
 			  </div>
 			<div class="form-group">
 			  <label for="contenido"></label>
-			  <textarea class="form-control" rows="3" id="contenido" placeholder="Escribe aqui tu mensaje..."></textarea>
+			  <textarea name="contenido" class="form-control" rows="3" id="contenido" placeholder="Escribe aqui tu mensaje..."></textarea>
 			</div>
 			  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 			  <button type="submit" class="pull-right btn btn-success">Enviar</button>

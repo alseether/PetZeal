@@ -69,7 +69,7 @@
 		echo '<div class="form-group">';
 			echo '<label class="col-xs-2 control-label" for="inputSuccess">Descripción</label>';
 			echo '<div class="col-xs-10">';
-				echo '<textarea type="text" id="inputSuccess" class="form-control" autocomplete maxlenght="50"> '.$masc["Descripcion"].'</textarea>';
+				echo '<textarea type="text" id="inputSuccess" class="form-control" autocomplete maxlenght="50" name="descripcion"> '.$masc["Descripcion"].'</textarea>';
 			echo '</div>';
 		echo '</div>';
 		echo '<input class="btn btn-success btn-lg" value="Guardar cambios" type=submit></input>';

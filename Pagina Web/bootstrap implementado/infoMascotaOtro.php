@@ -67,6 +67,7 @@
 		echo '</div>';
 	}
 
+	/*
 	echo '<div id="ventanaMsn" class="modal fade" role="dialog">';
 		echo '<div class="modal-dialog">';
 			echo '<div class="modal-content">';
@@ -90,6 +91,54 @@
 				echo '</div>';
 			echo '</div>';
 		echo '</div>';
-	echo '</div>';
+	echo '</div>';*/
 
 ?>
+
+	<!-- Modal -->
+	<div id="ventanaMsn" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Nuevo mensaje privado</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form action="enviarMensaje.php" method="get" role="form">
+			  <div class="form-group col-lg-6">
+			    <label for="emisor">Mensaje de:</label>
+			        <select name = "emisor" class = "form-control">
+						<?php
+							startDB();
+							$mascotas = getMascotasUsuario($_COOKIE["idUsu"]);
+								for($i = 0; $i < $mascotas->num_rows; $i++){
+									$row = $mascotas->fetch_assoc();
+									$mascota = getInfoMascota($row["IDmascota"])->fetch_assoc();
+									echo '<option value="'.$mascota["IDmascota"].'">'.$mascota["Nombre"].'</option>';
+								}
+							closeDB();
+						?>
+					</select>
+			  </div>
+			  <div class="form-group col-lg-6">
+			    <label for="receptor">Mensaje a:</label>
+			    <input type="text" name="receptor" class="form-control" id="receptor" placeholder="mascota@usuario">
+			  </div>
+			  <div class="form-group">
+			    <label for="asunto"></label>
+			    <input type="text" name="asunto" class="form-control" id="asunto" placeholder="Asunto">
+			  </div>
+			<div class="form-group">
+			  <label for="contenido"></label>
+			  <textarea name="contenido" class="form-control" rows="3" id="contenido" placeholder="Escribe aqui tu mensaje..."></textarea>
+			</div>
+			  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+			  <button type="submit" class="pull-right btn btn-success">Enviar</button>
+			</form>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
