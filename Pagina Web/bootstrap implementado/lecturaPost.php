@@ -49,7 +49,6 @@
 									echo '</select><br>';
 									
 									echo ' <textarea class ="form-control" rows="4" type="text" name="comentario" placeholder="tu comentario..." id="cuadro-comentario"></textarea>';
-									//echo ' <a id="botonLike" class="btn btn-default btn-md">Me gusta</a>';
 									echo ' <input type="submit" id="botonComentar" class="btn btn-success btn-md"></input>';
 								echo ' </form>';
 							echo ' </li>';
