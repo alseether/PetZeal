@@ -5,8 +5,9 @@
  	
  	$idMas = $_REQUEST["id"];
  	$descripcion= $_REQUEST["descripcion"];
-
-	insertaNuevaPublicacion($descripcion, 0, "", 0, $idMas);
+	$fecha = date("Y")."-".date("m")."-".date("d");
+	
+	insertaNuevaPublicacion($descripcion, $fecha, "", 0, $idMas);
 	
 	$consulta = "select IDpublicacion from publicaciones where IDmascota = '".$idMas."' order by IDpublicacion desc limit 1";
 	$idPubli = query($consulta)->fetch_assoc();;

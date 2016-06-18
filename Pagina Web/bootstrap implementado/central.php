@@ -21,7 +21,7 @@
 						$row = $mascotas->fetch_assoc();
 						$primera = getInfoMascota($row["IDmascota"]);
 						$rowPrimera = $primera->fetch_assoc();
-						echo '<div class="panel-heading"><h2>'.$rowPrimera["Nombre"].'</h2></div>';
+						echo '<div class="panel-heading "><h2>'.$rowPrimera["Nombre"].'</h2></div>';
 						echo '<div class="panel-body panelPosts-mascota">';
 							echo '<ul class="media-list">';
 								echo '<li class="media">';
@@ -30,16 +30,7 @@
 	        								echo'<img class="media-object img-rounded" width="100" height="100" src="assets/images/imagenRegistroMascota.jpg" alt="posts1">';
 	      								echo'</a>';
 									echo'</div>';
-									echo'<div class="media-body">';
-										echo '<form  method="post" action="subirPublicacion.php?id='.$row["IDmascota"].'" enctype="multipart/form-data">';
-											//echo '<img src="assets/images/imagenRegistroMascota.jpg" alt="pots1" id="subir-publicacion-foto">';
-											echo '<textarea class="form-control" rows="4" type="text" name="descripcion" ></textarea>';
-											//cho '<a id="foto" name="foto" class="boton-peq botonNaranja" href="subirImagen.html">Foto</a>';
-											echo '<input id="botonesHeader" class="btn btn-default btn-md" type="file" name="imagen"></input>';
-											echo '<input type="submit" id="botonesHeader" class="btn btn-success btn-md"></input>';
-										echo '</form>';
-									echo '</div>';
-
+									
 								echo '</li>';		
 								if($id == 0){
 									cargaPublicacionesMascota($row["IDmascota"]);
@@ -62,10 +53,20 @@
 			        							echo '<img class="media-object img-rounded" width="100" height="100" src="assets/images/oficio.jpg" alt="especialista">';
 			      							echo '</a>';
 			    						echo '</div>';
-			    						echo '<div class="media-body">';
-			                  				echo '<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#ventanaPost">Publicar</button>';
-			    						echo '</div>';
+			    						echo'<div class="media-body">';
+											echo '<form  method="post" action ="subirPost.php">';
+												echo'<h4>Título</h4>';
+												echo '<textarea class="form-control" rows="1" type="text" name="titulo" ></textarea>';
+												echo'<h4>Descripcion</h4>';
+												echo '<textarea class="form-control" rows="4" type="text" name="descripcion" ></textarea>';
+												echo'<h4>Etiquetas</h4>';
+												echo '<textarea class="form-control" rows="1" type="text" name="etiqueta" ></textarea>';
+												echo '<input  type="submit" class="btn btn-success btn-lg pull-right"></input>';
+			    							echo '</form>';
+										echo '</div>';
+										echo '<hr></hr>';
 			  						echo '</li>';
+
 									cargaPostUsuario($_COOKIE["idUsu"]);
 								echo '</ul>';
 							echo '</div>';

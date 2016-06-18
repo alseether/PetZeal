@@ -24,7 +24,11 @@
 						echo '<div class="media-body">';
 							echo '<a type="button" class="media-body" onclick="cargaPostCentro('.$row["IDusuario"].','.$row["IDpost"].')"><p class="info-list-cont">';
 							    echo '<h4 class="media-heading">'.$row["Titulo"].'</h4>';
-							    echo '<p>'.substr ( $row["Descripcion"], 0, 60).'</p></a>';	
+							    if(strlen( $row["Descripcion"]) > 60){
+							    	echo ''.substr ( $row["Descripcion"], 0, 60).'...</a>';
+							    }else{
+							    	echo '<p>'.$row["Descripcion"].'</p></a>';
+							    }
 						echo '</div>';
 					echo '</li>';	
 				}	 

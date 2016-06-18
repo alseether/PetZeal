@@ -134,7 +134,7 @@ function getInfoPost($idPost){
 }
 function insertaNuevoPost($titulo, $fecha, $descripcion, $et1, $et2, $et3, $et4, $et5, $likes, $idUsuario){
 	global $mysqli;
-	$query="INSERT INTO posts (Titulo, Fecha, Descripcion, Etiqueta1, Etiqueta2, Etiqueta3, Etiqueta4, Etiqueta5, IDusuario) 
+	$query="INSERT INTO posts (Titulo, Fecha, Descripcion, Etiqueta1, Etiqueta2, Etiqueta3, Etiqueta4, Etiqueta5, Likes, IDusuario) 
 	VALUES ('".$titulo."', '".$fecha."', '".$descripcion."', '".$et1."', '".$et2."', '".$et3."', '".$et4."', '".$et5."', '".$likes."', '".$idUsuario."')";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
@@ -153,7 +153,7 @@ function eliminaPost($idPost){
 
 /* Funciones de la tabla de publicaciones*/
 
-function getPublicacionesMascota($idMascota){
+function getPublicacionesMascota($idMascota){insertaNuevaPublicacion
 	global $mysqli;
 	$query="SELECT IDpublicacion FROM publicaciones WHERE IDmascota = '".$idMascota."'";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));

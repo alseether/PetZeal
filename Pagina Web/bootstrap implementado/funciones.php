@@ -47,9 +47,14 @@
 					echo '<a href="info.html?masc=false&id='.$idUsuario.'"> 
 							<img class="media-object img-rounded" width="100" height="100" src="'.$infoUsu["Imagen"].'" alt="foto perfil">
 						  </a>';
-				echo '</div>'; 
+				echo '</div>';
 				echo '<div class="media-body">'; 
-					echo '<p class="media-heading"><h4>'.$p["Titulo"].'</h4><br>'.$p["Descripcion"].'</p>';
+						if(strlen( $p["Descripcion"]) > 200){
+							echo '<p class="media-heading"><h4>'.$p["Titulo"].'</h4><br>'.substr ( $p["Descripcion"], 0, 200).'...<a onclick="cargaPostCentro('.$idUsuario.','.$row["IDpost"].')">Ver más</a></p>';
+						}else{
+							echo '<p class="media-heading"><h4>'.$p["Titulo"].'</h4><br>'.$p["Descripcion"].'</p>';
+						
+						}
 					echo '<input type="button"class="pull-right btn btn-md glyphicon glyphicon-trash" onclick="borrarPost('.$row["IDpost"].')" src="assets/images/borrar.png" >';
 				echo '</div>'; 
 			echo '<li>'; 
