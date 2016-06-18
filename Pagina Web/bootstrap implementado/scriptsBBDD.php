@@ -153,7 +153,7 @@ function eliminaPost($idPost){
 
 /* Funciones de la tabla de publicaciones*/
 
-function getPublicacionesMascota($idMascota){insertaNuevaPublicacion
+function getPublicacionesMascota($idMascota){
 	global $mysqli;
 	$query="SELECT IDpublicacion FROM publicaciones WHERE IDmascota = '".$idMascota."'";
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
