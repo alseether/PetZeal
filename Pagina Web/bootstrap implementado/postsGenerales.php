@@ -6,9 +6,9 @@
 	$consulta = "select * from posts order by IDpost desc limit 20";
 	$ultimosPost = query($consulta);
 
-		echo '<div class="panel panel-default col-lg-3 col-md-12 col-sm-12">';
+		echo '<div class="panel panel-default col-lg-3 col-md-11 col-sm-11">';
 			echo '<div class="panel-heading"><h2>Posts</h2></div>';
-			echo '<div id="panelPosts" class="panel-body">';
+			echo '<div class="panelPostsOK panel-body">';
 			echo '<ul class="media-list>';
 			if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true){
 

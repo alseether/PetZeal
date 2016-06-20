@@ -20,7 +20,7 @@
 		startDB();
 		echo '<div id="botonesHeader" class="col-lg-3 col-md-3 col-sm-3">';
 			if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true){
-				echo '<a href="mensajeria.html" id="botonHeader" class="btn btn-default glyphicon glyphicon-envelope btn-md col-lg-2 col-md-2 col-sm-2 botonMensajeria" role="button"></a>';
+				echo '<a href="mensajeria.html" class="btn btn-default glyphicon glyphicon-envelope btn-md col-lg-2 col-md-2 col-sm-2 botonMensajeria" role="button"></a>';
 			}
 			if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true){
 				echo '<div class="col-lg-3 col-md-3 col-sm-3"></div>';
