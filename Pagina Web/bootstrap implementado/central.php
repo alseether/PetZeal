@@ -45,7 +45,7 @@
 								echo '</li>';*/
 								echo '<li class="media">';
 									echo'<div class="media-left">';
-										echo'<a href="infoMascota_Usu.html">';
+										echo'<a href="info.html?masc=true&id='.$row["IDmascota"].'">';
 	        								echo'<img class="media-object img-rounded" width="100" height="100" src="assets/images/imagenRegistroMascota.jpg" alt="posts1">';
 	      								echo'</a>';
 									echo'</div>';
@@ -54,7 +54,7 @@
 											//echo '<img src="assets/images/imagenRegistroMascota.jpg" alt="pots1" id="subir-publicacion-foto">';
 											echo '<textarea class="form-control" rows="4" type="text" name="descripcion" ></textarea>';
 											//cho '<a id="foto" name="foto" class="boton-peq botonNaranja" href="subirImagen.html">Foto</a>';
-											echo '<input id="botonesHeader" class="btn btn-default btn-md" type="file" name="imagen"></input>';
+											echo '<input id="botonesHeader" type="file" name="imagen"></input>';
 											echo '<input type="submit" id="botonesHeader" class="btn btn-success btn-md"></input>';
 										echo '</form>';
 									echo '</div>';
@@ -121,7 +121,7 @@
 										echo '<ul class="media-list">';
 											echo '<li class="media">';
 												echo'<div class="media-left">';
-													echo'<a href="infoMascota_Usu.html">';
+													echo'<a href="info.html?masc=true&id='.$row["IDmascota"].'">';
 				        								echo'<img class="media-object img-rounded" width="100" height="100" src="assets/images/imagenRegistroMascota.jpg" alt="posts1">';
 				      								echo'</a>';
 												echo'</div>';
