@@ -25,11 +25,11 @@
 		else
 			include("infoMascotaOtro.php");
 	}
-	else if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true && isset($_COOKIE["idUsu"]) && $idAccedido == $_COOKIE["idUsu"]){
+	else if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true && isset($_COOKIE["idUsu"]) && $_COOKIE["rol"]=="User" && $idAccedido == $_COOKIE["idUsu"]){
 			include("infoUsuario.php");
 	}
 	else{
-		if(isset($_COOKIE["idUsu"]) && $idAccedido == $_COOKIE["idUsu"])
+		if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true && isset($_COOKIE["idUsu"]) && $_COOKIE["rol"]=="Premium" && $idAccedido == $_COOKIE["idUsu"])
 			include("infoPremium.php");
 		else
 			include("infoPremiumOtro.php");

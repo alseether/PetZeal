@@ -7,10 +7,14 @@
 		echo '<fieldset>';
 			echo '<div class="panel-heading"><h1>Información de la mascota</h1></div>';
 			echo '<div class="panel-body col-lg-8 col-md-8 col-sm-12">';
-				echo '<h3>'.$masc["Nombre"].'</h3>';
+				echo '<h1>'.$masc["Nombre"].'</h1>';
+				echo '<h4><b>Especie:</b></h4>';
 				echo '<h4>'.$masc["Especie"].'</h4>';
+				echo '<h4><b>Raza:</b></h4>';
 				echo '<h4>'.$masc["Raza"].'</h4>';
+				echo '<h4><b>Fecha de nacimiento:</b></h4>';
 				echo '<h4>'.$masc["Nacimiento"].'</h4>';
+				echo '<h4><b>Descripcion:</b></h4>';
 				echo '<h4>'.$masc["Descripcion"].'</h4>';
 			echo '</div>';
 			echo '<div>';
