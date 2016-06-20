@@ -50,9 +50,11 @@
 				echo '</div>';
 				echo '<div class="media-body">'; 
 						if(strlen( $p["Descripcion"]) > 200){
-							echo '<p class="media-heading"><h4>'.$p["Titulo"].'</h4><br>'.substr ( $p["Descripcion"], 0, 200).'...<a onclick="cargaPostCentro('.$idUsuario.','.$row["IDpost"].')">Ver más</a></p>';
+							echo '<p class="media-heading"><h4><span href="#" onclick="cargaPostCentro('.$infoUsu["IDusuario"].','.$p["IDpost"].')"'.$p["Titulo"].'</span>'.$p["Titulo"].'</h4><br>';
+							echo substr ( $p["Descripcion"], 0, 200).'...<a href="#" onclick="cargaPostCentro('.$idUsuario.','.$row["IDpost"].')">Ver más</a></p>';
 						}else{
-							echo '<p class="media-heading"><h4>'.$p["Titulo"].'</h4><br>'.$p["Descripcion"].'</p>';
+							echo '<p class="media-heading"><h4><span href="#" onclick="cargaPostCentro('.$infoUsu["IDusuario"].','.$p["IDpost"].')"'.$p["Titulo"].'</span>'.$p["Titulo"].'</h4><br>';
+							echo $p["Descripcion"].'</p>';
 						
 						}
 					echo '<button class="pull-right btn btn-md glyphicon glyphicon-trash" onclick="borrarPost('.$row["IDpost"].')"></button>';
