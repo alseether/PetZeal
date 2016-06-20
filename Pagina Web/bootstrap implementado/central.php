@@ -56,11 +56,11 @@
 			    						echo'<div class="media-body">';
 											echo '<form  method="post" action ="subirPost.php">';
 												echo'<h4>Título</h4>';
-												echo '<textarea class="form-control" rows="1" type="text" name="titulo" ></textarea>';
+												echo '<textarea class="form-control" rows="1" type="text" name="titulo" placeholder="Escribe el titulo..."></textarea>';
 												echo'<h4>Descripcion</h4>';
-												echo '<textarea class="form-control" rows="4" type="text" name="descripcion" ></textarea>';
+												echo '<textarea class="form-control" rows="4" type="text" name="descripcion" placeholder="Escribe el post..."></textarea>';
 												echo'<h4>Etiquetas</h4>';
-												echo '<textarea class="form-control" rows="1" type="text" name="etiqueta" ></textarea>';
+												echo '<textarea class="form-control" rows="1" type="text" name="etiquetas" placeholder="Ej: $etiqueta1 $etiqueta2" ></textarea>';
 												echo '<input  type="submit" class="btn btn-success btn-lg pull-right"></input>';
 			    							echo '</form>';
 										echo '</div>';
@@ -127,9 +127,7 @@
 			            echo '</div>';
 		          	echo '</div>';
 			}else{
-				echo '<div class="center-block hidden-md hidden-sm hidden-xs col-lg-6">';
-					echo '<a id="botonRegistrate" href="altaUsuario.html" type="button" class="col-lg-12 btn btn-warning btn-lg" role="button">Regístrate</a>';
-				echo '</div>';
+				echo '<a id="botonRegistrate" href="registro.html?pr=false" type="button" class="col-md-offset-4 col-lg-4 btn btn-warning btn-lg" role="button">Regístrate</a>';
 			}
 		echo '</div>';
 	echo '</div>';
