@@ -42,7 +42,7 @@
 				} 
 				$idUsu = getIdUsuario(implode($search))->fetch_assoc();
 				$usu = getInfoUsuario($idUsu["IDusuario"])->fetch_assoc();
-				if($usu != NULL){
+				if($usu != NULL && $usu["Rol"]=="Premium"){
 					echo '<h1>Usuarios encontrados:</h1>';
 					$encontrado = true;
 					echo '<li class="media">';
