@@ -149,6 +149,12 @@ function eliminaPost($idPost){
 	$query="DELETE FROM posts WHERE IDpost='".$idPost."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
+function actualizaLikePost($idPost, $likes){
+	global $mysqli;
+	$query="UPDATE posts SET Likes='".$likes."'
+	WHERE IDpost='".$idPost."'"; 
+	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
+}
 
 
 /* Funciones de la tabla de publicaciones*/

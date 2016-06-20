@@ -2,7 +2,14 @@
 	$(document).ready(function(){
 	    $("#header").load("cabecera.php");
 	    $("#slideIzq").load("postsGenerales.php");
-	   $("#content").load("central.php?id=0&p=1");
+		    var dir = getURLParameter('dir');
+			if(dir == null){
+			 $("#content").load("central.php?id=0&p=1");
+			}else{
+				var id = getURLParameter('id');
+				var np = getURLParameter('np');
+				$("#content").load("lecturaPost.php?id=" + id + "&np=" + np);
+			}
 	   $("#slideDer").load("infoEstatica.html");
 
 		muestraError();
