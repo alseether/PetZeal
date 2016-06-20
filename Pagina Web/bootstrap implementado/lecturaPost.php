@@ -71,12 +71,12 @@
 								echo ' <li class="media">';
 									echo ' <form method="post" action = "subirComentario.php?idp='.$rowPost["IDpost"].'">';
 										echo '<select name ="Nmasc" class = "campo">';
-										$infoMascota = getMascotasUsuario($id);
+										$infoMascota = getMascotasUsuario($_COOKIE["idUsu"]);
 										for ($i = 0; $i < $infoMascota->num_rows; $i++) {
 											$infoMascota2 = $infoMascota->fetch_assoc();
 											$rowMascota = getInfoMascota($infoMascota2["IDmascota"])->fetch_assoc();
 											
-												echo '<option value="'.$infoUsuario["IDmascota"].'">'.$rowMascota["Nombre"].'</option>';
+												echo '<option value="'.$infoMascota2["IDmascota"].'">'.$rowMascota["Nombre"].'</option>';
 										}
 										echo '</select><br>';
 										echo ' <textarea class ="form-control" rows="4" type="text" name="comentario" placeholder="tu comentario..." id="cuadro-comentario"></textarea>';
