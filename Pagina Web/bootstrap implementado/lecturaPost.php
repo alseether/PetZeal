@@ -31,10 +31,31 @@
 							echo '<button type="submit" id="botonesHeader" class="btn btn-md pull-right glyphicon glyphicon-heart"></button>';		
 						echo'</div>';
 						echo'<div class="media-body">';
-							echo ' <p> '.$rowPost["Descripcion"].'</p>';
+							echo ' <p> '.$rowPost["Descripcion"].'</p><br>';
+							echo '<h6>Etiquetas: ';
+							if($rowPost["Etiqueta1"] != 0){
+								$etiqueda = getInfoEtiqueta($rowPost["Etiqueta1"])->fetch_assoc();
+								echo '$'.$etiqueda["Etiqueta"].' ';
+							}
+							if($rowPost["Etiqueta2"] != 0){
+								$etiqueda = getInfoEtiqueta($rowPost["Etiqueta2"])->fetch_assoc();
+								echo '$'.$etiqueda["Etiqueta"].' ';
+							}
+							if($rowPost["Etiqueta3"] != 0){
+								$etiqueda = getInfoEtiqueta($rowPost["Etiqueta3"])->fetch_assoc();
+								echo '$'.$etiqueda["Etiqueta"].' ';
+							}
+							if($rowPost["Etiqueta4"] != 0){
+								$etiqueda = getInfoEtiqueta($rowPost["Etiqueta4"])->fetch_assoc();
+								echo '$'.$etiqueda["Etiqueta"].' ';
+							}
+							if($rowPost["Etiqueta5"] != 0){
+								$etiqueda = getInfoEtiqueta($rowPost["Etiqueta5"])->fetch_assoc();
+								echo '$'.$etiqueda["Etiqueta"];
+							}
+						echo '</h6>';
 						echo'</div>';
 						echo'<div class="media-footer">';
-							//echo '<h4>Etiquetas: '.$rowPost["Etiqueta1"].'</h4>';
 						echo'</div>';
 					echo ' </li>';
 					if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true){
