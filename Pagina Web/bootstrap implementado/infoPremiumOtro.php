@@ -49,8 +49,13 @@
 							echo '</a>';
 						echo '</div>';
 						echo '<div class="media-body">';
-							echo '<h4 class="media-heading">'.$datos["Titulo"].'</h4>';
-							echo '<p>'.substr ( $datos["Descripcion"], 0, 140).'</p>';
+							if(strlen( $datos["Descripcion"]) > 200){
+								echo '<p class="media-heading"><h4><span type="button" onclick="cargaPost('.$usu["IDusuario"].','.$datos["IDpost"].')">'.$datos["Titulo"].'</span></h4><br>';
+								echo substr ( $datos["Descripcion"], 0, 200).'...<a href="index.html?dir=true&id='.$usu["IDusuario"].'&np='.$datos["IDpost"].'">Ver más</a></p>';
+							}else{
+								echo '<p class="media-heading"><h4><span href="index.html?dir=true&id='.$usu["IDusuario"].'&np='.$datos["IDpost"].'">'.$datos["Titulo"].'</span></h4><br>';
+								echo $datos["Descripcion"].'</p>';
+							}
 						echo '</div>';
 					echo '</li>';
 				}

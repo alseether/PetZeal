@@ -76,7 +76,7 @@
 											$infoMascota2 = $infoMascota->fetch_assoc();
 											$rowMascota = getInfoMascota($infoMascota2["IDmascota"])->fetch_assoc();
 											
-												echo '<option value="'.$infoMascota2["IDmascota"].'">'.$rowMascota["Nombre"].'</option>';
+												echo '<option value="'.$infoUsuario["IDmascota"].'">'.$rowMascota["Nombre"].'</option>';
 										}
 										echo '</select><br>';
 										echo ' <textarea class ="form-control" rows="4" type="text" name="comentario" placeholder="tu comentario..." id="cuadro-comentario"></textarea>';

@@ -90,6 +90,10 @@
 		echo '</div>';	
 	}
 
+	function cargaPost($id, $idPost){
+		header('Location: ./index.html?dir=true&id=' + $id + '&np=' + $idPost);
+	}
+
 	function securePass($id, $pass){
 		$salt = getSaltUsuario($id)->fetch_assoc();
 		$nueva = $pass.$salt["Salt"]."idiota";
