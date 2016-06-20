@@ -60,7 +60,8 @@
 			exit();
 		}
 		else{
-			insertaNuevoMensaje($idMascotaEmi["IDmascota"], $idMascotaRec, $asunto, getdate(), $contenido, 1);	// El 1 al final indica que el mensaje SI se ha leido, a falta de corregir el problema de marcarlos
+			$fecha = date("Y")."-".date("m")."-".date("d");
+			insertaNuevoMensaje($idMascotaEmi["IDmascota"], $idMascotaRec, $asunto, $fecha, $contenido, 1);	// El 1 al final indica que el mensaje SI se ha leido, a falta de corregir el problema de marcarlos
 		}
 		
 		closeDB();
