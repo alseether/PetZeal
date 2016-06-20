@@ -24,7 +24,7 @@
     			echo '</div>';
 				echo '<div class="media-body">';
 					echo '<p class="info-list-cont">'.$p["Descripcion"].'';
-					echo '<input type="button" class="pull-right btn btn-md glyphicon glyphicon-trash" onclick="borrarPublicacion('.$idMascota.', '.$row["IDpublicacion"].')" src="assets/images/borrar.png" >';
+					echo '<button class="pull-right btn btn-md glyphicon glyphicon-trash" onclick="borrarPublicacion('.$idMascota.', '.$row["IDpublicacion"].')">';
 				echo '</div>';
 			echo '<li>';
 			$i++;
@@ -55,7 +55,7 @@
 							echo '<p class="media-heading"><h4>'.$p["Titulo"].'</h4><br>'.$p["Descripcion"].'</p>';
 						
 						}
-					echo '<input type="button"class="pull-right btn btn-md glyphicon glyphicon-trash" onclick="borrarPost('.$row["IDpost"].')" src="assets/images/borrar.png" >';
+					echo '<button class="pull-right btn btn-md glyphicon glyphicon-trash" onclick="borrarPost('.$row["IDpost"].')"></button>';
 				echo '</div>'; 
 			echo '<li>'; 
 			$i++;
@@ -83,7 +83,7 @@
 				echo '<button class="btn btn-default" onclick="cambioMascota('.$infoMascota["IDmascota"].',0)">'.$infoMascota["Nombre"].'</button>';
 				$i++;
 			}
-			echo '<a href="altaMascota.html" class="btn btn-default pull-right" role="button">+</a>';
+			echo '<a href="registro.html?pr=false" class="btn btn-default pull-right" role="button">+</a>';
 		}
 		echo '</div>';	
 	}

@@ -54,8 +54,8 @@
 											//echo '<img src="assets/images/imagenRegistroMascota.jpg" alt="pots1" id="subir-publicacion-foto">';
 											echo '<textarea class="form-control" rows="4" type="text" name="descripcion" ></textarea>';
 											//cho '<a id="foto" name="foto" class="boton-peq botonNaranja" href="subirImagen.html">Foto</a>';
-											echo '<input id="botonesHeader" type="file" name="imagen"></input>';
-											echo '<input type="submit" id="botonesHeader" class="btn btn-success btn-md"></input>';
+											echo '<input type="file" name="imagen"></input>';
+											echo '<input type="submit" id="botonesHeader" class="pull-right btn btn-success btn-md"></input>';
 										echo '</form>';
 									echo '</div>';
 
@@ -90,7 +90,7 @@
 												echo '<textarea class="form-control" rows="4" type="text" name="descripcion" placeholder="Escribe el post..."></textarea>';
 												echo'<h4>Etiquetas</h4>';
 												echo '<textarea class="form-control" rows="1" type="text" name="etiquetas" placeholder="Ej: $etiqueta1 $etiqueta2" ></textarea>';
-												echo '<input  type="submit" class="btn btn-success btn-lg pull-right"></input>';
+												echo '<input  type="submit" style="margin-top: 15px" class="btn btn-success btn-lg pull-right"></input>';
 			    							echo '</form>';
 										echo '</div>';
 										echo '<hr></hr>';
@@ -130,8 +130,8 @@
 														//echo '<img src="assets/images/imagenRegistroMascota.jpg" alt="pots1" id="subir-publicacion-foto">';
 														echo '<textarea class="form-control" rows="4" type="text" name="descripcion" ></textarea>';
 														//cho '<a id="foto" name="foto" class="boton-peq botonNaranja" href="subirImagen.html">Foto</a>';
-														echo '<input id="botonesHeader" class="btn btn-default btn-md" type="file" name="imagen"></input>';
-														echo '<input type="submit" id="botonesHeader" class="btn btn-success btn-md"></input>';
+														echo '<input type="file" name="imagen"></input>';
+														echo '<input type="submit" id="botonesHeader" class="pull-right btn btn-success btn-md"></input>';
 													echo '</form>';
 												echo '</div>';
 
