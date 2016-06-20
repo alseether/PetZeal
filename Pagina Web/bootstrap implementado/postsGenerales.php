@@ -22,12 +22,12 @@
 							echo '<a href="info.html?masc=false&id='.$row["IDusuario"].'"> <img class="media-object img-thumbnail" width="100" height="100" src="'.$rowUsu["Imagen"].'" alt="foto usuario"></a>';
 						echo '</div>';
 						echo '<div class="media-body">';
-							echo '<a type="button" class="media-body" onclick="cargaPostCentro('.$row["IDusuario"].','.$row["IDpost"].')"><p class="info-list-cont">';
+							echo '<span type="button" class="media-body" onclick="cargaPostCentro('.$row["IDusuario"].','.$row["IDpost"].')"><p class="info-list-cont">';
 							    echo '<h4 class="media-heading">'.$row["Titulo"].'</h4>';
 							    if(strlen( $row["Descripcion"]) > 60){
-							    	echo ''.substr ( $row["Descripcion"], 0, 60).'...</a>';
+							    	echo ''.substr ( $row["Descripcion"], 0, 60).'<a href="#">Ver más</a>';
 							    }else{
-							    	echo '<p>'.$row["Descripcion"].'</p></a>';
+							    	echo '<p>'.$row["Descripcion"].'</p></span>';
 							    }
 						echo '</div>';
 					echo '</li>';	
@@ -43,9 +43,13 @@
 								echo '<a href="info.html?masc=false&id='.$row["IDusuario"].'"> <img class="media-object img-thumbnail" width="100" height="100" src="'.$rowUsu["Imagen"].'" alt="foto usuario"></a>';
 							echo '</div>';
 								echo '<div class="media-body">';
-								echo '<a type="button" class="media-body" onclick="cargaPostCentro('.$row["IDusuario"].','.$row["IDpost"].')"><p class="info-list-cont">';
-									    echo '<h4 class="media-heading">'.$row["Titulo"].'</h4>';
-									    echo '<p>'.substr ( $row["Descripcion"], 0, 60).'</p></a>';	
+								echo '<span type="button" class="media-body" onclick="cargaPostCentro('.$row["IDusuario"].','.$row["IDpost"].')"><p class="info-list-cont">';
+									echo '<h4 class="media-heading">'.$row["Titulo"].'</h4>';
+									if(strlen( $row["Descripcion"]) > 60){
+							    	echo ''.substr ( $row["Descripcion"], 0, 60).'<a href="#">Ver más</a>';
+								    }else{
+								    	echo '<p>'.$row["Descripcion"].'</p></span>';
+								    }   
 								echo '</div>';
 						echo '</li>';
 					}			
