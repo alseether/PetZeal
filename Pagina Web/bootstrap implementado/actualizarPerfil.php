@@ -20,7 +20,6 @@
 			actualizaInfoMascota($id, $nombre, $especie, $raza, $nacimiento, $descripcion, $datos["Imagen"], $_COOKIE["idUsu"]);
 		}
 		else{
-			$password = updateSecurePass($id, $_REQUEST["pwd"]);
 			$nick = $_REQUEST["nick"];
 			$email = $_REQUEST["email"];
 			$cp = $_REQUEST["cp"]; 

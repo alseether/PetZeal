@@ -27,7 +27,7 @@
 	}
 	$reg=$resto->fetch_array();
 	//Comprobar contraseña y asignar iduser
-	$introducida = obteinSecurePass($idUsu["IDusuario"], $passwd);
+	$introducida = securePass($idUsu["IDusuario"], $passwd);
 	if($introducida != $reg["Password"]){
 	    header('Location: ./error.php?err=3');
 	    exit();

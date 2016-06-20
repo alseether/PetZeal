@@ -88,9 +88,7 @@
 		echo '</div>';	
 	}
 
-
-
-	function obteinSecurePass($id, $pass){
+	function securePass($id, $pass){
 		$salt = getSaltUsuario($id)->fetch_assoc();
 		$nueva = $pass.$salt["Salt"]."idiota";
 		$nueva = hash("sha256", $nueva);
@@ -105,17 +103,7 @@
 		$nueva = hash("sha256", $nueva);
 
 		return $nueva;
-	}
-
-	function updateSecurePass($id, $pass){
-		$salt = getRandomCode(12);
-
-		actualizaSalt($id, $salt);
-		$nueva = $pass.$salt."idiota";
-		$nueva = hash("sha256", $nueva);
-
-		return $nueva;
-	}
+	}	
 
 	function getRandomCode($tam){
 	    $an = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-)(.:,;";
