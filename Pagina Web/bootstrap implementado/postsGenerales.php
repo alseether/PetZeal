@@ -2,6 +2,7 @@
 	// realiza consulta a la BBDD de los post existentes
 	include_once('scriptsBBDD.php');
 	include_once('funciones.php');
+
 	startDB();
 	$consulta = "select * from posts order by IDpost desc limit 20";
 	$ultimosPost = query($consulta);
@@ -23,9 +24,9 @@
 						echo '</div>';
 						echo '<div class="media-body">';
 							echo '<span type="button" class="media-body" onclick="cargaPostCentro('.$row["IDusuario"].','.$row["IDpost"].')"><p class="info-list-cont">';
-							    echo '<h4 class="media-heading">'.$row["Titulo"].'</h4>';
+							    echo '<a id="link" href="#" ><h4 class="media-heading">'.$row["Titulo"].'</h4></a>';
 							    if(strlen( $row["Descripcion"]) > 60){
-							    	echo ''.substr ( $row["Descripcion"], 0, 60).'<a href="#">Ver más</a>';
+							    	echo ''.substr ( $row["Descripcion"], 0, 60).'<a style="text-decoration:none" href="#">Ver más</a>';
 							    }else{
 							    	echo '<p>'.$row["Descripcion"].'</p></span>';
 							    }
@@ -44,7 +45,7 @@
 							echo '</div>';
 								echo '<div class="media-body">';
 								echo '<span type="button" class="media-body" onclick="cargaPostCentro('.$row["IDusuario"].','.$row["IDpost"].')"><p class="info-list-cont">';
-									echo '<h4 class="media-heading">'.$row["Titulo"].'</h4>';
+									echo '<a href="#" id="link"> <h4 class=" media-heading">'.$row["Titulo"].'</h4></a>';
 									if(strlen( $row["Descripcion"]) > 60){
 							    	echo ''.substr ( $row["Descripcion"], 0, 60).'<a href="#">Ver más</a>';
 								    }else{
