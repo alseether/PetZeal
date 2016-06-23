@@ -188,11 +188,16 @@ function eliminaPublicacion($idPublicacion){
 	$query="DELETE FROM publicaciones WHERE IDpublicacion='".$idPublicacion."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
-
 function actualizaFotoPublicacion($foto, $idPublicacion){
 	global $mysqli;
 	$query="UPDATE publicaciones SET Imagen='".$foto."'
 	WHERE IDpublicacion='".$idPublicacion."'"; 
+	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
+}
+function actualizaLikePubli($idPubli, $likes){
+	global $mysqli;
+	$query="UPDATE publicaciones SET Likes='".$likes."'
+	WHERE IDpublicacion='".$idPubli."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 

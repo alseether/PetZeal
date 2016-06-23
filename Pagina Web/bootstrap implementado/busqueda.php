@@ -12,7 +12,7 @@
 	//implode($search) Array a string
 	$encontrado = false;
 	//echo "search es $busqueda";
-	echo '<div class="panel panel-default col-lg-9 col-md-12 col-sm-12">';
+	echo '<div class="panel panel-default col-lg-9 col-md-11 col-sm-11">';
 		echo '<div class="panel-heading"><h2>Búsqueda por: "'.$busqueda.'"</h2></div>';
 		echo '<div id="panelPosts-mascota" class="panel-body">';
 			echo '<ul class="media-list">';
@@ -75,8 +75,8 @@
 						echo '</div>';
 				   		echo '<div class="media-body">';
 							echo '<a href="lectura.html?id='.$row["IDpost"].'">';
-								echo '<h2 class="media-heading">@'.$idUsu["Nick"].'</h2>';
-							    	echo '<h4>'.$row["Titulo"].'</h4><br>';
+								echo '<h2>'.$row["Titulo"].'</h2>';
+								echo '<h4 class="media-heading">@'.$idUsu["Nick"].'</h4>';
 							echo '</a>';
 						echo '</div>';
 					echo '</li>';

@@ -20,7 +20,8 @@
 			echo '<div>';
 				echo '<div class = "col-lg-4 col-md-4 col-sm-11">';
 					echo '<img src='.$masc["Imagen"].' class="img-rounded" alt="Foto de perfil de la mascota" width="200" height="150">';
-					echo '<button id="botonesHeader" type="button" class="center-block btn btn-default btn-md" data-toggle="modal" data-target="#ventanaMsn">Mensaje Directo</button>';
+					if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true)
+						echo '<button id="botonesHeader" type="button" class="center-block btn btn-default btn-md" data-toggle="modal" data-target="#ventanaMsn">Mensaje Directo</button>';
 				echo '</div>';
 			echo '</div>';
 		echo '</fieldset>';
@@ -41,12 +42,14 @@
 							echo '<img class="media-object img-rounded" width="100" height="100" src="'.$datos["Imagen"].'" alt="posts"></img>';
 							echo '</a>';
 						echo '</div>';
-						echo '<form action="./actualizaLike.php?id='.$datos["IDpublicacion"].'" method="post" enctype="multipart/form-data" class="media-body">';
+						echo '<form action="meGustaPubli.php?idP='.$datos["IDpublicacion"].'&idMasc='.$masc["IDmascota"].'" method="post" enctype="multipart/form-data" class="media-body">';
 							echo '<p>'.$datos["Descripcion"].'</p>';
-							echo '<div id="botonesHeader" class="btn-group pull-right">';
-								echo '<span id="botonesHeader" class="btn btn-default">'.$datos["Likes"].'</span>';
-								echo '<button type="submit" class="btn btn-md glyphicon glyphicon-heart"></button>';
-							echo '</div>';
+							if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true){
+								echo '<div id="botonesHeader" class="btn-group pull-right">';
+									echo '<span id="botonesHeader" class="btn btn-default">'.$datos["Likes"].'</span>';
+									echo '<button type="submit" class="btn btn-md glyphicon glyphicon-heart"></button>';
+								echo '</div>';
+							}
 						echo '</form>';
 					echo '</li>';
 				}	

@@ -94,6 +94,10 @@
 		header('Location: ./index.html?dir=true&id=' + $id + '&np=' + $idPost);
 	}
 
+	function cargaIndex(){
+		header('Location: ./index.html');
+	}
+
 	function securePass($id, $pass){
 		$salt = getSaltUsuario($id)->fetch_assoc();
 		$nueva = $pass.$salt["Salt"]."idiota";

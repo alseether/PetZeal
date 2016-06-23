@@ -4,6 +4,7 @@
 	echo '<div id="cabecera" class="page-header col-lg-12 col-md-12 col-sm-12" style="background-color:006633;" >';
 		echo '<div class="col-lg-3 col-md-4 col-sm-3 col-xs-12">';
 	        echo '<a href="index.html" style="background-color:006633;">';
+	       // echo '<span type="button" class="media-body" onclick="cargaIndex()" style="background-color:006633;">';
 	        	echo '<img alt="PetZeal" id="imagenLogo" src="assets/images/logoPetZeal.png">';
 	    	echo '</a>';
 	    echo '</div>';

@@ -46,7 +46,7 @@
 								echo '<li class="media">';
 									echo'<div class="media-left">';
 										echo'<a href="info.html?masc=true&id='.$row["IDmascota"].'">';
-	        								echo'<img class="media-object img-rounded" width="100" height="100" src="assets/images/imagenRegistroMascota.jpg" alt="posts1">';
+	        								echo'<img class="media-object img-rounded" width="100" height="100" src="'.$rowPrimera["Imagen"].'" alt="posts1">';
 	      								echo'</a>';
 									echo'</div>';
 									echo'<div class="media-body">';
@@ -58,7 +58,7 @@
 											echo '<input type="submit" id="botonesHeader" class="pull-right btn btn-success btn-md"></input>';
 										echo '</form>';
 									echo '</div>';
-
+									echo '<hr></hr>';
 								echo '</li>';		
 								if($id == 0){
 									cargaPublicacionesMascota($row["IDmascota"]);
@@ -72,35 +72,36 @@
 					if($hayPosts == 1){
 						$contenido = true;
 						$posts = getPostsUsuario($_COOKIE["idUsu"]);
+						$infoUsu = getInfoUsuario($_COOKIE["idUsu"])->fetch_assoc();
+						echo '<div class="panel-heading"><h2>'.$_COOKIE["nick"].'</h2></div>';
+						echo '<div class="panel-body panelPosts-mascota">';
+							echo '<ul class="media-list">';	
+								echo '<li class="media">';
+		   							echo '<div class="media-left">';
+		      							echo '<a href="info.html?masc=false&id='.$_COOKIE["idUsu"].'">';
+		        							echo '<img class="media-object img-rounded" width="100" height="100" src="'.$infoUsu["Imagen"].'" alt="especialista">';
+		      							echo '</a>';
+		    						echo '</div>';
+		    						echo'<div class="media-body">';
+										echo '<form  method="post" action ="subirPost.php">';
+											echo'<h4>Título</h4>';
+											echo '<textarea class="form-control" rows="1" type="text" name="titulo" placeholder="Escribe el titulo..."></textarea>';
+											echo'<h4>Descripcion</h4>';
+											echo '<textarea class="form-control" rows="4" type="text" name="descripcion" placeholder="Escribe el post..."></textarea>';
+											echo'<h4>Etiquetas</h4>';
+											echo '<textarea class="form-control" rows="1" type="text" name="etiquetas" placeholder="$etiqueta1 $etiqueta2 (máximo 5)" ></textarea>';
+											echo '<input  type="submit" style="margin-top: 15px" class="btn btn-success btn-lg pull-right"></input>';
+		    							echo '</form>';
+									echo '</div>';
+									echo '<hr></hr>';
+		  						echo '</li>';
 						if($posts->num_rows > 0){
-							echo '<div class="panel-heading"><h2>'.$_COOKIE["nick"].'</h2></div>';
-							echo '<div class="panel-body panelPosts-mascota">';
-								echo '<ul class="media-list">';	
-									echo '<li class="media">';
-			   							echo '<div class="media-left">';
-			      							echo '<a href="info.html?masc=false&id='.$_COOKIE["idUsu"].'">';
-			        							echo '<img class="media-object img-rounded" width="100" height="100" src="assets/images/oficio.jpg" alt="especialista">';
-			      							echo '</a>';
-			    						echo '</div>';
-			    						echo'<div class="media-body">';
-											echo '<form  method="post" action ="subirPost.php">';
-												echo'<h4>Título</h4>';
-												echo '<textarea class="form-control" rows="1" type="text" name="titulo" placeholder="Escribe el titulo..."></textarea>';
-												echo'<h4>Descripcion</h4>';
-												echo '<textarea class="form-control" rows="4" type="text" name="descripcion" placeholder="Escribe el post..."></textarea>';
-												echo'<h4>Etiquetas</h4>';
-												echo '<textarea class="form-control" rows="1" type="text" name="etiquetas" placeholder="Ej: $etiqueta1 $etiqueta2" ></textarea>';
-												echo '<input  type="submit" style="margin-top: 15px" class="btn btn-success btn-lg pull-right"></input>';
-			    							echo '</form>';
-										echo '</div>';
-										echo '<hr></hr>';
-			  						echo '</li>';
-
-									cargaPostUsuario($_COOKIE["idUsu"]);
-								echo '</ul>';
-							echo '</div>';
-							$cargadoPosts = 0;
+							cargaPostUsuario($_COOKIE["idUsu"]);
+							
 						}
+						$cargadoPosts = 0;
+						echo '</ul>';
+						echo '</div>';
 						
 					}
 					if($cargadoPosts != 0){						
@@ -121,12 +122,12 @@
 										echo '<ul class="media-list">';
 											echo '<li class="media">';
 												echo'<div class="media-left">';
-													echo'<a href="info.html?masc=true&id='.$row["IDmascota"].'">';
-				        								echo'<img class="media-object img-rounded" width="100" height="100" src="assets/images/imagenRegistroMascota.jpg" alt="posts1">';
+													echo'<a href="info.html?masc=true&id='.$rowPrimera["IDmascota"].'">';
+				        								echo'<img class="media-object img-rounded" width="100" height="100" src="'.$rowPrimera["Imagen"].'" alt="posts1">';
 				      								echo'</a>';
 												echo'</div>';
 												echo'<div class="media-body">';
-													echo '<form  method="post" action="subirPublicacion.php?id='.$row["IDmascota"].'" enctype="multipart/form-data">';
+													echo '<form  method="post" action="subirPublicacion.php?id='.$rowPrimera["IDmascota"].'" enctype="multipart/form-data">';
 														//echo '<img src="assets/images/imagenRegistroMascota.jpg" alt="pots1" id="subir-publicacion-foto">';
 														echo '<textarea class="form-control" rows="4" type="text" name="descripcion" placeholder="Escribe la descripcion..."></textarea>';
 														//cho '<a id="foto" name="foto" class="boton-peq botonNaranja" href="subirImagen.html">Foto</a>';
@@ -134,7 +135,7 @@
 														echo '<input type="submit" id="botonesHeader" class="pull-right btn btn-success btn-md"></input>';
 													echo '</form>';
 												echo '</div>';
-
+												echo '<hr></hr>';
 											echo '</li>';		
 											if($id == 0){
 												cargaPublicacionesMascota($row["IDmascota"]);
