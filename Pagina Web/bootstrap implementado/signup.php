@@ -51,7 +51,7 @@
 		
 		$info = getInfoUsuario($_COOKIE["idUsu"])->fetch_assoc();
 		actualizaInfoUsuario($_COOKIE["idUsu"], $info["Nick"], $info["Password"], $info["Email"], $rol, $info["CP"], $nombre, $direccion, $tlf, $ocupacion, $web, $descripcion, $imagen);
-		$target_path = "assets/pets-images/".$_COOKIE["idUsu"];
+		$target_path = "assets/profile-images/".$_COOKIE["idUsu"];
 		move_uploaded_file($_FILES['imagen']['tmp_name'], $target_path);
 		actualizaFotoUsuario($_COOKIE["idUsu"], $target_path);
 		setcookie("rol", "", time() - 3600);
@@ -75,7 +75,7 @@
 		insertaNuevaMascota($nombre, $especie, $raza, $nacimiento, $descripcion, "", $_COOKIE["idUsu"]);
 
 		$idMasc = getIdMascota($nombre, $_COOKIE["idUsu"])->fetch_assoc();
-		$target_path = "assets/profile-images/".$idMasc["IDmascota"];
+		$target_path = "assets/pets-images/".$idMasc["IDmascota"];
 		move_uploaded_file($_FILES['imagen']['tmp_name'], $target_path);
 		actualizaFotoMascota($idMasc["IDmascota"], $target_path);
 		header('Location: ./index.html');

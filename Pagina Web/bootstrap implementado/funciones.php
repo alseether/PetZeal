@@ -11,9 +11,11 @@
 
 // Esta funcion requiere haber abierto la BBDD
 	function cargaPublicacionesMascota( $idMascota ){
-		$publicaciones = getPublicacionesMascota($idMascota);
+		$consulta = "select IDpublicacion from publicaciones WHERE IDmascota = '".$idMascota."' order by IDpublicacion desc limit 100";
+		//$publicaciones = getPublicacionesMascota($idMascota);
+		$publicaciones = query($consulta);
 		$i = 0;
-		while($i < $publicaciones->num_rows && $i < 5){
+		while($i < $publicaciones->num_rows){
 			$row = $publicaciones->fetch_assoc();
 			$p = getInfoPublicacion($row["IDpublicacion"])->fetch_assoc();
 			echo '<li class="media">';
@@ -34,11 +36,11 @@
 	// Esta funcion requiere haber abierto la BBDD
 	function cargaPostUsuario( $idUsuario ){
 		$infoUsu = getInfoUsuario($idUsuario)->fetch_assoc();
-		$consulta = 'select * from posts where IDusuario = "'.$idUsuario.'" order by IDpost desc limit 20';
+		$consulta = 'select * from posts where IDusuario = "'.$idUsuario.'" order by IDpost desc limit 100';
 		$posts = query($consulta);
 		$i = 0;
 
-		while($i < $posts->num_rows && $i < 5){
+		while($i < $posts->num_rows){
 			$row = $posts->fetch_assoc();
 
 			$p = getInfoPost($row["IDpost"])->fetch_assoc();
