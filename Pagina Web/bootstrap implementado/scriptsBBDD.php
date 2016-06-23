@@ -107,7 +107,7 @@ function actualizaFotoMascota($idMascota, $imagen){
 }
 function eliminaMascota($idMascota){
 	global $mysqli;
-	$query="DELETE FROM mascota WHERE IDmascota='".$idMascota."'"; 
+	$query="DELETE FROM mascotas WHERE IDmascota='".$idMascota."'"; 
 	$ret = $mysqli->query($query) or die ($mysqli->error. " en la linea".(__LINE__-1));
 }
 

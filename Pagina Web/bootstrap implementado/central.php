@@ -7,6 +7,7 @@
 	$hayPosts = $_GET["p"];
 	$cargadoPosts = 1;
 	$contenido = false;
+	$nuevoUsu = false;
 
 	echo '<div class="div-cuerpo col-lg-6 col-md-11 col-sm-11">';
 		echo '<div id="panelPostsInicio" class="panel panel-default">';					  
@@ -32,41 +33,47 @@
 						$row = $mascotas->fetch_assoc();
 						$primera = getInfoMascota($row["IDmascota"]);
 						$rowPrimera = $primera->fetch_assoc();*/
-						echo '<div class="panel-heading "><h2>'.$rowPrimera["Nombre"].'</h2></div>';
-						echo '<div class="panel-body panelPosts-mascota">';
-							echo '<ul class="media-list">';
-								/*echo '<li class="media">';
-									echo'<div class="media-left">';
-										echo'<a href="info.html?masc=true&id='.$rowPrimera["IDmascota"].'">';
-	        								echo'<img class="media-object img-rounded" width="100" height="100" src="assets/images/imagenRegistroMascota.jpg" alt="posts1">';
-	      								echo'</a>';
-									echo'</div>';
-									
-								echo '</li>';*/
-								echo '<li class="media">';
-									echo'<div class="media-left">';
-										echo'<a href="info.html?masc=true&id='.$row["IDmascota"].'">';
-	        								echo'<img class="media-object img-rounded" width="100" height="100" src="'.$rowPrimera["Imagen"].'" alt="posts1">';
-	      								echo'</a>';
-									echo'</div>';
-									echo'<div class="media-body">';
-										echo '<form  method="post" action="subirPublicacion.php?id='.$row["IDmascota"].'" enctype="multipart/form-data">';
-											//echo '<img src="assets/images/imagenRegistroMascota.jpg" alt="pots1" id="subir-publicacion-foto">';
-											echo '<textarea class="form-control" rows="4" type="text" name="descripcion" placeholder="Escribe tu publicacion..."></textarea>';
-											//cho '<a id="foto" name="foto" class="boton-peq botonNaranja" href="subirImagen.html">Foto</a>';
-											echo '<input type="file" name="imagen"></input>';
-											echo '<input type="submit" id="botonesHeader" class="pull-right btn btn-success btn-md"></input>';
-										echo '</form>';
-									echo '</div>';
-									echo '<hr></hr>';
-								echo '</li>';		
-								if($id == 0){
-									cargaPublicacionesMascota($row["IDmascota"]);
-								}else{
-									cargaPublicacionesMascota($id);
-								}
-							echo '</ul>';	
-						echo '</div>';
+						if($mascotas->num_rows > 0){
+							echo '<div class="panel-heading "><h2>'.$rowPrimera["Nombre"].'</h2></div>';
+							echo '<div class="panel-body panelPosts-mascota">';
+								echo '<ul class="media-list">';
+									/*echo '<li class="media">';
+										echo'<div class="media-left">';
+											echo'<a href="info.html?masc=true&id='.$rowPrimera["IDmascota"].'">';
+		        								echo'<img class="media-object img-rounded" width="100" height="100" src="assets/images/imagenRegistroMascota.jpg" alt="posts1">';
+		      								echo'</a>';
+										echo'</div>';
+										
+									echo '</li>';*/
+									echo '<li class="media">';
+										echo'<div class="media-left">';
+											echo'<a href="info.html?masc=true&id='.$row["IDmascota"].'">';
+		        								echo'<img class="media-object img-rounded" width="100" height="100" src="'.$rowPrimera["Imagen"].'" alt="posts1">';
+		      								echo'</a>';
+										echo'</div>';
+										echo'<div class="media-body">';
+											echo '<form  method="post" action="subirPublicacion.php?id='.$row["IDmascota"].'" enctype="multipart/form-data">';
+												//echo '<img src="assets/images/imagenRegistroMascota.jpg" alt="pots1" id="subir-publicacion-foto">';
+												echo '<textarea class="form-control" rows="4" type="text" name="descripcion" placeholder="Escribe tu publicacion..."></textarea>';
+												//cho '<a id="foto" name="foto" class="boton-peq botonNaranja" href="subirImagen.html">Foto</a>';
+												echo '<input type="file" name="imagen"></input>';
+												echo '<input type="submit" id="botonesHeader" class="pull-right btn btn-success btn-md"></input>';
+											echo '</form>';
+										echo '</div>';
+										echo '<hr></hr>';
+									echo '</li>';		
+									if($id == 0){
+										cargaPublicacionesMascota($row["IDmascota"]);
+									}else{
+										cargaPublicacionesMascota($id);
+									}
+								echo '</ul>';	
+							echo '</div>';
+						}
+						else{
+							echo '<a id="botonRegistrate" href="registro.html?pr=false" type="button" class="col-md-offset-3 col-lg-6 btn btn-warning btn-lg" role="button">Añade tu primera mascota</a>';
+							$nuevoUsu = true;
+						}
 					//}
 				}else{//premium  
 					if($hayPosts == 1){
@@ -149,12 +156,13 @@
 												
 				}
 				$cargadoPosts = 1;
-
+				if($nuevoUsu == false){
 					echo '<div class="panel-footer">';
 			            echo '<div class="btn-group">'; 
 			            	cargaCarrusel($_COOKIE["idUsu"]);
 			            echo '</div>';
 		          	echo '</div>';
+		        }
 			}else{
 				echo '<a id="botonRegistrate" href="registro.html?pr=false" type="button" class="col-md-offset-4 col-lg-4 btn btn-warning btn-lg" role="button">Regístrate</a>';
 			}
