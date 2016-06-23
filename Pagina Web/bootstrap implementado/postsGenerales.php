@@ -18,7 +18,7 @@
 					$infoUsuario = getInfoUsuario($row["IDusuario"]);
 					$rowUsu = $infoUsuario->fetch_assoc();
 			    	echo '<li class="media">';
-			    		// AQUI FALTA PONER LAS URLs CORRECTAS A LAS QUE LLEVEN
+			    		
 						echo '<div class="media-left">';
 							echo '<a href="info.html?masc=false&id='.$row["IDusuario"].'"> <img class="media-object img-thumbnail" width="100" height="100" src="'.$rowUsu["Imagen"].'" alt="foto usuario"></a>';
 						echo '</div>';
@@ -40,7 +40,7 @@
 						$rowUsu = $infoUsuario->fetch_assoc();
 				    	echo '<li class="media">';
 					    	echo '<div class="media-left">';
-					    		// AQUI FALTA PONER LAS URLs CORRECTAS A LAS QUE LLEVEN
+					    		
 								echo '<a href="info.html?masc=false&id='.$row["IDusuario"].'"> <img class="media-object img-thumbnail" width="100" height="100" src="'.$rowUsu["Imagen"].'" alt="foto usuario"></a>';
 							echo '</div>';
 								echo '<div class="media-body">';
