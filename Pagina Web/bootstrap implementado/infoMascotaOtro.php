@@ -14,7 +14,7 @@
 				echo '<h4>'.$masc["Raza"].'</h4>';
 				echo '<h4><b>Fecha de nacimiento:</b></h4>';
 				echo '<h4>'.$masc["Nacimiento"].'</h4>';
-				echo '<h4><b>Descripcion:</b></h4>';
+				echo '<h4><b>Descripción:</b></h4>';
 				echo '<h4>'.$masc["Descripcion"].'</h4>';
 			echo '</div>';
 			echo '<div>';
