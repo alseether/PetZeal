@@ -54,14 +54,14 @@
 				$idMascotaRec = $row["IDmascota"];
 			}
 		}
-		
+
 		if($idMascotaRec == 0){
 			 header('Location: ./error.php?err=15');
 			exit();
 		}
 		else{
 			$fecha = date("Y")."-".date("m")."-".date("d");
-			insertaNuevoMensaje($idMascotaEmi["IDmascota"], $idMascotaRec, $asunto, $fecha, $contenido, 1);	// El 1 al final indica que el mensaje SI se ha leido, a falta de corregir el problema de marcarlos
+			insertaNuevoMensaje($idMascotaEmi, $idMascotaRec, $asunto, $fecha, $contenido, 1);	// El 1 al final indica que el mensaje SI se ha leido, a falta de corregir el problema de marcarlos
 		}
 		
 		closeDB();

@@ -22,6 +22,15 @@
 					echo '<img src='.$masc["Imagen"].' class="img-rounded" alt="Foto de perfil de la mascota" width="200" height="150">';
 					if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true)
 						echo '<button id="botonesHeader" type="button" class="center-block btn btn-default btn-md" data-toggle="modal" data-target="#ventanaMsn">Mensaje Directo</button>';
+					$usu = getInfoUsuario($masc["IDusuario"])->fetch_assoc();
+					echo '<h4><b>Dueño:</b></h4>';
+					if($usu["Rol"] == "Premium"){
+						echo '<a href="info.html?masc=false&id='.$usu["IDusuario"].'">';
+							echo '<h4>@'.$usu["Nick"].'</h4>';
+						echo '</a>';
+					}
+					else
+						echo '<h4>@'.$usu["Nick"].'</h4>';
 				echo '</div>';
 			echo '</div>';
 		echo '</fieldset>';

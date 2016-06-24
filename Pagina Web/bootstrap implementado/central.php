@@ -34,7 +34,10 @@
 						$primera = getInfoMascota($row["IDmascota"]);
 						$rowPrimera = $primera->fetch_assoc();*/
 						if($mascotas->num_rows > 0){
-							echo '<div class="panel-heading "><h2>'.$rowPrimera["Nombre"].'</h2></div>';
+							echo '<div class="panel-heading ">';
+								echo '<a href="info.html?masc=true&id='.$rowPrimera["IDmascota"].'">';
+									echo '<h2>'.$rowPrimera["Nombre"].'</h2></div>';
+								echo '</a>';
 							echo '<div class="panel-body panelPosts-mascota">';
 								echo '<ul class="media-list">';
 									/*echo '<li class="media">';

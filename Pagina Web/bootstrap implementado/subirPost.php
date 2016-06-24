@@ -85,6 +85,6 @@
 	
 	closeDB();
 	
-	header('Location: ./index.html');
+	header('Location: ./index.html?id='.$_COOKIE["idUsu"].'&p=1');
 				
 ?>

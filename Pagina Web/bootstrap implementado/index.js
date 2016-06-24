@@ -4,7 +4,15 @@
 	    $("#slideIzq").load("postsGenerales.php");
 		    var dir = getURLParameter('dir');
 			if(dir == null){
-			 $("#content").load("central.php?id=0&p=1");
+				var id = getURLParameter('id');
+				var p = getURLParameter('p');
+				if(p == null && id == null){
+			 		$("#content").load("central.php?id=0&p=1");
+				}
+				else{
+					var parameters = "id=" + id + "&p=" + p;
+					$("#content").load("central.php?"+parameters);
+				}
 			}else{
 				var id = getURLParameter('id');
 				var np = getURLParameter('np');

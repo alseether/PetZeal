@@ -20,6 +20,6 @@
 	
 	closeDB();
 	
-	header('Location: ./index.html');
+	header('Location: ./index.html?id='.$idMas.'&p=0');
 				
 ?>

@@ -20,7 +20,7 @@
 			$p = getInfoPublicacion($row["IDpublicacion"])->fetch_assoc();
 			echo '<li class="media">';
 			   	echo '<div class="media-left">';
-      				echo '<a href="info.html?masc=true&id='.$idMascota.'">';
+      				echo '<a data-toggle="modal" data-target="#ventanaImagen'.$row["IDpublicacion"].'">';
         				echo'<img class="media-object img-rounded" width="100" height="100" src="'.$p["Imagen"].'" alt="foto publicacion">';
       				echo '</a>';
     			echo '</div>';
@@ -29,6 +29,18 @@
 					echo '<button class="pull-right btn btn-md glyphicon glyphicon-trash" onclick="borrarPublicacion('.$idMascota.', '.$row["IDpublicacion"].')">';
 				echo '</div>';
 			echo '<li>';
+
+			echo '<div id="ventanaImagen'.$row["IDpublicacion"].'" class="modal fade" role="dialog">';
+				echo '<div class="modal-dialog">';
+					echo '<div class="modal-content">';
+						echo '<div class="modal-body">';
+							echo '<button type="button" class="close" data-dismiss="modal">&times;</button>';
+							echo '<img class="media-object img-rounded" width="500" height="400" src="'.$p["Imagen"].'" alt="posts"></img>';
+						echo '</div>';
+					echo '</div>';
+				echo '</div>';
+			echo '</div>';
+
 			$i++;
 		}
 	}

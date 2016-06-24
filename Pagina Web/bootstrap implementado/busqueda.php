@@ -74,7 +74,7 @@
 							echo '<a href="info.html?masc=false&id='.$idUsu["IDusuario"].'"> <img class="media-object img-rounded" width="100" height="100" src="'.$idUsu["Imagen"].'" alt="foto usuario"></a>';
 						echo '</div>';
 				   		echo '<div class="media-body">';
-							echo '<a href="lecturaPost.php?id='.$row["IDpost"].'">';	// Corregir esta llamada, debe ser a index, con los parametros adecuados
+							echo '<a href="index.html?dir=true&id='.$idUsu["IDusuario"].'&np='.$row["IDpost"].'">';	// Corregir esta llamada, debe ser a index, con los parametros adecuados
 								echo '<h2>'.$row["Titulo"].'</h2>';
 								echo '<h4 class="media-heading">@'.$idUsu["Nick"].'</h4>';
 							echo '</a>';

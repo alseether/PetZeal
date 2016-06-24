@@ -38,6 +38,9 @@
 							}
 						echo'</div>';
 						echo'<div class="media-body">';
+							echo '<a href="info.html?masc=false&id='.$row["IDusuario"].'">';
+								echo'<h2 class="media-heading">@'.$rowUsu["Nick"].'</h2>';
+							echo '</a>';
 							echo ' <p> '.$rowPost["Descripcion"].'</p><br>';
 							echo '<h6>Etiquetas: ';
 							if($rowPost["Etiqueta1"] != 0){
@@ -62,6 +65,7 @@
 							}
 							echo '</h6>';
 						echo'</div>';
+						echo '<hr></hr>';
 						echo'<div class="media-footer">';
 						echo'</div>';
 						echo ' </li>';
@@ -84,47 +88,46 @@
 									echo ' </form>';
 								echo ' </li>';
 							echo ' </div>';
-					
+						echo '<hr></hr>';
 						}
 				echo ' </ul>';
 				$infoComent = getComentariosPost($rowPost["IDpost"]);
 				$rowComent = $infoComent->fetch_assoc();
 				$row2 = getInfoComentario($rowComent["IDcomentario"]);
 				if($row2->num_rows >0){
-			
-			echo '</div>';
-			$infoComent = getComentariosPost($rowPost["IDpost"]);
-			
-			for ($i = 0; $i < $infoComent->num_rows; $i++) {
-				$rowComent = $infoComent->fetch_assoc();
-				$row2 = getInfoComentario($rowComent["IDcomentario"]);
-				$row3 = $row2->fetch_assoc();
-				$row4 =  getInfoMascota($row3["IDmascota"]);
-				$rowMasc = $row4->fetch_assoc();
-				$infoEspecialista = getInfoUsuario($row3["IDespecialista"])->fetch_assoc();
-				echo '<div class=" panel-body ">';
-					echo ' <ul class="media-list">';
-						echo ' <li class="media">';
-							echo'<div class="media-left">';
-								if($row3["IDmascota"] == 0){
-									echo '	<img class="media-object img-rounded" width="100" height="100" src="'.$infoEspecialista["Imagen"].'" alt="pots1jpg">';
-								}else{
-									echo '	<img class="media-object img-rounded" width="100" height="100" src="'.$rowMasc["Imagen"].'" alt="pots1jpg">';
-								}
-							echo '</div>';
-							echo'<div class="media-body">';
-								if($row3["IDmascota"] == 0){
-									echo '	<h3 class="media-heading">'.$infoEspecialista["Nick"].'</h3>';
-								}else{
-									echo '	<h3 class="media-heading">'.$rowMasc["Nombre"].'</h3>';
-								}
-								echo '	<p>'.$row3["Descripcion"].'</p>';
-							echo '</div>';
-						echo '</li>';
-					echo '</ul>';
-				echo '</div>';
-			}
-		}	
+					echo '</div>';
+					$infoComent = getComentariosPost($rowPost["IDpost"]);
+					
+					for ($i = 0; $i < $infoComent->num_rows; $i++) {
+						$rowComent = $infoComent->fetch_assoc();
+						$row2 = getInfoComentario($rowComent["IDcomentario"]);
+						$row3 = $row2->fetch_assoc();
+						$row4 =  getInfoMascota($row3["IDmascota"]);
+						$rowMasc = $row4->fetch_assoc();
+						$infoEspecialista = getInfoUsuario($row3["IDespecialista"])->fetch_assoc();
+						echo '<div class=" panel-body ">';
+							echo ' <ul class="media-list">';
+								echo ' <li class="media">';
+									echo'<div class="media-left">';
+										if($row3["IDmascota"] == 0){
+											echo '<a href="info.html?masc=false&id='.$infoEspecialista["IDusuario"].'"><img class="media-object img-rounded" width="100" height="100" src="'.$infoEspecialista["Imagen"].'" alt="pots1jpg"></a>';
+										}else{
+											echo '<a href="info.html?masc=true&id='.$rowMasc["IDmascota"].'"><img class="media-object img-rounded" width="100" height="100" src="'.$rowMasc["Imagen"].'" alt="pots1jpg"></a>';
+										}
+									echo '</div>';
+									echo'<div class="media-body">';
+										if($row3["IDmascota"] == 0){
+											echo '<h3 class="media-heading">'.$infoEspecialista["Nick"].'</h3>';
+										}else{
+											echo '<h3 class="media-heading">'.$rowMasc["Nombre"].'</h3>';
+										}
+										echo '	<p>'.$row3["Descripcion"].'</p>';
+									echo '</div>';
+								echo '</li>';
+							echo '</ul>';
+						echo '</div>';
+					}
+				}	
 	echo '</div>';
 	closeDB();
 ?>

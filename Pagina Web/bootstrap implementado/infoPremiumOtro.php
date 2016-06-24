@@ -29,6 +29,10 @@
 					echo '<img src='.$usu["Imagen"].' class="img-rounded" alt="foto '.$usu["Nick"].'" width="200" height="150">';
 					if(isset($_COOKIE["log"]) && $_COOKIE["log"] == true)
 						echo '<button id="botonesHeader" type="button" class="center-block btn btn-default btn-md" data-toggle="modal" data-target="#ventanaMsn">Mensaje Directo</button>';
+					$mascotas = getMascotasUsuario($usu["IDusuario"]);
+					if($mascotas->num_rows > 0){
+						echo '<button id="botonesHeader" type="button" class="center-block btn btn-default btn-md" data-toggle="modal" data-target="#ventanaMascotas">Ver mascotas del usuario</button>';
+					}
 				echo '</div>';
 			echo '</div>';
 		echo '</fieldset>';
@@ -64,7 +68,7 @@
 			echo '</div>';
 	echo '</div>';
 
-	echo '<div id="ventanaMsn" class="modal fade" role="dialog">';
+	/*echo '<div id="ventanaMsn" class="modal fade" role="dialog">';
 		echo '<div class="modal-dialog">';
 			echo '<div class="modal-content">';
 				echo '<div class="modal-header">';
@@ -87,7 +91,74 @@
 				echo '</div>';
 			echo '</div>';
 		echo '</div>';
+	echo '</div>';*/
+
+	echo '<div id="ventanaMascotas" class="modal fade" role="dialog">';
+		echo '<div class="modal-dialog">';
+			echo '<div class="modal-content">';
+				echo '<div class="modal-header">';
+					echo '<button type="button" class="close" data-dismiss="modal">&times;</button>';
+					echo '<h4 class="modal-title">Mascotas del usuario</h4>';
+				echo '</div>';
+				echo '<div class="modal-body">';
+					$numMasc = $mascotas->num_rows;
+					for($i=0; $i<$numMasc; $i++){
+						$masc = $mascotas->fetch_assoc();
+						$info = getInfoMascota($masc["IDmascota"])->fetch_assoc();
+						echo '<a href="info.html?masc=true&id='.$masc["IDmascota"].'">';
+							echo '<h4>@'.$info["Nombre"].'</h4>';
+						echo '</a>';
+					}
+				echo '</div>';
+			echo '</div>';
+		echo '</div>';
 	echo '</div>';
 
 	closeDB();
 ?>
+	<div id="ventanaMsn" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Nuevo mensaje privado</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form action="enviarMensaje.php" method="get" role="form">
+			  <div class="form-group col-lg-6">
+			    <label for="emisor">Mensaje de:</label>
+			        <select name = "emisor" class = "form-control">
+						<?php
+							startDB();
+							$mascotas = getMascotasUsuario($_COOKIE["idUsu"]);
+								for($i = 0; $i < $mascotas->num_rows; $i++){
+									$row = $mascotas->fetch_assoc();
+									$mascota = getInfoMascota($row["IDmascota"])->fetch_assoc();
+									echo '<option value="'.$mascota["IDmascota"].'">'.$mascota["Nombre"].'</option>';
+								}
+							closeDB();
+						?>
+					</select>
+			  </div>
+			  <div class="form-group col-lg-6">
+			    <label for="receptor">Mensaje a:</label>
+			    <input type="text" name="receptor" class="form-control" id="receptor" placeholder="mascota@usuario">
+			  </div>
+			  <div class="form-group">
+			    <label for="asunto"></label>
+			    <input type="text" name="asunto" class="form-control" id="asunto" placeholder="Asunto">
+			  </div>
+			<div class="form-group">
+			  <label for="contenido"></label>
+			  <textarea name="contenido" class="form-control" rows="3" id="contenido" placeholder="Escribe aqui tu mensaje..."></textarea>
+			</div>
+			  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+			  <button type="submit" class="pull-right btn btn-success">Enviar</button>
+			</form>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
